@@ -1623,7 +1623,7 @@
         ]
       }
     },
-    "targeting": "pageLoad >= 4 && firefoxVersion >= 71",
+    "targeting": "pageLoad >= 4",
     "frequency": {
       "lifetime": 2,
       "custom": [{ "period": 172800000, "cap": 1 }]
@@ -1642,7 +1642,7 @@
       "category": "cfrFeatures",
       "anchor_id": "tracking-protection-icon-box",
       "skip_address_bar_notifier": true,
-      "bucket_id": "CFR_SOCIAL_TRACKING_PROTECTION",
+      "bucket_id": "CFR_FINGERPRINTERS_PROTECTION",
       "heading_text": { "string_id": "cfr-doorhanger-fingerprinters-heading" },
       "notification_text": "",
       "info_icon": {
@@ -1677,7 +1677,7 @@
         ]
       }
     },
-    "targeting": "pageLoad >= 4 && firefoxVersion >= 71",
+    "targeting": "pageLoad >= 4",
     "frequency": {
       "lifetime": 2,
       "custom": [{ "period": 172800000, "cap": 1 }]
@@ -1696,7 +1696,7 @@
       "category": "cfrFeatures",
       "anchor_id": "tracking-protection-icon-box",
       "skip_address_bar_notifier": true,
-      "bucket_id": "CFR_SOCIAL_TRACKING_PROTECTION",
+      "bucket_id": "CFR_CRYPTOMINERS_PROTECTION",
       "heading_text": { "string_id": "cfr-doorhanger-cryptominers-heading" },
       "notification_text": "",
       "info_icon": {
@@ -1731,7 +1731,7 @@
         ]
       }
     },
-    "targeting": "pageLoad >= 4 && firefoxVersion >= 71",
+    "targeting": "pageLoad >= 4",
     "frequency": {
       "lifetime": 2,
       "custom": [{ "period": 172800000, "cap": 1 }]
