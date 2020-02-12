@@ -1,4 +1,5 @@
-- content:
+- id: FXA_BOOKMARK_PANEL_71_plus
+  content:
     background_color_1: '#7d31ae'
     background_color_2: '#5033be'
     close_button:
@@ -16,14 +17,14 @@
       string_id: cfr-doorhanger-bookmark-fxa-header
   frequency:
     lifetime: 3
-  id: FXA_BOOKMARK_PANEL_71_plus
   targeting: locale != 'ru' && !usesFirefoxSync && isFxAEnabled == true && totalBookmarksCount
     >= 10 && firefoxVersion >= 70 && userPrefs.cfrFeatures
   template: fxa_bookmark_panel
   trigger:
     id: bookmark-panel
   weight: 100
-- content:
+- id: FXA_BOOKMARK_PANEL_1
+  content:
     background_color_1: '#7d31ae'
     background_color_2: '#5033be'
     close_button:
@@ -41,14 +42,14 @@
       string_id: cfr-doorhanger-bookmark-fxa-header
   frequency:
     lifetime: 3
-  id: FXA_BOOKMARK_PANEL_1
   targeting: locale != 'ru' && !usesFirefoxSync && isFxAEnabled == true && totalBookmarksCount
     >= 10 && firefoxVersion == 69
   template: fxa_bookmark_panel
   trigger:
     id: bookmark-panel
   weight: 100
-- content:
+- id: FXA_BOOKMARK_PANEL_68
+  content:
     background_color_1: '#7d31ae'
     background_color_2: '#5033be'
     close_button:
@@ -61,7 +62,6 @@
     title: cfr-doorhanger-bookmark-fxa-header
   frequency:
     lifetime: 3
-  id: FXA_BOOKMARK_PANEL_68
   targeting: locale != 'ru' && !usesFirefoxSync && isFxAEnabled == true && totalBookmarksCount
     >= 10 && firefoxVersion == 68
   template: fxa_bookmark_panel

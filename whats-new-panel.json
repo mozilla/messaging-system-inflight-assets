@@ -1,5 +1,6 @@
 [
   {
+    "id": "WHATS_NEW_BADGE_72",
     "content": {
       "action": {
         "id": "show-whatsnew-button"
@@ -14,7 +15,6 @@
     "frequency": {
       "lifetime": 100
     },
-    "id": "WHATS_NEW_BADGE_72",
     "priority": 5,
     "targeting": "firefoxVersion == 72 && (usesFirefoxSync || hasAccessedFxAPanel || currentDate|date - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_72'] || (messageImpressions['WHATS_NEW_BADGE_72']|length >= 1 && currentDate|date - messageImpressions['WHATS_NEW_BADGE_72'][0] <= 345600000)) && 'browser.messaging-system.whatsNewPanel.enabled'|preferenceValue",
     "template": "toolbar_badge",
@@ -23,6 +23,7 @@
     }
   },
   {
+    "id": "WHATS_NEW_72_1",
     "content": {
       "body": {
         "string_id": "cfr-whatsnew-fx70-body"
@@ -42,7 +43,6 @@
         "string_id": "cfr-whatsnew-fx70-title"
       }
     },
-    "id": "WHATS_NEW_72_1",
     "order": 1,
     "targeting": "false",
     "template": "whatsnew_panel_message",
@@ -51,6 +51,7 @@
     }
   },
   {
+    "id": "WHATS_NEW_FINGERPRINTER_COUNTER_72",
     "content": {
       "body": {
         "string_id": "cfr-whatsnew-fingerprinter-counter-body"
@@ -73,7 +74,6 @@
         "string_id": "cfr-whatsnew-fingerprinter-counter-header"
       }
     },
-    "id": "WHATS_NEW_FINGERPRINTER_COUNTER_72",
     "order": 3,
     "targeting": "firefoxVersion >= 72 && blockedCountByType.fingerprinterCount >= 10",
     "template": "whatsnew_panel_message",
@@ -82,6 +82,7 @@
     }
   },
   {
+    "id": "WHATS_NEW_FINGERPRINTER_COUNTER_ALT",
     "content": {
       "body": {
         "string_id": "cfr-whatsnew-fingerprinter-counter-body-alt"
@@ -99,7 +100,6 @@
         "string_id": "cfr-whatsnew-fingerprinter-counter-header-alt"
       }
     },
-    "id": "WHATS_NEW_FINGERPRINTER_COUNTER_ALT",
     "order": 3,
     "targeting": "firefoxVersion >= 72 && blockedCountByType.fingerprinterCount < 10",
     "template": "whatsnew_panel_message",
@@ -108,6 +108,7 @@
     }
   },
   {
+    "id": "WHATS_NEW_PERMISSION_PROMPT_72",
     "content": {
       "body": {
         "string_id": "cfr-whatsnew-permission-prompt-body"
@@ -123,7 +124,6 @@
         "string_id": "cfr-whatsnew-permission-prompt-header"
       }
     },
-    "id": "WHATS_NEW_PERMISSION_PROMPT_72",
     "order": 2,
     "targeting": "firefoxVersion >= 72",
     "template": "whatsnew_panel_message",
@@ -132,6 +132,7 @@
     }
   },
   {
+    "id": "WHATS_NEW_PIP_72",
     "content": {
       "body": {
         "string_id": "cfr-whatsnew-pip-body"
@@ -149,7 +150,6 @@
         "string_id": "cfr-whatsnew-pip-header"
       }
     },
-    "id": "WHATS_NEW_PIP_72",
     "order": 1,
     "targeting": "firefoxVersion >= 72",
     "template": "whatsnew_panel_message",
@@ -158,6 +158,7 @@
     }
   },
   {
+    "id": "WHATS_NEW_BADGE_MOBILE_71",
     "content": {
       "action": {
         "id": "show-whatsnew-button"
@@ -172,7 +173,6 @@
     "frequency": {
       "lifetime": 100
     },
-    "id": "WHATS_NEW_BADGE_MOBILE_71",
     "priority": 5,
     "targeting": "isFxAEnabled && sync.mobileDevices == 0 && localeLanguageCode == 'en' && firefoxVersion == 71 && (hasAccessedFxAPanel || currentDate|date - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_MOBILE_71'] || (messageImpressions['WHATS_NEW_BADGE_MOBILE_71']|length >= 1 && currentDate|date - messageImpressions['WHATS_NEW_BADGE_MOBILE_71'][0] <= 345600000))",
     "template": "toolbar_badge",
@@ -181,6 +181,7 @@
     }
   },
   {
+    "id": "WHATS_NEW_MOBILE_71",
     "content": {
       "body": "Enhanced Tracking Protection is on by default in Firefox mobile, blocking 2000+ trackers from chasing you around the web.",
       "bucket_id": "WHATS_NEW_MOBILE_71",
@@ -192,7 +193,6 @@
       "published_date": 1576509418500,
       "title": "Your privacy is automatic on mobile, too"
     },
-    "id": "WHATS_NEW_MOBILE_71",
     "order": 1,
     "targeting": "localeLanguageCode == 'en' && firefoxVersion == 71 && isFxAEnabled && usesFirefoxSync",
     "template": "whatsnew_panel_message",
@@ -201,6 +201,7 @@
     }
   },
   {
+    "id": "WHATS_NEW_MOBILE_FEAT_1_71",
     "content": {
       "body": "Automatically clear your history and cookies with Private Browsing mode on mobile.",
       "bucket_id": "WHATS_NEW_MOBILE_FEAT_1_71",
@@ -211,7 +212,6 @@
       "published_date": 1576509418500,
       "title": "Leave no trace"
     },
-    "id": "WHATS_NEW_MOBILE_FEAT_1_71",
     "order": 2,
     "targeting": "localeLanguageCode == 'en' && firefoxVersion == 71 && isFxAEnabled && usesFirefoxSync",
     "template": "whatsnew_panel_message",
@@ -220,6 +220,7 @@
     }
   },
   {
+    "id": "WHATS_NEW_MOBILE_FEAT_2_71",
     "content": {
       "body": "Don\u2019t walk out the door without your bookmarks, tabs, notes, and passwords.",
       "bucket_id": "WHATS_NEW_MOBILE_FEAT_2_71",
@@ -230,7 +231,6 @@
       "published_date": 1576509418500,
       "title": "Take your online life with you"
     },
-    "id": "WHATS_NEW_MOBILE_FEAT_2_71",
     "order": 3,
     "targeting": "localeLanguageCode == 'en' && firefoxVersion == 71 && isFxAEnabled && usesFirefoxSync",
     "template": "whatsnew_panel_message",
@@ -239,6 +239,7 @@
     }
   },
   {
+    "id": "WHATS_NEW_MOBILE_FEAT_2_71_NONFXA",
     "content": {
       "body": "Don\u2019t walk out the door without your bookmarks, tabs, notes, and passwords.",
       "bucket_id": "WHATS_NEW_MOBILE_FEAT_2_71_NONFXA",
@@ -249,7 +250,6 @@
       "published_date": 1576509418500,
       "title": "Take your online life with you"
     },
-    "id": "WHATS_NEW_MOBILE_FEAT_2_71_NONFXA",
     "order": 3,
     "targeting": "localeLanguageCode == 'en' && firefoxVersion == 71 && isFxAEnabled && !usesFirefoxSync",
     "template": "whatsnew_panel_message",
@@ -258,6 +258,7 @@
     }
   },
   {
+    "id": "WHATS_NEW_MOBILE_FEAT_1_71_NONFXA",
     "content": {
       "body": "Automatically clear your history and cookies with Private Browsing mode on mobile.",
       "bucket_id": "WHATS_NEW_MOBILE_FEAT_1_71_NONFXA",
@@ -268,7 +269,6 @@
       "published_date": 1576509418500,
       "title": "Leave no trace"
     },
-    "id": "WHATS_NEW_MOBILE_FEAT_1_71_NONFXA",
     "order": 2,
     "targeting": "localeLanguageCode == 'en' && firefoxVersion == 71 && isFxAEnabled && !usesFirefoxSync",
     "template": "whatsnew_panel_message",
@@ -277,6 +277,7 @@
     }
   },
   {
+    "id": "WHATS_NEW_MOBILE_71_NONFXA",
     "content": {
       "body": "Enhanced Tracking Protection is on by default in Firefox mobile, blocking 2000+ trackers from chasing you around the web.",
       "bucket_id": "WHATS_NEW_MOBILE_71_NONFXA",
@@ -288,7 +289,6 @@
       "published_date": 1576509418500,
       "title": "Your privacy is automatic on mobile, too"
     },
-    "id": "WHATS_NEW_MOBILE_71_NONFXA",
     "order": 1,
     "targeting": "localeLanguageCode == 'en' && firefoxVersion == 71 && isFxAEnabled && !usesFirefoxSync",
     "template": "whatsnew_panel_message",
@@ -297,6 +297,7 @@
     }
   },
   {
+    "id": "WHATS_NEW_71_1",
     "content": {
       "body": {
         "string_id": "cfr-whatsnew-fx70-body"
@@ -316,7 +317,6 @@
         "string_id": "cfr-whatsnew-fx70-title"
       }
     },
-    "id": "WHATS_NEW_71_1",
     "order": 1,
     "targeting": "firefoxVersion == 71 && localeLanguageCode != 'en'",
     "template": "whatsnew_panel_message",

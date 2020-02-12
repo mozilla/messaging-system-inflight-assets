@@ -1,4 +1,5 @@
-- content:
+- id: YOUTUBE_ENHANCE_3_72
+  content:
     addon:
       amo_url: https://addons.mozilla.org/firefox/addon/enhancer-for-youtube/
       author: Maxime RF
@@ -44,7 +45,6 @@
       set playback speed and volume, remove annotations, and more.
   frequency:
     lifetime: 3
-  id: YOUTUBE_ENHANCE_3_72
   targeting: "\n      localeLanguageCode == \"en\" &&\n      (xpinstallEnabled ==\
     \ true) &&\n      ([\"enhancerforyoutube@maximerf.addons.mozilla.org\",\"{dc8f61ab-5e98-4027-98ef-bb2ff6060d71}\"\
     ,\"{7b1bf0b6-a1b9-42b0-b75d-252036438bdc}\",\"jid0-UVAeBCfd34Kk5usS8A1CBiobvM8@jetpack\"\
@@ -58,7 +58,8 @@
     params:
     - www.youtube.com
     - youtube.com
-- content:
+- id: YOUTUBE_ENHANCE_3
+  content:
     addon:
       amo_url: https://addons.mozilla.org/firefox/addon/enhancer-for-youtube/
       author: Maxime RF
@@ -104,7 +105,6 @@
       set playback speed and volume, remove annotations, and more.
   frequency:
     lifetime: 3
-  id: YOUTUBE_ENHANCE_3
   targeting: "\n      localeLanguageCode == \"en\" &&\n      (xpinstallEnabled ==\
     \ true) &&\n      ([\"enhancerforyoutube@maximerf.addons.mozilla.org\",\"{dc8f61ab-5e98-4027-98ef-bb2ff6060d71}\"\
     ,\"{7b1bf0b6-a1b9-42b0-b75d-252036438bdc}\",\"jid0-UVAeBCfd34Kk5usS8A1CBiobvM8@jetpack\"\
@@ -118,7 +118,8 @@
     params:
     - www.youtube.com
     - youtube.com
-- content:
+- id: GOOGLE_TRANSLATE_3_72
+  content:
     addon:
       amo_url: https://addons.mozilla.org/firefox/addon/to-google-translate/
       author: Juan Escobar
@@ -163,7 +164,6 @@
       to open the context menu, and choose a text or aural translation.
   frequency:
     lifetime: 3
-  id: GOOGLE_TRANSLATE_3_72
   targeting: "\n      localeLanguageCode == \"en\" &&\n      (xpinstallEnabled ==\
     \ true) &&\n      ([\"jid1-93WyvpgvxzGATw@jetpack\",\"{087ef4e1-4286-4be6-9aa3-8d6c420ee1db}\"\
     ,\"{4170faaa-ee87-4a0e-b57a-1aec49282887}\",\"jid1-TMndP6cdKgxLcQ@jetpack\",\"\
@@ -182,7 +182,8 @@
     id: openURL
     params:
     - translate.google.com
-- content:
+- id: GOOGLE_TRANSLATE_3
+  content:
     addon:
       amo_url: https://addons.mozilla.org/firefox/addon/to-google-translate/
       author: Juan Escobar
@@ -228,7 +229,6 @@
       to open the context menu, and choose a text or aural translation.
   frequency:
     lifetime: 3
-  id: GOOGLE_TRANSLATE_3
   targeting: "\n      localeLanguageCode == \"en\" &&\n      (xpinstallEnabled ==\
     \ true) &&\n      ([\"jid1-93WyvpgvxzGATw@jetpack\",\"{087ef4e1-4286-4be6-9aa3-8d6c420ee1db}\"\
     ,\"{4170faaa-ee87-4a0e-b57a-1aec49282887}\",\"jid1-TMndP6cdKgxLcQ@jetpack\",\"\
@@ -304,7 +304,8 @@
     params:
     - www.facebook.com
     - facebook.com
-- content:
+- id: FACEBOOK_CONTAINER_3
+  content:
     addon:
       amo_url: https://addons.mozilla.org/firefox/addon/facebook-container/
       author: Mozilla
@@ -350,7 +351,6 @@
       way you normally do without annoying ads following you around.
   frequency:
     lifetime: 3
-  id: FACEBOOK_CONTAINER_3
   targeting: "\n      localeLanguageCode == \"en\" &&\n      (xpinstallEnabled ==\
     \ true) &&\n      ([\"@contain-facebook\",\"{bb1b80be-e6b3-40a1-9b6e-9d4073343f0b}\"\
     ,\"{a50d61ca-d27b-437a-8b52-5fd801a0a88b}\"] intersect addonsInfo.addons|keys)|length\
@@ -362,7 +362,8 @@
     params:
     - www.facebook.com
     - facebook.com
-- content:
+- id: MILESTONE_MESSAGE
+  content:
     anchor_id: tracking-protection-icon-box
     bucket_id: CFR_MILESTONE_MESSAGE
     buttons:
@@ -381,14 +382,14 @@
     text: ''
   frequency:
     lifetime: 7
-  id: MILESTONE_MESSAGE
   targeting: pageLoad >= 4
   template: milestone_message
   trigger:
     id: trackingProtection
     params:
     - ContentBlockingMilestone
-- content:
+- id: SEND_TAB_CFR
+  content:
     bucket_id: SEND_TAB_CFR
     buttons:
       primary:
@@ -426,7 +427,6 @@
       string_id: cfr-doorhanger-send-tab-body
   frequency:
     lifetime: 3
-  id: SEND_TAB_CFR
   targeting: isFxAEnabled == true && firefoxVersion >= 71 && userPrefs.cfrFeatures
   template: cfr_doorhanger
   trigger:
@@ -524,7 +524,8 @@
     - www.medium.com
     - bleacherreport.com
     - www.bleacherreport.com
-- content:
+- id: SEND_RECIPE_TAB_CFR
+  content:
     bucket_id: SEND_RECIPE_TAB_CFR
     buttons:
       primary:
@@ -562,7 +563,6 @@
       string_id: cfr-doorhanger-send-tab-body
   frequency:
     lifetime: 3
-  id: SEND_RECIPE_TAB_CFR
   priority: 1
   targeting: isFxAEnabled == true && firefoxVersion >= 71 && userPrefs.cfrFeatures
   template: cfr_doorhanger
@@ -803,7 +803,8 @@
     - www.spoonful.com
     - kraftrecipes.com
     - www.kraftrecipes.com
-- content:
+- id: PDF_URL_FFX_SEND
+  content:
     bucket_id: PDF_URL_FFX_SEND
     buttons:
       primary:
@@ -842,7 +843,6 @@
       string_id: cfr-doorhanger-firefox-send-body
   frequency:
     lifetime: 3
-  id: PDF_URL_FFX_SEND
   schema: 1569593455712
   targeting: firefoxVersion >= 71 && userPrefs.cfrFeatures
   template: cfr_doorhanger
@@ -850,7 +850,8 @@
     id: openURL
     patterns:
     - '*://*/*.pdf'
-- content:
+- id: BOOKMARK_SYNC_CFR
+  content:
     bucket_id: BOOKMARK_SYNC_CFR
     buttons:
       primary:
@@ -888,13 +889,13 @@
       string_id: cfr-doorhanger-sync-bookmarks-body
   frequency:
     lifetime: 3
-  id: BOOKMARK_SYNC_CFR
   schema: 1569593098563
   targeting: 'false'
   template: cfr_doorhanger
   trigger:
     id: openBookmarkedURL
-- content:
+- id: WNP_MOMENTS_2
+  content:
     action:
       data:
         expireDelta: 604800000
@@ -902,14 +903,14 @@
       id: moments-wnp
     bucket_id: WNP_MOMENTS_2
     category: cfrFeatures
-  id: WNP_MOMENTS_2
   targeting: firefoxVersion >= 69 && localeLanguageCode in ["en","fr","de"] && ((currentDate|date
     - profileAgeCreated) / 86400000) >= 17 && ((currentDate|date - profileAgeCreated)
     / 86400000) < 30
   template: update_action
   trigger:
     id: momentsUpdate
-- content:
+- id: PIN_TAB
+  content:
     bucket_id: CFR_PIN_TAB
     buttons:
       primary:
@@ -950,7 +951,6 @@
       string_id: cfr-doorhanger-pintab-description
   frequency:
     lifetime: 3
-  id: PIN_TAB
   targeting: locale in ["en-US","en-CA","en-AU","en-GB","en-ZA","en-NZ","fr","de"]
     && !hasPinnedTabs && recentVisits[.timestamp > (currentDate|date - 3600 * 1000
     * 1)]|length >= 3 && firefoxVersion < 72
@@ -992,7 +992,8 @@
     - www.amazon.fr
     - amazon.de
     - www.amazon.de
-- content:
+- id: PIN_TAB_72
+  content:
     bucket_id: CFR_PIN_TAB
     buttons:
       primary:
@@ -1033,7 +1034,6 @@
       string_id: cfr-doorhanger-pintab-description
   frequency:
     lifetime: 3
-  id: PIN_TAB_72
   targeting: locale in ["en-US","en-CA","en-AU","en-GB","en-ZA","en-NZ","fr","de"]
     && !hasPinnedTabs && recentVisits[.timestamp > (currentDate|date - 3600 * 1000
     * 1)]|length >= 3 && firefoxVersion >= 72
@@ -1075,7 +1075,8 @@
     - www.amazon.fr
     - amazon.de
     - www.amazon.de
-- content:
+- id: SAVE_LOGIN
+  content:
     bucket_id: CFR_SAVE_LOGIN
     buttons:
       primary:
@@ -1113,14 +1114,14 @@
       string_id: cfr-doorhanger-sync-logins-body
   frequency:
     lifetime: 3
-  id: SAVE_LOGIN
   targeting: isFxAEnabled == true && usesFirefoxSync == false && firefoxVersion >=
     70 && firefoxVersion < 72
   template: cfr_doorhanger
   trigger:
     id: newSavedLogin
   weight: 100
-- content:
+- id: SAVE_LOGIN_72
+  content:
     bucket_id: CFR_SAVE_LOGIN
     buttons:
       primary:
@@ -1158,13 +1159,13 @@
       string_id: cfr-doorhanger-sync-logins-body
   frequency:
     lifetime: 3
-  id: SAVE_LOGIN_72
   targeting: isFxAEnabled == true && usesFirefoxSync == false && firefoxVersion >=
     72
   template: cfr_doorhanger
   trigger:
     id: newSavedLogin
-- content:
+- id: WNP_MOMENTS_1
+  content:
     action:
       data:
         expireDelta: 604800000
@@ -1172,7 +1173,6 @@
       id: moments-wnp
     bucket_id: WNP_MOMENTS_1
     category: cfrFeatures
-  id: WNP_MOMENTS_1
   targeting: firefoxVersion >= 69 && localeLanguageCode in ["en","fr","de"] && ((currentDate|date
     - profileAgeCreated) / 86400000) >= 4 && ((currentDate|date - profileAgeCreated)
     / 86400000) < 15
@@ -1193,7 +1193,8 @@
   template: update_action
   trigger:
     id: momentsUpdate
-- content:
+- id: SOCIAL_TRACKING_PROTECTION
+  content:
     anchor_id: tracking-protection-icon-box
     bucket_id: CFR_SOCIAL_TRACKING_PROTECTION
     buttons:
@@ -1232,7 +1233,6 @@
     - cap: 1
       period: 172800000
     lifetime: 2
-  id: SOCIAL_TRACKING_PROTECTION
   priority: 1
   targeting: pageLoad >= 4
   template: cfr_doorhanger
@@ -1241,7 +1241,8 @@
     params:
     - 65536
     - 537001984
-- content:
+- id: FINGERPRINTERS_PROTECTION
+  content:
     anchor_id: tracking-protection-icon-box
     bucket_id: CFR_FINGERPRINTERS_PROTECTION
     buttons:
@@ -1280,7 +1281,6 @@
     - cap: 1
       period: 172800000
     lifetime: 2
-  id: FINGERPRINTERS_PROTECTION
   priority: 2
   targeting: pageLoad >= 4
   template: cfr_doorhanger
@@ -1288,7 +1288,8 @@
     id: contentBlocking
     params:
     - 64
-- content:
+- id: CRYPTOMINERS_PROTECTION
+  content:
     anchor_id: tracking-protection-icon-box
     bucket_id: CFR_CRYPTOMINERS_PROTECTION
     buttons:
@@ -1327,7 +1328,6 @@
     - cap: 1
       period: 172800000
     lifetime: 2
-  id: CRYPTOMINERS_PROTECTION
   priority: 3
   targeting: pageLoad >= 4
   template: cfr_doorhanger
