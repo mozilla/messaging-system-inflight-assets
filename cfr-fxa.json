@@ -1,100 +1,100 @@
 [
   {
-    "weight": 100,
+    "id": "FXA_BOOKMARK_PANEL_71_plus",
     "content": {
-      "cta": {
-        "string_id": "cfr-doorhanger-bookmark-fxa-link-text"
-      },
-      "text": {
-        "string_id": "cfr-doorhanger-bookmark-fxa-body"
+      "background_color_1": "#7d31ae",
+      "background_color_2": "#5033be",
+      "close_button": {
+        "tooltiptext": {
+          "string_id": "cfr-doorhanger-bookmark-fxa-close-btn-tooltip"
+        }
       },
       "color": "white",
-      "title": {
-        "string_id": "cfr-doorhanger-bookmark-fxa-header"
+      "cta": {
+        "string_id": "cfr-doorhanger-bookmark-fxa-link-text"
       },
       "info_icon": {
         "tooltiptext": {
           "string_id": "cfr-doorhanger-bookmark-fxa-info-icon-tooltip"
         }
       },
-      "close_button": {
-        "tooltiptext": {
-          "string_id": "cfr-doorhanger-bookmark-fxa-close-btn-tooltip"
-        }
+      "text": {
+        "string_id": "cfr-doorhanger-bookmark-fxa-body"
       },
-      "background_color_1": "#7d31ae",
-      "background_color_2": "#5033be"
+      "title": {
+        "string_id": "cfr-doorhanger-bookmark-fxa-header"
+      }
     },
-    "trigger": {
-      "id": "bookmark-panel"
-    },
-    "template": "fxa_bookmark_panel",
     "frequency": {
       "lifetime": 3
     },
     "targeting": "locale != 'ru' && !usesFirefoxSync && isFxAEnabled == true && totalBookmarksCount >= 10 && firefoxVersion >= 70 && userPrefs.cfrFeatures",
-    "id": "FXA_BOOKMARK_PANEL_71_plus"
+    "template": "fxa_bookmark_panel",
+    "trigger": {
+      "id": "bookmark-panel"
+    },
+    "weight": 100
   },
   {
-    "weight": 100,
+    "id": "FXA_BOOKMARK_PANEL_1",
     "content": {
-      "cta": {
-        "string_id": "cfr-doorhanger-bookmark-fxa-link-text"
-      },
-      "text": {
-        "string_id": "cfr-doorhanger-bookmark-fxa-body"
+      "background_color_1": "#7d31ae",
+      "background_color_2": "#5033be",
+      "close_button": {
+        "tooltiptext": {
+          "string_id": "cfr-doorhanger-bookmark-fxa-close-btn-tooltip"
+        }
       },
       "color": "white",
-      "title": {
-        "string_id": "cfr-doorhanger-bookmark-fxa-header"
+      "cta": {
+        "string_id": "cfr-doorhanger-bookmark-fxa-link-text"
       },
       "info_icon": {
         "tooltiptext": {
           "string_id": "cfr-doorhanger-bookmark-fxa-info-icon-tooltip"
         }
       },
-      "close_button": {
-        "tooltiptext": {
-          "string_id": "cfr-doorhanger-bookmark-fxa-close-btn-tooltip"
-        }
+      "text": {
+        "string_id": "cfr-doorhanger-bookmark-fxa-body"
       },
-      "background_color_1": "#7d31ae",
-      "background_color_2": "#5033be"
+      "title": {
+        "string_id": "cfr-doorhanger-bookmark-fxa-header"
+      }
     },
-    "trigger": {
-      "id": "bookmark-panel"
-    },
-    "template": "fxa_bookmark_panel",
     "frequency": {
       "lifetime": 3
     },
     "targeting": "locale != 'ru' && !usesFirefoxSync && isFxAEnabled == true && totalBookmarksCount >= 10 && firefoxVersion == 69",
-    "id": "FXA_BOOKMARK_PANEL_1"
-  },
-  {
-    "weight": 100,
-    "content": {
-      "cta": "cfr-doorhanger-bookmark-fxa-link-text",
-      "text": "cfr-doorhanger-bookmark-fxa-body",
-      "color": "white",
-      "title": "cfr-doorhanger-bookmark-fxa-header",
-      "info_icon": {
-        "tooltiptext": "cfr-doorhanger-bookmark-fxa-info-icon-tooltip"
-      },
-      "close_button": {
-        "tooltiptext": "cfr-doorhanger-bookmark-fxa-close-btn-tooltip"
-      },
-      "background_color_1": "#7d31ae",
-      "background_color_2": "#5033be"
-    },
+    "template": "fxa_bookmark_panel",
     "trigger": {
       "id": "bookmark-panel"
     },
-    "template": "fxa_bookmark_panel",
+    "weight": 100
+  },
+  {
+    "id": "FXA_BOOKMARK_PANEL_68",
+    "content": {
+      "background_color_1": "#7d31ae",
+      "background_color_2": "#5033be",
+      "close_button": {
+        "tooltiptext": "cfr-doorhanger-bookmark-fxa-close-btn-tooltip"
+      },
+      "color": "white",
+      "cta": "cfr-doorhanger-bookmark-fxa-link-text",
+      "info_icon": {
+        "tooltiptext": "cfr-doorhanger-bookmark-fxa-info-icon-tooltip"
+      },
+      "text": "cfr-doorhanger-bookmark-fxa-body",
+      "title": "cfr-doorhanger-bookmark-fxa-header"
+    },
     "frequency": {
       "lifetime": 3
     },
     "targeting": "locale != 'ru' && !usesFirefoxSync && isFxAEnabled == true && totalBookmarksCount >= 10 && firefoxVersion == 68",
-    "id": "FXA_BOOKMARK_PANEL_68"
+    "template": "fxa_bookmark_panel",
+    "trigger": {
+      "id": "bookmark-panel"
+    },
+    "weight": 100
   }
 ]
