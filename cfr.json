@@ -1559,5 +1559,24 @@
     "template": "update_action",
     "targeting": "firefoxVersion >= 69 && localeLanguageCode in [\"en\",\"fr\",\"de\"] && ((currentDate|date - profileAgeCreated) / 86400000) >= 4 && ((currentDate|date - profileAgeCreated) / 86400000) < 15",
     "id": "WNP_MOMENTS_1"
+  },
+  {
+    "content": {
+      "action": {
+        "id": "moments-wnp",
+        "data": {
+          "url": "https://www.mozilla.org/firefox/welcome/6/",
+          "expireDelta": 604800000
+        }
+      },
+      "category": "cfrFeatures",
+      "bucket_id": "WNP_MOMENTS_DEFAULT_BROWSER"
+    },
+    "trigger": {
+      "id": "momentsUpdate"
+    },
+    "template": "update_action",
+    "targeting": "firefoxVersion >= 73 && localeLanguageCode in [\"en\",\"fr\",\"de\"] && ((currentDate|date - profileAgeCreated) / 86400000) > 30 && !isDefaultBrowser",
+    "id": "WNP_MOMENTS_DEFAULT_BROWSER"
   }
 ]
