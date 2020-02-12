@@ -19,7 +19,7 @@
     "frequency": {
       "lifetime": 100
     },
-    "targeting": "firefoxVersion == 72 && (hasAccessedFxAPanel || currentDate|date - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_72'] || (messageImpressions['WHATS_NEW_BADGE_72']|length >= 1 && currentDate|date - messageImpressions['WHATS_NEW_BADGE_72'][0] <= 345600000)) && 'browser.messaging-system.whatsNewPanel.enabled'|preferenceValue",
+    "targeting": "firefoxVersion == 72 && (usesFirefoxSync || hasAccessedFxAPanel || currentDate|date - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_72'] || (messageImpressions['WHATS_NEW_BADGE_72']|length >= 1 && currentDate|date - messageImpressions['WHATS_NEW_BADGE_72'][0] <= 345600000)) && 'browser.messaging-system.whatsNewPanel.enabled'|preferenceValue",
     "id": "WHATS_NEW_BADGE_72"
   },
   {
