@@ -1036,7 +1036,7 @@
     lifetime: 3
   targeting: locale in ["en-US","en-CA","en-AU","en-GB","en-ZA","en-NZ","fr","de"]
     && !hasPinnedTabs && recentVisits[.timestamp > (currentDate|date - 3600 * 1000
-    * 1)]|length >= 3 && firefoxVersion >= 72
+    * 1)]|length >= 3 && firefoxVersion >= 72 && userPrefs.cfrFeatures
   template: cfr_doorhanger
   trigger:
     id: frequentVisits
