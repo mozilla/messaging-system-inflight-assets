@@ -1335,7 +1335,7 @@
     id: contentBlocking
     params:
     - 2048
-- id: IMPORT_PASSWORD
+- id: CFR_EXP_IMPORT_PASSWORD
   content:
     bucket_id: CFR_IMPORT_PASSWORD
     buttons:
@@ -1381,7 +1381,6 @@
     id: openURL
     params:
     - docs.google.com
-    - www.docs.google.com
     - calendar.google.com
     - mail.google.com
     - outlook.live.com
