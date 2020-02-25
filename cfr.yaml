@@ -1375,7 +1375,7 @@
       you like to import those settings?
   frequency:
     lifetime: 3
-  targeting: firefoxVersion >= 73 && locale = "en-US" && ((currentDate|date - profileAgeCreated) / 86400000) < 7 && userPrefs.cfrFeatures && 'browser.newtabpage.activity-stream.asrouter.providers.cfr'|preferenceValue == '{"id":"cfr","enabled":true,"type":"remote-settings","bucket":"cfr","frequency":{"custom":[{"period":"daily","cap":1}]},"categories":["cfrAddons","cfrFeatures"],"updateCycleInMs":3600000,"cohort":"import_password_treatment"}'
+  targeting: firefoxVersion >= 73 && locale == "en-US" && ((currentDate|date - profileAgeCreated) / 86400000) < 7 && userPrefs.cfrFeatures && 'browser.newtabpage.activity-stream.asrouter.providers.cfr'|preferenceValue == '{"id":"cfr","enabled":true,"type":"remote-settings","bucket":"cfr","frequency":{"custom":[{"period":"daily","cap":1}]},"categories":["cfrAddons","cfrFeatures"],"updateCycleInMs":3600000,"cohort":"import_password_treatment"}'
   template: cfr_doorhanger
   trigger:
     id: openURL
