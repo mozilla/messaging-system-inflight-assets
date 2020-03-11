@@ -37,3 +37,20 @@
   template: toolbar_badge
   trigger:
     id: toolbarBadgeUpdate
+- id: WHATS_NEW_PERMISSION_PROMPT_72
+  content:
+    body:
+      string_id: cfr-whatsnew-permission-prompt-body
+    bucket_id: WHATS_NEW_PERMISSION_PROMPT_72
+    cta_type: OPEN_URL
+    cta_url: https://support.mozilla.org/1/firefox/%VERSION%/%OS%/%LOCALE%/whats-new-notifications
+    link_text:
+      string_id: cfr-whatsnew-permission-prompt-cta
+    published_date: 1578405980832
+    title:
+      string_id: cfr-whatsnew-permission-prompt-header
+  order: 2
+  targeting: firefoxVersion >= 72
+  template: whatsnew_panel_message
+  trigger:
+    id: whatsNewPanelOpened

@@ -108,30 +108,6 @@
     }
   },
   {
-    "id": "WHATS_NEW_PERMISSION_PROMPT_72",
-    "content": {
-      "body": {
-        "string_id": "cfr-whatsnew-permission-prompt-body"
-      },
-      "bucket_id": "WHATS_NEW_PERMISSION_PROMPT_72",
-      "cta_type": "OPEN_URL",
-      "cta_url": "https://support.mozilla.org/1/firefox/%VERSION%/%OS%/%LOCALE%/whats-new-notifications",
-      "link_text": {
-        "string_id": "cfr-whatsnew-permission-prompt-cta"
-      },
-      "published_date": 1578405980832,
-      "title": {
-        "string_id": "cfr-whatsnew-permission-prompt-header"
-      }
-    },
-    "order": 2,
-    "targeting": "firefoxVersion >= 72",
-    "template": "whatsnew_panel_message",
-    "trigger": {
-      "id": "whatsNewPanelOpened"
-    }
-  },
-  {
     "id": "WHATS_NEW_PIP_72",
     "content": {
       "body": {
@@ -322,6 +298,57 @@
     "template": "whatsnew_panel_message",
     "trigger": {
       "id": "whatsNewPanelOpened"
+    }
+  },
+  {
+    "id": "WHATS_NEW_AWESOMEBAR_75",
+    "template": "whatsnew_panel_message",
+    "order": 1,
+    "content": {
+      "bucket_id": "WHATS_NEW_AWESOMEBAR_75",
+      "published_date": 1583941100700,
+      "title": {
+        "string_id": "cfr-whatsnew-searchbar-title"
+      },
+      "icon_url": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxwYXRoIGQ9Ik0xNS43NDUgMTQuMzMxbC00LjgyMi00LjgyMmE2LjAxOSA2LjAxOSAwIDEgMC0xLjQxNCAxLjQxNGw0LjgyMiA0LjgyMmExIDEgMCAwIDAgMS40MTQtMS40MTR6bS05LjcwNy00LjI5M2E0IDQgMCAxIDEgMC04IDQgNCAwIDAgMSAwIDh6IiBpZD0iYSIvPjwvZGVmcz48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGZpbGw9IiMwMDYwREYiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgcng9IjIiLz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4IDgpIj48cGF0aCBkPSJNMCAwaDE2djE2SDB6Ii8+PG1hc2sgaWQ9ImIiIGZpbGw9IiNmZmYiPjx1c2UgeGxpbms6aHJlZj0iI2EiLz48L21hc2s+PHBhdGggZD0iTTAgMGgxNnYxNkgweiIgbWFzaz0idXJsKCNiKSIgZmlsbD0iI0ZGRiIvPjwvZz48L2c+PC9zdmc+",
+      "icon_alt": {
+        "string_id": "cfr-whatsnew-searchbar-icon-alt-text"
+      },
+      "body": {
+        "string_id": "cfr-whatsnew-searchbar-body-topsites"
+      },
+      "cta_url": "https://support.mozilla.org/1/firefox/%VERSION%/%OS%/%LOCALE%/address-bar-search",
+      "cta_type": "OPEN_URL",
+      "link_text": {
+        "string_id": "cfr-whatsnew-pip-cta"
+      }
+    },
+    "targeting": "firefoxVersion >= 75",
+    "trigger": {
+      "id": "whatsNewPanelOpened"
+    }
+  },
+  {
+    "id": "WHATS_NEW_BADGE_75",
+    "content": {
+      "action": {
+        "id": "show-whatsnew-button"
+      },
+      "badgeDescription": {
+        "string_id": "cfr-badge-reader-label-newfeature"
+      },
+      "bucket_id": "WHATS_NEW_BADGE_75",
+      "delay": 300000,
+      "target": "whats-new-menu-button"
+    },
+    "frequency": {
+      "lifetime": 100
+    },
+    "priority": 5,
+    "targeting": "firefoxVersion == 75 && (usesFirefoxSync || hasAccessedFxAPanel || currentDate|date - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_75'] || (messageImpressions['WHATS_NEW_BADGE_75']|length >= 1 && currentDate|date - messageImpressions['WHATS_NEW_BADGE_75'][0] <= 345600000)) && 'browser.messaging-system.whatsNewPanel.enabled'|preferenceValue",
+    "template": "toolbar_badge",
+    "trigger": {
+      "id": "toolbarBadgeUpdate"
     }
   }
 ]
