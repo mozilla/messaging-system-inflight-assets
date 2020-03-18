@@ -1128,6 +1128,7 @@
         action:
           data:
             category: sync
+            entrypoint: cfr-save-login
           type: OPEN_PREFERENCES_PAGE
         label:
           string_id: cfr-doorhanger-sync-logins-ok-button

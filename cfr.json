@@ -1478,7 +1478,8 @@
         "primary": {
           "action": {
             "data": {
-              "category": "sync"
+              "category": "sync",
+              "entrypoint": "cfr-save-login"
             },
             "type": "OPEN_PREFERENCES_PAGE"
           },
