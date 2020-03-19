@@ -18,8 +18,8 @@
   frequency:
     lifetime: 3
   targeting: |
-    !usesFirefoxSync && isFxAEnabled == true && totalBookmarksCount
-    >= 10 && firefoxVersion >= 70 && userPrefs.cfrFeatures
+    !usesFirefoxSync && isFxAEnabled == true && totalBookmarksCount >= 10
+    && firefoxVersion >= 70 && userPrefs.cfrFeatures
   template: fxa_bookmark_panel
   trigger:
     id: bookmark-panel
