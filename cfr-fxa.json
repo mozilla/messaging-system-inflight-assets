@@ -4,6 +4,7 @@
     "content": {
       "background_color_1": "#7d31ae",
       "background_color_2": "#5033be",
+      "bucket_id": "FXA_BOOKMARK_PANEL_71_plus",
       "close_button": {
         "tooltiptext": {
           "string_id": "cfr-doorhanger-bookmark-fxa-close-btn-tooltip"
