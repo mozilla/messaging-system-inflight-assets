@@ -4,10 +4,10 @@ CMD = 'import sys, yaml, json; json.dump(yaml.load(sys.stdin, Loader=yaml.Loader
 
 all: cfr.json cfr-archived.json cfr-fxa.json cfr-fxa-archived.json whats-new-panel.json whats-new-panel-archived.json
 
-%.json:%.yaml post-build
+%.json:%.yaml pre-build
 	$(PYTHON) $(FLAGS) $(CMD) < $< > $@
 
-post-build:
+pre-build:
 	yamllint .
 
 .PHONY: clean
