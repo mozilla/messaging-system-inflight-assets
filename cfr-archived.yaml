@@ -10,18 +10,18 @@
         label:
           string_id: cfr-doorhanger-sync-logins-ok-button
       secondary:
-      - action:
-          type: CANCEL
-        label:
-          string_id: cfr-doorhanger-extension-cancel-button
-      - label:
-          string_id: cfr-doorhanger-extension-never-show-recommendation
-      - action:
-          data:
-            category: general-cfrfeatures
-          type: OPEN_PREFERENCES_PAGE
-        label:
-          string_id: cfr-doorhanger-extension-manage-settings-button
+        - action:
+            type: CANCEL
+          label:
+            string_id: cfr-doorhanger-extension-cancel-button
+        - label:
+            string_id: cfr-doorhanger-extension-never-show-recommendation
+        - action:
+            data:
+              category: general-cfrfeatures
+            type: OPEN_PREFERENCES_PAGE
+          label:
+            string_id: cfr-doorhanger-extension-manage-settings-button
     category: cfrFeatures
     heading_text:
       string_id: cfr-doorhanger-sync-logins-header
@@ -63,19 +63,19 @@
         label:
           string_id: cfr-doorhanger-extension-ok-button
       secondary:
-      - action:
-          type: CANCEL
-        label:
-          string_id: cfr-doorhanger-extension-cancel-button
-      - label:
-          string_id: cfr-doorhanger-extension-never-show-recommendation
-      - action:
-          data:
-            category: general-cfraddons
-            origin: CFR
-          type: OPEN_PREFERENCES_PAGE
-        label:
-          string_id: cfr-doorhanger-extension-manage-settings-button
+        - action:
+            type: CANCEL
+          label:
+            string_id: cfr-doorhanger-extension-cancel-button
+        - label:
+            string_id: cfr-doorhanger-extension-never-show-recommendation
+        - action:
+            data:
+              category: general-cfraddons
+              origin: CFR
+            type: OPEN_PREFERENCES_PAGE
+          label:
+            string_id: cfr-doorhanger-extension-manage-settings-button
     category: cfrAddons
     heading_text:
       string_id: cfr-doorhanger-extension-heading
@@ -101,8 +101,8 @@
   trigger:
     id: openURL
     params:
-    - www.youtube.com
-    - youtube.com
+      - www.youtube.com
+      - youtube.com
 - id: GOOGLE_TRANSLATE_3
   content:
     addon:
@@ -123,19 +123,19 @@
         label:
           string_id: cfr-doorhanger-extension-ok-button
       secondary:
-      - action:
-          type: CANCEL
-        label:
-          string_id: cfr-doorhanger-extension-cancel-button
-      - label:
-          string_id: cfr-doorhanger-extension-never-show-recommendation
-      - action:
-          data:
-            category: general-cfraddons
-            origin: CFR
-          type: OPEN_PREFERENCES_PAGE
-        label:
-          string_id: cfr-doorhanger-extension-manage-settings-button
+        - action:
+            type: CANCEL
+          label:
+            string_id: cfr-doorhanger-extension-cancel-button
+        - label:
+            string_id: cfr-doorhanger-extension-never-show-recommendation
+        - action:
+            data:
+              category: general-cfraddons
+              origin: CFR
+            type: OPEN_PREFERENCES_PAGE
+          label:
+            string_id: cfr-doorhanger-extension-manage-settings-button
     category: cfrAddons
     heading_text:
       string_id: cfr-doorhanger-extension-heading
@@ -167,7 +167,7 @@
   trigger:
     id: openURL
     params:
-    - translate.google.com
+      - translate.google.com
 - id: FACEBOOK_CONTAINER_3
   content:
     addon:
@@ -188,19 +188,19 @@
         label:
           string_id: cfr-doorhanger-extension-ok-button
       secondary:
-      - action:
-          type: CANCEL
-        label:
-          string_id: cfr-doorhanger-extension-cancel-button
-      - label:
-          string_id: cfr-doorhanger-extension-never-show-recommendation
-      - action:
-          data:
-            category: general-cfraddons
-            origin: CFR
-          type: OPEN_PREFERENCES_PAGE
-        label:
-          string_id: cfr-doorhanger-extension-manage-settings-button
+        - action:
+            type: CANCEL
+          label:
+            string_id: cfr-doorhanger-extension-cancel-button
+        - label:
+            string_id: cfr-doorhanger-extension-never-show-recommendation
+        - action:
+            data:
+              category: general-cfraddons
+              origin: CFR
+            type: OPEN_PREFERENCES_PAGE
+          label:
+            string_id: cfr-doorhanger-extension-manage-settings-button
     category: cfrAddons
     heading_text:
       string_id: cfr-doorhanger-extension-heading
@@ -224,8 +224,8 @@
   trigger:
     id: openURL
     params:
-    - www.facebook.com
-    - facebook.com
+      - www.facebook.com
+      - facebook.com
 - id: PIN_TAB
   content:
     bucket_id: CFR_PIN_TAB
@@ -236,25 +236,25 @@
         label:
           string_id: cfr-doorhanger-pintab-ok-button
       secondary:
-      - action:
-          type: CANCEL
-        label:
-          string_id: cfr-doorhanger-extension-cancel-button
-      - label:
-          string_id: cfr-doorhanger-extension-never-show-recommendation
-      - action:
-          data:
-            category: general-cfrfeatures
-            origin: CFR
-          type: OPEN_PREFERENCES_PAGE
-        label:
-          string_id: cfr-doorhanger-extension-manage-settings-button
+        - action:
+            type: CANCEL
+          label:
+            string_id: cfr-doorhanger-extension-cancel-button
+        - label:
+            string_id: cfr-doorhanger-extension-never-show-recommendation
+        - action:
+            data:
+              category: general-cfrfeatures
+              origin: CFR
+            type: OPEN_PREFERENCES_PAGE
+          label:
+            string_id: cfr-doorhanger-extension-manage-settings-button
     category: cfrFeatures
     descriptionDetails:
       steps:
-      - string_id: cfr-doorhanger-pintab-step1
-      - string_id: cfr-doorhanger-pintab-step2
-      - string_id: cfr-doorhanger-pintab-step3
+        - string_id: cfr-doorhanger-pintab-step1
+        - string_id: cfr-doorhanger-pintab-step2
+        - string_id: cfr-doorhanger-pintab-step3
     heading_text:
       string_id: cfr-doorhanger-pintab-heading
     info_icon:
@@ -275,40 +275,40 @@
   trigger:
     id: frequentVisits
     params:
-    - docs.google.com
-    - www.docs.google.com
-    - calendar.google.com
-    - messenger.com
-    - www.messenger.com
-    - web.whatsapp.com
-    - mail.google.com
-    - outlook.live.com
-    - facebook.com
-    - www.facebook.com
-    - twitter.com
-    - www.twitter.com
-    - reddit.com
-    - www.reddit.com
-    - github.com
-    - www.github.com
-    - youtube.com
-    - www.youtube.com
-    - feedly.com
-    - www.feedly.com
-    - drive.google.com
-    - amazon.com
-    - www.amazon.com
-    - messages.android.com
-    - amazon.ca
-    - www.amazon.ca
-    - amazon.com.au
-    - www.amazon.com.au
-    - amazon.co.uk
-    - www.amazon.co.uk
-    - amazon.fr
-    - www.amazon.fr
-    - amazon.de
-    - www.amazon.de
+      - docs.google.com
+      - www.docs.google.com
+      - calendar.google.com
+      - messenger.com
+      - www.messenger.com
+      - web.whatsapp.com
+      - mail.google.com
+      - outlook.live.com
+      - facebook.com
+      - www.facebook.com
+      - twitter.com
+      - www.twitter.com
+      - reddit.com
+      - www.reddit.com
+      - github.com
+      - www.github.com
+      - youtube.com
+      - www.youtube.com
+      - feedly.com
+      - www.feedly.com
+      - drive.google.com
+      - amazon.com
+      - www.amazon.com
+      - messages.android.com
+      - amazon.ca
+      - www.amazon.ca
+      - amazon.com.au
+      - www.amazon.com.au
+      - amazon.co.uk
+      - www.amazon.co.uk
+      - amazon.fr
+      - www.amazon.fr
+      - amazon.de
+      - www.amazon.de
 - id: SAVE_LOGIN
   content:
     bucket_id: CFR_SAVE_LOGIN
@@ -321,18 +321,18 @@
         label:
           string_id: cfr-doorhanger-sync-logins-ok-button
       secondary:
-      - action:
-          type: CANCEL
-        label:
-          string_id: cfr-doorhanger-extension-cancel-button
-      - label:
-          string_id: cfr-doorhanger-extension-never-show-recommendation
-      - action:
-          data:
-            category: general-cfrfeatures
-          type: OPEN_PREFERENCES_PAGE
-        label:
-          string_id: cfr-doorhanger-extension-manage-settings-button
+        - action:
+            type: CANCEL
+          label:
+            string_id: cfr-doorhanger-extension-cancel-button
+        - label:
+            string_id: cfr-doorhanger-extension-never-show-recommendation
+        - action:
+            data:
+              category: general-cfrfeatures
+            type: OPEN_PREFERENCES_PAGE
+          label:
+            string_id: cfr-doorhanger-extension-manage-settings-button
     category: cfrFeatures
     heading_text:
       string_id: cfr-doorhanger-sync-logins-header

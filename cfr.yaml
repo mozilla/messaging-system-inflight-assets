@@ -18,19 +18,19 @@
         label:
           string_id: cfr-doorhanger-extension-ok-button
       secondary:
-      - action:
-          type: CANCEL
-        label:
-          string_id: cfr-doorhanger-extension-cancel-button
-      - label:
-          string_id: cfr-doorhanger-extension-never-show-recommendation
-      - action:
-          data:
-            category: general-cfraddons
-            origin: CFR
-          type: OPEN_PREFERENCES_PAGE
-        label:
-          string_id: cfr-doorhanger-extension-manage-settings-button
+        - action:
+            type: CANCEL
+          label:
+            string_id: cfr-doorhanger-extension-cancel-button
+        - label:
+            string_id: cfr-doorhanger-extension-never-show-recommendation
+        - action:
+            data:
+              category: general-cfraddons
+              origin: CFR
+            type: OPEN_PREFERENCES_PAGE
+          label:
+            string_id: cfr-doorhanger-extension-manage-settings-button
     category: cfrAddons
     heading_text:
       string_id: cfr-doorhanger-extension-heading
@@ -56,8 +56,8 @@
   trigger:
     id: openURL
     params:
-    - www.youtube.com
-    - youtube.com
+      - www.youtube.com
+      - youtube.com
 - id: GOOGLE_TRANSLATE_3_72
   content:
     addon:
@@ -78,19 +78,19 @@
         label:
           string_id: cfr-doorhanger-extension-ok-button
       secondary:
-      - action:
-          type: CANCEL
-        label:
-          string_id: cfr-doorhanger-extension-cancel-button
-      - label:
-          string_id: cfr-doorhanger-extension-never-show-recommendation
-      - action:
-          data:
-            category: general-cfraddons
-            origin: CFR
-          type: OPEN_PREFERENCES_PAGE
-        label:
-          string_id: cfr-doorhanger-extension-manage-settings-button
+        - action:
+            type: CANCEL
+          label:
+            string_id: cfr-doorhanger-extension-cancel-button
+        - label:
+            string_id: cfr-doorhanger-extension-never-show-recommendation
+        - action:
+            data:
+              category: general-cfraddons
+              origin: CFR
+            type: OPEN_PREFERENCES_PAGE
+          label:
+            string_id: cfr-doorhanger-extension-manage-settings-button
     category: cfrAddons
     heading_text:
       string_id: cfr-doorhanger-extension-heading
@@ -121,7 +121,7 @@
   trigger:
     id: openURL
     params:
-    - translate.google.com
+      - translate.google.com
 - id: FACEBOOK_CONTAINER_3_72
   content:
     addon:
@@ -142,19 +142,19 @@
         label:
           string_id: cfr-doorhanger-extension-ok-button
       secondary:
-      - action:
-          type: CANCEL
-        label:
-          string_id: cfr-doorhanger-extension-cancel-button
-      - label:
-          string_id: cfr-doorhanger-extension-never-show-recommendation
-      - action:
-          data:
-            category: general-cfraddons
-            origin: CFR
-          type: OPEN_PREFERENCES_PAGE
-        label:
-          string_id: cfr-doorhanger-extension-manage-settings-button
+        - action:
+            type: CANCEL
+          label:
+            string_id: cfr-doorhanger-extension-cancel-button
+        - label:
+            string_id: cfr-doorhanger-extension-never-show-recommendation
+        - action:
+            data:
+              category: general-cfraddons
+              origin: CFR
+            type: OPEN_PREFERENCES_PAGE
+          label:
+            string_id: cfr-doorhanger-extension-manage-settings-button
     category: cfrAddons
     heading_text:
       string_id: cfr-doorhanger-extension-heading
@@ -177,8 +177,8 @@
   trigger:
     id: openURL
     params:
-    - www.facebook.com
-    - facebook.com
+      - www.facebook.com
+      - facebook.com
 - id: MILESTONE_MESSAGE
   content:
     anchor_id: tracking-protection-icon-box
@@ -204,7 +204,7 @@
   trigger:
     id: trackingProtection
     params:
-    - ContentBlockingMilestone
+      - ContentBlockingMilestone
 - id: SEND_TAB_CFR
   content:
     bucket_id: SEND_TAB_CFR
@@ -217,18 +217,18 @@
         label:
           string_id: cfr-doorhanger-send-tab-ok-button
       secondary:
-      - action:
-          type: CANCEL
-        label:
-          string_id: cfr-doorhanger-extension-cancel-button
-      - label:
-          string_id: cfr-doorhanger-extension-never-show-recommendation
-      - action:
-          data:
-            category: general-cfrfeatures
-          type: OPEN_PREFERENCES_PAGE
-        label:
-          string_id: cfr-doorhanger-extension-manage-settings-button
+        - action:
+            type: CANCEL
+          label:
+            string_id: cfr-doorhanger-extension-cancel-button
+        - label:
+            string_id: cfr-doorhanger-extension-never-show-recommendation
+        - action:
+            data:
+              category: general-cfrfeatures
+            type: OPEN_PREFERENCES_PAGE
+          label:
+            string_id: cfr-doorhanger-extension-manage-settings-button
     category: cfrFeatures
     heading_text:
       string_id: cfr-doorhanger-send-tab-header
@@ -249,98 +249,98 @@
   trigger:
     id: openArticleURL
     params:
-    - huffingtonpost.com
-    - www.huffingtonpost.com
-    - cnn.com
-    - www.cnn.com
-    - nytimes.com
-    - www.nytimes.com
-    - foxnews.com
-    - www.foxnews.com
-    - nbcnews.com
-    - www.nbcnews.com
-    - dailymail.co.uk
-    - www.dailymail.co.uk
-    - washingtonpost.com
-    - www.washingtonpost.com
-    - theguardian.com
-    - www.theguardian.com
-    - wsj.com
-    - www.wsj.com
-    - abcnews.go.com
-    - www.abcnews.go.com
-    - news.bbc.co.uk
-    - www.news.bbc.co.uk
-    - usatoday.com
-    - www.usatoday.com
-    - latimes.com
-    - www.latimes.com
-    - buzzfeed.com
-    - www.buzzfeed.com
-    - aljazeera.com
-    - www.aljazeera.com
-    - indiatimes.com
-    - www.indiatimes.com
-    - forbes.com
-    - www.forbes.com
-    - cnbc.com
-    - www.cnbc.com
-    - bloomberg.com
-    - www.bloomberg.com
-    - reuters.com
-    - www.reuters.com
-    - nypost.com
-    - www.nypost.com
-    - drudgereport.com
-    - www.drudgereport.com
-    - chron.com
-    - www.chron.com
-    - dw.com
-    - www.dw.com
-    - cbsnews.com
-    - www.cbsnews.com
-    - usnews.com
-    - www.usnews.com
-    - thehindu.com
-    - www.thehindu.com
-    - sfgate.com
-    - www.sfgate.com
-    - thehill.com
-    - www.thehill.com
-    - indianexpress.com
-    - www.indianexpress.com
-    - thedailybeast.com
-    - www.thedailybeast.com
-    - news.com.au
-    - www.news.com.au
-    - time.com
-    - www.time.com
-    - latimes.com
-    - www.latimes.com
-    - hindustantimes.com
-    - www.hindustantimes.com
-    - newsnow.co.uk
-    - www.newsnow.co.uk
-    - theatlantic.com
-    - www.theatlantic.com
-    - variety.com
-    - www.variety.com
-    - euronews.com
-    - www.euronews.com
-    - hollywoodreporter.com
-    - www.hollywoodreporter.com
-    - newsweek.com
-    - www.newsweek.com
-    - patch.com
-    - www.patch.com
-    - nationalgeographic.com
-    - www.nationalgeographic.com
-    - alarabiya.net
-    - www.alarabiya.net
-    - medium.com
-    - www.medium.com
-    - bleacherreport.com
-    - www.bleacherreport.com
+      - huffingtonpost.com
+      - www.huffingtonpost.com
+      - cnn.com
+      - www.cnn.com
+      - nytimes.com
+      - www.nytimes.com
+      - foxnews.com
+      - www.foxnews.com
+      - nbcnews.com
+      - www.nbcnews.com
+      - dailymail.co.uk
+      - www.dailymail.co.uk
+      - washingtonpost.com
+      - www.washingtonpost.com
+      - theguardian.com
+      - www.theguardian.com
+      - wsj.com
+      - www.wsj.com
+      - abcnews.go.com
+      - www.abcnews.go.com
+      - news.bbc.co.uk
+      - www.news.bbc.co.uk
+      - usatoday.com
+      - www.usatoday.com
+      - latimes.com
+      - www.latimes.com
+      - buzzfeed.com
+      - www.buzzfeed.com
+      - aljazeera.com
+      - www.aljazeera.com
+      - indiatimes.com
+      - www.indiatimes.com
+      - forbes.com
+      - www.forbes.com
+      - cnbc.com
+      - www.cnbc.com
+      - bloomberg.com
+      - www.bloomberg.com
+      - reuters.com
+      - www.reuters.com
+      - nypost.com
+      - www.nypost.com
+      - drudgereport.com
+      - www.drudgereport.com
+      - chron.com
+      - www.chron.com
+      - dw.com
+      - www.dw.com
+      - cbsnews.com
+      - www.cbsnews.com
+      - usnews.com
+      - www.usnews.com
+      - thehindu.com
+      - www.thehindu.com
+      - sfgate.com
+      - www.sfgate.com
+      - thehill.com
+      - www.thehill.com
+      - indianexpress.com
+      - www.indianexpress.com
+      - thedailybeast.com
+      - www.thedailybeast.com
+      - news.com.au
+      - www.news.com.au
+      - time.com
+      - www.time.com
+      - latimes.com
+      - www.latimes.com
+      - hindustantimes.com
+      - www.hindustantimes.com
+      - newsnow.co.uk
+      - www.newsnow.co.uk
+      - theatlantic.com
+      - www.theatlantic.com
+      - variety.com
+      - www.variety.com
+      - euronews.com
+      - www.euronews.com
+      - hollywoodreporter.com
+      - www.hollywoodreporter.com
+      - newsweek.com
+      - www.newsweek.com
+      - patch.com
+      - www.patch.com
+      - nationalgeographic.com
+      - www.nationalgeographic.com
+      - alarabiya.net
+      - www.alarabiya.net
+      - medium.com
+      - www.medium.com
+      - bleacherreport.com
+      - www.bleacherreport.com
 - id: SEND_RECIPE_TAB_CFR
   content:
     bucket_id: SEND_RECIPE_TAB_CFR
@@ -353,18 +353,18 @@
         label:
           string_id: cfr-doorhanger-send-tab-ok-button
       secondary:
-      - action:
-          type: CANCEL
-        label:
-          string_id: cfr-doorhanger-extension-cancel-button
-      - label:
-          string_id: cfr-doorhanger-extension-never-show-recommendation
-      - action:
-          data:
-            category: general-cfrfeatures
-          type: OPEN_PREFERENCES_PAGE
-        label:
-          string_id: cfr-doorhanger-extension-manage-settings-button
+        - action:
+            type: CANCEL
+          label:
+            string_id: cfr-doorhanger-extension-cancel-button
+        - label:
+            string_id: cfr-doorhanger-extension-never-show-recommendation
+        - action:
+            data:
+              category: general-cfrfeatures
+            type: OPEN_PREFERENCES_PAGE
+          label:
+            string_id: cfr-doorhanger-extension-manage-settings-button
     category: cfrFeatures
     heading_text:
       string_id: cfr-doorhanger-send-tab-recipe-header
@@ -386,240 +386,240 @@
   trigger:
     id: openArticleURL
     params:
-    - therecipecritic.com
-    - www.therecipecritic.com
-    - skinnytaste.com
-    - www.skinnytaste.com
-    - chef-in-training.com
-    - www.chef-in-training.com
-    - cookiesandcups.com
-    - www.cookiesandcups.com
-    - sporkful.com
-    - www.sporkful.com
-    - foodandwine.com
-    - www.foodandwine.com
-    - rakskitchen.net
-    - www.rakskitchen.net
-    - thekitchn.com
-    - www.thekitchn.com
-    - manjulaskitchen.com
-    - www.manjulaskitchen.com
-    - 100daysofrealfood.com
-    - www.100daysofrealfood.com
-    - eater.com
-    - www.eater.com
-    - seriouseats.com
-    - www.seriouseats.com
-    - food52.com
-    - www.food52.com
-    - chowhound.com
-    - www.chowhound.com
-    - minimalistbaker.com
-    - www.minimalistbaker.com
-    - simplyrecipes.com
-    - www.simplyrecipes.com
-    - cookieandkate.com
-    - www.cookieandkate.com
-    - damndelicious.net
-    - www.damndelicious.net
-    - cafedelites.com
-    - www.cafedelites.com
-    - recipetineats.com
-    - www.recipetineats.com
-    - gimmesomeoven.com
-    - www.gimmesomeoven.com
-    - pinchofyum.com
-    - www.pinchofyum.com
-    - justonecookbook.com
-    - www.justonecookbook.com
-    - sallysbakingaddiction.com
-    - www.sallysbakingaddiction.com
-    - budgetbytes.com
-    - www.budgetbytes.com
-    - smittenkitchen.com
-    - www.smittenkitchen.com
-    - dinnerthendessert.com
-    - www.dinnerthendessert.com
-    - tastesbetterfromscratch.com
-    - www.tastesbetterfromscratch.com
-    - thewoksoflife.com
-    - www.thewoksoflife.com
-    - cookingclassy.com
-    - www.cookingclassy.com
-    - natashaskitchen.com
-    - www.natashaskitchen.com
-    - thepioneerwoman.com
-    - www.thepioneerwoman.com
-    - wellplated.com
-    - www.wellplated.com
-    - grubstreet.com
-    - www.grubstreet.com
-    - vegrecipesofindia.com
-    - www.vegrecipesofindia.com
-    - foodwishes.blogspot.com
-    - www.foodwishes.blogspot.com
-    - kcrw.com
-    - www.kcrw.com
-    - lecremedelacrumb.com
-    - www.lecremedelacrumb.com
-    - onceuponachef.com
-    - www.onceuponachef.com
-    - rasamalaysia.com
-    - www.rasamalaysia.com
-    - gimmedelicious.com
-    - www.gimmedelicious.com
-    - maangchi.com
-    - www.maangchi.com
-    - diethood.com
-    - www.diethood.com
-    - aspicyperspective.com
-    - www.aspicyperspective.com
-    - fitfoodiefinds.com
-    - www.fitfoodiefinds.com
-    - skinnyms.com
-    - www.skinnyms.com
-    - ambitiouskitchen.com
-    - www.ambitiouskitchen.com
-    - addapinch.com
-    - www.addapinch.com
-    - twopeasandtheirpod.com
-    - www.twopeasandtheirpod.com
-    - toriavey.com
-    - www.toriavey.com
-    - jocooks.com
-    - www.jocooks.com
-    - kalynskitchen.com
-    - www.kalynskitchen.com
-    - spicysouthernkitchen.com
-    - www.spicysouthernkitchen.com
-    - thepeachkitchen.com
-    - www.thepeachkitchen.com
-    - lilluna.com
-    - www.lilluna.com
-    - foodiecrush.com
-    - www.foodiecrush.com
-    - averiecooks.com
-    - www.averiecooks.com
-    - momontimeout.com
-    - www.momontimeout.com
-    - detoxinista.com
-    - www.detoxinista.com
-    - chelseasmessyapron.com
-    - www.chelseasmessyapron.com
-    - thebigmansworld.com
-    - www.thebigmansworld.com
-    - mykoreankitchen.com
-    - www.mykoreankitchen.com
-    - ohsheglows.com
-    - www.ohsheglows.com
-    - familyfreshmeals.com
-    - www.familyfreshmeals.com
-    - melskitchencafe.com
-    - www.melskitchencafe.com
-    - culinaryhill.com
-    - www.culinaryhill.com
-    - howsweeteats.com
-    - www.howsweeteats.com
-    - loveandlemons.com
-    - www.loveandlemons.com
-    - archanaskitchen.com
-    - www.archanaskitchen.com
-    - finedininglovers.com
-    - www.finedininglovers.com
-    - lowcarbmaven.com
-    - www.lowcarbmaven.com
-    - carlsbadcravings.com
-    - www.carlsbadcravings.com
-    - iheartnaptime.net
-    - www.iheartnaptime.net
-    - lifeloveandsugar.com
-    - www.lifeloveandsugar.com
-    - davidlebovitz.com
-    - www.davidlebovitz.com
-    - gousto.co.uk
-    - www.gousto.co.uk
-    - daringgourmet.com
-    - www.daringgourmet.com
-    - thecookierookie.com
-    - www.thecookierookie.com
-    - iamafoodblog.com
-    - www.iamafoodblog.com
-    - afamilyfeast.com
-    - www.afamilyfeast.com
-    - whatsgabycooking.com
-    - www.whatsgabycooking.com
-    - sugarfreemom.com
-    - www.sugarfreemom.com
-    - pressurecookingtoday.com
-    - www.pressurecookingtoday.com
-    - iwashyoudry.com
-    - www.iwashyoudry.com
-    - the-girl-who-ate-everything.com
-    - www.the-girl-who-ate-everything.com
-    - glutenfreeonashoestring.com
-    - www.glutenfreeonashoestring.com
-    - closetcooking.com
-    - www.closetcooking.com
-    - kitchentreaty.com
-    - www.kitchentreaty.com
-    - iowagirleats.com
-    - www.iowagirleats.com
-    - plainchicken.com
-    - www.plainchicken.com
-    - nomnompaleo.com
-    - www.nomnompaleo.com
-    - justataste.com
-    - www.justataste.com
-    - platingsandpairings.com
-    - www.platingsandpairings.com
-    - joythebaker.com
-    - www.joythebaker.com
-    - 101cookbooks.com
-    - www.101cookbooks.com
-    - joyfulhealthyeats.com
-    - www.joyfulhealthyeats.com
-    - myfoodstory.com
-    - www.myfoodstory.com
-    - tablefortwoblog.com
-    - www.tablefortwoblog.com
-    - thelemonbowl.com
-    - www.thelemonbowl.com
-    - allrecipes.com
-    - www.allrecipes.com
-    - epicurious.com
-    - www.epicurious.com
-    - copykat.com
-    - www.copykat.com
-    - seriouseats.com
-    - www.seriouseats.com
-    - foodnetwork.com
-    - www.foodnetwork.com
-    - food.com
-    - www.food.com
-    - simplyrecipes.com
-    - www.simplyrecipes.com
-    - smittenkitchen.com
-    - www.smittenkitchen.com
-    - yummly.com
-    - www.yummly.com
-    - myrecipes.com
-    - www.myrecipes.com
-    - thekitchn.com
-    - www.thekitchn.com
-    - bettycrocker.com
-    - www.bettycrocker.com
-    - chow.com
-    - www.chow.com
-    - cookinglight.com
-    - www.cookinglight.com
-    - eatingwell.com
-    - www.eatingwell.com
-    - cooks.com
-    - www.cooks.com
-    - spoonful.com
-    - www.spoonful.com
-    - kraftrecipes.com
-    - www.kraftrecipes.com
+      - therecipecritic.com
+      - www.therecipecritic.com
+      - skinnytaste.com
+      - www.skinnytaste.com
+      - chef-in-training.com
+      - www.chef-in-training.com
+      - cookiesandcups.com
+      - www.cookiesandcups.com
+      - sporkful.com
+      - www.sporkful.com
+      - foodandwine.com
+      - www.foodandwine.com
+      - rakskitchen.net
+      - www.rakskitchen.net
+      - thekitchn.com
+      - www.thekitchn.com
+      - manjulaskitchen.com
+      - www.manjulaskitchen.com
+      - 100daysofrealfood.com
+      - www.100daysofrealfood.com
+      - eater.com
+      - www.eater.com
+      - seriouseats.com
+      - www.seriouseats.com
+      - food52.com
+      - www.food52.com
+      - chowhound.com
+      - www.chowhound.com
+      - minimalistbaker.com
+      - www.minimalistbaker.com
+      - simplyrecipes.com
+      - www.simplyrecipes.com
+      - cookieandkate.com
+      - www.cookieandkate.com
+      - damndelicious.net
+      - www.damndelicious.net
+      - cafedelites.com
+      - www.cafedelites.com
+      - recipetineats.com
+      - www.recipetineats.com
+      - gimmesomeoven.com
+      - www.gimmesomeoven.com
+      - pinchofyum.com
+      - www.pinchofyum.com
+      - justonecookbook.com
+      - www.justonecookbook.com
+      - sallysbakingaddiction.com
+      - www.sallysbakingaddiction.com
+      - budgetbytes.com
+      - www.budgetbytes.com
+      - smittenkitchen.com
+      - www.smittenkitchen.com
+      - dinnerthendessert.com
+      - www.dinnerthendessert.com
+      - tastesbetterfromscratch.com
+      - www.tastesbetterfromscratch.com
+      - thewoksoflife.com
+      - www.thewoksoflife.com
+      - cookingclassy.com
+      - www.cookingclassy.com
+      - natashaskitchen.com
+      - www.natashaskitchen.com
+      - thepioneerwoman.com
+      - www.thepioneerwoman.com
+      - wellplated.com
+      - www.wellplated.com
+      - grubstreet.com
+      - www.grubstreet.com
+      - vegrecipesofindia.com
+      - www.vegrecipesofindia.com
+      - foodwishes.blogspot.com
+      - www.foodwishes.blogspot.com
+      - kcrw.com
+      - www.kcrw.com
+      - lecremedelacrumb.com
+      - www.lecremedelacrumb.com
+      - onceuponachef.com
+      - www.onceuponachef.com
+      - rasamalaysia.com
+      - www.rasamalaysia.com
+      - gimmedelicious.com
+      - www.gimmedelicious.com
+      - maangchi.com
+      - www.maangchi.com
+      - diethood.com
+      - www.diethood.com
+      - aspicyperspective.com
+      - www.aspicyperspective.com
+      - fitfoodiefinds.com
+      - www.fitfoodiefinds.com
+      - skinnyms.com
+      - www.skinnyms.com
+      - ambitiouskitchen.com
+      - www.ambitiouskitchen.com
+      - addapinch.com
+      - www.addapinch.com
+      - twopeasandtheirpod.com
+      - www.twopeasandtheirpod.com
+      - toriavey.com
+      - www.toriavey.com
+      - jocooks.com
+      - www.jocooks.com
+      - kalynskitchen.com
+      - www.kalynskitchen.com
+      - spicysouthernkitchen.com
+      - www.spicysouthernkitchen.com
+      - thepeachkitchen.com
+      - www.thepeachkitchen.com
+      - lilluna.com
+      - www.lilluna.com
+      - foodiecrush.com
+      - www.foodiecrush.com
+      - averiecooks.com
+      - www.averiecooks.com
+      - momontimeout.com
+      - www.momontimeout.com
+      - detoxinista.com
+      - www.detoxinista.com
+      - chelseasmessyapron.com
+      - www.chelseasmessyapron.com
+      - thebigmansworld.com
+      - www.thebigmansworld.com
+      - mykoreankitchen.com
+      - www.mykoreankitchen.com
+      - ohsheglows.com
+      - www.ohsheglows.com
+      - familyfreshmeals.com
+      - www.familyfreshmeals.com
+      - melskitchencafe.com
+      - www.melskitchencafe.com
+      - culinaryhill.com
+      - www.culinaryhill.com
+      - howsweeteats.com
+      - www.howsweeteats.com
+      - loveandlemons.com
+      - www.loveandlemons.com
+      - archanaskitchen.com
+      - www.archanaskitchen.com
+      - finedininglovers.com
+      - www.finedininglovers.com
+      - lowcarbmaven.com
+      - www.lowcarbmaven.com
+      - carlsbadcravings.com
+      - www.carlsbadcravings.com
+      - iheartnaptime.net
+      - www.iheartnaptime.net
+      - lifeloveandsugar.com
+      - www.lifeloveandsugar.com
+      - davidlebovitz.com
+      - www.davidlebovitz.com
+      - gousto.co.uk
+      - www.gousto.co.uk
+      - daringgourmet.com
+      - www.daringgourmet.com
+      - thecookierookie.com
+      - www.thecookierookie.com
+      - iamafoodblog.com
+      - www.iamafoodblog.com
+      - afamilyfeast.com
+      - www.afamilyfeast.com
+      - whatsgabycooking.com
+      - www.whatsgabycooking.com
+      - sugarfreemom.com
+      - www.sugarfreemom.com
+      - pressurecookingtoday.com
+      - www.pressurecookingtoday.com
+      - iwashyoudry.com
+      - www.iwashyoudry.com
+      - the-girl-who-ate-everything.com
+      - www.the-girl-who-ate-everything.com
+      - glutenfreeonashoestring.com
+      - www.glutenfreeonashoestring.com
+      - closetcooking.com
+      - www.closetcooking.com
+      - kitchentreaty.com
+      - www.kitchentreaty.com
+      - iowagirleats.com
+      - www.iowagirleats.com
+      - plainchicken.com
+      - www.plainchicken.com
+      - nomnompaleo.com
+      - www.nomnompaleo.com
+      - justataste.com
+      - www.justataste.com
+      - platingsandpairings.com
+      - www.platingsandpairings.com
+      - joythebaker.com
+      - www.joythebaker.com
+      - 101cookbooks.com
+      - www.101cookbooks.com
+      - joyfulhealthyeats.com
+      - www.joyfulhealthyeats.com
+      - myfoodstory.com
+      - www.myfoodstory.com
+      - tablefortwoblog.com
+      - www.tablefortwoblog.com
+      - thelemonbowl.com
+      - www.thelemonbowl.com
+      - allrecipes.com
+      - www.allrecipes.com
+      - epicurious.com
+      - www.epicurious.com
+      - copykat.com
+      - www.copykat.com
+      - seriouseats.com
+      - www.seriouseats.com
+      - foodnetwork.com
+      - www.foodnetwork.com
+      - food.com
+      - www.food.com
+      - simplyrecipes.com
+      - www.simplyrecipes.com
+      - smittenkitchen.com
+      - www.smittenkitchen.com
+      - yummly.com
+      - www.yummly.com
+      - myrecipes.com
+      - www.myrecipes.com
+      - thekitchn.com
+      - www.thekitchn.com
+      - bettycrocker.com
+      - www.bettycrocker.com
+      - chow.com
+      - www.chow.com
+      - cookinglight.com
+      - www.cookinglight.com
+      - eatingwell.com
+      - www.eatingwell.com
+      - cooks.com
+      - www.cooks.com
+      - spoonful.com
+      - www.spoonful.com
+      - kraftrecipes.com
+      - www.kraftrecipes.com
 - id: PDF_URL_FFX_SEND
   content:
     bucket_id: PDF_URL_FFX_SEND
@@ -633,18 +633,18 @@
         label:
           string_id: cfr-doorhanger-firefox-send-ok-button
       secondary:
-      - action:
-          type: CANCEL
-        label:
-          string_id: cfr-doorhanger-extension-cancel-button
-      - label:
-          string_id: cfr-doorhanger-extension-never-show-recommendation
-      - action:
-          data:
-            category: general-cfrfeatures
-          type: OPEN_PREFERENCES_PAGE
-        label:
-          string_id: cfr-doorhanger-extension-manage-settings-button
+        - action:
+            type: CANCEL
+          label:
+            string_id: cfr-doorhanger-extension-cancel-button
+        - label:
+            string_id: cfr-doorhanger-extension-never-show-recommendation
+        - action:
+            data:
+              category: general-cfrfeatures
+            type: OPEN_PREFERENCES_PAGE
+          label:
+            string_id: cfr-doorhanger-extension-manage-settings-button
     category: cfrFeatures
     heading_text:
       string_id: cfr-doorhanger-firefox-send-header
@@ -666,7 +666,7 @@
   trigger:
     id: openURL
     patterns:
-    - '*://*/*.pdf'
+      - '*://*/*.pdf'
 - id: BOOKMARK_SYNC_CFR
   content:
     bucket_id: BOOKMARK_SYNC_CFR
@@ -679,18 +679,18 @@
         label:
           string_id: cfr-doorhanger-sync-bookmarks-ok-button
       secondary:
-      - action:
-          type: CANCEL
-        label:
-          string_id: cfr-doorhanger-extension-cancel-button
-      - label:
-          string_id: cfr-doorhanger-extension-never-show-recommendation
-      - action:
-          data:
-            category: general-cfrfeatures
-          type: OPEN_PREFERENCES_PAGE
-        label:
-          string_id: cfr-doorhanger-extension-manage-settings-button
+        - action:
+            type: CANCEL
+          label:
+            string_id: cfr-doorhanger-extension-cancel-button
+        - label:
+            string_id: cfr-doorhanger-extension-never-show-recommendation
+        - action:
+            data:
+              category: general-cfrfeatures
+            type: OPEN_PREFERENCES_PAGE
+          label:
+            string_id: cfr-doorhanger-extension-manage-settings-button
     category: cfrFeatures
     heading_text:
       string_id: cfr-doorhanger-sync-bookmarks-header
@@ -736,25 +736,25 @@
         label:
           string_id: cfr-doorhanger-pintab-ok-button
       secondary:
-      - action:
-          type: CANCEL
-        label:
-          string_id: cfr-doorhanger-extension-cancel-button
-      - label:
-          string_id: cfr-doorhanger-extension-never-show-recommendation
-      - action:
-          data:
-            category: general-cfrfeatures
-            origin: CFR
-          type: OPEN_PREFERENCES_PAGE
-        label:
-          string_id: cfr-doorhanger-extension-manage-settings-button
+        - action:
+            type: CANCEL
+          label:
+            string_id: cfr-doorhanger-extension-cancel-button
+        - label:
+            string_id: cfr-doorhanger-extension-never-show-recommendation
+        - action:
+            data:
+              category: general-cfrfeatures
+              origin: CFR
+            type: OPEN_PREFERENCES_PAGE
+          label:
+            string_id: cfr-doorhanger-extension-manage-settings-button
     category: cfrFeatures
     descriptionDetails:
       steps:
-      - string_id: cfr-doorhanger-pintab-step1
-      - string_id: cfr-doorhanger-pintab-step2
-      - string_id: cfr-doorhanger-pintab-step3
+        - string_id: cfr-doorhanger-pintab-step1
+        - string_id: cfr-doorhanger-pintab-step2
+        - string_id: cfr-doorhanger-pintab-step3
     heading_text:
       string_id: cfr-doorhanger-pintab-heading
     info_icon:
@@ -775,40 +775,40 @@
   trigger:
     id: frequentVisits
     params:
-    - docs.google.com
-    - www.docs.google.com
-    - calendar.google.com
-    - messenger.com
-    - www.messenger.com
-    - web.whatsapp.com
-    - mail.google.com
-    - outlook.live.com
-    - facebook.com
-    - www.facebook.com
-    - twitter.com
-    - www.twitter.com
-    - reddit.com
-    - www.reddit.com
-    - github.com
-    - www.github.com
-    - youtube.com
-    - www.youtube.com
-    - feedly.com
-    - www.feedly.com
-    - drive.google.com
-    - amazon.com
-    - www.amazon.com
-    - messages.android.com
-    - amazon.ca
-    - www.amazon.ca
-    - amazon.com.au
-    - www.amazon.com.au
-    - amazon.co.uk
-    - www.amazon.co.uk
-    - amazon.fr
-    - www.amazon.fr
-    - amazon.de
-    - www.amazon.de
+      - docs.google.com
+      - www.docs.google.com
+      - calendar.google.com
+      - messenger.com
+      - www.messenger.com
+      - web.whatsapp.com
+      - mail.google.com
+      - outlook.live.com
+      - facebook.com
+      - www.facebook.com
+      - twitter.com
+      - www.twitter.com
+      - reddit.com
+      - www.reddit.com
+      - github.com
+      - www.github.com
+      - youtube.com
+      - www.youtube.com
+      - feedly.com
+      - www.feedly.com
+      - drive.google.com
+      - amazon.com
+      - www.amazon.com
+      - messages.android.com
+      - amazon.ca
+      - www.amazon.ca
+      - amazon.com.au
+      - www.amazon.com.au
+      - amazon.co.uk
+      - www.amazon.co.uk
+      - amazon.fr
+      - www.amazon.fr
+      - amazon.de
+      - www.amazon.de
 - id: SAVE_LOGIN_72
   content:
     bucket_id: CFR_SAVE_LOGIN
@@ -822,18 +822,18 @@
         label:
           string_id: cfr-doorhanger-sync-logins-ok-button
       secondary:
-      - action:
-          type: CANCEL
-        label:
-          string_id: cfr-doorhanger-extension-cancel-button
-      - label:
-          string_id: cfr-doorhanger-extension-never-show-recommendation
-      - action:
-          data:
-            category: general-cfrfeatures
-          type: OPEN_PREFERENCES_PAGE
-        label:
-          string_id: cfr-doorhanger-extension-manage-settings-button
+        - action:
+            type: CANCEL
+          label:
+            string_id: cfr-doorhanger-extension-cancel-button
+        - label:
+            string_id: cfr-doorhanger-extension-never-show-recommendation
+        - action:
+            data:
+              category: general-cfrfeatures
+            type: OPEN_PREFERENCES_PAGE
+          label:
+            string_id: cfr-doorhanger-extension-manage-settings-button
     category: cfrFeatures
     heading_text:
       string_id: cfr-doorhanger-sync-logins-header
@@ -895,14 +895,14 @@
         label:
           string_id: cfr-doorhanger-socialtracking-ok-button
       secondary:
-      - event: BLOCK
-        label:
-          string_id: cfr-doorhanger-socialtracking-close-button
-      - action:
-          type: DISABLE_STP_DOORHANGERS
-        event: BLOCK
-        label:
-          string_id: cfr-doorhanger-socialtracking-dont-show-again
+        - event: BLOCK
+          label:
+            string_id: cfr-doorhanger-socialtracking-close-button
+        - action:
+            type: DISABLE_STP_DOORHANGERS
+          event: BLOCK
+          label:
+            string_id: cfr-doorhanger-socialtracking-dont-show-again
     category: cfrFeatures
     heading_text:
       string_id: cfr-doorhanger-socialtracking-heading
@@ -920,8 +920,8 @@
       string_id: cfr-doorhanger-socialtracking-description
   frequency:
     custom:
-    - cap: 1
-      period: 172800000
+      - cap: 1
+        period: 172800000
     lifetime: 2
   priority: 1
   targeting: pageLoad >= 4
@@ -929,8 +929,8 @@
   trigger:
     id: contentBlocking
     params:
-    - 65536
-    - 537001984
+      - 65536
+      - 537001984
 - id: FINGERPRINTERS_PROTECTION
   content:
     anchor_id: tracking-protection-icon-box
@@ -943,14 +943,14 @@
         label:
           string_id: cfr-doorhanger-socialtracking-ok-button
       secondary:
-      - event: BLOCK
-        label:
-          string_id: cfr-doorhanger-socialtracking-close-button
-      - action:
-          type: DISABLE_STP_DOORHANGERS
-        event: BLOCK
-        label:
-          string_id: cfr-doorhanger-socialtracking-dont-show-again
+        - event: BLOCK
+          label:
+            string_id: cfr-doorhanger-socialtracking-close-button
+        - action:
+            type: DISABLE_STP_DOORHANGERS
+          event: BLOCK
+          label:
+            string_id: cfr-doorhanger-socialtracking-dont-show-again
     category: cfrFeatures
     heading_text:
       string_id: cfr-doorhanger-fingerprinters-heading
@@ -968,8 +968,8 @@
       string_id: cfr-doorhanger-fingerprinters-description
   frequency:
     custom:
-    - cap: 1
-      period: 172800000
+      - cap: 1
+        period: 172800000
     lifetime: 2
   priority: 2
   targeting: pageLoad >= 4
@@ -977,7 +977,7 @@
   trigger:
     id: contentBlocking
     params:
-    - 64
+      - 64
 - id: CRYPTOMINERS_PROTECTION
   content:
     anchor_id: tracking-protection-icon-box
@@ -990,14 +990,14 @@
         label:
           string_id: cfr-doorhanger-socialtracking-ok-button
       secondary:
-      - event: BLOCK
-        label:
-          string_id: cfr-doorhanger-socialtracking-close-button
-      - action:
-          type: DISABLE_STP_DOORHANGERS
-        event: BLOCK
-        label:
-          string_id: cfr-doorhanger-socialtracking-dont-show-again
+        - event: BLOCK
+          label:
+            string_id: cfr-doorhanger-socialtracking-close-button
+        - action:
+            type: DISABLE_STP_DOORHANGERS
+          event: BLOCK
+          label:
+            string_id: cfr-doorhanger-socialtracking-dont-show-again
     category: cfrFeatures
     heading_text:
       string_id: cfr-doorhanger-cryptominers-heading
@@ -1015,8 +1015,8 @@
       string_id: cfr-doorhanger-cryptominers-description
   frequency:
     custom:
-    - cap: 1
-      period: 172800000
+      - cap: 1
+        period: 172800000
     lifetime: 2
   priority: 3
   targeting: pageLoad >= 4
@@ -1024,7 +1024,7 @@
   trigger:
     id: contentBlocking
     params:
-    - 2048
+      - 2048
 - id: CFR_EXP_IMPORT_PASSWORD
   content:
     bucket_id: CFR_IMPORT_PASSWORD
@@ -1039,18 +1039,18 @@
             accesskey: s
           value: Import Passwords
       secondary:
-      - action:
-          type: CANCEL
-        label:
-          string_id: cfr-doorhanger-extension-cancel-button
-      - label:
-          string_id: cfr-doorhanger-extension-never-show-recommendation
-      - action:
-          data:
-            category: general-cfrfeatures
-          type: OPEN_PREFERENCES_PAGE
-        label:
-          string_id: cfr-doorhanger-extension-manage-settings-button
+        - action:
+            type: CANCEL
+          label:
+            string_id: cfr-doorhanger-extension-cancel-button
+        - label:
+            string_id: cfr-doorhanger-extension-never-show-recommendation
+        - action:
+            data:
+              category: general-cfrfeatures
+            type: OPEN_PREFERENCES_PAGE
+          label:
+            string_id: cfr-doorhanger-extension-manage-settings-button
     category: cfrFeatures
     heading_text: Import Your Password From Other Browsers
     icon: chrome://browser/content/aboutlogins/icons/intro-illustration.svg
@@ -1070,22 +1070,22 @@
   trigger:
     id: openURL
     params:
-    - docs.google.com
-    - calendar.google.com
-    - mail.google.com
-    - outlook.live.com
-    - facebook.com
-    - www.facebook.com
-    - twitter.com
-    - www.twitter.com
-    - reddit.com
-    - www.reddit.com
-    - github.com
-    - www.github.com
-    - youtube.com
-    - www.youtube.com
-    - feedly.com
-    - www.feedly.com
-    - drive.google.com
-    - netflix.com
-    - www.netflix.com
+      - docs.google.com
+      - calendar.google.com
+      - mail.google.com
+      - outlook.live.com
+      - facebook.com
+      - www.facebook.com
+      - twitter.com
+      - www.twitter.com
+      - reddit.com
+      - www.reddit.com
+      - github.com
+      - www.github.com
+      - youtube.com
+      - www.youtube.com
+      - feedly.com
+      - www.feedly.com
+      - drive.google.com
+      - netflix.com
+      - www.netflix.com
