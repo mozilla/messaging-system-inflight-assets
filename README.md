@@ -12,6 +12,12 @@ To sync from YAML to JSON, just run
 $ make
 ```
 
+To validate the JSON against the schema
+
+```sh
+$ make check
+```
+
 It requires Python 3 and pyyaml for the conversion.
 
 ```sh
@@ -19,6 +25,9 @@ It requires Python 3 and pyyaml for the conversion.
 $ brew install python3
 $ pip3 install pyyaml
 $ pip3 install yamllint
+
+# this is for schema validation
+$ pip3 install jsonschema
 ```
 
 Note: make sure you commit all the changes (YAML&JSON) to the repo.
