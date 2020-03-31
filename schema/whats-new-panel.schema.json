@@ -1,0 +1,155 @@
+{
+  "title": "ExtensionDoorhanger",
+  "description": "A template with a heading, addon icon, title and description. No markup allowed.",
+  "version": "1.0.0",
+  "type": "object",
+  "definitions": {
+    "plainText": {
+      "description": "Plain text (no HTML allowed)",
+      "type": "string"
+    },
+    "linkUrl": {
+      "description": "Target for links or buttons",
+      "type": "string",
+      "format": "uri"
+    },
+    "stringOrStringID": {
+      "description": "This can be a reference to a localized string in Firefox or just a plain string.",
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Description message of the addon."
+        },
+        {
+          "type": "object",
+          "properties": {
+            "string_id": {
+              "type": "string",
+              "description": "Id of string to localized addon description"
+            }
+          },
+          "required": ["string_id"]
+        }
+      ]
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Message identifier"
+    },
+    "content": {
+      "type": "object",
+      "properties": {
+        "layout": {
+          "type": "string",
+          "description": "Attribute used for different groups of messages from the same provider"
+        },
+        "body": {
+          "description": "This can be a reference to a localized string in Firefox or just a plain string.",
+          "oneOf": [
+            {
+              "type": "string",
+              "description": "Description message of the addon."
+            },
+            {
+              "type": "object",
+              "properties": {
+                "string_id": {
+                  "type": "string",
+                  "description": "Id of string to localized addon description"
+                }
+              },
+              "required": ["string_id"]
+            }
+          ]
+        },
+        "bucket_id": {
+          "type": "string",
+          "description": "A bucket identifier for the addon. This is used in order to anonymize telemetry for history-sensitive targeting."
+        },
+        "cta_type": {
+          "type": "string"
+        },
+        "cta_url": {
+          "$ref": "#/definitions/linkUrl"
+        },
+        "icon_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "$ref": "#/definitions/linkUrl"
+            }
+          ]
+        },
+        "link_text": {
+          "$ref": "#/definitions/stringOrStringID"
+        },
+        "published_date": {
+          "type": "integer"
+        },
+        "title": {
+          "$ref": "#/definitions/stringOrStringID"
+        },
+        "delay": {
+          "type": "integer"
+        },
+        "target": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true,
+      "required": ["bucket_id"]
+    },
+    "frequency": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "lifetime": {
+          "type": "integer"
+        },
+        "custom": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "cap": {
+                "type": "integer"
+              },
+              "period": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      }
+    },
+    "priority": {
+      "type": "integer"
+    },
+    "order": {
+      "type": "integer"
+    },
+    "targeting": {
+      "type": "string"
+    },
+    "template": {
+      "type": "string"
+    },
+    "trigger": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "params": {
+          "type": "array"
+        }
+      },
+      "required": ["id"]
+    }
+  },
+  "additionalProperties": false,
+  "required": ["id", "content", "targeting", "template", "trigger"]
+}
