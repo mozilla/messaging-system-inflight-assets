@@ -18,6 +18,7 @@ It requires Python 3 and pyyaml for the conversion.
 # if you don't have Python 3 installed
 $ brew install python3
 $ pip3 install pyyaml
+$ pip3 install yamllint
 ```
 
 Note: make sure you commit all the changes (YAML&JSON) to the repo.
