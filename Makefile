@@ -19,4 +19,3 @@ check:
 	scripts/validate.py cfr.json schema/cfr.schema.json
 	scripts/validate.py cfr-fxa.json schema/cfr-fxa.schema.json
 	scripts/validate.py whats-new-panel.json schema/whats-new-panel.schema.json
-
