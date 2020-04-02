@@ -5,6 +5,8 @@ import sys
 
 import jsonschema
 
+from jsonschema.exceptions import best_match, ValidationError
+
 
 USAGE = """
     Usage:
@@ -22,7 +24,12 @@ def validate(src_path, schema_path):
     with open(src_path, "r") as f:
         items = json.loads(f.read())
         for item in items:
-            jsonschema.validate(instance=item, schema=schema)
+            try:
+                jsonschema.validate(instance=item, schema=schema)
+            except ValidationError as err:
+                match = best_match([err])
+                print("Validation error: {}".format(match.message))
+                sys.exit(1)
 
     print("Passed!")
 
