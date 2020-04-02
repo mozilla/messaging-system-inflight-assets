@@ -1,3 +1,5 @@
+[![Mozilla](https://circleci.com/gh/mozilla/messaging-system-inflight-assets.svg?style=svg)](https://circleci.com/gh/mozilla/messaging-system-inflight-assets)
+
 This repo hosts various in-flight remote assets of Firefox Messaging System.
 
 Currently, it consists of CFR, CFR-FXA, and What's New Pannel.
