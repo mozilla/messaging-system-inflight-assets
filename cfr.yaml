@@ -171,8 +171,9 @@
   targeting: "\n      localeLanguageCode == \"en\" &&\n      (xpinstallEnabled ==\
     \ true) &&\n      ([\"@contain-facebook\",\"{bb1b80be-e6b3-40a1-9b6e-9d4073343f0b}\"\
     ,\"{a50d61ca-d27b-437a-8b52-5fd801a0a88b}\"] intersect addonsInfo.addons|keys)|length\
-    \ == 0 &&\n      ([\"www.facebook.com\",\"facebook.com\"] intersect topFrecentSites[.frecency\
-    \ >= 5000]|mapToProperty('host'))|length > 0 && firefoxVersion >= 72 && userPrefs.cfrAddons"
+    \ == 0 &&\n      ([\"www.facebook.com\",\"facebook.com\",\"messenger.com\",\"www.messenger.com\",\
+    \"instagram.com\",\"www.instagram.com\",\"whatsapp.com\",\"www.whatsapp.com\",\"web.whatsapp.com\"]\
+    intersect topFrecentSites[.frecency >= 5000]|mapToProperty('host'))|length > 0 && userPrefs.cfrAddons"
   template: cfr_doorhanger
   trigger:
     id: openURL
