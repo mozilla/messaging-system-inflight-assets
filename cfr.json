@@ -232,13 +232,20 @@
     "frequency": {
       "lifetime": 3
     },
-    "targeting": "\n      localeLanguageCode == \"en\" &&\n      (xpinstallEnabled == true) &&\n      ([\"@contain-facebook\",\"{bb1b80be-e6b3-40a1-9b6e-9d4073343f0b}\",\"{a50d61ca-d27b-437a-8b52-5fd801a0a88b}\"] intersect addonsInfo.addons|keys)|length == 0 &&\n      ([\"www.facebook.com\",\"facebook.com\"] intersect topFrecentSites[.frecency >= 10000]|mapToProperty('host'))|length > 0 && firefoxVersion >= 72 && userPrefs.cfrAddons",
+    "targeting": "\n      localeLanguageCode == \"en\" &&\n      (xpinstallEnabled == true) &&\n      ([\"@contain-facebook\",\"{bb1b80be-e6b3-40a1-9b6e-9d4073343f0b}\",\"{a50d61ca-d27b-437a-8b52-5fd801a0a88b}\"] intersect addonsInfo.addons|keys)|length == 0 &&\n      ([\"www.facebook.com\",\"facebook.com\"] intersect topFrecentSites[.frecency >= 5000]|mapToProperty('host'))|length > 0 && firefoxVersion >= 72 && userPrefs.cfrAddons",
     "template": "cfr_doorhanger",
     "trigger": {
       "id": "openURL",
       "params": [
         "www.facebook.com",
-        "facebook.com"
+        "facebook.com",
+        "www.instagram.com",
+        "instagram.com",
+        "www.whatsapp.com",
+        "whatsapp.com",
+        "web.whatsapp.com",
+        "www.messenger.com",
+        "messenger.com"
       ]
     }
   },
