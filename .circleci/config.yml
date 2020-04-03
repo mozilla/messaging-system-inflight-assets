@@ -13,8 +13,10 @@ jobs:
       - python/save-cache
       - run:
           command: |
-            touch *.json && PATH=/home/circleci/.local/bin/:$PATH make
+            touch *.json && make
           name: Build
+          environment:
+            PATH=/home/circleci/.local/bin/:$PATH
       - run:
           command: make check
           name: Validate
