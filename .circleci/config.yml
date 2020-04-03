@@ -14,6 +14,7 @@ jobs:
       - run:
           command: |
             export PATH=/home/circleci/.local/bin/:$PATH
+            ls /home/circleci/.local/bin
             touch *.json && make
           name: Build
       - run:
