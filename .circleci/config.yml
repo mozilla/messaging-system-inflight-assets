@@ -2,19 +2,18 @@ version: 2.1
 
 orbs:
   python: circleci/python@0.2.1
-  yamllint: freighthub/yamllint@1.0.0
 
 jobs:
   build-and-test:
     executor: python/default
     steps:
       - checkout
-      - python/load-cache
+      # - python/load-cache
       - python/install-deps
-      - python/save-cache
+      # - python/save-cache
       - run:
           command: |
-            PATH=/home/circleci/.local/bin:$PATH echo $PATH && touch *.json && make
+            touch *.json && make
           name: Build
       - run:
           command: make check
