@@ -1,0 +1,161 @@
+{
+  "title": "CFRUrlbarChiclet",
+  "description": "A template with a chiclet button with text.",
+  "version": "1.0.0",
+  "type": "object",
+  "definitions": {
+    "plainText": {
+      "description": "Plain text (no HTML allowed)",
+      "type": "string"
+    },
+    "linkUrl": {
+      "description": "Target for links or buttons",
+      "type": "string",
+      "format": "uri"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Message identifier"
+    },
+    "content": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "description": "Attribute used for different groups of messages from the same provider"
+        },
+        "layout": {
+          "type": "string",
+          "description": "Describes how content should be displayed.",
+          "enum": ["chiclet_open_url"]
+        },
+        "bucket_id": {
+          "type": "string",
+          "description": "A bucket identifier for the addon. This is used in order to anonymize telemetry for history-sensitive targeting."
+        },
+        "notification_text": {
+          "description": "The text in the small blue chicklet that appears in the URL bar. This can be a reference to a localized string in Firefox or just a plain string.",
+          "oneOf": [
+            {
+              "type": "string",
+              "description": "Message shown in the location bar notification."
+            },
+            {
+              "type": "object",
+              "properties": {
+                "string_id": {
+                  "type": "string",
+                  "description": "Id of localized string for the location bar notification."
+                }
+              },
+              "required": ["string_id"]
+            }
+          ]
+        },
+        "active_color": {
+          "type": "string",
+          "description": "Background color of the button"
+        },
+        "action": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "description": "The page to open when the button is clicked.",
+              "allOf": [
+                {"$ref": "#/definitions/linkUrl"},
+                {"description": "Icon associated with the message"}
+              ]
+            },
+            "where": {
+              "description": "Should it open in a new tab or the current tab",
+              "enum": ["current", "tabshifted"]
+            }
+          },
+          "additionalProperties": false,
+          "required": ["url", "where"]
+        },
+        "additionalProperties": false
+      },
+      "additionalProperties": false,
+      "required": ["layout", "category", "bucket_id", "notification_text", "action"]
+    },
+    "frequency": {
+      "type": "object",
+      "description": "An object containing frequency cap information for a message.",
+      "properties": {
+        "lifetime": {
+          "type": "integer",
+          "description": "The maximum lifetime impressions for a message.",
+          "minimum": 1,
+          "maximum": 100
+        },
+        "custom": {
+          "type": "array",
+          "description": "An array of custom frequency cap definitions.",
+          "items": {
+            "description": "A frequency cap definition containing time and max impression information",
+            "type": "object",
+            "properties": {
+              "period": {
+                "oneOf": [
+                  {
+                    "type": "integer",
+                    "description": "Period of time in milliseconds (e.g. 86400000 for one day)"
+                  },
+                  {
+                    "type": "string",
+                    "description": "One of a preset list of short forms for period of time (e.g. 'daily' for one day)",
+                    "enum": ["daily"]
+                  }
+                ]
+
+              },
+              "cap": {
+                "type": "integer",
+                "description": "The maximum impressions for the message within the defined period.",
+                "minimum": 1,
+                "maximum": 100
+              }
+            },
+            "required": ["period", "cap"]
+          }
+        }
+      }
+    },
+    "priority": {
+      "type": "integer"
+    },
+    "targeting": {
+      "type": "string",
+      "description": "A JEXL expression representing targeting information"
+    },
+    "template": {
+      "type": "string"
+    },
+    "trigger": {
+      "type": "object",
+      "description": "An action to trigger potentially showing the message",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "A string identifying the trigger action"
+        },
+        "params": {
+          "type": "array",
+          "description": "An optional array of string parameters for the trigger action",
+          "items": {
+            "anyOf": [
+              { "type": "integer" },
+              { "type": "string" }
+            ]
+          }
+        }
+      },
+      "required": ["id"]
+    }
+  },
+  "additionalProperties": false,
+  "required": ["id", "content", "targeting", "template", "trigger"]
+}
