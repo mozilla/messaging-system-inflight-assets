@@ -7,12 +7,12 @@
     notification_text: Help improve Firefox
     active_color: '#595e91'
     action:
-      url: http://example.com/%VERSION%/
+      url: https://qsurvey.mozilla.com/s3/goals-survey
       where: tabshifted
   priority: 4
-  targeting: locale in ["en-US","en-CA","en-AU","en-GB","en-ZA","en-NZ"] &&\
-    firefoxVersion >= 75 &&\
-    [userId, "HEARTBEAT_TACTIC_2_75"]|stableSample(0.01) &&
+  targeting: locale in ["en-US","en-CA","en-AU","en-GB","en-ZA","en-NZ"] &&
+    firefoxVersion >= 75 &&
+    [userId, "HEARTBEAT_TACTIC_2_75"]|stableSample(0.01)
   frequency:
     lifetime: 3
   trigger:
