@@ -300,7 +300,7 @@
         "string_id": "cfr-whatsnew-pip-cta"
       }
     },
-    "targeting": "firefoxVersion >= 75",
+    "targeting": "firefoxVersion >= 75 &&\n!(locale in [\"ach\", \"af\", \"ast\", \"az\", \"bg\", \"bn\", \"bo\", \"br\", \"brx\",\n\"ca-valencia\", \"ca\", \"el\", \"et\", \"fa\", \"ff\", \"fi\", \"ga-IE\", \"gl\", \"gu-IN\",\n\"hi-IN\", \"hy-AM\", \"is\", \"km\", \"kn\", \"lij\", \"lo\", \"ltg\", \"lv\", \"mk\", \"mr\",\n\"ms\", \"my\", \"ne-NP\", \"scn\", \"si\", \"sk\", \"sr\", \"ta\", \"te\", \"tl\", \"trs\", \"ur\"])\n",
     "trigger": {
       "id": "whatsNewPanelOpened"
     }

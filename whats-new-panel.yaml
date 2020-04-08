@@ -238,7 +238,13 @@
     cta_type: OPEN_URL
     link_text:
       string_id: cfr-whatsnew-pip-cta
-  targeting: firefoxVersion >= 75
+  # Exclude those locales due to the missing stringIDs
+  targeting: |
+    firefoxVersion >= 75 &&
+    !(locale in ["ach", "af", "ast", "az", "bg", "bn", "bo", "br", "brx",
+    "ca-valencia", "ca", "el", "et", "fa", "ff", "fi", "ga-IE", "gl", "gu-IN",
+    "hi-IN", "hy-AM", "is", "km", "kn", "lij", "lo", "ltg", "lv", "mk", "mr",
+    "ms", "my", "ne-NP", "scn", "si", "sk", "sr", "ta", "te", "tl", "trs", "ur"])
   trigger:
     id: whatsNewPanelOpened
 - id: WHATS_NEW_BADGE_75
