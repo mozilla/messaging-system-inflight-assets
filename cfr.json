@@ -1092,6 +1092,7 @@
         "string_id": "cfr-doorhanger-sync-logins-header"
       },
       "icon": "chrome://browser/content/aboutlogins/icons/intro-illustration.svg",
+      "icon_class": "cfr-doorhanger-large-icon",
       "info_icon": {
         "label": {
           "string_id": "cfr-doorhanger-extension-sumo-link"
@@ -1109,7 +1110,80 @@
     "frequency": {
       "lifetime": 3
     },
-    "targeting": "isFxAEnabled == true && usesFirefoxSync == false && firefoxVersion >= 72",
+    "targeting": "(!type || type == 'save') && isFxAEnabled == true && usesFirefoxSync == false && firefoxVersion >= 72",
+    "template": "cfr_doorhanger",
+    "trigger": {
+      "id": "newSavedLogin"
+    }
+  },
+  {
+    "id": "UPDATE_LOGIN",
+    "content": {
+      "bucket_id": "CFR_UPDATE_LOGIN",
+      "buttons": {
+        "primary": {
+          "action": {
+            "data": {
+              "category": "sync",
+              "entrypoint": "cfr-update-login"
+            },
+            "type": "OPEN_PREFERENCES_PAGE"
+          },
+          "label": {
+            "string_id": "cfr-doorhanger-sync-logins-ok-button"
+          }
+        },
+        "secondary": [
+          {
+            "action": {
+              "type": "CANCEL"
+            },
+            "label": {
+              "string_id": "cfr-doorhanger-extension-cancel-button"
+            }
+          },
+          {
+            "label": {
+              "string_id": "cfr-doorhanger-extension-never-show-recommendation"
+            }
+          },
+          {
+            "action": {
+              "data": {
+                "category": "general-cfrfeatures"
+              },
+              "type": "OPEN_PREFERENCES_PAGE"
+            },
+            "label": {
+              "string_id": "cfr-doorhanger-extension-manage-settings-button"
+            }
+          }
+        ]
+      },
+      "category": "cfrFeatures",
+      "heading_text": {
+        "string_id": "cfr-doorhanger-sync-logins-header"
+      },
+      "icon": "chrome://browser/content/aboutlogins/icons/intro-illustration.svg",
+      "icon_class": "cfr-doorhanger-large-icon",
+      "info_icon": {
+        "label": {
+          "string_id": "cfr-doorhanger-extension-sumo-link"
+        },
+        "sumo_path": "extensionrecommendations"
+      },
+      "layout": "icon_and_message",
+      "notification_text": {
+        "string_id": "cfr-doorhanger-feature-notification"
+      },
+      "text": {
+        "string_id": "cfr-doorhanger-sync-logins-body"
+      }
+    },
+    "frequency": {
+      "lifetime": 3
+    },
+    "targeting": "type == 'update' && isFxAEnabled == true && usesFirefoxSync == false && firefoxVersion >= 76",
     "template": "cfr_doorhanger",
     "trigger": {
       "id": "newSavedLogin"
