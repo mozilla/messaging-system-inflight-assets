@@ -1,4 +1,4 @@
-- id: aw_pull_factor_privacy_1
+- id: AW_PULL_FACTOR_PRIVACY_1
   filter_expression: localeLanguageCode == "en" && browserSettings.update.channel ==
     "release" && firefoxVersion >= 75 && [userId, "aw_pull_factor_privacy_1"]|bucketSample(0,
     2000, 10000)
@@ -12,23 +12,11 @@
         ratio: 1
         value:
           title: Welcome to Firefox. Fast, safe, private.
-          cards:
-            - PERSONAL_DATA_PROMISE_CARD
-            - FX_MONITOR_CARD
-            - BROWSE_PRIVATELY_CARD
       - slug: variant_2
         ratio: 1
         value:
           title: Welcome to Firefox
-          cards:
-            - PERSONAL_DATA_PROMISE_CARD
-            - FX_MONITOR_CARD
-            - BROWSE_PRIVATELY_CARD
       - slug: variant_3
         ratio: 1
         value:
           title: Welcome to Firefox. Fast, safe, private.
-          cards:
-            - SYNC_CARD
-            - FX_MONITOR_CARD
-            - BROWSE_PRIVATELY_CARD
