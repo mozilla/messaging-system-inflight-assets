@@ -138,7 +138,7 @@
   targeting: firefoxVersion >= 76
   trigger:
     id: whatsNewPanelOpened
-- id: WHATS_NEW_LOCKWISE_PASSWORDS
+- id: WHATS_NEW_LOCKWISE_PASSWORDS_76
   template: whatsnew_panel_message
   order: 1
   content:

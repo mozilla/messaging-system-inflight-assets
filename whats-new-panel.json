@@ -76,7 +76,7 @@
       }
     },
     "order": 1,
-    "targeting": "firefoxVersion >= 72",
+    "targeting": "firefoxVersion >= 72 && firefoxVersion < 76",
     "template": "whatsnew_panel_message",
     "trigger": {
       "id": "whatsNewPanelOpened"
@@ -139,7 +139,7 @@
     "order": 3,
     "content": {
       "bucket_id": "WHATS_NEW_PIP_76",
-      "published_date": 1586859903200,
+      "published_date": 1588636800000,
       "title": {
         "string_id": "cfr-whatsnew-pip-fullscreen-header"
       },
@@ -162,12 +162,12 @@
     }
   },
   {
-    "id": "WHATS_NEW_VULNERABLE_PASSWORDS",
+    "id": "WHATS_NEW_VULNERABLE_PASSWORDS_76",
     "template": "whatsnew_panel_message",
     "order": 2,
     "content": {
-      "bucket_id": "WHATS_NEW_VULNERABLE_PASSWORDS",
-      "published_date": 1586859903200,
+      "bucket_id": "WHATS_NEW_VULNERABLE_PASSWORDS_76",
+      "published_date": 1588636800000,
       "title": {
         "string_id": "cfr-whatsnew-passwords-header"
       },
@@ -190,12 +190,12 @@
     }
   },
   {
-    "id": "WHATS_NEW_LOCKWISE_PASSWORDS",
+    "id": "WHATS_NEW_LOCKWISE_PASSWORDS_76",
     "template": "whatsnew_panel_message",
     "order": 1,
     "content": {
-      "bucket_id": "WHATS_NEW_LOCKWISE_PASSWORDS",
-      "published_date": 1586859903200,
+      "bucket_id": "WHATS_NEW_LOCKWISE_PASSWORDS_76",
+      "published_date": 1588636800000,
       "title": {
         "string_id": "cfr-whatsnew-lockwise-header"
       },
