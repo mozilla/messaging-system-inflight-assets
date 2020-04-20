@@ -1,22 +1,166 @@
 - id: AW_PULL_FACTOR_PRIVACY_1
-  filter_expression: localeLanguageCode == "en" && browserSettings.update.channel ==
-    "release" && firefoxVersion >= 75 && [userId, "aw_pull_factor_privacy_1"]|bucketSample(0,
-    2000, 10000)
+  enabled: true
+  filter_expression: localeLanguageCode == "en" &&
+    firefoxVersion >= 76 && [userId, "aw_pull_factor_privacy_1"]|bucketSample(0,
+    2000, 10000) &&
+    (!('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue) || 'aw_pull_factor_privacy_1' in activeExperiments)
   arguments:
     slug: aw_pull_factor_privacy_1
+    userFacingName: "About:Welcome Pull Factor Reinforcement"
+    isHighVolume: false,
+    experimentDocumentUrl: https://experimenter.services.mozilla.com/experiments/aboutwelcome-pull-factor-reinforcement/
+    userFacingDescription: This study uses 4 different variants of about:welcome with a goal of testing new experiment framework and get insights on whether reinforcing pull-factors improves retention.
+    isEnrollmentPaused: false
     branches:
       - slug: control
         ratio: 1
+        groups:
+          - aboutwelcome
         value: {}
       - slug: variant_1
         ratio: 1
+        groups:
+          - aboutwelcome
         value:
           title: Welcome to Firefox. Fast, safe, private.
+          cards:
+            - id: TRAILHEAD_CARD_12
+              content:
+                title:
+                  string_id: onboarding-personal-data-promise-title
+                text:
+                  string_id: onboarding-personal-data-promise-text
+                icon: pledge
+                primary_button:
+                  label:
+                    string_id: onboarding-personal-data-promise-button
+                  action:
+                    type: OPEN_URL
+                    data:
+                      args: https://www.mozilla.org/firefox/privacy/
+                      where: tabshifted
+            - id: TRAILHEAD_CARD_3
+              content:
+                title:
+                  string_id: onboarding-firefox-monitor-title
+                text:
+                  string_id: onboarding-firefox-monitor-text2
+                icon: ffmonitor
+                primary_button:
+                  label:
+                    string_id: onboarding-firefox-monitor-button
+                  action:
+                    type: OPEN_URL
+                    data:
+                      args: https://monitor.firefox.com/
+                      where: tabshifted
+            - id: TRAILHEAD_CARD_4
+              content:
+                title:
+                  string_id: onboarding-browse-privately-title
+                text:
+                  string_id: onboarding-browse-privately-text
+                icon: private
+                primary_button:
+                  label:
+                    string_id: onboarding-browse-privately-button
+                  action:
+                    type: OPEN_PRIVATE_BROWSER_WINDOW
       - slug: variant_2
         ratio: 1
+        groups:
+          - aboutwelcome
         value:
           title: Welcome to Firefox
+          cards:
+            - id: TRAILHEAD_CARD_12
+              content:
+                title:
+                  string_id: onboarding-personal-data-promise-title
+                text:
+                  string_id: onboarding-personal-data-promise-text
+                icon: pledge
+                primary_button:
+                  label:
+                    string_id: onboarding-personal-data-promise-button
+                  action:
+                    type: OPEN_URL
+                    data:
+                      args: https://www.mozilla.org/firefox/privacy/
+                      where: tabshifted
+            - id: TRAILHEAD_CARD_3
+              content:
+                title:
+                  string_id: onboarding-firefox-monitor-title
+                text:
+                  string_id: onboarding-firefox-monitor-text2
+                icon: ffmonitor
+                primary_button:
+                  label:
+                    string_id: onboarding-firefox-monitor-button
+                  action:
+                    type: OPEN_URL
+                    data:
+                      args: https://monitor.firefox.com/
+                      where: tabshifted
+            - id: TRAILHEAD_CARD_4
+              content:
+                title:
+                  string_id: onboarding-browse-privately-title
+                text:
+                  string_id: onboarding-browse-privately-text
+                icon: private
+                primary_button:
+                  label:
+                    string_id: onboarding-browse-privately-button
+                  action:
+                    type: OPEN_PRIVATE_BROWSER_WINDOW
       - slug: variant_3
         ratio: 1
+        groups:
+          - aboutwelcome
         value:
           title: Welcome to Firefox. Fast, safe, private.
+          cards:
+            - id: TRAILHEAD_CARD_2
+              content:
+                title:
+                  string_id: onboarding-data-sync-title
+                text:
+                  string_id: onboarding-data-sync-text2
+                icon: devices
+                primary_button:
+                  label:
+                    string_id: onboarding-data-sync-button2
+                  action:
+                    type: OPEN_URL
+                    data:
+                      args: https://accounts.firefox.com/?service=sync&action=email&context=fx_desktop_v3&entrypoint=activity-stream-firstrun&style=trailhead
+                      where: tabshifted
+            - id: TRAILHEAD_CARD_3
+              content:
+                title:
+                  string_id: onboarding-firefox-monitor-title
+                text:
+                  string_id: onboarding-firefox-monitor-text2
+                icon: ffmonitor
+                primary_button:
+                  label:
+                    string_id: onboarding-firefox-monitor-button
+                  action:
+                    type: OPEN_URL
+                    data:
+                      args: https://monitor.firefox.com/
+                      where: tabshifted
+            - id: TRAILHEAD_CARD_4
+              content:
+                title:
+                  string_id: onboarding-browse-privately-title
+                text:
+                  string_id: onboarding-browse-privately-text
+                icon: private
+                primary_button:
+                  label:
+                    string_id: onboarding-browse-privately-button
+                  action:
+                    type: OPEN_PRIVATE_BROWSER_WINDOW
