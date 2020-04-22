@@ -206,7 +206,7 @@
       "body": {
         "string_id": "cfr-whatsnew-lockwise-body"
       },
-      "cta_url": "https://support.mozilla.org/1/firefox/%VERSION%/%OS%/%LOCALE%/lockwise-alerts",
+      "cta_url": "https://support.mozilla.org/1/firefox/%VERSION%/%OS%/%LOCALE%/generate-password",
       "cta_type": "OPEN_URL",
       "link_text": {
         "string_id": "cfr-whatsnew-pip-cta"
