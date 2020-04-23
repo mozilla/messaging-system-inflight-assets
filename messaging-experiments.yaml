@@ -1,13 +1,12 @@
 - id: AW_PULL_FACTOR_PRIVACY_1
   enabled: true
-  filter_expression: localeLanguageCode == "en" &&
+  filter_expression: ('76' in env.version) || (localeLanguageCode == "en" &&
     firefoxVersion >= 76 && [userId, "aw_pull_factor_privacy_1"]|bucketSample(0,
     2000, 10000) &&
-    (!('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue) || 'aw_pull_factor_privacy_1' in activeExperiments)
+    (!('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue) || 'aw_pull_factor_privacy_1' in activeExperiments))
   arguments:
     slug: aw_pull_factor_privacy_1
     userFacingName: "About:Welcome Pull Factor Reinforcement"
-    isHighVolume: false,
     experimentDocumentUrl: https://experimenter.services.mozilla.com/experiments/aboutwelcome-pull-factor-reinforcement/
     userFacingDescription: This study uses 4 different variants of about:welcome with a goal of testing new experiment framework and get insights on whether reinforcing pull-factors improves retention.
     isEnrollmentPaused: false
