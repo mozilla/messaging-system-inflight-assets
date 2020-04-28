@@ -526,7 +526,7 @@
   {
     "id": "CFR_XMAN_SMOKE_TEST",
     "enabled": true,
-    "filter_expression": "localeLanguageCode == 'en' && firefoxVersion >= 77 && [userId, 'cfr_xman_smoke_test']|bucketSample(0, 2000, 10000)",
+    "targeting": "localeLanguageCode == 'en' && firefoxVersion >= 77 && [userId, 'cfr_xman_smoke_test']|bucketSample(0, 2000, 10000)",
     "arguments": {
       "slug": "cfr_xman_smoke_test",
       "userFacingName": "CFR X-Man smoke test",

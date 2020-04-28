@@ -332,7 +332,7 @@
                     type: OPEN_PRIVATE_BROWSER_WINDOW
 - id: CFR_XMAN_SMOKE_TEST
   enabled: true
-  filter_expression: localeLanguageCode == 'en' &&
+  targeting: localeLanguageCode == 'en' &&
     firefoxVersion >= 77 && [userId, 'cfr_xman_smoke_test']|bucketSample(0, 2000, 10000)
   arguments:
     slug: cfr_xman_smoke_test
