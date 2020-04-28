@@ -334,6 +334,7 @@
   enabled: true
   targeting: localeLanguageCode == 'en' &&
     firefoxVersion >= 77 && [userId, 'cfr_xman_smoke_test']|bucketSample(0, 2000, 10000)
+  filter_expression: env.channel == 'nightly'
   arguments:
     slug: cfr_xman_smoke_test
     userFacingName: CFR X-Man smoke test

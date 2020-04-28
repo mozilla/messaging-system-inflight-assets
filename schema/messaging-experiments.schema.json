@@ -70,5 +70,5 @@
       "required": ["slug", "branches"]
     }
   },
-  "required": ["id", "arguments"]
+  "required": ["id", "arguments", "filter_expression"]
 }
