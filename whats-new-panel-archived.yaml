@@ -235,3 +235,64 @@
   template: whatsnew_panel_message
   trigger:
     id: whatsNewPanelOpened
+- id: WHATS_NEW_BADGE_75
+  content:
+    action:
+      id: show-whatsnew-button
+    badgeDescription:
+      string_id: cfr-badge-reader-label-newfeature
+    bucket_id: WHATS_NEW_BADGE_75
+    delay: 300000
+    target: whats-new-menu-button
+  frequency:
+    lifetime: 100
+  priority: 5
+  targeting: firefoxVersion == 75 && (usesFirefoxSync || hasAccessedFxAPanel || currentDate|date
+    - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_75']
+    || (messageImpressions['WHATS_NEW_BADGE_75']|length >= 1 && currentDate|date -
+    messageImpressions['WHATS_NEW_BADGE_75'][0] <= 345600000)) && 'browser.messaging-system.whatsNewPanel.enabled'|preferenceValue
+  template: toolbar_badge
+  trigger:
+    id: toolbarBadgeUpdate
+- id: WHATS_NEW_FINGERPRINTER_COUNTER_72
+  content:
+    body:
+      string_id: cfr-whatsnew-fingerprinter-counter-body
+    bucket_id: WHATS_NEW_FINGERPRINTER_COUNTER_72
+    cta_type: OPEN_ABOUT_PAGE
+    cta_url: protections
+    icon_alt: ''
+    icon_url: resource://activity-stream/data/content/assets/protection-report-icon.png
+    layout: tracking-protections
+    layout_title_content_variable: fingerprinterCount
+    link_text:
+      string_id: cfr-whatsnew-tracking-blocked-link-text
+    published_date: 1578405980832
+    subtitle:
+      string_id: cfr-whatsnew-tracking-blocked-subtitle
+    title:
+      string_id: cfr-whatsnew-fingerprinter-counter-header
+  order: 3
+  targeting: firefoxVersion >= 72 && blockedCountByType.fingerprinterCount >= 10
+  template: whatsnew_panel_message
+  trigger:
+    id: whatsNewPanelOpened
+- id: WHATS_NEW_FINGERPRINTER_COUNTER_ALT
+  content:
+    body:
+      string_id: cfr-whatsnew-fingerprinter-counter-body-alt
+    bucket_id: WHATS_NEW_FINGERPRINTER_COUNTER_ALT
+    cta_type: OPEN_ABOUT_PAGE
+    cta_url: protections
+    icon_alt: ''
+    icon_url: resource://activity-stream/data/content/assets/protection-report-icon.png
+    link_text:
+      string_id: cfr-whatsnew-tracking-blocked-link-text
+    published_date: 1578405980832
+    title:
+      string_id: cfr-whatsnew-fingerprinter-counter-header-alt
+  order: 3
+  targeting: firefoxVersion >= 72 && blockedCountByType.fingerprinterCount < 10
+  template: whatsnew_panel_message
+  trigger:
+    id: whatsNewPanelOpened
