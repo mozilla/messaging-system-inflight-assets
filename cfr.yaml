@@ -1153,7 +1153,9 @@
     buttons:
       primary:
         label:
-          string_id: cfr-doorhanger-firefox-better-web-ok-button
+          value: "Learn More"
+          attributes:
+            accesskey: "L"
         action:
           data:
             args: https://firstlook.mozilla.com/betterweb/?utm_campaign=fbw-march&utm_medium=inproduct&utm_source=fx-cfr&utm_content=cfr-message

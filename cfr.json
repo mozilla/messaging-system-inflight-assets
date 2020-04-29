@@ -1544,7 +1544,10 @@
       "buttons": {
         "primary": {
           "label": {
-            "string_id": "cfr-doorhanger-firefox-better-web-ok-button"
+            "value": "Learn More",
+            "attributes": {
+              "accesskey": "L"
+            }
           },
           "action": {
             "data": {
