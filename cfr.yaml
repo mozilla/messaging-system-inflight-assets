@@ -1153,9 +1153,9 @@
     buttons:
       primary:
         label:
-          value: "Learn More"
+          value: Learn More
           attributes:
-            accesskey: "L"
+            accesskey: L
         action:
           data:
             args: https://firstlook.mozilla.com/betterweb/?utm_campaign=fbw-march&utm_medium=inproduct&utm_source=fx-cfr&utm_content=cfr-message
@@ -1290,4 +1290,4 @@
   frequency:
     lifetime: 3
   targeting: firefoxVersion >= 74 && localeLanguageCode == 'en' &&
-    userPrefs.cfrFeatures && region == 'US'
+    userPrefs.cfrFeatures && region == 'US' && [userId, 'CFR_EXP_FBW_PROMOTION']|stableSample(0.05)

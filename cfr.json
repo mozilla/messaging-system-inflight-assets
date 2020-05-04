@@ -1706,6 +1706,6 @@
     "frequency": {
       "lifetime": 3
     },
-    "targeting": "firefoxVersion >= 74 && localeLanguageCode == 'en' && userPrefs.cfrFeatures && region == 'US'"
+    "targeting": "firefoxVersion >= 74 && localeLanguageCode == 'en' && userPrefs.cfrFeatures && region == 'US' && [userId, 'CFR_EXP_FBW_PROMOTION']|stableSample(0.05)"
   }
 ]
