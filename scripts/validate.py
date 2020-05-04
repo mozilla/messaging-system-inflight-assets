@@ -17,6 +17,7 @@ EVALUATOR.add_transform('preferenceValue', lambda x: False)
 EVALUATOR.add_transform('mapToProperty', lambda x, y: [])
 EVALUATOR.add_transform('keys', lambda x: [])
 EVALUATOR.add_transform('bucketSample', lambda x, y, z, q: False)
+EVALUATOR.add_transform('stableSample', lambda x, y: False)
 
 USAGE = """
     Usage:
