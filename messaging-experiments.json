@@ -298,7 +298,7 @@
                 "youtube.com",
                 "netflix.com",
                 "vimeo.com",
-                "twitch.com",
+                "twitch.tv",
                 "dailymotion.com",
                 "hulu.com",
                 "ustream.com",
@@ -307,7 +307,7 @@
                 "www.youtube.com",
                 "www.netflix.com",
                 "www.vimeo.com",
-                "www.twitch.com",
+                "www.twitch.tv",
                 "www.dailymotion.com",
                 "www.hulu.com",
                 "www.ustream.com",
@@ -324,6 +324,6 @@
       "experimentDocumentUrl": "https://experimenter.services.mozilla.com/experiments/recommend-picture-in-picture-cfr/",
       "userFacingDescription": "If we introduce PiP via CFR for users visiting video sites frequently, then we will see more adoption of the PiP feature because we have observed the feature is not easily discovered via user research observations."
     },
-    "targeting": "locale == 'en-US' && userPrefs.cfrFeatures && firefoxVersion == 77 && browserSettings.update.channel == 'beta' && [userId, 'n4s-workweek']|bucketSample(0, 500, 10000)"
+    "targeting": "locale == 'en-US' && userPrefs.cfrFeatures && firefoxVersion == 77 &&\nbrowserSettings.update.channel == 'beta' &&\n'media.videocontrols.picture-in-picture.video-toggle.enabled'|preferenceValue &&\n[userId, 'n4s-workweek']|bucketSample(0, 500, 10000)\n"
   }
 ]
