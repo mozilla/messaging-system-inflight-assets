@@ -33,7 +33,8 @@
   targeting: firefoxVersion == 76 && (usesFirefoxSync || hasAccessedFxAPanel || currentDate|date
     - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_76']
     || (messageImpressions['WHATS_NEW_BADGE_76']|length >= 1 && currentDate|date -
-    messageImpressions['WHATS_NEW_BADGE_76'][0] <= 345600000)) && 'browser.messaging-system.whatsNewPanel.enabled'|preferenceValue
+    messageImpressions['WHATS_NEW_BADGE_76'][0] <= 345600000)) && 'browser.messaging-system.whatsNewPanel.enabled'|preferenceValue &&
+    locale in ["be", "cs", "cy", "da", "de", "dsb", "en-US", "en-CA", "en-GB", "es-AR", "es-CL", "es-ES", "es-MX", "eu", "fi", "fr", "fy-NL", "gn", "hsb", "hu", "ia", "it", "ja", "ja-JP-mac", "ka", "kab", "ko", "lt", "nb-NO", "nl", "nn-NO", "oc", "pl", "pt-BR", "pt-PT", "ro", "ru", "sl", "sq", "sv-SE", "th", "tr", "uk", "vi", "zh-CN", "zh-TW"]
   template: toolbar_badge
   trigger:
     id: toolbarBadgeUpdate
