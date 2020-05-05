@@ -8,6 +8,8 @@ Currently, it consists of CFR, CFR-FXA, and What's New Pannel.
 
 To add/modify/delete assets, please edit the YAML files other than the JSON ones, because the former allows us to use comments in the document. Once you complete the editing, you can sync your changes to the JSON file(s), and copy them over to Remote Settings for publishing.
 
+When deleting asset(s), make sure copy the deleted content in the YAML files to the corresponding archive file located in the `archive` directory. For instance, when you're deleting messages in `cfr.yaml`, please copy the deletions to the `archive/cfr-archived.yaml`.
+
 To sync from YAML to JSON, just run
 
 ```sh
