@@ -240,3 +240,163 @@
     browserSettings.update.channel == 'beta' &&
     'media.videocontrols.picture-in-picture.video-toggle.enabled'|preferenceValue &&
     [userId, 'n4s-workweek']|bucketSample(0, 500, 10000)
+- id: N4S_PRIVACY_PROTECTIONS_REPORT
+  enabled: true
+  filter_expression: env.version >= '77.' && env.version < '78.' && env.channel == 'beta' &&
+    !(env.telemetry.main.environment.profile.creationDate < ('2020-05-06'|date / 1000 / 60 / 60 / 24)))
+  targeting: locale == 'en-US' && [userId, "n4s-workweek"]|bucketSample(2500,
+    2000, 10000) &&
+    (!('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue) || 'bug-1635870-message-privacy-protections-report-onboarding-n4s-beta-76-77' in activeExperiments)
+  arguments:
+    slug: bug-1635870-message-privacy-protections-report-onboarding-n4s-beta-76-77
+    userFacingName: "Privacy Protections Report Onboarding (N4S)"
+    experimentDocumentUrl: https://experimenter.services.mozilla.com/experiments/privacy-protections-report-onboarding-n4s/
+    userFacingDescription: This experiment will compare a treatment branch with the default onboarding experience, to a set of treatments with a new protection report card.
+    isEnrollmentPaused: false
+    branches:
+      - slug: n4s_protections_report_control
+        ratio: 1
+        groups:
+          - aboutwelcome
+        value: {}
+      - slug: n4s_protections_report_position1
+        ratio: 1
+        groups:
+          - aboutwelcome
+        value:
+          cards:
+            - id: TRAILHEAD_CARD_13
+              content:
+                title: Private by Default
+                text: Firefox’s default privacy and security settings block malware and keep companies from following your every move.
+                icon: tracking
+                primary_button:
+                  label: Learn More
+                  action:
+                    type: OPEN_URL
+                    data:
+                      args: https://support.mozilla.org/kb/enhanced-tracking-protection-firefox-desktop
+                      where: tabshifted
+            - id: TRAILHEAD_CARD_3
+              content:
+                title:
+                  string_id: onboarding-firefox-monitor-title
+                text:
+                  string_id: onboarding-firefox-monitor-text2
+                icon: ffmonitor
+                primary_button:
+                  label:
+                    string_id: onboarding-firefox-monitor-button
+                  action:
+                    type: OPEN_URL
+                    data:
+                      args: https://monitor.firefox.com/
+                      where: tabshifted
+            - id: TRAILHEAD_CARD_4
+              content:
+                title:
+                  string_id: onboarding-browse-privately-title
+                text:
+                  string_id: onboarding-browse-privately-text
+                icon: private
+                primary_button:
+                  label:
+                    string_id: onboarding-browse-privately-button
+                  action:
+                    type: OPEN_PRIVATE_BROWSER_WINDOW
+      - slug: n4s_protections_report_position2
+        ratio: 1
+        groups:
+          - aboutwelcome
+        value:
+          cards:
+            - id: TRAILHEAD_CARD_12
+              content:
+                title:
+                  string_id: onboarding-data-sync-title
+                text:
+                  string_id: onboarding-data-sync-text2
+                icon: devices
+                primary_button:
+                  label:
+                    string_id: onboarding-data-sync-button2
+                  action:
+                    type: OPEN_URL
+                    data:
+                      args: "https://accounts.firefox.com/?service=sync&action=email&context=fx_desktop_v3&entrypoint=activity-stream-firstrun&style=trailhead"
+                      where: tabshifted
+            - id: TRAILHEAD_CARD_13
+              content:
+                title: Private by Default
+                text: Firefox’s default privacy and security settings block malware and keep companies from following your every move.
+                icon: tracking
+                primary_button:
+                  label: Learn More
+                  action:
+                    type: OPEN_URL
+                    data:
+                      args: https://support.mozilla.org/kb/enhanced-tracking-protection-firefox-desktop
+                      where: tabshifted
+            - id: TRAILHEAD_CARD_3
+              content:
+                title:
+                  string_id: onboarding-firefox-monitor-title
+                text:
+                  string_id: onboarding-firefox-monitor-text2
+                icon: ffmonitor
+                primary_button:
+                  label:
+                    string_id: onboarding-firefox-monitor-button
+                  action:
+                    type: OPEN_URL
+                    data:
+                      args: https://monitor.firefox.com/
+                      where: tabshifted
+      - slug: n4s_protections_report_position3
+        ratio: 1
+        groups:
+          - aboutwelcome
+        value:
+          cards:
+            - id: TRAILHEAD_CARD_12
+              content:
+                title:
+                  string_id: onboarding-data-sync-title
+                text:
+                  string_id: onboarding-data-sync-text2
+                icon: devices
+                primary_button:
+                  label:
+                    string_id: onboarding-data-sync-button2
+                  action:
+                    type: OPEN_URL
+                    data:
+                      args: "https://accounts.firefox.com/?service=sync&action=email&context=fx_desktop_v3&entrypoint=activity-stream-firstrun&style=trailhead"
+                      where: tabshifted
+            - id: TRAILHEAD_CARD_3
+              content:
+                title:
+                  string_id: onboarding-firefox-monitor-title
+                text:
+                  string_id: onboarding-firefox-monitor-text2
+                icon: ffmonitor
+                primary_button:
+                  label:
+                    string_id: onboarding-firefox-monitor-button
+                  action:
+                    type: OPEN_URL
+                    data:
+                      args: https://monitor.firefox.com/
+                      where: tabshifted
+            - id: TRAILHEAD_CARD_13
+              content:
+                title: Private by Default
+                text: Firefox’s default privacy and security settings block malware and keep companies from following your every move.
+                icon: tracking
+                primary_button:
+                  label: Learn More
+                  action:
+                    type: OPEN_URL
+                    data:
+                      args: https://support.mozilla.org/kb/enhanced-tracking-protection-firefox-desktop
+                      where: tabshifted
