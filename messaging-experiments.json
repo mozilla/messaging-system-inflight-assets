@@ -67,42 +67,42 @@
                       }
                     }
                   ]
-                },
-                "category": "cfrAddons",
-                "heading_text": {
-                  "string_id": "cfr-doorhanger-extension-heading"
-                },
-                "info_icon": {
-                  "label": {
-                    "string_id": "cfr-doorhanger-extension-sumo-link"
-                  },
-                  "sumo_path": "extensionrecommendations"
-                },
-                "notification_text": {
-                  "string_id": "cfr-doorhanger-extension-notification2"
-                },
-                "text": "Stop Facebook from tracking your activity across the web. Use Facebook the way you normally do without annoying ads following you around."
+                }
               },
-              "frequency": {
-                "lifetime": 3
+              "category": "cfrAddons",
+              "heading_text": {
+                "string_id": "cfr-doorhanger-extension-heading"
               },
-              "targeting": "localeLanguageCode == 'en' &&  (xpinstallEnabled == true) && (['@contain-facebook','{bb1b80be-e6b3-40a1-9b6e-9d4073343f0b}', '{a50d61ca-d27b-437a-8b52-5fd801a0a88b}'] intersect addonsInfo.addons|keys)|length == 0 && (['www.facebook.com','facebook.com','messenger.com','www.messenger.com', 'instagram.com','www.instagram.com','whatsapp.com','www.whatsapp.com','web.whatsapp.com'] intersect topFrecentSites[.frecency >= 5000]|mapToProperty('host'))|length > 0 && userPrefs.cfrAddons",
-              "priority": 5,
-              "template": "cfr_doorhanger",
-              "trigger": {
-                "id": "openURL",
-                "params": [
-                  "www.facebook.com",
-                  "facebook.com",
-                  "www.instagram.com",
-                  "instagram.com",
-                  "www.whatsapp.com",
-                  "whatsapp.com",
-                  "web.whatsapp.com",
-                  "www.messenger.com",
-                  "messenger.com"
-                ]
-              }
+              "info_icon": {
+                "label": {
+                  "string_id": "cfr-doorhanger-extension-sumo-link"
+                },
+                "sumo_path": "extensionrecommendations"
+              },
+              "notification_text": {
+                "string_id": "cfr-doorhanger-extension-notification2"
+              },
+              "text": "Stop Facebook from tracking your activity across the web. Use Facebook the way you normally do without annoying ads following you around."
+            },
+            "frequency": {
+              "lifetime": 3
+            },
+            "targeting": "localeLanguageCode == 'en' &&  (xpinstallEnabled == true) && (['@contain-facebook','{bb1b80be-e6b3-40a1-9b6e-9d4073343f0b}', '{a50d61ca-d27b-437a-8b52-5fd801a0a88b}'] intersect addonsInfo.addons|keys)|length == 0 && (['www.facebook.com','facebook.com','messenger.com','www.messenger.com', 'instagram.com','www.instagram.com','whatsapp.com','www.whatsapp.com','web.whatsapp.com'] intersect topFrecentSites[.frecency >= 5000]|mapToProperty('host'))|length > 0 && userPrefs.cfrAddons",
+            "priority": 5,
+            "template": "cfr_doorhanger",
+            "trigger": {
+              "id": "openURL",
+              "params": [
+                "www.facebook.com",
+                "facebook.com",
+                "www.instagram.com",
+                "instagram.com",
+                "www.whatsapp.com",
+                "whatsapp.com",
+                "web.whatsapp.com",
+                "www.messenger.com",
+                "messenger.com"
+              ]
             }
           }
         },
@@ -163,42 +163,42 @@
                       }
                     }
                   ]
-                },
-                "category": "cfrAddons",
-                "heading_text": {
-                  "string_id": "cfr-doorhanger-extension-heading"
-                },
-                "info_icon": {
-                  "label": {
-                    "string_id": "cfr-doorhanger-extension-sumo-link"
-                  },
-                  "sumo_path": "extensionrecommendations"
-                },
-                "notification_text": {
-                  "string_id": "cfr-doorhanger-extension-notification2"
-                },
-                "text": "Stop Facebook from tracking your activity across the web. Use Facebook the way you normally do without annoying ads following you around."
+                }
               },
-              "frequency": {
-                "lifetime": 3
+              "category": "cfrAddons",
+              "heading_text": {
+                "string_id": "cfr-doorhanger-extension-heading"
               },
-              "targeting": "localeLanguageCode == 'en' &&  (xpinstallEnabled == true) && (['@contain-facebook','{bb1b80be-e6b3-40a1-9b6e-9d4073343f0b}', '{a50d61ca-d27b-437a-8b52-5fd801a0a88b}'] intersect addonsInfo.addons|keys)|length == 0 && (['www.facebook.com','facebook.com','messenger.com','www.messenger.com', 'instagram.com','www.instagram.com','whatsapp.com','www.whatsapp.com','web.whatsapp.com'] intersect topFrecentSites[.frecency >= 5000]|mapToProperty('host'))|length > 0 && userPrefs.cfrAddons",
-              "priority": 5,
-              "template": "cfr_doorhanger",
-              "trigger": {
-                "id": "openURL",
-                "params": [
-                  "www.facebook.com",
-                  "facebook.com",
-                  "www.instagram.com",
-                  "instagram.com",
-                  "www.whatsapp.com",
-                  "whatsapp.com",
-                  "web.whatsapp.com",
-                  "www.messenger.com",
-                  "messenger.com"
-                ]
-              }
+              "info_icon": {
+                "label": {
+                  "string_id": "cfr-doorhanger-extension-sumo-link"
+                },
+                "sumo_path": "extensionrecommendations"
+              },
+              "notification_text": {
+                "string_id": "cfr-doorhanger-extension-notification2"
+              },
+              "text": "Stop Facebook from tracking your activity across the web. Use Facebook the way you normally do without annoying ads following you around."
+            },
+            "frequency": {
+              "lifetime": 3
+            },
+            "targeting": "localeLanguageCode == 'en' &&  (xpinstallEnabled == true) && (['@contain-facebook','{bb1b80be-e6b3-40a1-9b6e-9d4073343f0b}', '{a50d61ca-d27b-437a-8b52-5fd801a0a88b}'] intersect addonsInfo.addons|keys)|length == 0 && (['www.facebook.com','facebook.com','messenger.com','www.messenger.com', 'instagram.com','www.instagram.com','whatsapp.com','www.whatsapp.com','web.whatsapp.com'] intersect topFrecentSites[.frecency >= 5000]|mapToProperty('host'))|length > 0 && userPrefs.cfrAddons",
+            "priority": 5,
+            "template": "cfr_doorhanger",
+            "trigger": {
+              "id": "openURL",
+              "params": [
+                "www.facebook.com",
+                "facebook.com",
+                "www.instagram.com",
+                "instagram.com",
+                "www.whatsapp.com",
+                "whatsapp.com",
+                "web.whatsapp.com",
+                "www.messenger.com",
+                "messenger.com"
+              ]
             }
           }
         }
