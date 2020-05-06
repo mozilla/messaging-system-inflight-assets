@@ -41,7 +41,13 @@ def validate_item_targeting(item):
 
 def load_all_schemas():
     schemas = {}
-    possible_schemas = ["./schema/cfr.schema.json"]
+    possible_schemas = [
+        "schema/cfr.schema.json",
+        "schema/cfr-fxa.schema.json",
+        "schema/cfr-heartbeat.schema.json",
+        "schema/messaging-experiments.schema.json",
+        "schema/whats-new-panel.schema.json",
+    ]
     for path in possible_schemas:
         with open(path, "r") as f:
             schemas[path] = json.loads(f.read())
@@ -72,7 +78,7 @@ def validate(src_path, schema_path):
                         for schema_path in all_schemas.keys():
                             try:
                                 jsonschema.validate(instance=branch_message, schema=all_schemas.get(schema_path))
-                                validated = validated + 1
+                                validated += 1
                                 print("\tValidated {} with {}".format(branch_message.get("id"), schema_path))
                             except ValidationError as err:
                                 match = best_match([err])
