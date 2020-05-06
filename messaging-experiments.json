@@ -328,9 +328,9 @@
     "targeting": "locale == 'en-US' && userPrefs.cfrFeatures && firefoxVersion == 77 &&\nbrowserSettings.update.channel == 'beta' &&\n'media.videocontrols.picture-in-picture.video-toggle.enabled'|preferenceValue &&\n[userId, 'n4s-workweek']|bucketSample(0, 500, 10000)\n"
   },
   {
-    "id": "N4S_PRIVACY_PROTECTIONS_REPORT",
+    "id": "PRIVACY-PROTECTIONS-REPORT-ONBOARDING-N4S",
     "enabled": true,
-    "filter_expression": "env.version >= '77.' && env.version < '78.' && env.channel == 'beta' && !(env.telemetry.main.environment.profile.creationDate < ('2020-05-06'|date / 1000 / 60 / 60 / 24)))",
+    "filter_expression": "env.version >= '77.' && env.version < '78.' && env.channel == 'beta' && !(env.telemetry.main.environment.profile.creationDate < ('2020-05-06'|date / 1000 / 60 / 60 / 24))",
     "targeting": "locale == 'en-US' && [userId, \"n4s-workweek\"]|bucketSample(2500, 2000, 10000) && (!('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue) || 'bug-1635870-message-privacy-protections-report-onboarding-n4s-beta-76-77' in activeExperiments)",
     "arguments": {
       "slug": "bug-1635870-message-privacy-protections-report-onboarding-n4s-beta-76-77",
@@ -444,6 +444,7 @@
                     },
                     "action": {
                       "type": "OPEN_URL",
+                      "addFlowParams": true,
                       "data": {
                         "args": "https://accounts.firefox.com/?service=sync&action=email&context=fx_desktop_v3&entrypoint=activity-stream-firstrun&style=trailhead",
                         "where": "tabshifted"
@@ -521,6 +522,7 @@
                     },
                     "action": {
                       "type": "OPEN_URL",
+                      "addFlowParams": true,
                       "data": {
                         "args": "https://accounts.firefox.com/?service=sync&action=email&context=fx_desktop_v3&entrypoint=activity-stream-firstrun&style=trailhead",
                         "where": "tabshifted"
