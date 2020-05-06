@@ -234,6 +234,7 @@
     isEnrollmentPaused: false
     experimentDocumentUrl: https://experimenter.services.mozilla.com/experiments/recommend-picture-in-picture-cfr/
     userFacingDescription: If we introduce PiP via CFR for users visiting video sites frequently, then we will see more adoption of the PiP feature because we have observed the feature is not easily discovered via user research observations.
+  filter_expression: env.version >= '77.' && env.version < '78.'
   targeting: |
     locale == 'en-US' && userPrefs.cfrFeatures && firefoxVersion == 77 &&
     browserSettings.update.channel == 'beta' &&
