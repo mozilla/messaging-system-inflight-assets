@@ -41,6 +41,8 @@ def validate_item_targeting(item):
 
 
 def validate(src_path, schema_path):
+    possible_schemas = ["./schema/cfr.schema.json"]
+
     with open(schema_path, "r") as f:
         schema = json.loads(f.read())
 
@@ -49,6 +51,29 @@ def validate(src_path, schema_path):
         for item in items:
             try:
                 jsonschema.validate(instance=item, schema=schema)
+                # If it's an experiment we want to evaluate the branches
+                if "arguments" in item:
+                    validated = 0
+                    for branch in item.get("arguments").get("branches"):
+                        if "id" not in branch.get("value"):
+                            print("\tSkip branch", branch.get("slug"))
+                            validated = validated + 1
+                            continue
+                        # Try all of the available message schemas
+                        for try_schema_path in possible_schemas:
+                            with open(try_schema_path, "r") as sf:
+                                message_schema = json.loads(sf.read())
+                                try:
+                                    jsonschema.validate(instance=branch.get("value"), schema=message_schema)
+                                    validated = validated + 1
+                                    print("\tValidated", branch.get("value").get("id"), "with", try_schema_path)
+                                except ValidationError as err:
+                                    match = best_match([err])
+                                    print("Validation error: {}".format(match.message))
+                                    print("\tTried to validate", branch.get("value").get("id"), "with", try_schema_path)
+                    if validated != len(item.get("arguments").get("branches")):
+                        print("Branches did not validate for", item.get("id"))
+                        sys.exit(1)
             except ValidationError as err:
                 match = best_match([err])
                 print("Validation error: {}".format(match.message))
