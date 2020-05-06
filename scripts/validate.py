@@ -71,7 +71,7 @@ def validate(src_path, schema_path):
                     for branch in item.get("arguments").get("branches"):
                         branch_message = branch.get("value")
                         if "id" not in branch_message:
-                            print("\t Skip branch {}".format(branch.get("slug")))
+                            print("\tSkip branch {} because it's empty".format(branch.get("slug")))
                             validated += 1
                             continue
                         # Try all of the available message schemas
@@ -80,6 +80,7 @@ def validate(src_path, schema_path):
                                 jsonschema.validate(instance=branch_message, schema=all_schemas.get(schema_path))
                                 validated += 1
                                 print("\tValidated {} with {}".format(branch_message.get("id"), schema_path))
+                                break
                             except ValidationError as err:
                                 match = best_match([err])
                                 print("Validation error: {}".format(match.message))
