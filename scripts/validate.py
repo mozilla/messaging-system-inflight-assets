@@ -39,16 +39,55 @@ def validate_item_targeting(item):
         print(e)
         sys.exit(1)
 
+def load_all_schemas():
+    schemas = {}
+    possible_schemas = [
+        "schema/cfr.schema.json",
+        "schema/cfr-fxa.schema.json",
+        "schema/cfr-heartbeat.schema.json",
+        "schema/messaging-experiments.schema.json",
+        "schema/whats-new-panel.schema.json",
+    ]
+    for path in possible_schemas:
+        with open(path, "r") as f:
+            schemas[path] = json.loads(f.read())
+
+    return schemas
 
 def validate(src_path, schema_path):
-    with open(schema_path, "r") as f:
-        schema = json.loads(f.read())
+    # Load all schemas to validate experiment messages
+    all_schemas = load_all_schemas()
+
+    schema = all_schemas.get(schema_path)
 
     with open(src_path, "r") as f:
         items = json.loads(f.read())
         for item in items:
             try:
                 jsonschema.validate(instance=item, schema=schema)
+                # If it's an experiment we want to evaluate the branches
+                if "arguments" in item:
+                    validated = 0
+                    for branch in item.get("arguments").get("branches"):
+                        branch_message = branch.get("value")
+                        if "id" not in branch_message:
+                            print("\tSkip branch {} because it's empty".format(branch.get("slug")))
+                            validated += 1
+                            continue
+                        # Try all of the available message schemas
+                        for schema_path in all_schemas.keys():
+                            try:
+                                jsonschema.validate(instance=branch_message, schema=all_schemas.get(schema_path))
+                                validated += 1
+                                print("\tValidated {} with {}".format(branch_message.get("id"), schema_path))
+                                break
+                            except ValidationError as err:
+                                match = best_match([err])
+                                print("Validation error: {}".format(match.message))
+                                print("\tTried to validate {} with {}".format(branch_message.get("id"), schema_path))
+                    if validated != len(item.get("arguments").get("branches")):
+                        print("Branches did not validate for {}".format(item.get("id")))
+                        sys.exit(1)
             except ValidationError as err:
                 match = best_match([err])
                 print("Validation error: {}".format(match.message))
