@@ -249,3 +249,56 @@
                     data:
                       args: https://support.mozilla.org/kb/enhanced-tracking-protection-firefox-desktop
                       where: tabshifted
+- id: N4S_AA_TEST_B
+  enabled: true
+  arguments:
+    slug: messaging-experiment-delivery-aa-comparison-b
+    branches:
+      - slug: branch-1
+        ratio: 1
+        groups:
+          - cfr
+        value: {}
+      - slug: branch-2
+        ratio: 1
+        groups:
+          - cfr
+        value:
+    isHighVolume: false
+    userFacingName: Messaging Experiment Delivery A/A Comparison B (Remote settings targeting)
+    isEnrollmentPaused: false
+    experimentDocumentUrl: https://experimenter.services.mozilla.com/experiments/messaging-experiment-delivery-aa-comparison/
+    userFacingDescription: In order to detect any possible differences or unexpected behaviour in our two delivery pipelines for messaging experiments, we would like to launch some A/A tests in both systems.
+  filter_expression: >
+    (env.locale in ["en-US"]) && (env.channel in ["nightly"]) &&
+    ([env.userId,"n4s-workweek"]|bucketSample(6500,2000,10000)) &&
+    ((env.version >= "78." && env.version < "79.")) &&
+    'media.videocontrols.picture-in-picture.video-toggle.enabled'|preferenceValue &&
+    env.appinfo.appBuildID >= "20200506093716"
+  targeting: ([userId, "n4s-workweek"]|bucketSample(6500,2000,10000))
+- id: N4S_AA_TEST_C
+  enabled: true
+  arguments:
+    slug: messaging-experiment-delivery-aa-comparison-c
+    branches:
+      - slug: branch-1
+        ratio: 1
+        groups:
+          - cfr
+        value: {}
+      - slug: branch-2
+        ratio: 1
+        groups:
+          - cfr
+        value:
+    isHighVolume: false
+    userFacingName: Messaging Experiment Delivery A/A Comparison C (Messaging Targeting)
+    isEnrollmentPaused: false
+    experimentDocumentUrl: https://experimenter.services.mozilla.com/experiments/messaging-experiment-delivery-aa-comparison/
+    userFacingDescription: In order to detect any possible differences or unexpected behaviour in our two delivery pipelines for messaging experiments, we would like to launch some A/A tests in both systems.
+  filter_expression: env.version >= "78." && env.version < "79."
+  targeting: >
+    locale == 'en-US' && firefoxVersion == 78 &&
+    browserSettings.update.channel == 'nightly' &&
+    'media.videocontrols.picture-in-picture.video-toggle.enabled'|preferenceValue &&
+    [userId, 'n4s-workweek']|bucketSample(8500, 2000, 10000)
