@@ -53,6 +53,7 @@ def load_all_schemas():
 
     possible_schemas = [
         "schema/cfr.schema.json",
+        "schema/onboarding.schema.json",
         "schema/cfr-fxa.schema.json",
         "schema/cfr-heartbeat.schema.json",
         "schema/messaging-experiments.schema.json",
@@ -61,6 +62,17 @@ def load_all_schemas():
     for path in possible_schemas:
         with open(path, "r") as f:
             ALL_SCHEMAS[path] = json.loads(f.read())
+
+
+def get_branch_message(branch_value):
+    if "id" in branch_value:
+        # CFR messages
+        return branch_value
+    if "cards" in branch_value:
+        # Onboarding messages
+        return branch_value.get("cards")
+
+    return None
 
 
 def validate_experiment(item):
@@ -74,7 +86,6 @@ def validate_experiment(item):
             print("\tSkip branch {} because it's empty".format(branch.get("slug")))
             validated += 1
             continue
-
         # Try all of the available message schemas
         for schema_path, schema in ALL_SCHEMAS.items():
             try:
