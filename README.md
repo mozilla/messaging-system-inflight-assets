@@ -32,6 +32,7 @@ $ pip3 install yamllint
 
 # this is for schema validation
 $ pip3 install jsonschema
+$ pip3 install pyjexl
 ```
 
 Note: make sure you commit all the changes (YAML&JSON) to the repo.
