@@ -22,16 +22,12 @@ To validate the JSON against the schema
 $ make check
 ```
 
-It requires Python 3 and pyyaml for the conversion.
+It requires Python 3 and various libraries for the schema validation and file generation.
 
 ```sh
 # if you don't have Python 3 installed
 $ brew install python3
-$ pip3 install pyyaml
-$ pip3 install yamllint
-
-# this is for schema validation
-$ pip3 install jsonschema
+$ pip3 install -r requirements.txt
 ```
 
 Note: make sure you commit all the changes (YAML&JSON) to the repo.
