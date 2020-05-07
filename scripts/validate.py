@@ -32,6 +32,8 @@ USAGE = """
 
 
 def validate_item_targeting(item, for_exp=False):
+    if "targeting" not in item and "filter_expression" not in item:
+        return
     indentation = "\t" if for_exp else ""
     print("{}Validate targeting {}".format(indentation, item['id']))
     for key in ["targeting", "filter_expression"]:
@@ -81,22 +83,24 @@ def validate_experiment(item):
 
     validated = 0
     for branch in item.get("arguments").get("branches"):
-        branch_message = branch.get("value")
-        if "id" not in branch_message:
+        branch_message = get_branch_message(branch.get("value"))
+        if branch_message is None:
             print("\tSkip branch {} because it's empty".format(branch.get("slug")))
             validated += 1
             continue
         # Try all of the available message schemas
-        for schema_path, schema in ALL_SCHEMAS.items():
+        for schema_path in ALL_SCHEMAS.keys():
             try:
-                jsonschema.validate(instance=branch_message, schema=schema)
+                branch_message_list = branch_message if isinstance(branch_message, list) else [branch_message]
+                for message in branch_message_list:
+                    jsonschema.validate(instance=message, schema=ALL_SCHEMAS.get(schema_path))
                 validated += 1
-                print("\tValidated {} with {}".format(branch_message.get("id"), schema_path))
+                print("\tValidated {} with {}".format(branch.get("slug"), schema_path))
                 break
             except ValidationError as err:
                 match = best_match([err])
                 print("\tValidation error: {}".format(match.message))
-                print("\tTried to validate {} with {}".format(branch_message.get("id"), schema_path))
+                print("\tTried to validate {} with {}\n".format(branch.get("slug"), schema_path))
 
         # Validate the targeting JEXL if any
         validate_item_targeting(branch_message, True)
