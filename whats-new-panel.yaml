@@ -40,7 +40,7 @@
     id: toolbarBadgeUpdate
 - id: WHATS_NEW_PIP_76
   template: whatsnew_panel_message
-  order: 3
+  order: 1
   content:
     bucket_id: WHATS_NEW_PIP_76
     published_date: 1588636800000
@@ -60,7 +60,7 @@
     id: whatsNewPanelOpened
 - id: WHATS_NEW_VULNERABLE_PASSWORDS_76
   template: whatsnew_panel_message
-  order: 2
+  order: 3
   content:
     bucket_id: WHATS_NEW_VULNERABLE_PASSWORDS_76
     published_date: 1588636800000
@@ -80,7 +80,7 @@
     id: whatsNewPanelOpened
 - id: WHATS_NEW_LOCKWISE_PASSWORDS_76
   template: whatsnew_panel_message
-  order: 1
+  order: 2
   content:
     bucket_id: WHATS_NEW_LOCKWISE_PASSWORDS_76
     published_date: 1588636800000
