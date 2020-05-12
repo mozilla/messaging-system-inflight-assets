@@ -114,7 +114,7 @@
       ],
       "isHighVolume": false,
       "userFacingName": "Recommend Picture-in-Picture CFR",
-      "isEnrollmentPaused": false,
+      "isEnrollmentPaused": true,
       "experimentDocumentUrl": "https://experimenter.services.mozilla.com/experiments/recommend-picture-in-picture-cfr/",
       "userFacingDescription": "If we introduce PiP via CFR for users visiting video sites frequently, then we will see more adoption of the PiP feature because we have observed the feature is not easily discovered via user research observations."
     },
