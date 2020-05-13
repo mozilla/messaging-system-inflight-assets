@@ -95,7 +95,7 @@ def validate_action(action, for_exp):
 
 def extract_actions(message, message_type):
     def _extract_cfr():
-        for name, button in message["content"].get("buttons").items():
+        for name, button in message["content"].get("buttons", {}).items():
             if name == "primary":
                 yield button["action"]
             else:
