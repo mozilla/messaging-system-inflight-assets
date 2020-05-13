@@ -13,7 +13,7 @@ PYTHON=python3
 EXPERIMENTER_URL=https://experimenter.services.mozilla.com/api/v1/experiments
 RECIPE_URL=${EXPERIMENTER_URL}/$1/recipe/
 
-if [ $1 == "-h" ] || [ $1 = "--help" ]; then
+if [[ $1 == "-h" ]] || [[ $1 = "--help" ]]; then
   echo "${USAGE}"
 elif [[ -z $1 ]]; then
   curl -SsL ${EXPERIMENTER_URL}/ | jq -r '.[].slug'
