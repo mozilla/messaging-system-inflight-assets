@@ -166,6 +166,7 @@ def validate_experiment(item):
 
 def validate(schema_name, src_path):
     schema = load_schema(schema_name)
+    check_action = schema_name in ['cfr']
 
     with open(src_path, "r") as f:
         items = json.loads(f.read())
@@ -181,6 +182,8 @@ def validate(schema_name, src_path):
                 print("Validation error: {}".format(match.message))
                 sys.exit(1)
             validate_item_targeting(item)
+            if check_action:
+                validate_all_actions(item, schema_name)
 
     print("Passed!")
 

@@ -51,7 +51,7 @@
             "type": "string"
           },
           "url": {
-            "type": "string"
+            "type": ["string", "null"]
           }
         },
         "type": "object"
