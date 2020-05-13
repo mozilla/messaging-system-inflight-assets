@@ -68,8 +68,8 @@ def validate_item_targeting(item, for_exp=False):
         try:
             result = list(EVALUATOR.validate(jexl_expression))
             if len(result) > 0:
-                raise Exception(result[0])
-        except Exception as e:
+                raise SyntaxError(result[0])
+        except SyntaxError as e:
             print(e)
             sys.exit(1)
 
@@ -155,7 +155,7 @@ def validate_experiment(item):
         except ValidationError as err:
             match = best_match([err])
             print("\tValidation error: {}".format(match.message))
-            exit(1)
+            sys.exit(1)
 
         # Validate the targeting JEXL if any
         validate_item_targeting(branch_message, True)
