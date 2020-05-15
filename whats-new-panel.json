@@ -73,7 +73,7 @@
         "string_id": "cfr-whatsnew-pip-cta"
       }
     },
-    "targeting": "firefoxVersion >= 76",
+    "targeting": "firefoxVersion >= 76 && (firefoxVersion < 77 || locale != \"en-GB\")",
     "trigger": {
       "id": "whatsNewPanelOpened"
     }
@@ -130,6 +130,26 @@
       }
     },
     "targeting": "firefoxVersion >= 76",
+    "trigger": {
+      "id": "whatsNewPanelOpened"
+    }
+  },
+  {
+    "id": "WHATS_NEW_POCKET_GB",
+    "template": "whatsnew_panel_message",
+    "order": 1,
+    "content": {
+      "bucket_id": "WHATS_NEW_POCKET_GB",
+      "published_date": 1591056000000,
+      "title": "Discover fascinating articles from Pocket for Firefox",
+      "icon_url": "chrome://pocket/content/panels/img/pocketlogosolo@2x.png",
+      "icon_alt": "Pocket for Firefox icon",
+      "body": "Get the most thought-provoking stories, news, and videos right on your new tab.",
+      "cta_url": "home-topstories",
+      "cta_type": "OPEN_PREFERENCES_PAGE",
+      "link_text": "Turn on Pocket Articles"
+    },
+    "targeting": "firefoxVersion == 77 && locale == \"en-GB\"",
     "trigger": {
       "id": "whatsNewPanelOpened"
     }
