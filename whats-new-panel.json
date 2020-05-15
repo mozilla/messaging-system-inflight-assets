@@ -141,13 +141,13 @@
     "content": {
       "bucket_id": "WHATS_NEW_POCKET_GB",
       "published_date": 1591056000000,
-      "title": "Discover fascinating articles from Pocket for Firefox",
+      "title": "Fascinating articles from Pocket for Firefox",
       "icon_url": "chrome://pocket/content/panels/img/pocketlogosolo@2x.png",
       "icon_alt": "Pocket for Firefox icon",
       "body": "Get the most thought-provoking stories, news, and videos right on your new tab.",
       "cta_url": "home-topstories",
       "cta_type": "OPEN_PREFERENCES_PAGE",
-      "link_text": "Turn on Pocket Articles"
+      "link_text": "Turn on Pocket articles"
     },
     "targeting": "firefoxVersion == 77 && locale == \"en-GB\"",
     "trigger": {
