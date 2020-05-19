@@ -99,7 +99,7 @@
     userFacingName: "Privacy Protections Report Onboarding (N4S)"
     experimentDocumentUrl: https://experimenter.services.mozilla.com/experiments/privacy-protections-report-onboarding-n4s/
     userFacingDescription: This experiment will compare a treatment branch with the default onboarding experience, to a set of treatments with a new protection report card.
-    isEnrollmentPaused: false
+    isEnrollmentPaused: true
     branches:
       - slug: n4s_protections_report_control
         ratio: 1
