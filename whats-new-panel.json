@@ -73,7 +73,7 @@
         "string_id": "cfr-whatsnew-pip-cta"
       }
     },
-    "targeting": "firefoxVersion >= 76 && (firefoxVersion < 77 || locale != \"en-GB\")",
+    "targeting": "firefoxVersion >= 76 && !(firefoxVersion >= 77 && locale == \"en-GB\")",
     "trigger": {
       "id": "whatsNewPanelOpened"
     }
@@ -149,7 +149,7 @@
       "cta_type": "OPEN_PREFERENCES_PAGE",
       "link_text": "Turn on Pocket articles"
     },
-    "targeting": "firefoxVersion == 77 && locale == \"en-GB\"",
+    "targeting": "firefoxVersion >= 77 && locale == \"en-GB\"",
     "trigger": {
       "id": "whatsNewPanelOpened"
     }
