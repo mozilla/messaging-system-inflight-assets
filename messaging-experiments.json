@@ -8,7 +8,7 @@
       "userFacingName": "About:Welcome Pull Factor Reinforcement",
       "experimentDocumentUrl": "https://experimenter.services.mozilla.com/experiments/aboutwelcome-pull-factor-reinforcement-76-release/",
       "userFacingDescription": "4 branch experiment different variants of about:welcome with a goal of testing new experiment framework and get insights on whether reinforcing pull-factors improves retention. Test deployment of multiple branches using new experiment framework",
-      "isEnrollmentPaused": false,
+      "isEnrollmentPaused": true,
       "branches": [
         {
           "slug": "control",
