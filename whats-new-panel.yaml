@@ -57,7 +57,7 @@
       string_id: cfr-whatsnew-pip-cta
   # For en-GB locales we want to remove this last message (order 3) so we add
   # WHATS_NEW_POCKET_GB on top and keep 3 messages in the panel
-  targeting: firefoxVersion >= 76 && !(firefoxVersion >= 77 && locale == "en-GB")
+  targeting: firefoxVersion >= 76 && locale != "en-GB"
   trigger:
     id: whatsNewPanelOpened
 - id: WHATS_NEW_VULNERABLE_PASSWORDS_76
@@ -107,7 +107,7 @@
     bucket_id: WHATS_NEW_POCKET_GB
     published_date: 1591056000000
     title: Fascinating articles from Pocket for Firefox
-    icon_url: data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjE2IiBoZWlnaHQ9IjE5NyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTE2Ny4yMDkgODMuMDkybC01MS4yOTYgNDguMDUzYy0yLjY0MSAzLjAwMy02Ljc5IDQuMTI5LTkuODA3IDQuMTI5LTMuNzcyIDAtNy41NDQtMS4xMjYtMTAuNTYxLTQuMTI5TDQ1LjAwMiA4My4wOTJjLTUuMjgtNS42MzItNi4wMzQtMTUuMDE3IDAtMjEuMDI0IDUuNjU4LTUuMjU1IDE1LjA4OC02LjAwNiAyMC43NDUgMGw0MC4zNTkgMzguNjY4IDQxLjExMy0zOC42NjhjNS4yOC02LjAwNiAxNC43MS01LjI1NSAxOS45OSAwIDUuMjgxIDYuMDA3IDUuMjgxIDE1LjM5MiAwIDIxLjAyNE0xOTUuOTE2Ljc4M0gyMC44NDJDOS40NzQuNzgzIDAgOS42NCAwIDIxLjE5M3Y2NS44NWMwIDU5LjY4NyA0OC41MDUgMTA5LjM2MyAxMDguMzc5IDEwOS4zNjNDMTY3Ljg3NCAxOTYuNDA2IDIxNiAxNDYuNzMgMjE2IDg3LjA0MnYtNjUuODVDMjE2IDkuNjQgMjA2LjkwNS43ODQgMTk1LjkxNi43ODQiIGZpbGw9IiNFRjQxNTYiLz48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTE2Ny4yMDcgODMuMDkxbC01MS4yOTcgNDguMDUzYy0yLjY0IDMuMDA0LTYuNzg5IDQuMTMtOS44MDcgNC4xMy0zLjc3MiAwLTcuNTQzLTEuMTI2LTEwLjU2LTQuMTNMNDUgODMuMDkxYy01LjI4LTUuNjMxLTYuMDM1LTE1LjAxNiAwLTIxLjAyMyA1LjY1OC01LjI1NiAxNS4wODctNi4wMDcgMjAuNzQ1IDBsNDAuMzU4IDM4LjY2OCA0MS4xMTMtMzguNjY4YzUuMjgxLTYuMDA3IDE0LjcxLTUuMjU2IDE5Ljk5MSAwIDUuMjggNi4wMDcgNS4yOCAxNS4zOTIgMCAyMS4wMjMiIGZpbGw9IiNmZmYiLz48L3N2Zz4=
+    icon_url: data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjU3NiIgaGVpZ2h0PSI1NzYiIHZpZXdCb3g9IjAgMCA0MzIgNDMyIj48cGF0aCBmaWxsPSIjZWY0MTU2IiBkPSJNMzEuNSAyMi40QzE5LjEgMjUuNCA5IDMzLjYgMy42IDQ0LjlMLjUgNTEuNS4yIDEzMWMtLjIgNjkuMS0uMSA4MS4xIDEuNCA5MiAxMC43IDgyLjMgNjguOCAxNTIuOSAxNDcuMyAxNzkuMSAyNC4yIDggMzEuMSA5LjEgNjIuNSA5LjYgMjguOS41IDM2LjMgMCA1Mi42LTMuOCAyMC40LTQuNyA0NS44LTE1IDYzLTI1LjYgMjcuMy0xNi45IDUyLjctNDEuNyA2OS45LTY4LjMgMTcuNi0yNy4yIDI5LjQtNTkuMSAzMy41LTkxIDEuNS0xMC45IDEuNy0yMi45IDEuNC05Mi41bC0uMy04MC0yLjgtNS43Yy01LjctMTEuNi0xNi40LTIwLjItMjguNS0yMi43LTcuOS0xLjctMzYxLjgtMS40LTM2OC43LjN6bTkyLjQgMTE2LjFjMyAxLjUgMTkuNCAxNi41IDQ2LjQgNDIuNWw0MS44IDQwLjEgMTEuNy0xMWM2LjQtNiAyNS45LTI0LjMgNDMuMi00MC42IDIxLjEtMTkuOSAzMy0zMC40IDM2LTMxLjggMTAuMy00LjggMjQuOC0xLjQgMzIuNCA3LjUgOS42IDExLjIgOS4zIDMwLjItLjcgNDAuNy0xLjggMS44LTI2LjMgMjUtNTQuNSA1MS41LTMwLjkgMjguOS01My4xIDQ5LjEtNTYgNTAuNi0zLjggMi02LjEgMi41LTEyLjIgMi41LTEyLjggMC0xMi40LjMtNzItNTYuNC01Ny40LTU0LjUtNTcuMi01NC40LTU4LjYtNjYuMi0yLjYtMjIuNSAyMi4zLTM5LjggNDIuNS0yOS40eiIvPjwvc3ZnPg==
     icon_alt: Pocket for Firefox icon
     body: Get the most thought-provoking stories from Pocket right on your new tab.
     cta_url: home-topstories
@@ -128,7 +128,7 @@
   frequency:
     lifetime: 100
   priority: 5
-  targeting: firefoxVersion == 77 && locale == "en-GB" && (usesFirefoxSync || hasAccessedFxAPanel ||
+  targeting: firefoxVersion >= 75 && locale == "en-GB" && (usesFirefoxSync || hasAccessedFxAPanel ||
     currentDate|date - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_77_GB']
     || (messageImpressions['WHATS_NEW_BADGE_77_GB']|length >= 1 && currentDate|date -
     messageImpressions['WHATS_NEW_BADGE_77_GB'][0] <= 345600000)) && 'browser.messaging-system.whatsNewPanel.enabled'|preferenceValue
