@@ -26,6 +26,7 @@ ALL_SCHEMAS = dict()
 SCHEMA_MAP = {
     "cfr": "schema/cfr.schema.json",
     "onboarding": "schema/onboarding.schema.json",
+    "onboarding-multistage": "schema/onboarding-multistage.schema.json",
     "cfr-fxa": "schema/cfr-fxa.schema.json",
     "cfr-heartbeat": "schema/cfr-heartbeat.schema.json",
     "messaging-experiments": "schema/messaging-experiments.schema.json",
@@ -109,10 +110,19 @@ def extract_actions(message, message_type):
             if "action" in button:
                 yield button["action"]
 
+    def _extract_onboarding_multistage():
+        for screen in message["screens"]:
+            for button_name in ["primary_button", "secondary_button"]:
+                button = screen["content"].get(button_name)
+                if button and button["action"].get("type"):
+                    yield button["action"]
+
     if message_type == "cfr":
         yield from _extract_cfr()
     elif message_type == "onboarding":
         yield from _extract_onboarding()
+    elif message_type == "onboarding-multistage":
+        yield from _extract_onboarding_multistage()
     else:
         raise KeyError("invalid message type {}".format(message_type))
 
@@ -122,20 +132,24 @@ def validate_all_actions(message, message_type, for_exp=False):
         validate_action(action, for_exp)
 
 
-def get_branch_message(branch_value):
-    if "id" in branch_value:
-        # CFR messages
-        return "cfr", branch_value
-    if "cards" in branch_value:
-        # Onboarding messages
-        return "onboarding", branch_value.get("cards")
-
-    return None, None
+def get_branch_message(branch):
+    if branch["groups"] == ["cfr"]:
+        return "cfr", branch["value"]
+    elif branch["groups"] == ["aboutwelcome"]:
+        value = branch["value"]
+        if "cards" in value:
+            return "onboarding", value["cards"]
+        elif "screens" in value:
+            return "onboarding-multistage", value
+        else:
+            return "onboarding", None
+    else:
+        return None, None
 
 
 def validate_experiment(item):
     for branch in item.get("arguments").get("branches"):
-        message_type, branch_message = get_branch_message(branch.get("value"))
+        message_type, branch_message = get_branch_message(branch)
         if branch_message is None:
             print(
                 "\tSkip branch {} because it's empty"

@@ -1,0 +1,241 @@
+{
+  "description": "MultiStage About Welcome Schema.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "Unique message identifier",
+      "type": "string"
+    },
+    "template": {
+      "enum": [
+        "MULTISTAGE", "multistage"
+      ],
+      "type": "string"
+    },
+    "screens": {
+      "properties": {
+        "id": {
+          "description": "Unique id identifying screen",
+          "type": "string"
+        },
+        "order": {
+          "description": "Order in which screen should display",
+          "type": "number"
+        },
+        "content": {
+          "properties": {
+            "title": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "description": "The message displayed in the title of the screen"
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "string_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "string_id"
+                  ],
+                  "description": "Id of localized string for screen title"
+                }
+              ],
+              "description": "Id of localized string or message override."
+            },
+            "subtitle": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "description": "The message displayed in the subtitle of the screen"
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "string_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "string_id"
+                  ],
+                  "description": "Id of localized string for screen subtitle"
+                }
+              ],
+              "description": "Id of localized string or message override."
+            },
+            "primary_button": {
+              "properties": {
+                "label": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "The label of the welcome screen primary action button"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "string_id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "string_id"
+                      ],
+                      "description": "Id of localized string for screen primary button"
+                    }
+                  ],
+                  "description": "Id of localized string or message override."
+                },
+                "action": {
+                  "properties": {
+                    "navigate": {
+                      "description": "Boolean value that control navigation to next screen action",
+                      "type": "boolean"
+                    },
+                    "data": {
+                      "properties": {
+                        "args": {
+                          "type": "string"
+                        },
+                        "where": {
+                          "default": "currrent",
+                          "description": "Where the URL is opened.",
+                          "enum": [
+                            "current",
+                            "save",
+                            "tab",
+                            "tabshifted",
+                            "window"
+                          ],
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    "addFlowParams": {
+                      "description": "Controls adding flow parameters to redirected URL",
+                      "type": "boolean"
+                    },
+                    "type": {
+                      "description": "Action dispatched by the button.",
+                      "enum": [
+                        "OPEN_URL",
+                        "OPEN_ABOUT_PAGE",
+                        "SHOW_MIGRATION_WIZARD"
+                      ],
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "type": "object"
+            },
+            "secondary_button": {
+              "properties": {
+                "label": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "The label of the welcome screen secondary action button"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "string_id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "string_id"
+                      ],
+                      "description": "Id of localized string for screen secondary button"
+                    }
+                  ],
+                  "description": "Id of localized string or message override."
+                },
+                "text": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "The text shown before secondary action button"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "string_id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "string_id"
+                      ],
+                      "description": "Id of localized string shown before secondary button"
+                    }
+                  ],
+                  "description": "Id of localized string or message override."
+                },
+                "position": {
+                  "description": "Decides placement of secondary link button on screen",
+                  "type": "string",
+                  "enum": [
+                    "top",
+                    "bottom"
+                  ]
+                },
+                "action": {
+                  "properties": {
+                    "navigate": {
+                      "description": "Boolean value that control navigation to next screen",
+                      "type": "boolean"
+                    },
+                    "data": {
+                      "properties": {
+                        "args": {
+                          "type": "string"
+                        },
+                        "where": {
+                          "default": "currrent",
+                          "description": "Where the URL is opened.",
+                          "enum": [
+                            "current",
+                            "save",
+                            "tab",
+                            "tabshifted",
+                            "window"
+                          ],
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    "addFlowParams": {
+                      "description": "Controls adding flow parameters to redirected URL",
+                      "type": "boolean"
+                    },
+                    "type": {
+                      "description": "Action dispatched by the button.",
+                      "enum": [
+                        "OPEN_URL",
+                        "OPEN_ABOUT_PAGE",
+                        "SHOW_MIGRATION_WIZARD"
+                      ],
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "array"
+    }
+  }
+}
