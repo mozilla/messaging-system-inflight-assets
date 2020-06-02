@@ -216,7 +216,7 @@
               content:
                 title: Import your passwords, bookmarks, and more
                 subtitle: Coming from another browser? It's easy to bring everything to Firefox.
-                tiles:
+                tiles: true
                 primary_button:
                   label: Start Import
                   action:
