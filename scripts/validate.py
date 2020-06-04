@@ -31,7 +31,8 @@ SCHEMA_MAP = {
     "cfr-heartbeat": "schema/cfr-heartbeat.schema.json",
     "messaging-experiments": "schema/messaging-experiments.schema.json",
     "whats-new-panel": "schema/whats-new-panel.schema.json",
-    "action": "schema/messaging-system-special-message-actions.schema.json"
+    "action": "schema/messaging-system-special-message-actions.schema.json",
+    "message-groups": "schema/message-groups.schema.json",
 }
 
 USAGE = """

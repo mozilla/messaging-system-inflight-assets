@@ -1,0 +1,7 @@
+[
+  {
+    "id": "messaging-experiments",
+    "enabled": true,
+    "type": "remote-settings"
+  }
+]
