@@ -128,7 +128,7 @@
     cta_url: https://support.mozilla.org/1/firefox/%VERSION%/%OS%/%LOCALE%/pdf-viewer
     cta_type: OPEN_URL
     link_text:
-      string_id: cfr-whatsnew-protections-cta-link
+      string_id: cfr-whatsnew-pip-cta
   targeting: firefoxVersion >= 78
   trigger:
     id: whatsNewPanelOpened
