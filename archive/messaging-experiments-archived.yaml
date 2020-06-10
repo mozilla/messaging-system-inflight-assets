@@ -1,3 +1,64 @@
+- id: MULTISTAGE_ABOUT_WELCOME_TEST
+  enabled: true
+  filter_expression: env.version >= '78.' && env.version < '80.'
+  targeting: localeLanguageCode == "en" &&
+    firefoxVersion >= 78 &&
+    (!('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue) || 'multistage_aboutwelcome_test' in activeExperiments)
+  arguments:
+    slug: multistage_aboutwelcome_test
+    userFacingName: "About:Welcome MultiStage Welcome Test"
+    experimentDocumentUrl: https://experimenter.services.mozilla.com/experiments/
+    userFacingDescription: Test study to validate launching multistage welcome flow via experiment framework.
+    isEnrollmentPaused: false
+    branches:
+      - slug: multistage_aboutwelcome_test_control
+        ratio: 1
+        groups:
+          - aboutwelcome
+        value: {}
+      - slug: multistage_aboutwelcome_test_treatment
+        ratio: 1
+        groups:
+          - aboutwelcome
+        value:
+          id: multi-stage-welcome
+          template: multistage
+          screens:
+            - id: "AW_GET_STARTED"
+              order: 0
+              content:
+                title:
+                  string_id: onboarding-welcome-header
+                subtitle: The fast, safe, and private browser that's backed by a non-profit.
+                primary_button:
+                  label: Start Setup
+                  action:
+                    navigate: true
+                secondary_button:
+                  text: Have an account?
+                  label: Sign in
+                  position: top
+                  action:
+                    type: OPEN_URL
+                    addFlowParams: true
+                    data:
+                      args: https://accounts.firefox.com/?service=sync&action=email&context=fx_desktop_v3&entrypoint=activity-stream-firstrun&style=trailhead
+                      where: current
+            - id: "AW_IMPORT_SETTINGS"
+              order: 1
+              content:
+                title: Import your passwords, bookmarks, and more
+                subtitle: Coming from another browser? It's easy to bring everything to Firefox.
+                tiles: true
+                primary_button:
+                  label: Start Import
+                  action:
+                    navigate: true
+                    type: SHOW_MIGRATION_WIZARD
+                secondary_button:
+                  label: Not now
+                  action:
+                    navigate: true
 - id: AW_PULL_FACTOR_PRIVACY_1
   enabled: true
   filter_expression: ('76' in env.version) || (localeLanguageCode == "en" &&
