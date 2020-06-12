@@ -167,7 +167,7 @@
                     type: OPEN_PRIVATE_BROWSER_WINDOW
 - id: MULTI-STAGE-ABOUTWELCOME-V1-78-BETA-V2
   enabled: true
-  filter_expression: env.version >= '78.' && env.version < '79.' && env.channel == 'beta' && env.appinfo.appBuildID >= '20200610093716'
+  filter_expression: env.version >= '78.' && env.version < '79.' && env.channel == 'beta' && env.appinfo.appBuildID >= '20200611192304'
   targeting: localeLanguageCode == "en" && [userId, "bug-1644521-message-multi-stage-aboutwelcome-v1-78-beta-v2-beta-78-79"]|bucketSample(0, 5000, 10000) &&
     (isFirstStartup || 'bug-1644521-message-multi-stage-aboutwelcome-v1-78-beta-v2-beta-78-79' in activeExperiments)
   arguments:
