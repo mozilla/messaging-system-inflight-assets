@@ -108,8 +108,8 @@
       string_id: cfr-whatsnew-protections-icon-alt
     body:
       string_id: cfr-whatsnew-protections-body
-    cta_url: protections
-    cta_type: OPEN_ABOUT_PAGE
+    cta_url: ""
+    cta_type: OPEN_PROTECTION_REPORT
     link_text:
       string_id: cfr-whatsnew-protections-cta-link
   targeting: firefoxVersion >= 78
