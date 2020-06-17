@@ -80,6 +80,10 @@
         "cta_url": {
           "$ref": "#/definitions/linkUrl"
         },
+        "cta_where": {
+          "description": "How to open the cta: new window, tab, focused, unfocused.",
+          "enum": ["current", "tabshifted", "tab", "save", "window"]
+        },
         "icon_url": {
           "anyOf": [
             {
