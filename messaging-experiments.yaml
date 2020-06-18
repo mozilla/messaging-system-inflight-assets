@@ -175,7 +175,7 @@
     userFacingName: "About:Welcome MultiStage Welcome Beta"
     experimentDocumentUrl: https://experimenter.services.mozilla.com/experiments/multi-stage-aboutwelcome-v1-78-beta-v2/
     userFacingDescription: Study to validate launching multistage welcome flow via experiment framework.
-    isEnrollmentPaused: false
+    isEnrollmentPaused: true
     branches:
       - slug: control
         ratio: 1
