@@ -13,9 +13,7 @@
     "description": "Disables all STP doorhangers.",
     "properties": {
       "type": {
-        "enum": [
-          "DISABLE_STP_DOORHANGERS"
-        ],
+        "enum": ["DISABLE_STP_DOORHANGERS"],
         "type": "string"
       }
     },
@@ -34,9 +32,7 @@
         "type": "object"
       },
       "type": {
-        "enum": [
-          "HIGHLIGHT_FEATURE"
-        ],
+        "enum": ["HIGHLIGHT_FEATURE"],
         "type": "string"
       }
     },
@@ -57,9 +53,7 @@
         "type": "object"
       },
       "type": {
-        "enum": [
-          "INSTALL_ADDON_FROM_URL"
-        ],
+        "enum": ["INSTALL_ADDON_FROM_URL"],
         "type": "string"
       }
     },
@@ -82,9 +76,7 @@
         "type": "object"
       },
       "type": {
-        "enum": [
-          "OPEN_ABOUT_PAGE"
-        ],
+        "enum": ["OPEN_ABOUT_PAGE"],
         "type": "string"
       }
     },
@@ -103,9 +95,7 @@
         "type": "object"
       },
       "type": {
-        "enum": [
-          "OPEN_APPLICATIONS_MENU"
-        ],
+        "enum": ["OPEN_APPLICATIONS_MENU"],
         "type": "string"
       }
     },
@@ -115,9 +105,7 @@
     "description": "Focuses and expands the awesome bar.",
     "properties": {
       "type": {
-        "enum": [
-          "OPEN_AWESOME_BAR"
-        ],
+        "enum": ["OPEN_AWESOME_BAR"],
         "type": "string"
       }
     },
@@ -140,9 +128,7 @@
         "type": "object"
       },
       "type": {
-        "enum": [
-          "OPEN_PREFERENCES_PAGE"
-        ],
+        "enum": ["OPEN_PREFERENCES_PAGE"],
         "type": "string"
       }
     },
@@ -152,9 +138,7 @@
     "description": "Opens a private browsing window.",
     "properties": {
       "type": {
-        "enum": [
-          "OPEN_PRIVATE_BROWSER_WINDOW"
-        ],
+        "enum": ["OPEN_PRIVATE_BROWSER_WINDOW"],
         "type": "string"
       }
     },
@@ -164,9 +148,7 @@
     "description": "Opens the protecions panel",
     "properties": {
       "type": {
-        "enum": [
-          "OPEN_PROTECTION_PANEL"
-        ],
+        "enum": ["OPEN_PROTECTION_PANEL"],
         "type": "string"
       }
     },
@@ -176,9 +158,7 @@
     "description": "Opens the protecions report",
     "properties": {
       "type": {
-        "enum": [
-          "OPEN_PROTECTION_REPORT"
-        ],
+        "enum": ["OPEN_PROTECTION_REPORT"],
         "type": "string"
       }
     },
@@ -195,22 +175,14 @@
           "where": {
             "default": "currrent",
             "description": "Where the URL is opened.",
-            "enum": [
-              "current",
-              "save",
-              "tab",
-              "tabshifted",
-              "window"
-            ],
+            "enum": ["current", "save", "tab", "tabshifted", "window"],
             "type": "string"
           }
         },
         "type": "object"
       },
       "type": {
-        "enum": [
-          "OPEN_URL"
-        ],
+        "enum": ["OPEN_URL"],
         "type": "string"
       }
     },
@@ -220,9 +192,7 @@
     "description": "Pin the current tab.",
     "properties": {
       "type": {
-        "enum": [
-          "PIN_CURRENT_TAB"
-        ],
+        "enum": ["PIN_CURRENT_TAB"],
         "type": "string"
       }
     },
@@ -232,9 +202,7 @@
     "description": "Show Firefox Accounts",
     "properties": {
       "type": {
-        "enum": [
-          "SHOW_FIREFOX_ACCOUNTS"
-        ],
+        "enum": ["SHOW_FIREFOX_ACCOUNTS"],
         "type": "string"
       },
       "data": {
@@ -253,9 +221,27 @@
     "description": "Shows the Migration Wizard to import data from another Browser. See https://support.mozilla.org/en-US/kb/import-data-another-browser",
     "properties": {
       "type": {
-        "enum": [
-          "SHOW_MIGRATION_WIZARD"
-        ],
+        "enum": ["SHOW_MIGRATION_WIZARD"],
+        "type": "string"
+      }
+    },
+    "type": "object"
+  },
+  "DISABLE_DOH": {
+    "description": "Disable the DoH feature.",
+    "properties": {
+      "type": {
+        "enum": ["DISABLE_DOH"],
+        "type": "string"
+      }
+    },
+    "type": "object"
+  },
+  "ACCEPT_DOH": {
+    "description": "Confirm to continue using the DoH feature.",
+    "properties": {
+      "type": {
+        "enum": ["ACCEPT_DOH"],
         "type": "string"
       }
     },
