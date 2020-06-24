@@ -1321,6 +1321,8 @@
       sumo_path: extensionrecommendations
     notification_text: Message from Firefox
     category: cfrFeatures
+  frequency:
+    lifetime: 3
   trigger:
     id: openURL
     patterns:
