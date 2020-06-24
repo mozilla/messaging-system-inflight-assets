@@ -168,14 +168,16 @@
 - id: MULTI-STAGE-ABOUTWELCOME-V1-78-BETA-V2
   enabled: true
   filter_expression: env.version >= '78.' && env.version < '79.' && env.channel == 'beta' && env.appinfo.appBuildID >= '20200611192304'
+  # The filter `!('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue)` is used to exclude
+  # users who have switched channels or re-installed the browser without having a new profile
   targeting: localeLanguageCode == "en" && [userId, "bug-1644521-message-multi-stage-aboutwelcome-v1-78-beta-v2-beta-78-79"]|bucketSample(0, 5000, 10000) &&
-    (isFirstStartup || 'bug-1644521-message-multi-stage-aboutwelcome-v1-78-beta-v2-beta-78-79' in activeExperiments)
+    ((isFirstStartup && !('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue)) || 'bug-1644521-message-multi-stage-aboutwelcome-v1-78-beta-v2-beta-78-79' in activeExperiments)
   arguments:
     slug: bug-1644521-message-multi-stage-aboutwelcome-v1-78-beta-v2-beta-78-79
     userFacingName: "About:Welcome MultiStage Welcome Beta"
     experimentDocumentUrl: https://experimenter.services.mozilla.com/experiments/multi-stage-aboutwelcome-v1-78-beta-v2/
     userFacingDescription: Study to validate launching multistage welcome flow via experiment framework.
-    isEnrollmentPaused: true
+    isEnrollmentPaused: false
     branches:
       - slug: control
         ratio: 1
