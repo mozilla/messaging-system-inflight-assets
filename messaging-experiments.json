@@ -416,7 +416,8 @@
   {
     "id": "PROTECTION-RETENTION-EXPERIMENT-RELEASE",
     "enabled": true,
-    "filter_expression": "env.channel == 'nightly'",
+    "filter_expression": "(env.channel == 'nightly' || env.channel == 'default')",
+    "targeting": "localeLanguageCode == 'en'",
     "arguments": {
       "slug": "bug-1645918-high-velocity-message-testing-privacy-retention-study",
       "userFacingName": "Message Router Content Experiment High Velocity Message Testing Privacy Retention Study",
@@ -433,7 +434,7 @@
           "value": {}
         },
         {
-          "slug": "treatment-variation-privacy",
+          "slug": "treatment-variation-a",
           "ratio": 1,
           "groups": [
             "cfr"
@@ -458,6 +459,7 @@
               "learn_more": "cryptominers-report",
               "text": "You\u2019re using the only major browser backed by a non-profit. See how Firefox puts your privacy first.",
               "icon": "chrome://browser/content/logos/tracking-protection.svg",
+              "icon_dark_theme": "chrome://browser/content/logos/tracking-protection-dark-theme.svg",
               "buttons": {
                 "primary": {
                   "label": {
@@ -468,7 +470,9 @@
                   },
                   "action": {
                     "type": "OPEN_URL",
-                    "args": "https://www.mozilla.org/firefox/privacy/?utm_source=firefox-desktop&utm_campaign=hvt-privacy-retention&utm_medium=referral"
+                    "data": {
+                      "args": "https://www.mozilla.org/firefox/privacy/?utm_source=firefox-desktop&utm_campaign=hvt-privacy-retention&utm_medium=referral"
+                    }
                   }
                 },
                 "secondary": [
@@ -496,7 +500,7 @@
           }
         },
         {
-          "slug": "treatment-variation-protections",
+          "slug": "treatment-variation-b",
           "ratio": 1,
           "groups": [
             "cfr"
@@ -521,11 +525,14 @@
               "learn_more": "cryptominers-report",
               "text": "You\u2019re using the only major browser backed by a non-profit. See how Firefox puts your privacy first.",
               "icon": "chrome://browser/content/logos/tracking-protection.svg",
+              "icon_dark_theme": "chrome://browser/content/logos/tracking-protection-dark-theme.svg",
               "buttons": {
                 "primary": {
-                  "value": "Show Me",
-                  "attributes": {
-                    "accesskey": "S"
+                  "label": {
+                    "value": "Show Me",
+                    "attributes": {
+                      "accesskey": "S"
+                    }
                   },
                   "action": {
                     "type": "OPEN_PROTECTION_PANEL"
@@ -556,7 +563,7 @@
           }
         },
         {
-          "slug": "treatment-variation-monitor",
+          "slug": "treatment-variation-c",
           "ratio": 1,
           "groups": [
             "cfr"
@@ -581,15 +588,20 @@
               "learn_more": "cryptominers-report",
               "text": "You\u2019re using the only major browser backed by a non-profit. See how Firefox puts your privacy first.",
               "icon": "chrome://browser/content/logos/tracking-protection.svg",
+              "icon_dark_theme": "chrome://browser/content/logos/tracking-protection-dark-theme.svg",
               "buttons": {
                 "primary": {
-                  "value": "Show Me",
-                  "attributes": {
-                    "accesskey": "S"
+                  "label": {
+                    "value": "Show Me",
+                    "attributes": {
+                      "accesskey": "S"
+                    }
                   },
                   "action": {
                     "type": "OPEN_URL",
-                    "args": "https://monitor.firefox.com/?utm_source=firefox-desktop&utm_campaign=hvt-privacy-retention&utm_medium=referral"
+                    "data": {
+                      "args": "https://monitor.firefox.com/?utm_source=firefox-desktop&utm_campaign=hvt-privacy-retention&utm_medium=referral"
+                    }
                   }
                 },
                 "secondary": [
