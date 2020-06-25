@@ -283,122 +283,129 @@
         groups:
           - cfr
         value: {}
-      - slug: treatment-variation-b
+      - slug: treatment-variation-privacy
         ratio: 1
         groups:
           - cfr
         value:
-          id: PROTECTIONS_RETENTION_B
+          id: PROTECTIONS_RETENTION_PRIVACY
           template: cfr_doorhanger
           content:
             layout: icon_and_message
             category: cfrFeatures
             anchor_id: tracking-protection-icon-box
             skip_address_bar_notifier: true
-            bucket_id: PROTECTIONS_RETENTION_B
-            heading_text: Firefox protects you, see how
+            bucket_id: PROTECTIONS_RETENTION_PRIVACY
+            heading_text: Putting your privacy before profits
             notification_text: ''
             info_icon:
               label:
                 string_id: cfr-doorhanger-extension-sumo-link
               sumo_path: extensionrecommendations
             learn_more: cryptominers-report
-            text: A generic message about privacy
+            text: You’re using the only major browser backed by a non-profit. See how Firefox puts your privacy first.
             icon: chrome://browser/content/logos/tracking-protection.svg
             buttons:
               primary:
                 label:
-                  string_id: cfr-doorhanger-extension-ok-button
+                  value: Show Me
+                  attributes:
+                    accesskey: S
                 action:
                   type: OPEN_URL
-                  args: https://monitor.firefox.com
-                event: PROTECTION
+                  args: https://www.mozilla.org/firefox/privacy/?utm_source=firefox-desktop&utm_campaign=hvt-privacy-retention&utm_medium=referral
               secondary:
                 - label:
-                    string_id: cfr-doorhanger-extensions-cancel-button
+                    string_id: cfr-doorhanger-extension-cancel-button
                   action:
                     type: CANCEL
           targeting: recentVisits|length > 1
+          frequency:
+            lifetime: 3
           trigger:
             id: frequentVisits
             patterns:
-              - https://*/*
-      - slug: treatment-variation-c
+              - http://*/*
+      - slug: treatment-variation-protections
         ratio: 1
         groups:
           - cfr
         value:
-          id: PROTECTIONS_RETENTION_C
+          id: PROTECTIONS_RETENTION_PROTECTIONS
           template: cfr_doorhanger
           content:
             layout: icon_and_message
             category: cfrFeatures
             anchor_id: tracking-protection-icon-box
             skip_address_bar_notifier: true
-            bucket_id: PROTECTIONS_RETENTION_C
-            heading_text: Firefox protects you, see how
+            bucket_id: PROTECTIONS_RETENTION_PROTECTIONS
+            heading_text: Putting your privacy before profits
             notification_text: ''
             info_icon:
               label:
                 string_id: cfr-doorhanger-extension-sumo-link
               sumo_path: extensionrecommendations
             learn_more: cryptominers-report
-            text: A generic message about privacy
+            text: You’re using the only major browser backed by a non-profit. See how Firefox puts your privacy first.
             icon: chrome://browser/content/logos/tracking-protection.svg
             buttons:
               primary:
-                label:
-                  string_id: cfr-doorhanger-extension-ok-button
-                action:
-                  type: OPEN_URL
-                  args: https://www.mozilla.org/privacy/firefox/
-                event: PROTECTION
-              secondary:
-                - label:
-                    string_id: cfr-doorhanger-extensions-cancel-button
-                  action:
-                    type: CANCEL
-          targeting: recentVisits|length > 1
-          trigger:
-            id: frequentVisits
-            patterns:
-              - https://*/*
-      - slug: treatment-variation-d
-        ratio: 1
-        groups:
-          - cfr
-        value:
-          id: PROTECTIONS_RETENTION_D
-          template: cfr_doorhanger
-          content:
-            layout: icon_and_message
-            category: cfrFeatures
-            anchor_id: tracking-protection-icon-box
-            skip_address_bar_notifier: true
-            bucket_id: PROTECTIONS_RETENTION_D
-            heading_text: Firefox protects you, see how
-            notification_text: ''
-            info_icon:
-              label:
-                string_id: cfr-doorhanger-extension-sumo-link
-              sumo_path: extensionrecommendations
-            learn_more: cryptominers-report
-            text: A generic message about privacy
-            icon: chrome://browser/content/logos/tracking-protection.svg
-            buttons:
-              primary:
-                label:
-                  string_id: cfr-doorhanger-extension-ok-button
+                value: Show Me
+                attributes:
+                  accesskey: S
                 action:
                   type: OPEN_PROTECTION_PANEL
-                event: PROTECTION
               secondary:
                 - label:
-                    string_id: cfr-doorhanger-extensions-cancel-button
+                    string_id: cfr-doorhanger-extension-cancel-button
                   action:
                     type: CANCEL
+          frequency:
+            lifetime: 3
           targeting: recentVisits|length > 1
           trigger:
             id: frequentVisits
             patterns:
-              - https://*/*
+              - http://*/*
+      - slug: treatment-variation-monitor
+        ratio: 1
+        groups:
+          - cfr
+        value:
+          id: PROTECTIONS_RETENTION_MONITOR
+          template: cfr_doorhanger
+          content:
+            layout: icon_and_message
+            category: cfrFeatures
+            anchor_id: tracking-protection-icon-box
+            skip_address_bar_notifier: true
+            bucket_id: PROTECTIONS_RETENTION_MONITOR
+            heading_text: Putting your privacy before profits
+            notification_text: ''
+            info_icon:
+              label:
+                string_id: cfr-doorhanger-extension-sumo-link
+              sumo_path: extensionrecommendations
+            learn_more: cryptominers-report
+            text: You’re using the only major browser backed by a non-profit. See how Firefox puts your privacy first.
+            icon: chrome://browser/content/logos/tracking-protection.svg
+            buttons:
+              primary:
+                value: Show Me
+                attributes:
+                  accesskey: S
+                action:
+                  type: OPEN_URL
+                  args: https://monitor.firefox.com/?utm_source=firefox-desktop&utm_campaign=hvt-privacy-retention&utm_medium=referral
+              secondary:
+                - label:
+                    string_id: cfr-doorhanger-extension-cancel-button
+                  action:
+                    type: CANCEL
+          frequency:
+            lifetime: 3
+          targeting: recentVisits|length > 1
+          trigger:
+            id: frequentVisits
+            patterns:
+              - http://*/*
