@@ -470,7 +470,8 @@
                   "action": {
                     "type": "OPEN_URL",
                     "data": {
-                      "args": "https://www.mozilla.org/firefox/privacy/?utm_source=firefox-desktop&utm_campaign=hvt-privacy-retention&utm_medium=referral"
+                      "args": "https://www.mozilla.org/firefox/privacy/?utm_source=firefox-desktop&utm_campaign=hvt-privacy-retention&utm_medium=referral",
+                      "where": "tab"
                     }
                   }
                 },
@@ -533,7 +534,7 @@
                     }
                   },
                   "action": {
-                    "type": "OPEN_PROTECTION_PANEL"
+                    "type": "OPEN_PROTECTION_REPORT"
                   }
                 },
                 "secondary": [
@@ -597,7 +598,8 @@
                   "action": {
                     "type": "OPEN_URL",
                     "data": {
-                      "args": "https://monitor.firefox.com/?utm_source=firefox-desktop&utm_campaign=hvt-privacy-retention&utm_medium=referral"
+                      "args": "https://monitor.firefox.com/?utm_source=firefox-desktop&utm_campaign=hvt-privacy-retention&utm_medium=referral",
+                      "where": "tab"
                     }
                   }
                 },

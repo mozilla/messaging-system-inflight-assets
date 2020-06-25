@@ -316,6 +316,7 @@
                   type: OPEN_URL
                   data:
                     args: https://www.mozilla.org/firefox/privacy/?utm_source=firefox-desktop&utm_campaign=hvt-privacy-retention&utm_medium=referral
+                    where: tab
               secondary:
                 - label:
                     string_id: cfr-doorhanger-extension-cancel-button
@@ -357,7 +358,7 @@
                   attributes:
                     accesskey: S
                 action:
-                  type: OPEN_PROTECTION_PANEL
+                  type: OPEN_PROTECTION_REPORT
               secondary:
                 - label:
                     string_id: cfr-doorhanger-extension-cancel-button
@@ -402,6 +403,7 @@
                   type: OPEN_URL
                   data:
                     args: https://monitor.firefox.com/?utm_source=firefox-desktop&utm_campaign=hvt-privacy-retention&utm_medium=referral
+                    where: tab
               secondary:
                 - label:
                     string_id: cfr-doorhanger-extension-cancel-button
