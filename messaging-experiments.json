@@ -483,6 +483,11 @@
                     "action": {
                       "type": "CANCEL"
                     }
+                  },
+                  {
+                    "label": {
+                      "string_id": "cfr-doorhanger-extension-never-show-recommendation"
+                    }
                   }
                 ]
               }
@@ -544,6 +549,11 @@
                     },
                     "action": {
                       "type": "CANCEL"
+                    }
+                  },
+                  {
+                    "label": {
+                      "string_id": "cfr-doorhanger-extension-never-show-recommendation"
                     }
                   }
                 ]
@@ -610,6 +620,11 @@
                     },
                     "action": {
                       "type": "CANCEL"
+                    }
+                  },
+                  {
+                    "label": {
+                      "string_id": "cfr-doorhanger-extension-never-show-recommendation"
                     }
                   }
                 ]
