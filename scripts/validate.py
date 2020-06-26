@@ -135,7 +135,10 @@ def validate_all_actions(message, message_type, for_exp=False):
 
 def get_branch_message(branch):
     if branch["groups"] == ["cfr"]:
-        return "cfr", branch["value"]
+        value = branch["value"]
+        if "id" in value:
+            return "cfr", branch["value"]
+        return "cfr", None
     elif branch["groups"] == ["aboutwelcome"]:
         value = branch["value"]
         if "cards" in value:
