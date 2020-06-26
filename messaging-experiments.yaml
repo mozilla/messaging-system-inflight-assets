@@ -200,7 +200,7 @@
               label:
                 string_id: cfr-doorhanger-extension-sumo-link
               sumo_path: extensionrecommendations
-            text: You’re using the only major browser backed by a non-profit. See how Firefox puts your privacy first.
+            text: 'You’re using the only major browser backed by a non-profit. See how Firefox puts your privacy first.'
             icon: chrome://browser/content/logos/tracking-protection.svg
             icon_dark_theme: chrome://browser/content/logos/tracking-protection-dark-theme.svg
             buttons:
@@ -228,6 +228,7 @@
             id: frequentVisits
             patterns:
               - http://*/*
+              - https://*/*
       - slug: treatment-variation-b
         ratio: 1
         groups:
@@ -247,7 +248,7 @@
               label:
                 string_id: cfr-doorhanger-extension-sumo-link
               sumo_path: extensionrecommendations
-            text: You’re using the only major browser backed by a non-profit. See how Firefox puts your privacy first.
+            text: 'You’re using the only major browser backed by a non-profit. See how Firefox puts your privacy first.'
             icon: chrome://browser/content/logos/tracking-protection.svg
             icon_dark_theme: chrome://browser/content/logos/tracking-protection-dark-theme.svg
             buttons:
@@ -272,6 +273,7 @@
             id: frequentVisits
             patterns:
               - http://*/*
+              - https://*/*
       - slug: treatment-variation-c
         ratio: 1
         groups:
@@ -291,7 +293,7 @@
               label:
                 string_id: cfr-doorhanger-extension-sumo-link
               sumo_path: extensionrecommendations
-            text: You’re using the only major browser backed by a non-profit. See how Firefox puts your privacy first.
+            text: 'You’re using the only major browser backed by a non-profit. See how Firefox puts your privacy first.'
             icon: chrome://browser/content/logos/tracking-protection.svg
             icon_dark_theme: chrome://browser/content/logos/tracking-protection-dark-theme.svg
             buttons:
@@ -319,6 +321,7 @@
             id: frequentVisits
             patterns:
               - http://*/*
+              - https://*/*
 - id: MULTI-STAGE-ABOUTWELCOME-V1-78-RELEASE
   enabled: true
   filter_expression: env.version >= '78.' && env.version < '79.' && env.channel == 'release'

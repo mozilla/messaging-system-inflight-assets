@@ -348,7 +348,8 @@
             "trigger": {
               "id": "frequentVisits",
               "patterns": [
-                "http://*/*"
+                "http://*/*",
+                "https://*/*"
               ]
             }
           }
@@ -415,7 +416,8 @@
             "trigger": {
               "id": "frequentVisits",
               "patterns": [
-                "http://*/*"
+                "http://*/*",
+                "https://*/*"
               ]
             }
           }
@@ -486,7 +488,8 @@
             "trigger": {
               "id": "frequentVisits",
               "patterns": [
-                "http://*/*"
+                "http://*/*",
+                "https://*/*"
               ]
             }
           }
