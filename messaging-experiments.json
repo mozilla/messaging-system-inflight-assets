@@ -266,7 +266,7 @@
     "id": "PROTECTION-RETENTION-EXPERIMENT-RELEASE",
     "enabled": true,
     "filter_expression": "env.channel == 'nightly' || env.channel == 'default'",
-    "targeting": "localeLanguageCode == 'en' && [userId, \"PROTECTION-RETENTION-EXPERIMENT-RELEASE\"]|stableSample(0.1)",
+    "targeting": "localeLanguageCode == 'en' && [userId, \"PROTECTION-RETENTION-EXPERIMENT-RELEASE\"]|stableSample(0.1) && 'app.shield.optoutstudies.enabled'|preferenceValue",
     "arguments": {
       "slug": "bug-1645918-high-velocity-message-testing-privacy-retention-study",
       "userFacingName": "Message Router Content Experiment High Velocity Message Testing Privacy Retention Study",
