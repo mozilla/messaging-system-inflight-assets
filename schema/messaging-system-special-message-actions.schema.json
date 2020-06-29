@@ -186,6 +186,7 @@
         "type": "string"
       }
     },
+    "required": ["data"],
     "type": "object"
   },
   "PIN_CURRENT_TAB": {
