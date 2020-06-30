@@ -98,38 +98,15 @@
       "cta_type": "OPEN_PREFERENCES_PAGE",
       "link_text": "Turn on Pocket articles"
     },
-    "targeting": "firefoxVersion >= 77 && locale == \"en-GB\"",
+    "targeting": "firefoxVersion >= 78 && locale == \"en-GB\"",
     "trigger": {
       "id": "whatsNewPanelOpened"
     }
   },
   {
-    "id": "WHATS_NEW_BADGE_77_GB",
-    "content": {
-      "action": {
-        "id": "show-whatsnew-button"
-      },
-      "badgeDescription": {
-        "string_id": "cfr-badge-reader-label-newfeature"
-      },
-      "bucket_id": "WHATS_NEW_BADGE_77_GB",
-      "delay": 300000,
-      "target": "whats-new-menu-button"
-    },
-    "frequency": {
-      "lifetime": 100
-    },
-    "priority": 5,
-    "targeting": "firefoxVersion >= 75 && locale == \"en-GB\" && (usesFirefoxSync || hasAccessedFxAPanel || currentDate|date - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_77_GB'] || (messageImpressions['WHATS_NEW_BADGE_77_GB']|length >= 1 && currentDate|date - messageImpressions['WHATS_NEW_BADGE_77_GB'][0] <= 345600000)) && 'browser.messaging-system.whatsNewPanel.enabled'|preferenceValue",
-    "template": "toolbar_badge",
-    "trigger": {
-      "id": "toolbarBadgeUpdate"
-    }
-  },
-  {
     "id": "WHATS_NEW_PROTECTIONS_DASHBOARD_78",
     "template": "whatsnew_panel_message",
-    "order": 1,
+    "order": 2,
     "content": {
       "bucket_id": "WHATS_NEW_PROTECTIONS_DASHBOARD_78",
       "published_date": 1593475200000,
@@ -157,7 +134,7 @@
   {
     "id": "WHATS_NEW_BETTER_PDF_78",
     "template": "whatsnew_panel_message",
-    "order": 2,
+    "order": 3,
     "content": {
       "bucket_id": "WHATS_NEW_BETTER_PDF_78",
       "published_date": 1593475200000,
