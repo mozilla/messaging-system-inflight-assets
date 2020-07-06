@@ -336,3 +336,38 @@
   template: toolbar_badge
   trigger:
     id: toolbarBadgeUpdate
+- id: WHATS_NEW_POCKET_GB
+  template: whatsnew_panel_message
+  order: 1
+  content:
+    bucket_id: WHATS_NEW_POCKET_GB
+    published_date: 1591056000000
+    title: Fascinating articles from Pocket for Firefox
+    icon_url: data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjU3NiIgaGVpZ2h0PSI1NzYiIHZpZXdCb3g9IjAgMCA0MzIgNDMyIj48cGF0aCBmaWxsPSIjZWY0MTU2IiBkPSJNMzEuNSAyMi40QzE5LjEgMjUuNCA5IDMzLjYgMy42IDQ0LjlMLjUgNTEuNS4yIDEzMWMtLjIgNjkuMS0uMSA4MS4xIDEuNCA5MiAxMC43IDgyLjMgNjguOCAxNTIuOSAxNDcuMyAxNzkuMSAyNC4yIDggMzEuMSA5LjEgNjIuNSA5LjYgMjguOS41IDM2LjMgMCA1Mi42LTMuOCAyMC40LTQuNyA0NS44LTE1IDYzLTI1LjYgMjcuMy0xNi45IDUyLjctNDEuNyA2OS45LTY4LjMgMTcuNi0yNy4yIDI5LjQtNTkuMSAzMy41LTkxIDEuNS0xMC45IDEuNy0yMi45IDEuNC05Mi41bC0uMy04MC0yLjgtNS43Yy01LjctMTEuNi0xNi40LTIwLjItMjguNS0yMi43LTcuOS0xLjctMzYxLjgtMS40LTM2OC43LjN6bTkyLjQgMTE2LjFjMyAxLjUgMTkuNCAxNi41IDQ2LjQgNDIuNWw0MS44IDQwLjEgMTEuNy0xMWM2LjQtNiAyNS45LTI0LjMgNDMuMi00MC42IDIxLjEtMTkuOSAzMy0zMC40IDM2LTMxLjggMTAuMy00LjggMjQuOC0xLjQgMzIuNCA3LjUgOS42IDExLjIgOS4zIDMwLjItLjcgNDAuNy0xLjggMS44LTI2LjMgMjUtNTQuNSA1MS41LTMwLjkgMjguOS01My4xIDQ5LjEtNTYgNTAuNi0zLjggMi02LjEgMi41LTEyLjIgMi41LTEyLjggMC0xMi40LjMtNzItNTYuNC01Ny40LTU0LjUtNTcuMi01NC40LTU4LjYtNjYuMi0yLjYtMjIuNSAyMi4zLTM5LjggNDIuNS0yOS40eiIvPjwvc3ZnPg==
+    icon_alt: Pocket for Firefox icon
+    body: Get the most thought-provoking stories from Pocket right on your new tab.
+    cta_url: home-topstories
+    cta_type: OPEN_PREFERENCES_PAGE
+    link_text: Turn on Pocket articles
+  targeting: firefoxVersion >= 77 && locale == "en-GB"
+  trigger:
+    id: whatsNewPanelOpened
+- id: WHATS_NEW_BADGE_77_GB
+  content:
+    action:
+      id: show-whatsnew-button
+    badgeDescription:
+      string_id: cfr-badge-reader-label-newfeature
+    bucket_id: WHATS_NEW_BADGE_77_GB
+    delay: 300000
+    target: whats-new-menu-button
+  frequency:
+    lifetime: 100
+  priority: 5
+  targeting: firefoxVersion >= 75 && locale == "en-GB" && (usesFirefoxSync || hasAccessedFxAPanel ||
+    currentDate|date - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_77_GB']
+    || (messageImpressions['WHATS_NEW_BADGE_77_GB']|length >= 1 && currentDate|date -
+    messageImpressions['WHATS_NEW_BADGE_77_GB'][0] <= 345600000)) && 'browser.messaging-system.whatsNewPanel.enabled'|preferenceValue
+  template: toolbar_badge
+  trigger:
+    id: toolbarBadgeUpdate

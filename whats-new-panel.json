@@ -22,7 +22,7 @@
         "string_id": "cfr-whatsnew-pip-cta"
       }
     },
-    "targeting": "firefoxVersion >= 76 && locale != \"en-GB\"",
+    "targeting": "firefoxVersion >= 76 && locale != \"en-GB\" && firefoxVersion < 78",
     "trigger": {
       "id": "whatsNewPanelOpened"
     }
@@ -50,7 +50,7 @@
         "string_id": "cfr-whatsnew-pip-cta"
       }
     },
-    "targeting": "firefoxVersion >= 76",
+    "targeting": "firefoxVersion >= 76 && firefoxVersion < 78",
     "trigger": {
       "id": "whatsNewPanelOpened"
     }
@@ -78,7 +78,7 @@
         "string_id": "cfr-whatsnew-pip-cta"
       }
     },
-    "targeting": "firefoxVersion >= 76",
+    "targeting": "firefoxVersion >= 76 && firefoxVersion < 78",
     "trigger": {
       "id": "whatsNewPanelOpened"
     }
@@ -153,6 +153,29 @@
     "targeting": "firefoxVersion >= 78",
     "trigger": {
       "id": "whatsNewPanelOpened"
+    }
+  },
+  {
+    "id": "WHATS_NEW_BADGE_78",
+    "content": {
+      "action": {
+        "id": "show-whatsnew-button"
+      },
+      "badgeDescription": {
+        "string_id": "cfr-badge-reader-label-newfeature"
+      },
+      "bucket_id": "WHATS_NEW_BADGE_78",
+      "delay": 300000,
+      "target": "whats-new-menu-button"
+    },
+    "frequency": {
+      "lifetime": 100
+    },
+    "priority": 5,
+    "targeting": "firefoxVersion == 78 && (usesFirefoxSync || hasAccessedFxAPanel || currentDate|date - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_78'] || (messageImpressions['WHATS_NEW_BADGE_78']|length >= 1 && currentDate|date - messageImpressions['WHATS_NEW_BADGE_78'][0] <= 345600000)) && 'browser.messaging-system.whatsNewPanel.enabled'|preferenceValue",
+    "template": "toolbar_badge",
+    "trigger": {
+      "id": "toolbarBadgeUpdate"
     }
   }
 ]
