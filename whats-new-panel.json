@@ -84,7 +84,6 @@
     }
   },
   {
-<<<<<<< HEAD
     "id": "WHATS_NEW_POCKET_GB",
     "template": "whatsnew_panel_message",
     "order": 1,
@@ -105,8 +104,6 @@
     }
   },
   {
-=======
->>>>>>> 7e94a32... Bug 1643757 - Retire unused messages, add badge for 78
     "id": "WHATS_NEW_PROTECTIONS_DASHBOARD_78",
     "template": "whatsnew_panel_message",
     "order": 2,
