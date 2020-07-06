@@ -970,6 +970,7 @@
     layout: icon_and_message
     learn_more: social-media-tracking-report
     notification_text: ''
+    persistent_doorhanger: true
     skip_address_bar_notifier: true
     text:
       string_id: cfr-doorhanger-socialtracking-description
@@ -1018,6 +1019,7 @@
     layout: icon_and_message
     learn_more: fingerprinters-report
     notification_text: ''
+    persistent_doorhanger: true
     skip_address_bar_notifier: true
     text:
       string_id: cfr-doorhanger-fingerprinters-description
@@ -1065,6 +1067,7 @@
     layout: icon_and_message
     learn_more: cryptominers-report
     notification_text: ''
+    persistent_doorhanger: true
     skip_address_bar_notifier: true
     text:
       string_id: cfr-doorhanger-cryptominers-description
@@ -1296,6 +1299,7 @@
   template: cfr_doorhanger
   content:
     skip_address_bar_notifier: true
+    persistent_doorhanger: true
     anchor_id: PanelUI-menu-button
     layout: icon_and_message
     text:
