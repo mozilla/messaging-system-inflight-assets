@@ -167,8 +167,8 @@
                     type: OPEN_PRIVATE_BROWSER_WINDOW
 - id: "PROTECTION-RETENTION-EXPERIMENT-RELEASE"
   enabled: true
-  filter_expression: env.channel == 'nightly' || env.channel == 'default'
-  targeting: localeLanguageCode == 'en' && [userId, "PROTECTION-RETENTION-EXPERIMENT-RELEASE"]|stableSample(0.1)
+  filter_expression: (env.channel == 'release' || env.channel == 'default') && env.version >= '77.'
+  targeting: localeLanguageCode == 'en' && [userId, "messaging-experiments-cfr"]|bucketSample(0, 310, 10000) && 'app.shield.optoutstudies.enabled'|preferenceValue
   arguments:
     slug: bug-1645918-high-velocity-message-testing-privacy-retention-study
     userFacingName: Message Router Content Experiment High Velocity Message Testing Privacy Retention Study
@@ -228,6 +228,7 @@
             id: frequentVisits
             patterns:
               - http://*/*
+              - https://*/*
       - slug: treatment-variation-b
         ratio: 1
         groups:
@@ -272,6 +273,7 @@
             id: frequentVisits
             patterns:
               - http://*/*
+              - https://*/*
       - slug: treatment-variation-c
         ratio: 1
         groups:
@@ -319,6 +321,7 @@
             id: frequentVisits
             patterns:
               - http://*/*
+              - https://*/*
 - id: MULTI-STAGE-ABOUTWELCOME-V1-78-RELEASE
   enabled: true
   filter_expression: env.version >= '78.' && env.version < '79.' && env.channel == 'release'
