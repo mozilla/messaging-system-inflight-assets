@@ -224,7 +224,7 @@
           targeting: recentVisits|length > 1
           frequency:
             lifetime: 3
-            custom: [{period: 86400 * 1000, cap: 1}]
+            custom: [{period: 86400000, cap: 1}]
           trigger:
             id: frequentVisits
             patterns:
@@ -269,7 +269,7 @@
                     string_id: cfr-doorhanger-extension-never-show-recommendation
           frequency:
             lifetime: 3
-            custom: [{period: 86400 * 1000, cap: 1}]
+            custom: [{period: 86400000, cap: 1}]
           targeting: recentVisits|length > 1
           trigger:
             id: frequentVisits
@@ -318,7 +318,7 @@
                     string_id: cfr-doorhanger-extension-never-show-recommendation
           frequency:
             lifetime: 3
-            custom: [{period: 86400 * 1000, cap: 1}]
+            custom: [{period: 86400000, cap: 1}]
           targeting: recentVisits|length > 1
           trigger:
             id: frequentVisits

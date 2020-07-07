@@ -346,7 +346,7 @@
               "lifetime": 3,
               "custom": [
                 {
-                  "period": "86400 * 1000",
+                  "period": 86400000,
                   "cap": 1
                 }
               ]
@@ -419,7 +419,7 @@
               "lifetime": 3,
               "custom": [
                 {
-                  "period": "86400 * 1000",
+                  "period": 86400000,
                   "cap": 1
                 }
               ]
@@ -497,7 +497,7 @@
               "lifetime": 3,
               "custom": [
                 {
-                  "period": "86400 * 1000",
+                  "period": 86400000,
                   "cap": 1
                 }
               ]
