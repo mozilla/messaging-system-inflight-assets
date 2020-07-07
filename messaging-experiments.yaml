@@ -200,7 +200,7 @@
               label:
                 string_id: cfr-doorhanger-extension-sumo-link
               sumo_path: extensionrecommendations
-            text: 'You’re using the only major browser backed by a non-profit. See how Firefox puts your privacy first.'
+            text: You’re using the only major browser backed by a non-profit. See how Firefox puts your privacy first.
             icon: chrome://browser/content/logos/tracking-protection.svg
             icon_dark_theme: chrome://browser/content/logos/tracking-protection-dark-theme.svg
             buttons:
@@ -248,7 +248,7 @@
               label:
                 string_id: cfr-doorhanger-extension-sumo-link
               sumo_path: extensionrecommendations
-            text: 'You’re using the only major browser backed by a non-profit. See how Firefox puts your privacy first.'
+            text: You’re using the only major browser backed by a non-profit. See how Firefox puts your privacy first.
             icon: chrome://browser/content/logos/tracking-protection.svg
             icon_dark_theme: chrome://browser/content/logos/tracking-protection-dark-theme.svg
             buttons:
@@ -293,7 +293,7 @@
               label:
                 string_id: cfr-doorhanger-extension-sumo-link
               sumo_path: extensionrecommendations
-            text: 'You’re using the only major browser backed by a non-profit. See how Firefox puts your privacy first.'
+            text: You’re using the only major browser backed by a non-profit. See how Firefox puts your privacy first.
             icon: chrome://browser/content/logos/tracking-protection.svg
             icon_dark_theme: chrome://browser/content/logos/tracking-protection-dark-theme.svg
             buttons:
