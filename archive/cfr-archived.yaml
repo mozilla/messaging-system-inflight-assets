@@ -354,3 +354,50 @@
   trigger:
     id: newSavedLogin
   weight: 100
+- id: PDF_URL_FFX_SEND
+  content:
+    bucket_id: PDF_URL_FFX_SEND
+    buttons:
+      primary:
+        action:
+          data:
+            args: https://send.firefox.com/login/?utm_source=activity-stream&entrypoint=activity-stream-cfr-pdf
+            where: tabshifted
+          type: OPEN_URL
+        label:
+          string_id: cfr-doorhanger-firefox-send-ok-button
+      secondary:
+        - action:
+            type: CANCEL
+          label:
+            string_id: cfr-doorhanger-extension-cancel-button
+        - label:
+            string_id: cfr-doorhanger-extension-never-show-recommendation
+        - action:
+            data:
+              category: general-cfrfeatures
+            type: OPEN_PREFERENCES_PAGE
+          label:
+            string_id: cfr-doorhanger-extension-manage-settings-button
+    category: cfrFeatures
+    heading_text:
+      string_id: cfr-doorhanger-firefox-send-header
+    icon: chrome://branding/content/icon64.png
+    info_icon:
+      label:
+        string_id: cfr-doorhanger-extension-sumo-link
+      sumo_path: extensionrecommendations
+    layout: icon_and_message
+    notification_text:
+      string_id: cfr-doorhanger-extension-notification
+    text:
+      string_id: cfr-doorhanger-firefox-send-body
+  frequency:
+    lifetime: 3
+  schema: 1569593455712
+  targeting: firefoxVersion >= 71 && userPrefs.cfrFeatures
+  template: cfr_doorhanger
+  trigger:
+    id: openURL
+    patterns:
+      - '*://*/*.pdf'
