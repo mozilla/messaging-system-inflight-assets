@@ -674,6 +674,7 @@
     "arguments": {
       "slug": "xman-moments-page-80-nightly",
       "userFacingName": "Moments Page Test: Nightly 80",
+      "userFacingDescription": "Moments page test",
       "isEnrollmentPaused": false,
       "branches": [
         {
