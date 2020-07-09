@@ -19,6 +19,14 @@
       "description": "Experiment configuration",
       "type": "object",
       "properties": {
+        "userFacingName": {
+          "type": "string",
+          "description": "Experiment name to be shown to users on about:studies"
+        },
+        "userFacingDescription": {
+          "type": "string",
+          "description": "Experiment description to be shown to users on about:studies"
+        },
         "slug": {
           "description": "Unique identifier for this experiment",
           "type": "string",
@@ -38,8 +46,7 @@
             "required": ["slug", "value", "ratio"],
             "properties": {
               "slug": {
-                "description":
-                "Unique identifier for this branch of the experiment",
+                "description": "Unique identifier for this branch of the experiment",
                 "type": "string",
                 "pattern": "^[A-Za-z0-9\\-_]+$"
               },
@@ -67,7 +74,12 @@
           }
         }
       },
-      "required": ["slug", "branches"]
+      "required": [
+        "slug",
+        "branches",
+        "userFacingName",
+        "userFacingDescription"
+      ]
     }
   },
   "required": ["id", "arguments"]
