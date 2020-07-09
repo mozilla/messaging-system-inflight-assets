@@ -110,25 +110,64 @@
     cta_type: OPEN_URL
     link_text:
       string_id: cfr-whatsnew-pip-cta
-  targeting: firefoxVersion >= 78
+  targeting: firefoxVersion >= 78 && firefoxVersion < 79
   trigger:
     id: whatsNewPanelOpened
-- id: WHATS_NEW_BADGE_78
+- id: WHATS_NEW_COOKIES_79
+  template: whatsnew_panel_message
+  order: 1
+  content:
+    bucket_id: WHATS_NEW_COOKIES_79
+    published_date: 1595894400000
+    title:
+      string_id: cfr-whatsnew-clear-cookies-header
+    body:
+      string_id: cfr-whatsnew-clear-cookies-body
+    icon_url: chrome://browser/content/logos/tracking-protection.svg
+    icon_alt:
+      string_id: cfr-whatsnew-clear-cookies-image-alt
+    cta_url: https://support.mozilla.org/1/firefox/%VERSION%/%OS%/%LOCALE%/pdf-viewer
+    cta_type: OPEN_URL
+    cta_where: tabshifted
+    link_text:
+      string_id: cfr-whatsnew-pip-cta
+  targeting: firefoxVersion >= 79
+  trigger:
+    id: whatsNewPanelOpened
+- id: WHATS_NEW_DOH_79
+  template: whatsnew_panel_message
+  order: 2
+  content:
+    bucket_id: WHATS_NEW_DOH_79
+    published_date: 1595894400000
+    title: Safer browsing with DNS over HTTPS
+    body: Firefox now offers DNS over HTTPS, which is another way we are leading the efforts to create a safer, more private web.
+    icon_url: chrome://browser/content/logos/tracking-protection.svg
+    icon_alt: Lock icon
+    cta_url: https://support.mozilla.org/1/firefox/%VERSION%/%OS%/%LOCALE%/pdf-viewer
+    cta_type: OPEN_URL
+    cta_where: tabshifted
+    link_text:
+      string_id: cfr-whatsnew-pip-cta
+  targeting: firefoxVersion >= 79 && region == "US" && false
+  trigger:
+    id: whatsNewPanelOpened
+- id: WHATS_NEW_BADGE_79
   content:
     action:
       id: show-whatsnew-button
     badgeDescription:
       string_id: cfr-badge-reader-label-newfeature
-    bucket_id: WHATS_NEW_BADGE_78
+    bucket_id: WHATS_NEW_BADGE_79
     delay: 300000
     target: whats-new-menu-button
   frequency:
     lifetime: 100
   priority: 5
-  targeting: firefoxVersion == 78 && (usesFirefoxSync || hasAccessedFxAPanel || currentDate|date
-    - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_78']
-    || (messageImpressions['WHATS_NEW_BADGE_78']|length >= 1 && currentDate|date -
-    messageImpressions['WHATS_NEW_BADGE_78'][0] <= 345600000)) && 'browser.messaging-system.whatsNewPanel.enabled'|preferenceValue
+  targeting: firefoxVersion == 79 && (usesFirefoxSync || hasAccessedFxAPanel || currentDate|date
+    - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_79']
+    || (messageImpressions['WHATS_NEW_BADGE_79']|length >= 1 && currentDate|date -
+    messageImpressions['WHATS_NEW_BADGE_79'][0] <= 345600000)) && 'browser.messaging-system.whatsNewPanel.enabled'|preferenceValue
   template: toolbar_badge
   trigger:
     id: toolbarBadgeUpdate
