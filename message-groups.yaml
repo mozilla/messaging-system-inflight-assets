@@ -6,4 +6,4 @@
     - browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features
   frequency:
     custom:
-      - {period: daily, cap: 1}
+      - {period: 86400000, cap: 1}

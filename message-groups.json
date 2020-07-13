@@ -10,7 +10,7 @@
     "frequency": {
       "custom": [
         {
-          "period": "daily",
+          "period": 86400000,
           "cap": 1
         }
       ]
