@@ -401,3 +401,150 @@
     id: openURL
     patterns:
       - '*://*/*.pdf'
+- id: CFR_EXP_FBW_PROMOTION
+  content:
+    icon: data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzOSA0MCI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iNzklIiB4Mj0iNTIuNCUiIHkxPSI2MS4xJSIgeTI9IjQ4LjclIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDU0MDk2IiBzdG9wLW9wYWNpdHk9Ii41Ii8+PHN0b3Agb2Zmc2V0PSI1JSIgc3RvcC1jb2xvcj0iIzBGM0Q5QyIgc3RvcC1vcGFjaXR5PSIuNCIvPjxzdG9wIG9mZnNldD0iMjYlIiBzdG9wLWNvbG9yPSIjMkYzNUIxIiBzdG9wLW9wYWNpdHk9Ii4zIi8+PHN0b3Agb2Zmc2V0PSI0NyUiIHN0b3AtY29sb3I9IiM0NjJGQkYiIHN0b3Atb3BhY2l0eT0iLjEiLz48c3RvcCBvZmZzZXQ9IjY3JSIgc3RvcC1jb2xvcj0iIzU0MkJDOCIgc3RvcC1vcGFjaXR5PSIwIi8+PHN0b3Agb2Zmc2V0PSI4NiUiIHN0b3AtY29sb3I9IiM1OTJBQ0IiIHN0b3Atb3BhY2l0eT0iMCIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJiIiB4MT0iMCUiIHgyPSIxMDAlIiB5MT0iNTAlIiB5Mj0iNTAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDA5MEVEIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjM0ZFMUIwIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9ImMiIHgxPSIxMSUiIHgyPSIxMDIuNCUiIHkxPSI0MS4zJSIgeTI9IjYwLjklIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjNTRGRkJEIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMERGIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PGcgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iIzAwODc4NyIgZD0iTTM0LjUgMjUuNkgxOC4zYS45LjkgMCAwMC0uOS45djIuNmE3IDcgMCAwMDcgN2g5YTUuMiA1LjIgMCAwMDUuMi01LjJ2LTIuM2MwLTEuMy0xLjMtMy00LTN6Ii8+PHBhdGggZmlsbD0idXJsKCNhKSIgZD0iTTE3LjUuMUgxLjNhLjkuOSAwIDAwLS45Ljl2Mi42YTcgNyAwIDAwNyA3aDlhNS4yIDUuMiAwIDAwNS4yLTUuMlYzYzAtMS4zLTEuNC0zLTQtM3oiIG9wYWNpdHk9Ii45IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNyAyNS41KSIvPjxwYXRoIGZpbGw9InVybCgjYikiIGQ9Ik0zMy40IDguNEwxOS4yLjRhMy40IDMuNCAwIDAwLTMuMyAwbC0xNC4yIDhhMy40IDMuNCAwIDAwLTEuNyAzdjE1LjhhMy4zIDMuMyAwIDAwMS43IDNsMTQuMiA4YTMuMyAzLjMgMCAwMDMuMyAwbDE0LjItOGEzLjMgMy4zIDAgMDAxLjctM1YxMS4zYTMuMyAzLjMgMCAwMC0xLjctM3oiLz48cGF0aCBmaWxsPSIjMjAxMjNBIiBkPSJNNi4yIDIwLjN2LTJhMS4zIDEuMyAwIDExMi43IDB2MmExLjMgMS4zIDAgMTEtMi43IDB6bTYuNyA5LjVhMS4zIDEuMyAwIDEwMS4zLTIuM2wtMS43LTFhMS4zIDEuMyAwIDEwLTEuMyAyLjNsMS43IDF6bTkuMy4xbC42LS4xIDEuOC0xYTEuMyAxLjMgMCAwMC0xLjMtMi4zbC0xLjggMWExLjMgMS4zIDAgMDAuNyAyLjR6bTYtMTIuOWExLjMgMS4zIDAgMDAtMS4zIDEuM3YyYTEuMyAxLjMgMCAxMDIuNiAwdi0yYTEuMyAxLjMgMCAwMC0xLjMtMS4zem0uNy00LjdsLS45LS41YTEuMyAxLjMgMCAwMC0yIDEuM2wtNi44IDRWOS4xYTEuMyAxLjMgMCAwMC4yLTIuNGwtLjktLjVjLS40LS4yLS45LS4yLTEuMyAwbC0uOC41YTEuMyAxLjMgMCAwMC0uNSAxLjhjLjEuMy40LjUuNy42VjE3bC03LTMuOWExLjMgMS4zIDAgMDAwLS44IDEuMyAxLjMgMCAwMC0xLjgtLjVsLS45LjVjLS40LjItLjcuNi0uNyAxdjFhMS4zIDEuMyAwIDAwMi4yIDFsNi44IDQtNi44IDMuOWExLjMgMS4zIDAgMDAtMi4yIDF2MWExLjMgMS4zIDAgMDAuNyAxbC45LjZhMS4zIDEuMyAwIDAwMS43LS41IDEuMyAxLjMgMCAwMC4yLS45bDYuOS0zLjl2Ny45YTEuMyAxLjMgMCAwMC0uOCAxLjUgMS4zIDEuMyAwIDAwLjYuOGwuOC41YTEuMyAxLjMgMCAwMDEuMyAwbC45LS41YTEuMyAxLjMgMCAwMC41LTEuOCAxLjMgMS4zIDAgMDAtLjctLjV2LTcuOWw3IDMuOWExLjMgMS4zIDAgMDAxLjggMS40bC44LS41Yy41LS4yLjctLjcuNy0xLjF2LTFhMS4zIDEuMyAwIDAwLTIuMS0xbC02LjktNCA3LTMuOGExLjMgMS4zIDAgMDAyLTF2LTFjMC0uNS0uMi0xLS42LTEuMXpNMjEuNSAxMWwxLjggMWExLjMgMS4zIDAgMDAxLjMtMi4zbC0xLjgtMWExLjMgMS4zIDAgMTAtMS4zIDIuM3pNMTIgMTIuMmwuNi0uMSAxLjctMUExLjMgMS4zIDAgMTAxMyA4LjhsLTEuNyAxYTEuMyAxLjMgMCAwMC43IDIuNHoiLz48cGF0aCBmaWxsPSJ1cmwoI2MpIiBkPSJNMzcuNyAyOS40aC0xNWE2LjQgNi40IDAgMDAtNi40IDYuNVYzOWEuOS45IDAgMDAuOS45aDE1YTYuNCA2LjQgMCAwMDYuNC02LjV2LTQuOGMwIC41LS40LjgtMSAuOHoiLz48cGF0aCBmaWxsPSIjMjAxMjNBIiBkPSJNMjMgMzQuNmExIDEgMCAwMC41LS45YzAtLjgtLjUtMS4yLTEuNS0xLjJoLTEuOHY0LjNIMjJjMSAwIDEuNi0uNCAxLjYtMS4zYTEgMSAwIDAwLS42LS45em0tMi0xLjNoMWMuNSAwIC43LjEuNy41cy0uMi41LS42LjVoLTF2LTF6bTEgMi44aC0xVjM1aDFjLjUgMCAuNy4yLjcuNXMtLjIuNi0uNy42em0yLjQuN2gyLjlWMzZoLTIuMXYtMWgydi0uN2gtMnYtMWgydi0uOGgtMi44em02LjgtNC4zSDI4di44aDEuMnYzLjVoLjh2LTMuNWgxLjJ6bTIuMiAwaC0uOEwzMSAzNi44aC44bC4zLS44aDEuOGwuMy44aC44bC0xLjYtNC4zem0tMSAyLjhsLjYtMS43LjYgMS43aC0xLjJ6Ii8+PC9nPjwvc3ZnPg==
+    text: Firefox Better Web improves privacy and performance by blocking trackers and
+      ads while directly supporting the sites you read.
+    layout: icon_and_message
+    buttons:
+      primary:
+        label:
+          value: Learn More
+          attributes:
+            accesskey: L
+        action:
+          data:
+            args: https://firstlook.firefox.com/betterweb/?utm_campaign=fbw-march&utm_medium=inproduct&utm_source=fx-cfr&utm_content=cfr-message
+            where: tabshifted
+          type: OPEN_URL
+      secondary:
+        - label:
+            string_id: cfr-doorhanger-extension-cancel-button
+          action:
+            type: CANCEL
+        - label:
+            string_id: cfr-doorhanger-extension-never-show-recommendation
+        - label:
+            string_id: cfr-doorhanger-extension-manage-settings-button
+          action:
+            data:
+              category: general-cfrfeatures
+            type: OPEN_PREFERENCES_PAGE
+    category: cfrFeatures
+    bucket_id: CFR_FBW_MARCH_PROMOTION
+    info_icon:
+      label:
+        string_id: cfr-doorhanger-extension-sumo-link
+      sumo_path: extensionrecommendations
+    heading_text: Support great content, free from ads
+    notification_text:
+      string_id: cfr-doorhanger-feature-notification
+  trigger:
+    id: openURL
+    params:
+      - www.theverge.com
+      - www.vox.com
+      - www.theatlantic.com
+      - www.businessinsider.com
+      - www.polygon.com
+      - www.slate.com
+      - www.gizmodo.com
+      - www.usatoday.com
+      - www.androidpolice.com
+      - www.thedailybeast.com
+      - www.lifehacker.com
+      - www.macrumors.com
+      - www.kotaku.com
+      - www.buzzfeednews.com
+      - www.eater.com
+      - www.avclub.com
+      - www.salon.com
+      - www.theinventory.com
+      - www.buzzfeed.com
+      - www.theonion.com
+      - www.insider.com
+      - www.curbed.com
+      - www.jezebel.com
+      - www.jalopnik.com
+      - www.boredpanda.com
+      - www.inquirer.com
+      - www.deadspin.com
+      - www.thetakeout.com
+      - www.theroot.com
+      - www.neowin.net
+      - www.sbnation.com
+      - www.tvtropes.org
+      - www.fatherly.com
+      - www.thisiscolossal.com
+      - www.hyperallergic.com
+      - www.searchenginejournal.com
+      - www.platform-decentral.com
+      - www.techxplore.com
+      - www.clickhole.com
+      - www.ninersnation.com
+      - www.wipdeveloper.com
+      - www.bannersociety.com
+      - www.innovationorigins.com
+      - www.bleedinggreennation.com
+      - www.fieldgulls.com
+      - www.projectsalamanca.com
+      - www.acmepackingcompany.com
+      - www.freep.com
+      - www.cagesideseats.com
+      - www.racked.com
+      - www.prideofdetroit.com
+      - www.outsports.com
+      - www.splinternews.com
+      - www.faketeams.com
+      - www.draftkings.com
+      - www.maizenbrew.com
+      - www.milehighreport.com
+      - www.bigblueview.com
+      - www.silverscreenandroll.com
+      - www.dirtysouthsoccer.com
+      - www.burntorangenation.com
+      - www.pinstripealley.com
+      - www.bloggingtheboys.com
+      - www.beyondtheboxscore.com
+      - www.allforxi.com
+      - www.sounderatheart.com
+      - www.blackheartgoldpants.com
+      - www.arrowheadpride.com
+      - www.hogshaven.com
+      - www.buffalorumblings.com
+      - www.mmafighting.com
+      - www.dailynorseman.com
+      - www.goodbullhunting.com
+      - www.patspulpit.com
+      - www.starsandstripesfc.com
+      - www.secondcityhockey.com
+      - www.tomahawknation.com
+      - www.chiesaditotti.com
+      - www.blogabull.com
+      - www.nunesmagician.com
+      - www.baltimorebeatdown.com
+      - www.blazersedge.com
+      - www.diebytheblade.com
+      - www.progressiveboink.com
+      - www.bleedcubbieblue.com
+      - www.postingandtoasting.com
+      - www.thefalcoholic.com
+      - www.wingingitinmotown.com
+      - www.everydayshouldbesaturday.com
+      - www.mccoveychronicles.com
+      - www.blueshirtbanter.com
+      - www.landgrantholyland.com
+      - www.barkingcarnival.com
+      - www.raptorshq.com
+      - www.ganggreennation.com
+      - www.streakingthelawn.com
+      - www.onefootdown.com
+      - www.canalstreetchronicles.com
+      - www.athleticsnation.com
+      - www.barcablaugranes.com
+  template: cfr_doorhanger
+  frequency:
+    lifetime: 3
+  targeting: firefoxVersion >= 74 && localeLanguageCode == 'en' &&
+    userPrefs.cfrFeatures && region == 'US'
