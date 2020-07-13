@@ -1,3 +1,9 @@
-- id: messaging-experiments
+- id: cfr
   enabled: true
-  type: "remote-settings"
+  type: remote-settings
+  userPreferences:
+    - browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons
+    - browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features
+  frequency:
+    custom:
+      - {period: daily, cap: 1}
