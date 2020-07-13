@@ -188,6 +188,7 @@
         value:
           id: PROTECTIONS_RETENTION_PRIVACY
           template: cfr_doorhanger
+          groups: [cfr]
           content:
             layout: icon_and_message
             category: cfrFeatures
@@ -237,6 +238,7 @@
         value:
           id: PROTECTIONS_RETENTION_PROTECTIONS
           template: cfr_doorhanger
+          groups: [cfr]
           content:
             layout: icon_and_message
             category: cfrFeatures
@@ -283,6 +285,7 @@
         value:
           id: PROTECTIONS_RETENTION_MONITOR
           template: cfr_doorhanger
+          groups: [cfr]
           content:
             layout: icon_and_message
             category: cfrFeatures
