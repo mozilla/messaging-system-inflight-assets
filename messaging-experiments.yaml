@@ -174,7 +174,7 @@
     userFacingName: Message Router Content Experiment High Velocity Message Testing Privacy Retention Study
     experimentDocumentUrl: https://experimenter.services.mozilla.com/experiments/high-velocity-message-testing-privacy-retention-study/
     userFacingDescription: If users are messaged to visit the about:protections page then they will understand the value Fx is providing them and be more likely to retain longer term
-    isEnrollmentPaused: false
+    isEnrollmentPaused: true
     branches:
       - slug: control
         ratio: 1
