@@ -774,7 +774,7 @@
               "addon": {
                 "id": "782160",
                 "title": "Firefox Multi-Account Containers",
-                "icon": "resource://activity-stream/data/content/assets/cfr_fb_container.png",
+                "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAACCUlEQVRo3u2YPU8UURSGn10nikCCUSJaaGNiZWWjnf6BN6FCLIiGQhtNMBpDZWc0BgoV0WCBECoozy9Q/4C1iQU2QjDKRwS2EYvdTTaTYWC5e+9k8T7d3jvnPefZ3dmdmRKApCHgNtCDGxvAjJl9aLZQUj+wACS1pW/AJTPbzqtLJN0DXjsO3sh1SafMbLzJuisNwwNcAE4D3/OKysDjFg5fZ9RD5q4C5zzk9krqDiXgiyPtLhCEKFA0iXvE/pDUBfTlHHIiY+28pLwZfwQRkNRJ9Y+pr8nSz3vsfw31Feo9wPD74WLbnwOhBLaAHQ+5lSDngJmtSBoELuccdg24mlp7C6zn1HwM9itkZvPA/G77kp5lCDw3sz0v5tqaKFA0h0Lgl4fcP2a2FkpgxkPudIjh6wKjwDit+SR+A6+Ahweo/QRsNrz+AiyFeiMi/y2l0A1r9wbHHGM2zawCUJJ0FBgDhoEu12BgDhgxs63U4N3AFDCA+xOLbeAd8CgBXgD3HQPrdAJ3aiIPUntjwM0W9ekARoCfZWCoRaGN3M1Yu+Whz40ycNJD8HFJ6QfFHR769ByKa6G2JgoUTRQomihQNFGgaKJA0USBovEp8DeUwLKH3DUz20itrXros1wG3ngInsxY89FnIgGeAhWqt3xnHQOXgPfAy4y9J8AK1dvNMw49doBFYMLMZv8BtVRph4qoHLkAAAAASUVORK5CYII=",
                 "rating": 4.6,
                 "users": 226263,
                 "author": "Mozilla Firefox",
@@ -890,7 +890,7 @@
               "addon": {
                 "id": "782160",
                 "title": "Firefox Multi-Account Containers",
-                "icon": "resource://activity-stream/data/content/assets/cfr_fb_container.png",
+                "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAACCUlEQVRo3u2YPU8UURSGn10nikCCUSJaaGNiZWWjnf6BN6FCLIiGQhtNMBpDZWc0BgoV0WCBECoozy9Q/4C1iQU2QjDKRwS2EYvdTTaTYWC5e+9k8T7d3jvnPefZ3dmdmRKApCHgNtCDGxvAjJl9aLZQUj+wACS1pW/AJTPbzqtLJN0DXjsO3sh1SafMbLzJuisNwwNcAE4D3/OKysDjFg5fZ9RD5q4C5zzk9krqDiXgiyPtLhCEKFA0iXvE/pDUBfTlHHIiY+28pLwZfwQRkNRJ9Y+pr8nSz3vsfw31Feo9wPD74WLbnwOhBLaAHQ+5lSDngJmtSBoELuccdg24mlp7C6zn1HwM9itkZvPA/G77kp5lCDw3sz0v5tqaKFA0h0Lgl4fcP2a2FkpgxkPudIjh6wKjwDit+SR+A6+Ahweo/QRsNrz+AiyFeiMi/y2l0A1r9wbHHGM2zawCUJJ0FBgDhoEu12BgDhgxs63U4N3AFDCA+xOLbeAd8CgBXgD3HQPrdAJ3aiIPUntjwM0W9ekARoCfZWCoRaGN3M1Yu+Whz40ycNJD8HFJ6QfFHR769ByKa6G2JgoUTRQomihQNFGgaKJA0USBovEp8DeUwLKH3DUz20itrXros1wG3ngInsxY89FnIgGeAhWqt3xnHQOXgPfAy4y9J8AK1dvNMw49doBFYMLMZv8BtVRph4qoHLkAAAAASUVORK5CYII=",
                 "rating": 4.6,
                 "users": 226263,
                 "author": "Mozilla Firefox",
