@@ -677,14 +677,14 @@
         groups:
           - cfr
         value:
-          id: EXPERIMENT_SOCIAL_TO_SHOPPING_ADS
+          id: EXPERIMENT_SHOPPING_TO_SOCIAL_ADS
           template: cfr_doorhanger
           groups:
             - cfr
           content:
             layout: addon_recommendation
             category: cfrAddons
-            bucket_id: EXPERIMENT_SOCIAL_TO_SHOPPING_ADS
+            bucket_id: EXPERIMENT_SHOPPING_TO_SOCIAL
             notification_text:
               string_id: cfr-doorhanger-extension-notification2
             heading_text:
@@ -705,9 +705,9 @@
             buttons:
               primary:
                 label:
-                  value: Add now
+                  value: I’m in!
                   attributes:
-                    accesskey: A
+                    accesskey: S
                 action:
                   type: INSTALL_ADDON_FROM_URL
                   data:
@@ -728,45 +728,33 @@
                       category: general-cfraddons
           frequency:
             lifetime: 3
-          targeting: (addonsInfo.addons|keys intersect ["@testpilot-containers"])|length == 0 && ((currentDate|date - profileAgeCreated) / 604800000) >= 1 && (topFrecentSites[.frecency > 100]|mapToProperty("host") intersect ["www.youtube.com","www.facebook.com","www.twitter.com","www.instagram.com","www.reddit.com","www.pinterest.com","www.linkedin.com","www.whatsapp.com","www.tiktok.com","www.messenger.com","www.tumblr.com","www.groupme.com","www.flickr.com","youtube.com","facebook.com","twitter.com","instagram.com","reddit.com","pinterest.com","linkedin.com","whatsapp.com","tiktok.com","messenger.com","tumblr.com","groupme.com","flickr.com"])|length
+          targeting: (addonsInfo.addons|keys intersect ["@testpilot-containers"])|length == 0 && ((currentDate|date - profileAgeCreated) / 604800000) >= 1 && (topFrecentSites[.frecency > 100]|mapToProperty("host") intersect ["amazon.com","ebay.com","zillow.com","discord.com","craigslist.org","walmart.com","homedepot.com","etsy.com","target.com","roblox.com","wayfair.com","lowes.com","overstock.com","zappos.com","wish.com","sears.com","kohls.com","costco.com","everlane.com","www.amazon.com","www.ebay.com","www.zillow.com","www.discord.com","www.craigslist.org","www.walmart.com","www.homedepot.com","www.etsy.com","www.target.com","www.roblox.com","www.wayfair.com","www.lowes.com","www.overstock.com","www.zappos.com","www.wish.com","www.sears.com","www.kohls.com","www.costco.com","www.everlane.com"])|length
           trigger:
             id: openURL
             params:
-              - amazon.com
-              - ebay.com
-              - zillow.com
-              - discord.com
-              - craigslist.org
-              - walmart.com
-              - homedepot.com
-              - etsy.com
-              - target.com
-              - roblox.com
-              - wayfair.com
-              - lowes.com
-              - overstock.com
-              - zappos.com
-              - wish.com
-              - sears.com
-              - kohls.com
-              - costco.com
-              - everlane.com
-              - www.amazon.com
-              - www.ebay.com
-              - www.zillow.com
-              - www.discord.com
-              - www.craigslist.org
-              - www.walmart.com
-              - www.homedepot.com
-              - www.etsy.com
-              - www.target.com
-              - www.roblox.com
-              - www.wayfair.com
-              - www.lowes.com
-              - www.overstock.com
-              - www.zappos.com
-              - www.wish.com
-              - www.sears.com
-              - www.kohls.com
-              - www.costco.com
-              - www.everlane.com
+              - www.youtube.com
+              - www.facebook.com
+              - www.twitter.com
+              - www.instagram.com
+              - www.reddit.com
+              - www.pinterest.com
+              - www.linkedin.com
+              - www.whatsapp.com
+              - www.tiktok.com
+              - www.messenger.com
+              - www.tumblr.com
+              - www.groupme.com
+              - www.flickr.com
+              - youtube.com
+              - facebook.com
+              - twitter.com
+              - instagram.com
+              - reddit.com
+              - pinterest.com
+              - linkedin.com
+              - whatsapp.com
+              - tiktok.com
+              - messenger.com
+              - tumblr.com
+              - groupme.com
+              - flickr.com
