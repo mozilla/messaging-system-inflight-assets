@@ -726,7 +726,7 @@
   {
     "id": "MESSAGE-ROUTER-CONTENT-EXPERIMENT-RELEASE-BUG-1651993",
     "enabled": true,
-    "filter_expression": "(env.channel == 'nightly' || env.channel == 'default')",
+    "filter_expression": "env.version >= '78.'",
     "targeting": "localeLanguageCode == 'en' && 'app.shield.optoutstudies.enabled'|preferenceValue && ( (topFrecentSites[.frecency > 100]|mapToProperty(\"host\") intersect [\"www.youtube.com\",\"www.facebook.com\",\"www.twitter.com\",\"www.instagram.com\",\"www.reddit.com\",\"www.pinterest.com\",\"www.linkedin.com\",\"www.whatsapp.com\",\"www.tiktok.com\",\"www.messenger.com\",\"www.tumblr.com\",\"www.groupme.com\",\"www.flickr.com\",\"youtube.com\",\"facebook.com\",\"twitter.com\",\"instagram.com\",\"reddit.com\",\"pinterest.com\",\"linkedin.com\",\"whatsapp.com\",\"tiktok.com\",\"messenger.com\",\"tumblr.com\",\"groupme.com\",\"flickr.com\"])|length || (topFrecentSites[.frecency > 100]|mapToProperty(\"host\") intersect [\"amazon.com\",\"ebay.com\",\"zillow.com\",\"discord.com\",\"craigslist.org\",\"walmart.com\",\"homedepot.com\",\"etsy.com\",\"target.com\",\"roblox.com\",\"wayfair.com\",\"lowes.com\",\"overstock.com\",\"zappos.com\",\"wish.com\",\"sears.com\",\"kohls.com\",\"costco.com\",\"everlane.com\",\"www.amazon.com\",\"www.ebay.com\",\"www.zillow.com\",\"www.discord.com\",\"www.craigslist.org\",\"www.walmart.com\",\"www.homedepot.com\",\"www.etsy.com\",\"www.target.com\",\"www.roblox.com\",\"www.wayfair.com\",\"www.lowes.com\",\"www.overstock.com\",\"www.zappos.com\",\"www.wish.com\",\"www.sears.com\",\"www.kohls.com\",\"www.costco.com\",\"www.everlane.com\"])|length )",
     "arguments": {
       "slug": "bug-1651993-high-velocity-message-testing-multi-account-containers-retention-study",
@@ -780,7 +780,7 @@
                 "author": "Mozilla Firefox",
                 "amo_url": "https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/"
               },
-              "text": "Prevent social media sites from seeing the shopping you are doing by using Firefox containers, a simple add-in to stop tracking.",
+              "text": "Prevent social media sites from seeing the shopping you are doing by using Firefox containers, a simple add-on to stop tracking.",
               "buttons": {
                 "primary": {
                   "label": {
@@ -828,7 +828,7 @@
             "frequency": {
               "lifetime": 3
             },
-            "targeting": "(addonsInfo.addons|keys intersect [\"@testpilot-containers\"])|length == 0 && ((currentDate|date - profileAgeCreated) / 604800000) >= 7 && (topFrecentSites[.frecency > 100]|mapToProperty(\"host\") intersect [\"amazon.com\",\"ebay.com\",\"zillow.com\",\"discord.com\",\"craigslist.org\",\"walmart.com\",\"homedepot.com\",\"etsy.com\",\"target.com\",\"roblox.com\",\"wayfair.com\",\"lowes.com\",\"overstock.com\",\"zappos.com\",\"wish.com\",\"sears.com\",\"kohls.com\",\"costco.com\",\"everlane.com\",\"www.amazon.com\",\"www.ebay.com\",\"www.zillow.com\",\"www.discord.com\",\"www.craigslist.org\",\"www.walmart.com\",\"www.homedepot.com\",\"www.etsy.com\",\"www.target.com\",\"www.roblox.com\",\"www.wayfair.com\",\"www.lowes.com\",\"www.overstock.com\",\"www.zappos.com\",\"www.wish.com\",\"www.sears.com\",\"www.kohls.com\",\"www.costco.com\",\"www.everlane.com\"])|length",
+            "targeting": "(addonsInfo.addons|keys intersect [\"@testpilot-containers\"])|length == 0 && ((currentDate|date - profileAgeCreated) / 604800000) >= 1 && (topFrecentSites[.frecency > 100]|mapToProperty(\"host\") intersect [\"amazon.com\",\"ebay.com\",\"zillow.com\",\"discord.com\",\"craigslist.org\",\"walmart.com\",\"homedepot.com\",\"etsy.com\",\"target.com\",\"roblox.com\",\"wayfair.com\",\"lowes.com\",\"overstock.com\",\"zappos.com\",\"wish.com\",\"sears.com\",\"kohls.com\",\"costco.com\",\"everlane.com\",\"www.amazon.com\",\"www.ebay.com\",\"www.zillow.com\",\"www.discord.com\",\"www.craigslist.org\",\"www.walmart.com\",\"www.homedepot.com\",\"www.etsy.com\",\"www.target.com\",\"www.roblox.com\",\"www.wayfair.com\",\"www.lowes.com\",\"www.overstock.com\",\"www.zappos.com\",\"www.wish.com\",\"www.sears.com\",\"www.kohls.com\",\"www.costco.com\",\"www.everlane.com\"])|length",
             "trigger": {
               "id": "openURL",
               "params": [
@@ -903,7 +903,7 @@
               "buttons": {
                 "primary": {
                   "label": {
-                    "value": "I\u2019m in",
+                    "value": "I\u2019m in!",
                     "attributes": {
                       "accesskey": "I"
                     }
@@ -947,7 +947,7 @@
             "frequency": {
               "lifetime": 3
             },
-            "targeting": "(addonsInfo.addons|keys intersect [\"@testpilot-containers\"])|length == 0 && ((currentDate|date - profileAgeCreated) / 604800000) >= 7 && (topFrecentSites[.frecency > 100]|mapToProperty(\"host\") intersect [\"www.youtube.com\",\"www.facebook.com\",\"www.twitter.com\",\"www.instagram.com\",\"www.reddit.com\",\"www.pinterest.com\",\"www.linkedin.com\",\"www.whatsapp.com\",\"www.tiktok.com\",\"www.messenger.com\",\"www.tumblr.com\",\"www.groupme.com\",\"www.flickr.com\",\"youtube.com\",\"facebook.com\",\"twitter.com\",\"instagram.com\",\"reddit.com\",\"pinterest.com\",\"linkedin.com\",\"whatsapp.com\",\"tiktok.com\",\"messenger.com\",\"tumblr.com\",\"groupme.com\",\"flickr.com\"])|length",
+            "targeting": "(addonsInfo.addons|keys intersect [\"@testpilot-containers\"])|length == 0 && ((currentDate|date - profileAgeCreated) / 604800000) >= 1 && (topFrecentSites[.frecency > 100]|mapToProperty(\"host\") intersect [\"www.youtube.com\",\"www.facebook.com\",\"www.twitter.com\",\"www.instagram.com\",\"www.reddit.com\",\"www.pinterest.com\",\"www.linkedin.com\",\"www.whatsapp.com\",\"www.tiktok.com\",\"www.messenger.com\",\"www.tumblr.com\",\"www.groupme.com\",\"www.flickr.com\",\"youtube.com\",\"facebook.com\",\"twitter.com\",\"instagram.com\",\"reddit.com\",\"pinterest.com\",\"linkedin.com\",\"whatsapp.com\",\"tiktok.com\",\"messenger.com\",\"tumblr.com\",\"groupme.com\",\"flickr.com\"])|length",
             "trigger": {
               "id": "openURL",
               "params": [
@@ -1078,7 +1078,7 @@
             "frequency": {
               "lifetime": 3
             },
-            "targeting": "(addonsInfo.addons|keys intersect [\"@testpilot-containers\"])|length == 0 && ((currentDate|date - profileAgeCreated) / 604800000) >= 7 && (topFrecentSites[.frecency > 100]|mapToProperty(\"host\") intersect [\"www.youtube.com\",\"www.facebook.com\",\"www.twitter.com\",\"www.instagram.com\",\"www.reddit.com\",\"www.pinterest.com\",\"www.linkedin.com\",\"www.whatsapp.com\",\"www.tiktok.com\",\"www.messenger.com\",\"www.tumblr.com\",\"www.groupme.com\",\"www.flickr.com\",\"youtube.com\",\"facebook.com\",\"twitter.com\",\"instagram.com\",\"reddit.com\",\"pinterest.com\",\"linkedin.com\",\"whatsapp.com\",\"tiktok.com\",\"messenger.com\",\"tumblr.com\",\"groupme.com\",\"flickr.com\"])|length",
+            "targeting": "(addonsInfo.addons|keys intersect [\"@testpilot-containers\"])|length == 0 && ((currentDate|date - profileAgeCreated) / 604800000) >= 1 && (topFrecentSites[.frecency > 100]|mapToProperty(\"host\") intersect [\"www.youtube.com\",\"www.facebook.com\",\"www.twitter.com\",\"www.instagram.com\",\"www.reddit.com\",\"www.pinterest.com\",\"www.linkedin.com\",\"www.whatsapp.com\",\"www.tiktok.com\",\"www.messenger.com\",\"www.tumblr.com\",\"www.groupme.com\",\"www.flickr.com\",\"youtube.com\",\"facebook.com\",\"twitter.com\",\"instagram.com\",\"reddit.com\",\"pinterest.com\",\"linkedin.com\",\"whatsapp.com\",\"tiktok.com\",\"messenger.com\",\"tumblr.com\",\"groupme.com\",\"flickr.com\"])|length",
             "trigger": {
               "id": "openURL",
               "params": [
