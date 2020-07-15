@@ -780,11 +780,14 @@
                 "author": "Mozilla Firefox",
                 "amo_url": "https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/"
               },
-              "text": "Firefox Multi-Account Containers lets you keep parts of your online life separated into color-coded tabs that preserve your privacy. Cookies are separated by container, allowing you to use the web with multiple identities or accounts simultaneously.",
+              "text": "Prevent social media sites from seeing the shopping you are doing by using Firefox containers, a simple add-in to stop tracking.",
               "buttons": {
                 "primary": {
                   "label": {
-                    "string_id": "cfr-doorhanger-extension-ok-button"
+                    "value": "Sign me up!",
+                    "attributes": {
+                      "accesskey": "S"
+                    }
                   },
                   "action": {
                     "type": "INSTALL_ADDON_FROM_URL",
@@ -896,11 +899,145 @@
                 "author": "Mozilla Firefox",
                 "amo_url": "https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/"
               },
-              "text": "Firefox Multi-Account Containers lets you keep parts of your online life separated into color-coded tabs that preserve your privacy. Cookies are separated by container, allowing you to use the web with multiple identities or accounts simultaneously.",
+              "text": "Are your ads weirdly related to your recent online shopping? Use Firefox containers to stop sites like these from tracking you online.",
               "buttons": {
                 "primary": {
                   "label": {
-                    "string_id": "cfr-doorhanger-extension-ok-button"
+                    "value": "I\u2019m in",
+                    "attributes": {
+                      "accesskey": "I"
+                    }
+                  },
+                  "action": {
+                    "type": "INSTALL_ADDON_FROM_URL",
+                    "data": {
+                      "url": null,
+                      "telemetrySource": "amo"
+                    }
+                  }
+                },
+                "secondary": [
+                  {
+                    "label": {
+                      "string_id": "cfr-doorhanger-extension-cancel-button"
+                    },
+                    "action": {
+                      "type": "CANCEL"
+                    }
+                  },
+                  {
+                    "label": {
+                      "string_id": "cfr-doorhanger-extension-never-show-recommendation"
+                    }
+                  },
+                  {
+                    "label": {
+                      "string_id": "cfr-doorhanger-extension-manage-settings-button"
+                    },
+                    "action": {
+                      "type": "OPEN_PREFERENCES_PAGE",
+                      "data": {
+                        "category": "general-cfraddons"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "frequency": {
+              "lifetime": 3
+            },
+            "targeting": "(addonsInfo.addons|keys intersect [\"@testpilot-containers\"])|length == 0 && ((currentDate|date - profileAgeCreated) / 604800000) >= 7 && (topFrecentSites[.frecency > 100]|mapToProperty(\"host\") intersect [\"www.youtube.com\",\"www.facebook.com\",\"www.twitter.com\",\"www.instagram.com\",\"www.reddit.com\",\"www.pinterest.com\",\"www.linkedin.com\",\"www.whatsapp.com\",\"www.tiktok.com\",\"www.messenger.com\",\"www.tumblr.com\",\"www.groupme.com\",\"www.flickr.com\",\"youtube.com\",\"facebook.com\",\"twitter.com\",\"instagram.com\",\"reddit.com\",\"pinterest.com\",\"linkedin.com\",\"whatsapp.com\",\"tiktok.com\",\"messenger.com\",\"tumblr.com\",\"groupme.com\",\"flickr.com\"])|length",
+            "trigger": {
+              "id": "openURL",
+              "params": [
+                "amazon.com",
+                "ebay.com",
+                "zillow.com",
+                "discord.com",
+                "craigslist.org",
+                "walmart.com",
+                "homedepot.com",
+                "etsy.com",
+                "target.com",
+                "roblox.com",
+                "wayfair.com",
+                "lowes.com",
+                "overstock.com",
+                "zappos.com",
+                "wish.com",
+                "sears.com",
+                "kohls.com",
+                "costco.com",
+                "everlane.com",
+                "www.amazon.com",
+                "www.ebay.com",
+                "www.zillow.com",
+                "www.discord.com",
+                "www.craigslist.org",
+                "www.walmart.com",
+                "www.homedepot.com",
+                "www.etsy.com",
+                "www.target.com",
+                "www.roblox.com",
+                "www.wayfair.com",
+                "www.lowes.com",
+                "www.overstock.com",
+                "www.zappos.com",
+                "www.wish.com",
+                "www.sears.com",
+                "www.kohls.com",
+                "www.costco.com",
+                "www.everlane.com"
+              ]
+            }
+          }
+        },
+        {
+          "slug": "treatmeant-c",
+          "ratio": 1,
+          "groups": [
+            "cfr"
+          ],
+          "value": {
+            "id": "EXPERIMENT_SOCIAL_TO_SHOPPING_ADS",
+            "template": "cfr_doorhanger",
+            "groups": [
+              "cfr"
+            ],
+            "content": {
+              "layout": "addon_recommendation",
+              "category": "cfrAddons",
+              "bucket_id": "EXPERIMENT_SOCIAL_TO_SHOPPING_ADS",
+              "notification_text": {
+                "string_id": "cfr-doorhanger-extension-notification2"
+              },
+              "heading_text": {
+                "string_id": "cfr-doorhanger-extension-heading"
+              },
+              "info_icon": {
+                "label": {
+                  "string_id": "cfr-doorhanger-extension-sumo-link"
+                },
+                "sumo_path": "extensionrecommendations"
+              },
+              "addon": {
+                "id": "782160",
+                "title": "Firefox Multi-Account Containers",
+                "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAACCUlEQVRo3u2YPU8UURSGn10nikCCUSJaaGNiZWWjnf6BN6FCLIiGQhtNMBpDZWc0BgoV0WCBECoozy9Q/4C1iQU2QjDKRwS2EYvdTTaTYWC5e+9k8T7d3jvnPefZ3dmdmRKApCHgNtCDGxvAjJl9aLZQUj+wACS1pW/AJTPbzqtLJN0DXjsO3sh1SafMbLzJuisNwwNcAE4D3/OKysDjFg5fZ9RD5q4C5zzk9krqDiXgiyPtLhCEKFA0iXvE/pDUBfTlHHIiY+28pLwZfwQRkNRJ9Y+pr8nSz3vsfw31Feo9wPD74WLbnwOhBLaAHQ+5lSDngJmtSBoELuccdg24mlp7C6zn1HwM9itkZvPA/G77kp5lCDw3sz0v5tqaKFA0h0Lgl4fcP2a2FkpgxkPudIjh6wKjwDit+SR+A6+Ahweo/QRsNrz+AiyFeiMi/y2l0A1r9wbHHGM2zawCUJJ0FBgDhoEu12BgDhgxs63U4N3AFDCA+xOLbeAd8CgBXgD3HQPrdAJ3aiIPUntjwM0W9ekARoCfZWCoRaGN3M1Yu+Whz40ycNJD8HFJ6QfFHR769ByKa6G2JgoUTRQomihQNFGgaKJA0USBovEp8DeUwLKH3DUz20itrXros1wG3ngInsxY89FnIgGeAhWqt3xnHQOXgPfAy4y9J8AK1dvNMw49doBFYMLMZv8BtVRph4qoHLkAAAAASUVORK5CYII=",
+                "rating": 4.6,
+                "users": 226263,
+                "author": "Mozilla Firefox",
+                "amo_url": "https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/"
+              },
+              "text": "Organize your online life like the rest of your life! Use Firefox containers to keep your shopping, social, and work habits separate.",
+              "buttons": {
+                "primary": {
+                  "label": {
+                    "value": "Add now",
+                    "attributes": {
+                      "accesskey": "A"
+                    }
                   },
                   "action": {
                     "type": "INSTALL_ADDON_FROM_URL",
