@@ -1000,7 +1000,7 @@
             "cfr"
           ],
           "value": {
-            "id": "EXPERIMENT_SHOPPING_TO_SOCIAL_ADS",
+            "id": "EXPERIMENT_SHOPPING_TO_SOCIAL_ORGANIZE",
             "template": "cfr_doorhanger",
             "groups": [
               "cfr"
@@ -1008,7 +1008,7 @@
             "content": {
               "layout": "addon_recommendation",
               "category": "cfrAddons",
-              "bucket_id": "EXPERIMENT_SHOPPING_TO_SOCIAL",
+              "bucket_id": "EXPERIMENT_SHOPPING_TO_SOCIAL_ORGANIZE",
               "notification_text": {
                 "string_id": "cfr-doorhanger-extension-notification2"
               },
