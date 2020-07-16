@@ -470,8 +470,6 @@
 - id: "MESSAGE-ROUTER-CONTENT-EXPERIMENT-RELEASE-BUG-1651993"
   enabled: true
   filter_expression: env.version >= '78.'
-  # English only locales, did not opt out of studies and has either
-  # a social website or a shopping website in the topsites section
   targeting: localeLanguageCode == 'en' && 'app.shield.optoutstudies.enabled'|preferenceValue
   arguments:
     slug: bug-1651993-high-velocity-message-testing-multi-account-containers-retention-study
