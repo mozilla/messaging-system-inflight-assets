@@ -472,10 +472,7 @@
   filter_expression: env.version >= '78.'
   # English only locales, did not opt out of studies and has either
   # a social website or a shopping website in the topsites section
-  targeting: localeLanguageCode == 'en' && 'app.shield.optoutstudies.enabled'|preferenceValue && (
-    (topFrecentSites[.frecency > 100]|mapToProperty("host") intersect ["www.youtube.com","www.facebook.com","www.twitter.com","www.instagram.com","www.reddit.com","www.pinterest.com","www.linkedin.com","www.whatsapp.com","www.tiktok.com","www.messenger.com","www.tumblr.com","www.groupme.com","www.flickr.com","youtube.com","facebook.com","twitter.com","instagram.com","reddit.com","pinterest.com","linkedin.com","whatsapp.com","tiktok.com","messenger.com","tumblr.com","groupme.com","flickr.com"])|length ||
-    (topFrecentSites[.frecency > 100]|mapToProperty("host") intersect ["amazon.com","ebay.com","zillow.com","discord.com","craigslist.org","walmart.com","homedepot.com","etsy.com","target.com","roblox.com","wayfair.com","lowes.com","overstock.com","zappos.com","wish.com","sears.com","kohls.com","costco.com","everlane.com","www.amazon.com","www.ebay.com","www.zillow.com","www.discord.com","www.craigslist.org","www.walmart.com","www.homedepot.com","www.etsy.com","www.target.com","www.roblox.com","www.wayfair.com","www.lowes.com","www.overstock.com","www.zappos.com","www.wish.com","www.sears.com","www.kohls.com","www.costco.com","www.everlane.com"])|length
-    )
+  targeting: localeLanguageCode == 'en' && 'app.shield.optoutstudies.enabled'|preferenceValue
   arguments:
     slug: bug-1651993-high-velocity-message-testing-multi-account-containers-retention-study
     userFacingName: Message Router Content Experiment High Velocity Message Testing Multi-Account Containers Retention Study
