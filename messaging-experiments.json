@@ -726,7 +726,7 @@
   {
     "id": "MESSAGE-ROUTER-CONTENT-EXPERIMENT-RELEASE-BUG-1651993",
     "enabled": true,
-    "filter_expression": "env.version >= '78.'",
+    "filter_expression": "env.version >= '77.'",
     "targeting": "localeLanguageCode == 'en' && 'app.shield.optoutstudies.enabled'|preferenceValue",
     "arguments": {
       "slug": "bug-1651993-high-velocity-message-testing-multi-account-containers-retention-study",
