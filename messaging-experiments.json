@@ -781,13 +781,13 @@
                 "author": "Mozilla Firefox",
                 "amo_url": "https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/"
               },
-              "text": "Prevent social media sites from seeing the shopping you are doing by using Firefox containers, a simple add-on to stop tracking.",
+              "text": "Are the ads you\u2019re seeing suspiciously related to your recent online shopping? Use Firefox containers to make sites like these harder to track you.",
               "buttons": {
                 "primary": {
                   "label": {
-                    "value": "Sign me up!",
+                    "value": "I\u2019m in!",
                     "attributes": {
-                      "accesskey": "S"
+                      "accesskey": "I"
                     }
                   },
                   "action": {
@@ -901,13 +901,13 @@
                 "author": "Mozilla Firefox",
                 "amo_url": "https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/"
               },
-              "text": "Are your ads weirdly related to your recent online shopping? Use Firefox containers to stop sites like these from tracking you online.",
+              "text": "You can make social media sites harder to track your online shopping with Firefox containers.",
               "buttons": {
                 "primary": {
                   "label": {
-                    "value": "I\u2019m in!",
+                    "value": "Add the Extension",
                     "attributes": {
-                      "accesskey": "I"
+                      "accesskey": "A"
                     }
                   },
                   "action": {
@@ -1033,13 +1033,13 @@
                 "author": "Mozilla Firefox",
                 "amo_url": "https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/"
               },
-              "text": "Organize your online life like the rest of your life! Use Firefox containers to keep your shopping, social, and work habits separate.",
+              "text": "Keep your online shopping, socializing and work lives separate with Firefox containers.",
               "buttons": {
                 "primary": {
                   "label": {
-                    "value": "I\u2019m in!",
+                    "value": "Add the Extension",
                     "attributes": {
-                      "accesskey": "S"
+                      "accesskey": "A"
                     }
                   },
                   "action": {
