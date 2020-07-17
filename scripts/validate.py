@@ -134,7 +134,8 @@ def extract_actions(message, message_type):
 
 def validate_all_actions(message, message_type, for_exp=False):
     for action in extract_actions(message, message_type):
-        validate_action(action, for_exp)
+        if action is not None:
+            validate_action(action, for_exp)
 
 
 def get_branch_message(branch):
@@ -159,6 +160,26 @@ def get_branch_message(branch):
         return None, None
 
 
+def validate_message_identifiers(message, experiment_slug, branch_slug):
+    """ https://bugzilla.mozilla.org/show_bug.cgi?id=1649642 """
+    message_id = message.get("id")
+    if message_id is None:
+        # Empty branch nothing to check
+        return
+    if message_id != branch_slug:
+        print("Message id for {} should match it's branch: {}"
+              .format(message.get("id"), branch_slug)
+              )
+        sys.exit(1)
+    cfr_content = message.get("content")
+    if cfr_content is not None:
+        if cfr_content.get("bucket_id") != experiment_slug:
+            print("Message bucket for {} should match experiment slug: {}"
+                  .format(message.get("id"), experiment_slug)
+                  )
+            sys.exit(1)
+
+
 def validate_experiment(item):
     for branch in item.get("arguments").get("branches"):
         message_type, branch_message = get_branch_message(branch)
@@ -176,6 +197,11 @@ def validate_experiment(item):
                     branch_message]
             for message in branch_message_list:
                 jsonschema.validate(instance=message, schema=schema)
+                validate_message_identifiers(
+                    message,
+                    item.get("arguments").get("slug"),
+                    branch.get("slug")
+                    )
             print("\tValidated {} with schema {}".format(
                 branch.get("slug"), message_type))
         except ValidationError as err:
