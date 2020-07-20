@@ -33,6 +33,7 @@ SCHEMA_MAP = {
     "whats-new-panel": "schema/whats-new-panel.schema.json",
     "action": "schema/messaging-system-special-message-actions.schema.json",
     "message-groups": "schema/message-groups.schema.json",
+    "moments-page": "schema/update-action.schema.json",
 }
 
 USAGE = """
@@ -56,6 +57,13 @@ def load_schema(name):
     with open(path, "r") as f:
         ALL_SCHEMAS[name] = json.loads(f.read())
     return ALL_SCHEMAS[name]
+
+
+def load_schema_exceptions(message_template):
+    if message_template in ["update_action"]:
+        return load_schema("moments-page")
+
+    return None
 
 
 def validate_item_targeting(item, for_exp=False):
@@ -124,13 +132,17 @@ def extract_actions(message, message_type):
         yield from _extract_onboarding()
     elif message_type == "onboarding-multistage":
         yield from _extract_onboarding_multistage()
+    elif message_type == "moments-page":
+        # No actions to validate for moments-page
+        yield None
     else:
         raise KeyError("invalid message type {}".format(message_type))
 
 
 def validate_all_actions(message, message_type, for_exp=False):
     for action in extract_actions(message, message_type):
-        validate_action(action, for_exp)
+        if action is not None:
+            validate_action(action, for_exp)
 
 
 def get_branch_message(branch):
@@ -147,6 +159,9 @@ def get_branch_message(branch):
             return "onboarding-multistage", value
         else:
             return "onboarding", None
+    elif branch["groups"] == ["moments-page"]:
+        value = branch["value"]
+        return "moments-page", value
     else:
         return None, None
 
@@ -191,7 +206,8 @@ def validate(schema_name, src_path):
         for item in items:
             try:
                 print("Validate schema for {}".format(item["id"]))
-                jsonschema.validate(instance=item, schema=schema)
+                schema_or_exception = load_schema_exceptions(item.get("template")) or schema
+                jsonschema.validate(instance=item, schema=schema_or_exception)
                 # If it's an experiment we want to evaluate the branches
                 if "arguments" in item:
                     validate_experiment(item)

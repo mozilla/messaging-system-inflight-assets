@@ -841,8 +841,7 @@
         },
         "id": "moments-wnp"
       },
-      "bucket_id": "WNP_MOMENTS_2",
-      "category": "cfrFeatures"
+      "bucket_id": "WNP_MOMENTS_2"
     },
     "targeting": "firefoxVersion >= 69 && localeLanguageCode in [\"en\",\"fr\",\"de\"] && ((currentDate|date - profileAgeCreated) / 86400000) >= 17 && ((currentDate|date - profileAgeCreated) / 86400000) < 30",
     "template": "update_action",
@@ -1123,8 +1122,7 @@
         },
         "id": "moments-wnp"
       },
-      "bucket_id": "WNP_MOMENTS_1",
-      "category": "cfrFeatures"
+      "bucket_id": "WNP_MOMENTS_1"
     },
     "targeting": "firefoxVersion >= 69 && localeLanguageCode in [\"en\",\"fr\",\"de\"] && ((currentDate|date - profileAgeCreated) / 86400000) >= 4 && ((currentDate|date - profileAgeCreated) / 86400000) < 15",
     "template": "update_action",
@@ -1141,8 +1139,7 @@
         },
         "id": "moments-wnp"
       },
-      "bucket_id": "WNP_MOMENTS_DEFAULT_BROWSER",
-      "category": "cfrFeatures"
+      "bucket_id": "WNP_MOMENTS_DEFAULT_BROWSER"
     },
     "id": "WNP_MOMENTS_DEFAULT_BROWSER",
     "targeting": "firefoxVersion >= 73 && localeLanguageCode in [\"en\",\"fr\",\"de\"] && ((currentDate|date - profileAgeCreated) / 86400000) > 30 && !isDefaultBrowser",
@@ -1516,6 +1513,24 @@
       "patterns": [
         "*://*/*"
       ]
+    }
+  },
+  {
+    "id": "WNP_MOMENTS_8",
+    "content": {
+      "action": {
+        "data": {
+          "expire": 1596499200000,
+          "url": "https://www.mozilla.org/firefox/welcome/8"
+        },
+        "id": "moments-wnp"
+      },
+      "bucket_id": "WNP_MOMENTS_8"
+    },
+    "targeting": "firefoxVersion >= 70 && ( localeLanguageCode == \"en\" || locale in [\"cy\", \"de\", \"dsb\", \"fr\", \"fy-NL\", \"hsb\", \"hu\", \"it\", \"ka\", \"kab\", \"nb-NO\", \"nl\", \"nn-NO\", \"pl\", \"pt-BR\", \"ru\", \"sl\", \"sv-SE\", \"tr\", \"uk\", \"vi\", \"zh-CN\", \"zh-TW\"] ) && ((currentDate|date - profileAgeCreated) / 86400000) >= 30",
+    "template": "update_action",
+    "trigger": {
+      "id": "momentsUpdate"
     }
   }
 ]
