@@ -60,7 +60,7 @@ def load_schema(name):
 
 
 def load_schema_exceptions(message_template):
-    if message_template in ["update_action"]:
+    if message_template == "update_action":
         return load_schema("moments-page")
 
     return None

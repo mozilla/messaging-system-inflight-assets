@@ -1418,7 +1418,7 @@
       },
       "bucket_id": "WNP_MOMENTS_8"
     },
-    "targeting": "firefoxVersion >= 70 && ( localeLanguageCode == \"en\" || locale in [\"cy\", \"de\", \"dsb\", \"fr\", \"fy-NL\", \"hsb\", \"hu\", \"it\", \"ka\", \"kab\", \"nb-NO\", \"nl\", \"nn-NO\", \"pl\", \"pt-BR\", \"ru\", \"sl\", \"sv-SE\", \"tr\", \"uk\", \"vi\", \"zh-CN\", \"zh-TW\"] ) && ((currentDate|date - profileAgeCreated) / 86400000) >= 30",
+    "targeting": "firefoxVersion >= 70 && ( localeLanguageCode == \"en\" || locale in [\"cy\", \"de\", \"dsb\", \"es-AR\", \"fr\", \"fy-NL\", \"hsb\", \"hu\", \"ia\", \"it\", \"ka\", \"kab\", \"nb-NO\", \"nl\", \"nn-NO\", \"pl\", \"pt-BR\", \"ru\", \"sl\", \"sv-SE\", \"tr\", \"uk\", \"vi\", \"zh-CN\", \"zh-TW\"] ) && ((currentDate|date - profileAgeCreated) / 86400000) >= 30",
     "template": "update_action",
     "trigger": {
       "id": "momentsUpdate"
