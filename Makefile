@@ -2,7 +2,7 @@ PYTHON = python3
 FLAGS = -c
 CMD = 'import sys, yaml, json; json.dump(yaml.load(sys.stdin, Loader=yaml.Loader), sys.stdout, indent=2)'
 
-all: cfr.json cfr-fxa.json cfr-heartbeat.json whats-new-panel.json messaging-experiments.json message-groups.json
+all: cfr.json cfr-fxa.json cfr-heartbeat.json whats-new-panel.json messaging-experiments.json message-groups.json moments.json
 
 %.json:%.yaml pre-build
 	$(PYTHON) $(FLAGS) $(CMD) < $< > $@
@@ -17,6 +17,7 @@ clean:
 
 check:
 	scripts/validate.py cfr cfr.json
+	scripts/validate.py moments-page moments.json
 	scripts/validate.py cfr-fxa cfr-fxa.json
 	scripts/validate.py whats-new-panel whats-new-panel.json
 	scripts/validate.py messaging-experiments messaging-experiments.json

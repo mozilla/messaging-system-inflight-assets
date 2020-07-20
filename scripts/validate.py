@@ -59,13 +59,6 @@ def load_schema(name):
     return ALL_SCHEMAS[name]
 
 
-def load_schema_exceptions(message_template):
-    if message_template == "update_action":
-        return load_schema("moments-page")
-
-    return None
-
-
 def validate_item_targeting(item, for_exp=False):
     if "targeting" not in item and "filter_expression" not in item:
         return
@@ -204,8 +197,7 @@ def validate(schema_name, src_path):
         for item in items:
             try:
                 print("Validate schema for {}".format(item["id"]))
-                schema_or_exception = load_schema_exceptions(item.get("template")) or schema
-                jsonschema.validate(instance=item, schema=schema_or_exception)
+                jsonschema.validate(instance=item, schema=schema)
                 # If it's an experiment we want to evaluate the branches
                 if "arguments" in item:
                     validate_experiment(item)

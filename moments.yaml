@@ -1,0 +1,46 @@
+- id: WNP_MOMENTS_8
+  content:
+    action:
+      data:
+        # Valid until August 3rd EOD
+        expire: 1596499200000
+        url: https://www.mozilla.org/firefox/welcome/8
+      id: moments-wnp
+    bucket_id: WNP_MOMENTS_8
+  # Fx 70+, profile age > 30 days all en-* and selected locales
+  targeting: firefoxVersion >= 70 &&
+    (
+      localeLanguageCode == "en" ||
+      locale in ["cy", "de", "dsb", "es-AR", "fr", "fy-NL", "hsb", "hu", "ia", "it", "ka", "kab", "nb-NO", "nl", "nn-NO", "pl", "pt-BR", "ru", "sl", "sv-SE", "tr", "uk", "vi", "zh-CN", "zh-TW"]
+    ) && ((currentDate|date - profileAgeCreated) / 86400000) > 30
+  template: update_action
+  trigger:
+    id: momentsUpdate
+- id: WNP_MOMENTS_2
+  content:
+    action:
+      data:
+        expireDelta: 604800000
+        url: https://www.mozilla.org/firefox/welcome/2/
+      id: moments-wnp
+    bucket_id: WNP_MOMENTS_2
+  targeting: firefoxVersion >= 69 && localeLanguageCode in ["en","fr","de"] && ((currentDate|date
+    - profileAgeCreated) / 86400000) >= 17 && ((currentDate|date - profileAgeCreated)
+    / 86400000) < 30
+  template: update_action
+  trigger:
+    id: momentsUpdate
+- id: WNP_MOMENTS_1
+  content:
+    action:
+      data:
+        expireDelta: 604800000
+        url: https://www.mozilla.org/firefox/welcome/1/
+      id: moments-wnp
+    bucket_id: WNP_MOMENTS_1
+  targeting: firefoxVersion >= 69 && localeLanguageCode in ["en","fr","de"] && ((currentDate|date
+    - profileAgeCreated) / 86400000) >= 4 && ((currentDate|date - profileAgeCreated)
+    / 86400000) < 15
+  template: update_action
+  trigger:
+    id: momentsUpdate
