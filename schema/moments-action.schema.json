@@ -1,6 +1,6 @@
 {
-  "title": "UpdateActionMessage",
-  "description": "A template for messages that execute predetermined actions.",
+  "title": "MomentsActionMessage",
+  "description": "A template for messages that execute moments page actions.",
   "version": "1.0.0",
   "type": "object",
   "properties": {

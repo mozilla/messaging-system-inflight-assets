@@ -33,7 +33,7 @@ SCHEMA_MAP = {
     "whats-new-panel": "schema/whats-new-panel.schema.json",
     "action": "schema/messaging-system-special-message-actions.schema.json",
     "message-groups": "schema/message-groups.schema.json",
-    "moments-page": "schema/update-action.schema.json",
+    "moments-page": "schema/moments-action.schema.json",
 }
 
 USAGE = """
