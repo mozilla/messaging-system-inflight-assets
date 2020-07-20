@@ -134,15 +134,14 @@ def extract_actions(message, message_type):
         yield from _extract_onboarding_multistage()
     elif message_type == "moments-page":
         # No actions to validate for moments-page
-        yield None
+        return
     else:
         raise KeyError("invalid message type {}".format(message_type))
 
 
 def validate_all_actions(message, message_type, for_exp=False):
     for action in extract_actions(message, message_type):
-        if action is not None:
-            validate_action(action, for_exp)
+        validate_action(action, for_exp)
 
 
 def get_branch_message(branch):
@@ -160,8 +159,7 @@ def get_branch_message(branch):
         else:
             return "onboarding", None
     elif branch["groups"] == ["moments-page"]:
-        value = branch["value"]
-        return "moments-page", value
+        return "moments-page", branch["value"]
     else:
         return None, None
 
