@@ -781,7 +781,7 @@
                 "author": "Mozilla Firefox",
                 "amo_url": "https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/"
               },
-              "text": "Are the ads you\u2019re seeing suspiciously related to your recent online shopping? Use Firefox containers to make sites like these harder to track you.",
+              "text": "Are the ads you\u2019re seeing suspiciously related to your recent online shopping? Use Firefox containers to make it harder for sites like these to track you.",
               "buttons": {
                 "primary": {
                   "label": {
@@ -901,7 +901,7 @@
                 "author": "Mozilla Firefox",
                 "amo_url": "https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/"
               },
-              "text": "You can make social media sites harder to track your online shopping with Firefox containers.",
+              "text": "You can make it harder for social media sites to track your online shopping with Firefox containers.",
               "buttons": {
                 "primary": {
                   "label": {
