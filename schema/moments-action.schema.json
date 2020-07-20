@@ -44,7 +44,7 @@
         }
       },
       "additionalProperties": false,
-      "required": ["action"]
+      "required": ["action", "bucket_id"]
     }
   }
 }
