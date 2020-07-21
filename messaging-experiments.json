@@ -727,7 +727,7 @@
     "id": "MESSAGE-ROUTER-CONTENT-EXPERIMENT-RELEASE-BUG-1651993",
     "enabled": true,
     "filter_expression": "env.version >= '77.'",
-    "targeting": "localeLanguageCode == 'en' && 'app.shield.optoutstudies.enabled'|preferenceValue",
+    "targeting": "localeLanguageCode == 'en' && 'app.shield.optoutstudies.enabled'|preferenceValue && ((currentDate|date - profileAgeCreated) / 86400000) >= 7 && [userId, \"messaging-experiments-cfr\"]|bucketSample(0, 153, 10000)",
     "arguments": {
       "slug": "bug-1651993-high-velocity-message-testing-multi-account-containers-retention-study",
       "userFacingName": "Message Router Content Experiment High Velocity Message Testing Multi-Account Containers Retention Study",
