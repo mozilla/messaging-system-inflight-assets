@@ -33,6 +33,7 @@ SCHEMA_MAP = {
     "whats-new-panel": "schema/whats-new-panel.schema.json",
     "action": "schema/messaging-system-special-message-actions.schema.json",
     "message-groups": "schema/message-groups.schema.json",
+    "moments-page": "schema/moments-action.schema.json",
 }
 
 USAGE = """
@@ -124,6 +125,9 @@ def extract_actions(message, message_type):
         yield from _extract_onboarding()
     elif message_type == "onboarding-multistage":
         yield from _extract_onboarding_multistage()
+    elif message_type == "moments-page":
+        # No actions to validate for moments-page
+        return
     else:
         raise KeyError("invalid message type {}".format(message_type))
 
@@ -147,6 +151,8 @@ def get_branch_message(branch):
             return "onboarding-multistage", value
         else:
             return "onboarding", None
+    elif branch["groups"] == ["moments-page"]:
+        return "moments-page", branch["value"]
     else:
         return None, None
 

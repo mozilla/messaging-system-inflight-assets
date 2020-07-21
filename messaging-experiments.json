@@ -710,8 +710,7 @@
                 },
                 "id": "moments-wnp"
               },
-              "bucket_id": "XMAN_MOMENTS_TEST",
-              "category": "cfrFeatures"
+              "bucket_id": "XMAN_MOMENTS_TEST"
             },
             "targeting": "true",
             "template": "update_action",

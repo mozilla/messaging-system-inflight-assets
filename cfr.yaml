@@ -672,21 +672,6 @@
   template: cfr_doorhanger
   trigger:
     id: openBookmarkedURL
-- id: WNP_MOMENTS_2
-  content:
-    action:
-      data:
-        expireDelta: 604800000
-        url: https://www.mozilla.org/firefox/welcome/2/
-      id: moments-wnp
-    bucket_id: WNP_MOMENTS_2
-    category: cfrFeatures
-  targeting: firefoxVersion >= 69 && localeLanguageCode in ["en","fr","de"] && ((currentDate|date
-    - profileAgeCreated) / 86400000) >= 17 && ((currentDate|date - profileAgeCreated)
-    / 86400000) < 30
-  template: update_action
-  trigger:
-    id: momentsUpdate
 - id: PIN_TAB_72
   content:
     bucket_id: CFR_PIN_TAB
@@ -862,35 +847,6 @@
   template: cfr_doorhanger
   trigger:
     id: newSavedLogin
-- id: WNP_MOMENTS_1
-  content:
-    action:
-      data:
-        expireDelta: 604800000
-        url: https://www.mozilla.org/firefox/welcome/1/
-      id: moments-wnp
-    bucket_id: WNP_MOMENTS_1
-    category: cfrFeatures
-  targeting: firefoxVersion >= 69 && localeLanguageCode in ["en","fr","de"] && ((currentDate|date
-    - profileAgeCreated) / 86400000) >= 4 && ((currentDate|date - profileAgeCreated)
-    / 86400000) < 15
-  template: update_action
-  trigger:
-    id: momentsUpdate
-- content:
-    action:
-      data:
-        expireDelta: 604800000
-        url: https://www.mozilla.org/firefox/welcome/6/
-      id: moments-wnp
-    bucket_id: WNP_MOMENTS_DEFAULT_BROWSER
-    category: cfrFeatures
-  id: WNP_MOMENTS_DEFAULT_BROWSER
-  targeting: firefoxVersion >= 73 && localeLanguageCode in ["en","fr","de"] && ((currentDate|date
-    - profileAgeCreated) / 86400000) > 30 && !isDefaultBrowser
-  template: update_action
-  trigger:
-    id: momentsUpdate
 - id: SOCIAL_TRACKING_PROTECTION
   content:
     anchor_id: tracking-protection-icon-box
@@ -1036,70 +992,6 @@
     id: contentBlocking
     params:
       - 2048
-- id: CFR_EXP_IMPORT_PASSWORD
-  content:
-    bucket_id: CFR_IMPORT_PASSWORD
-    buttons:
-      primary:
-        action:
-          data:
-            category: sync
-          type: SHOW_MIGRATION_WIZARD
-        label:
-          attributes:
-            accesskey: s
-          value: Import Passwords
-      secondary:
-        - action:
-            type: CANCEL
-          label:
-            string_id: cfr-doorhanger-extension-cancel-button
-        - label:
-            string_id: cfr-doorhanger-extension-never-show-recommendation
-        - action:
-            data:
-              category: general-cfrfeatures
-            type: OPEN_PREFERENCES_PAGE
-          label:
-            string_id: cfr-doorhanger-extension-manage-settings-button
-    category: cfrFeatures
-    heading_text: Import Your Password From Other Browsers
-    icon: chrome://browser/content/aboutlogins/icons/intro-illustration.svg
-    info_icon:
-      label:
-        string_id: cfr-doorhanger-extension-sumo-link
-      sumo_path: extensionrecommendations
-    layout: icon_and_message
-    notification_text:
-      string_id: cfr-doorhanger-feature-notification
-    text: You can import your passwords and settings from Google Chrome or Edge.  Would
-      you like to import those settings?
-  frequency:
-    lifetime: 3
-  targeting: firefoxVersion >= 74 && locale == "en-US" && ((currentDate|date - profileAgeCreated) / 86400000) < 7 && userPrefs.cfrFeatures && 'browser.newtabpage.activity-stream.asrouter.providers.cfr'|preferenceValue == '{"id":"cfr","enabled":true,"type":"remote-settings","bucket":"cfr","frequency":{"custom":[{"period":"daily","cap":1}]},"categories":["cfrAddons","cfrFeatures"],"updateCycleInMs":3600000,"cohort":"import_password_treatment"}'
-  template: cfr_doorhanger
-  trigger:
-    id: openURL
-    params:
-      - docs.google.com
-      - calendar.google.com
-      - mail.google.com
-      - outlook.live.com
-      - facebook.com
-      - www.facebook.com
-      - twitter.com
-      - www.twitter.com
-      - reddit.com
-      - www.reddit.com
-      - github.com
-      - www.github.com
-      - youtube.com
-      - www.youtube.com
-      - feedly.com
-      - www.feedly.com
-      - drive.google.com
-      - netflix.com
-      - www.netflix.com
 - id: DOH_ROLLOUT_CONFIRMATION
   targeting: "'doh-rollout.enabled'|preferenceValue && !'doh-rollout.disable-heuristics'|preferenceValue && !'doh-rollout.skipHeuristicsCheck'|preferenceValue && !'doh-rollout.doorhanger-decision'|preferenceValue && firefoxVersion >= 79"
   template: cfr_doorhanger

@@ -462,7 +462,6 @@
                 url: https://www.mozilla.org/firefox/welcome/1/
               id: moments-wnp
             bucket_id: XMAN_MOMENTS_TEST
-            category: cfrFeatures
           targeting: "true"
           template: update_action
           trigger:
