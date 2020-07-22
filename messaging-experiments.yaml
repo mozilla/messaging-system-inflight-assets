@@ -757,3 +757,189 @@
               - tumblr.com
               - groupme.com
               - flickr.com
+- id: MULTI-STAGE-ABOUTWELCOME-V2-79-RELEASE
+  enabled: true
+  filter_expression: env.version >= '79.' && (env.channel == 'default' || env.channel == 'beta')
+  # The filter `!('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue)` is used to exclude
+  # users who have switched channels or re-installed the browser without having a new profile
+  targeting: localeLanguageCode == "en" && [userId, "message-multi-stage-aboutwelcome-v2-79"]|bucketSample(0, 2000, 10000) &&
+    ((isFirstStartup && !('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue)) || 'message-multi-stage-aboutwelcome-v2-79' in activeExperiments)
+  arguments:
+    slug: message-multi-stage-aboutwelcome-v2-79
+    userFacingName: "Multi-Stage About:Welcome V2 79 Release"
+    experimentDocumentUrl: https://experimenter.services.mozilla.com/experiments/multi-stage-aboutwelcome-v2-79-release/
+    userFacingDescription: Study to validate Multi-stage onboarding experience.
+    isEnrollmentPaused: true
+    branches:
+      - slug: control
+        ratio: 1
+        groups:
+          - aboutwelcome
+        value: {}
+      - slug: treatment-a
+        ratio: 1
+        groups:
+          - aboutwelcome
+        value:
+          id: multi-stage-welcome-import
+          template: multistage
+          screens:
+            - id: "AW_GET_STARTED"
+              order: 0
+              content:
+                zap: true
+                title:
+                  string_id: onboarding-welcome-header
+                subtitle: The fast, safe, and private browser that's backed by a non-profit.
+                primary_button:
+                  label: Start Setup
+                  action:
+                    navigate: true
+                secondary_button:
+                  text: Have an account?
+                  label: Sign in
+                  position: top
+                  action:
+                    type: OPEN_URL
+                    addFlowParams: true
+                    data:
+                      args: https://accounts.firefox.com/?service=sync&action=email&context=fx_desktop_v3&entrypoint=activity-stream-firstrun&style=trailhead
+                      where: current
+            - id: "AW_IMPORT_SETTINGS"
+              order: 1
+              content:
+                zap: true
+                title: Import your passwords, bookmarks, and more
+                subtitle: Coming from another browser? It's easy to bring everything to Firefox.
+                tiles: true
+                primary_button:
+                  label: Start Import
+                  action:
+                    navigate: true
+                    type: SHOW_MIGRATION_WIZARD
+                secondary_button:
+                  label: Not now
+                  action:
+                    navigate: true
+      - slug: treatment-b
+        ratio: 1
+        groups:
+          - aboutwelcome
+        value:
+          id: multi-stage-welcome-theme
+          template: multistage
+          screens:
+            - id: "AW_GET_STARTED"
+              order: 0
+              content:
+                zap: true
+                title:
+                  string_id: onboarding-welcome-header
+                subtitle: The fast, safe, and private browser that's backed by a non-profit.
+                primary_button:
+                  label: Start Setup
+                  action:
+                    navigate: true
+                secondary_button:
+                  text: Have an account?
+                  label: Sign in
+                  position: top
+                  action:
+                    type: OPEN_URL
+                    addFlowParams: true
+                    data:
+                      args: https://accounts.firefox.com/?service=sync&action=email&context=fx_desktop_v3&entrypoint=activity-stream-firstrun&style=trailhead
+                      where: current
+            - id: "AW_CHOOSE_THEME"
+              order: 1
+              content:
+                zap: true
+                title: Choose a look
+                subtitle: Personalize Firefox with a theme.
+                tiles:
+                  type: theme
+                  action:
+                    theme: <event>
+                  data:
+                    - theme: light
+                      label: Light
+                    - theme: dark
+                      label: Dark
+                primary_button:
+                  label: Save Theme
+                  action:
+                    navigate: true
+                secondary_button:
+                  label: Not now
+                  action:
+                    navigate: true
+                    theme: default
+      - slug: treatment-c
+        ratio: 1
+        groups:
+          - aboutwelcome
+        value:
+          id: multi-stage-welcome-import-theme
+          template: multistage
+          screens:
+            - id: "AW_GET_STARTED"
+              order: 0
+              content:
+                zap: true
+                title:
+                  string_id: onboarding-welcome-header
+                subtitle: The fast, safe, and private browser that's backed by a non-profit.
+                primary_button:
+                  label: Start Setup
+                  action:
+                    navigate: true
+                secondary_button:
+                  text: Have an account?
+                  label: Sign in
+                  position: top
+                  action:
+                    type: OPEN_URL
+                    addFlowParams: true
+                    data:
+                      args: https://accounts.firefox.com/?service=sync&action=email&context=fx_desktop_v3&entrypoint=activity-stream-firstrun&style=trailhead
+                      where: current
+            - id: "AW_IMPORT_SETTINGS"
+              order: 1
+              content:
+                zap: true
+                title: Import your passwords, bookmarks, and more
+                subtitle: Coming from another browser? It's easy to bring everything to Firefox.
+                tiles: true
+                primary_button:
+                  label: Start Import
+                  action:
+                    navigate: true
+                    type: SHOW_MIGRATION_WIZARD
+                secondary_button:
+                  label: Not now
+                  action:
+                    navigate: true
+            - id: "AW_CHOOSE_THEME"
+              order: 1
+              content:
+                zap: true
+                title: Choose a look
+                subtitle: Personalize Firefox with a theme.
+                tiles:
+                  type: theme
+                  action:
+                    theme: <event>
+                  data:
+                    - theme: light
+                      label: Light
+                    - theme: dark
+                      label: Dark
+                primary_button:
+                  label: Save Theme
+                  action:
+                    navigate: true
+                secondary_button:
+                  label: Not now
+                  action:
+                    navigate: true
+                    theme: default
