@@ -162,18 +162,28 @@ def get_branch_message(branch):
 
 def validate_message_identifiers(message, experiment_slug, branch_slug):
     """ https://bugzilla.mozilla.org/show_bug.cgi?id=1649642 """
+    def _branch_message_id_join(string):
+        try:
+            msg_encoding = eval(string)
+            if len(msg_encoding) == 2 and msg_encoding[0] == branch_slug:
+                return True
+        except (ValueError, NameError):
+            return False
+        return False
+
     message_id = message.get("id")
     if message_id is None:
         # Empty branch nothing to check
         return
-    if message_id != branch_slug:
-        print("Message id for {} should match it's branch: {}"
+    if message_id != branch_slug and not _branch_message_id_join(message_id):
+        print("Message id for {} should match or include it's branch: {}"
               .format(message.get("id"), branch_slug)
               )
         sys.exit(1)
     cfr_content = message.get("content")
     if cfr_content is not None:
-        if cfr_content.get("bucket_id") != experiment_slug:
+        msg_bucket = cfr_content.get("bucket_id")
+        if msg_bucket and msg_bucket != experiment_slug:
             print("Message bucket for {} should match experiment slug: {}"
                   .format(message.get("id"), experiment_slug)
                   )

@@ -24,7 +24,7 @@
         value:
           title: Welcome to Firefox. Fast, safe, private.
           cards:
-            - id: TRAILHEAD_CARD_12
+            - id: "['treatment-variation-b','TRAILHEAD_CARD_12']"
               content:
                 title:
                   string_id: onboarding-personal-data-promise-title
@@ -39,7 +39,7 @@
                     data:
                       args: https://www.mozilla.org/firefox/privacy/
                       where: tabshifted
-            - id: TRAILHEAD_CARD_3
+            - id: "['treatment-variation-b','TRAILHEAD_CARD_3']"
               content:
                 title:
                   string_id: onboarding-firefox-monitor-title
@@ -54,7 +54,7 @@
                     data:
                       args: https://monitor.firefox.com/
                       where: tabshifted
-            - id: TRAILHEAD_CARD_4
+            - id: "['treatment-variation-b','TRAILHEAD_CARD_4']"
               content:
                 title:
                   string_id: onboarding-browse-privately-title
@@ -73,7 +73,7 @@
         value:
           title: Welcome to Firefox
           cards:
-            - id: TRAILHEAD_CARD_12
+            - id: "['treatment-variation-c','TRAILHEAD_CARD_12']"
               content:
                 title:
                   string_id: onboarding-personal-data-promise-title
@@ -88,7 +88,7 @@
                     data:
                       args: https://www.mozilla.org/firefox/privacy/
                       where: tabshifted
-            - id: TRAILHEAD_CARD_3
+            - id: "['treatment-variation-c','TRAILHEAD_CARD_3']"
               content:
                 title:
                   string_id: onboarding-firefox-monitor-title
@@ -103,7 +103,7 @@
                     data:
                       args: https://monitor.firefox.com/
                       where: tabshifted
-            - id: TRAILHEAD_CARD_4
+            - id: "['treatment-variation-c','TRAILHEAD_CARD_4']"
               content:
                 title:
                   string_id: onboarding-browse-privately-title
@@ -122,7 +122,7 @@
         value:
           title: Welcome to Firefox. Fast, safe, private.
           cards:
-            - id: TRAILHEAD_CARD_2
+            - id: "['treatment-variation-d','TRAILHEAD_CARD_2']"
               content:
                 title:
                   string_id: onboarding-data-sync-title
@@ -138,7 +138,7 @@
                     data:
                       args: https://accounts.firefox.com/?service=sync&action=email&context=fx_desktop_v3&entrypoint=activity-stream-firstrun&style=trailhead
                       where: tabshifted
-            - id: TRAILHEAD_CARD_3
+            - id: "['treatment-variation-d','TRAILHEAD_CARD_3']"
               content:
                 title:
                   string_id: onboarding-firefox-monitor-title
@@ -153,7 +153,7 @@
                     data:
                       args: https://monitor.firefox.com/
                       where: tabshifted
-            - id: TRAILHEAD_CARD_4
+            - id: "['treatment-variation-d','TRAILHEAD_CARD_4']"
               content:
                 title:
                   string_id: onboarding-browse-privately-title
@@ -186,7 +186,7 @@
         groups:
           - cfr
         value:
-          id: PROTECTIONS_RETENTION_PRIVACY
+          id: treatment-variation-a
           template: cfr_doorhanger
           groups: [cfr]
           content:
@@ -194,7 +194,7 @@
             category: cfrFeatures
             anchor_id: tracking-protection-icon-box
             skip_address_bar_notifier: true
-            bucket_id: PROTECTIONS_RETENTION_PRIVACY
+            bucket_id: bug-1646798-message-high-velocity-message-testing-privacy-retenti-release-77-79
             heading_text: Putting your privacy before profits
             notification_text: ''
             info_icon:
@@ -236,7 +236,7 @@
         groups:
           - cfr
         value:
-          id: PROTECTIONS_RETENTION_PROTECTIONS
+          id: treatment-variation-b
           template: cfr_doorhanger
           groups: [cfr]
           content:
@@ -244,7 +244,7 @@
             category: cfrFeatures
             anchor_id: tracking-protection-icon-box
             skip_address_bar_notifier: true
-            bucket_id: PROTECTIONS_RETENTION_PROTECTIONS
+            bucket_id: bug-1646798-message-high-velocity-message-testing-privacy-retenti-release-77-79
             heading_text: Putting your privacy before profits
             notification_text: ''
             info_icon:
@@ -283,7 +283,7 @@
         groups:
           - cfr
         value:
-          id: PROTECTIONS_RETENTION_MONITOR
+          id: treatment-variation-c
           template: cfr_doorhanger
           groups: [cfr]
           content:
@@ -291,7 +291,7 @@
             category: cfrFeatures
             anchor_id: tracking-protection-icon-box
             skip_address_bar_notifier: true
-            bucket_id: PROTECTIONS_RETENTION_MONITOR
+            bucket_id: bug-1646798-message-high-velocity-message-testing-privacy-retenti-release-77-79
             heading_text: Putting your privacy before profits
             notification_text: ''
             info_icon:
