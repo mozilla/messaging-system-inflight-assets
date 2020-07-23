@@ -769,7 +769,7 @@
     userFacingName: "Multi-Stage About:Welcome V2 79 Release"
     experimentDocumentUrl: https://experimenter.services.mozilla.com/experiments/multi-stage-aboutwelcome-v2-79-release/
     userFacingDescription: Study to validate Multi-stage onboarding experience.
-    isEnrollmentPaused: true
+    isEnrollmentPaused: false
     branches:
       - slug: control
         ratio: 1
@@ -788,8 +788,7 @@
               order: 0
               content:
                 zap: true
-                title:
-                  string_id: onboarding-welcome-header
+                title: Welcome to Firefox
                 subtitle: The fast, safe, and private browser that's backed by a non-profit.
                 primary_button:
                   label: Start Setup
@@ -811,7 +810,8 @@
                 zap: true
                 title: Import your passwords, bookmarks, and more
                 subtitle: Coming from another browser? It's easy to bring everything to Firefox.
-                tiles: true
+                tiles:
+                  type: topsites
                 primary_button:
                   label: Start Import
                   action:
@@ -833,8 +833,7 @@
               order: 0
               content:
                 zap: true
-                title:
-                  string_id: onboarding-welcome-header
+                title: Welcome to Firefox
                 subtitle: The fast, safe, and private browser that's backed by a non-profit.
                 primary_button:
                   label: Start Setup
@@ -886,8 +885,7 @@
               order: 0
               content:
                 zap: true
-                title:
-                  string_id: onboarding-welcome-header
+                title: Welcome to Firefox
                 subtitle: The fast, safe, and private browser that's backed by a non-profit.
                 primary_button:
                   label: Start Setup
@@ -909,7 +907,8 @@
                 zap: true
                 title: Import your passwords, bookmarks, and more
                 subtitle: Coming from another browser? It's easy to bring everything to Firefox.
-                tiles: true
+                tiles:
+                  type: topsites
                 primary_button:
                   label: Start Import
                   action:
@@ -920,7 +919,7 @@
                   action:
                     navigate: true
             - id: "AW_CHOOSE_THEME"
-              order: 1
+              order: 2
               content:
                 zap: true
                 title: Choose a look
