@@ -4,6 +4,14 @@
   "version": "1.0.0",
   "type": "object",
   "properties": {
+    "groups": {
+      "type": "array",
+      "description": "Configure message behaviour: frequency, prefs",
+      "items": {
+        "type": "string",
+        "description": "Name of group configuration"
+      }
+    },
     "content": {
       "type": "object",
       "properties": {
@@ -46,5 +54,6 @@
       "additionalProperties": false,
       "required": ["action", "bucket_id"]
     }
-  }
+  },
+  "required": ["groups", "content"]
 }

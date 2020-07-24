@@ -1,4 +1,5 @@
 - id: WNP_MOMENTS_8
+  groups: [moments-pages]
   content:
     action:
       data:
@@ -17,6 +18,7 @@
   trigger:
     id: momentsUpdate
 - id: WNP_MOMENTS_2
+  groups: [moments-pages]
   content:
     action:
       data:
@@ -31,6 +33,7 @@
   trigger:
     id: momentsUpdate
 - id: WNP_MOMENTS_1
+  groups: [moments-pages]
   content:
     action:
       data:

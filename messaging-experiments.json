@@ -702,6 +702,9 @@
           ],
           "value": {
             "id": "XMAN_MOMENTS_TEST",
+            "groups": [
+              "moments-pages"
+            ],
             "content": {
               "action": {
                 "data": {
