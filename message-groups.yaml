@@ -1,18 +1,12 @@
 - id: cfr
   enabled: true
   type: remote-settings
-  userPreferences:
-    - browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons
-    - browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features
   frequency:
     custom:
       - {period: 86400000, cap: 1}
 - id: cfr-experiments
   enabled: true
   type: remote-settings
-  userPreferences:
-    - browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons
-    - browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features
   frequency:
     custom:
       - {period: 86400000, cap: 1}
