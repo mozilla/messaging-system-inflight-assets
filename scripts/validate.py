@@ -152,7 +152,9 @@ def get_branch_message(branch):
         else:
             return "onboarding", None
     elif branch["groups"] == ["moments-page"]:
-        return "moments-page", branch["value"]
+        if "id" in branch["value"]:
+            return "moments-page", branch["value"]
+        return "moments-page", None
     else:
         return None, None
 
