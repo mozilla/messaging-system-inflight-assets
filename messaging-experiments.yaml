@@ -478,7 +478,7 @@
     userFacingName: Message Router Content Experiment High Velocity Message Testing Multi-Account Containers Retention Study
     experimentDocumentUrl: https://experimenter.services.mozilla.com/experiments/high-velocity-message-testing-multi-account-containers-retention-study/
     userFacingDescription: This promotes Multi-Account Containers Addon via CFR to users and investigates if the addon has a positive effect in terms of Firefox retention. We will use a conditional trigger here to show the CFR to users at the most relevant moment. We believe this can drive the addon adoption which will improve retention.
-    isEnrollmentPaused: false
+    isEnrollmentPaused: true
     branches:
       - slug: control
         ratio: 1
