@@ -352,7 +352,7 @@
         groups:
           - aboutwelcome
         value:
-          id: multi-stage-welcome
+          id: treatment-static
           template: multistage
           screens:
             - id: "AW_GET_STARTED"
@@ -395,7 +395,7 @@
         groups:
           - aboutwelcome
         value:
-          id: multi-stage-welcome-importable
+          id: treatment-dynamic
           template: multistage
           screens:
             - id: "AW_GET_STARTED"
@@ -454,7 +454,7 @@
         groups:
           - moments-page
         value:
-          id: XMAN_MOMENTS_TEST
+          id: treatment
           groups: [moments-pages]
           content:
             action:
@@ -462,7 +462,7 @@
                 expireDelta: 604800000
                 url: https://www.mozilla.org/firefox/welcome/1/
               id: moments-wnp
-            bucket_id: XMAN_MOMENTS_TEST
+            bucket_id: xman-moments-page-80-nightly
           targeting: "true"
           template: update_action
           trigger:
@@ -490,14 +490,14 @@
         groups:
           - cfr
         value:
-          id: EXPERIMENT_SHOPPING_TO_SOCIAL
+          id: treatmeant-a
           template: cfr_doorhanger
           groups:
             - cfr
           content:
             layout: addon_recommendation
             category: cfrAddons
-            bucket_id: EXPERIMENT_SHOPPING_TO_SOCIAL
+            bucket_id: bug-1651993-high-velocity-message-testing-multi-account-containers-retention-study
             notification_text:
               string_id: cfr-doorhanger-extension-notification2
             heading_text:
@@ -577,16 +577,14 @@
         groups:
           - cfr
         value:
-          id: EXPERIMENT_SOCIAL_TO_SHOPPING
+          id: treatmeant-b
           template: cfr_doorhanger
           groups:
             - cfr
           content:
             layout: addon_recommendation
             category: cfrAddons
-            bucket_id: EXPERIMENT_SOCIAL_TO_SHOPPING
-            notification_text:
-              string_id: cfr-doorhanger-extension-notification2
+            bucket_id: bug-1651993-high-velocity-message-testing-multi-account-containers-retention-study
             heading_text:
               string_id: cfr-doorhanger-extension-heading
             info_icon:
@@ -676,16 +674,14 @@
         groups:
           - cfr
         value:
-          id: EXPERIMENT_SHOPPING_TO_SOCIAL_ORGANIZE
+          id: treatmeant-c
           template: cfr_doorhanger
           groups:
             - cfr
           content:
             layout: addon_recommendation
             category: cfrAddons
-            bucket_id: EXPERIMENT_SHOPPING_TO_SOCIAL_ORGANIZE
-            notification_text:
-              string_id: cfr-doorhanger-extension-notification2
+            bucket_id: bug-1651993-high-velocity-message-testing-multi-account-containers-retention-study
             heading_text:
               string_id: cfr-doorhanger-extension-heading
             info_icon:
@@ -782,7 +778,7 @@
         groups:
           - aboutwelcome
         value:
-          id: multi-stage-welcome-import
+          id: treatment-a
           template: multistage
           screens:
             - id: "AW_GET_STARTED"
@@ -827,7 +823,7 @@
         groups:
           - aboutwelcome
         value:
-          id: multi-stage-welcome-theme
+          id: treatment-b
           template: multistage
           screens:
             - id: "AW_GET_STARTED"
@@ -879,7 +875,7 @@
         groups:
           - aboutwelcome
         value:
-          id: multi-stage-welcome-import-theme
+          id: treatment-c
           template: multistage
           screens:
             - id: "AW_GET_STARTED"

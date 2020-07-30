@@ -551,7 +551,7 @@
             "aboutwelcome"
           ],
           "value": {
-            "id": "multi-stage-welcome",
+            "id": "treatment-static",
             "template": "multistage",
             "screens": [
               {
@@ -615,7 +615,7 @@
             "aboutwelcome"
           ],
           "value": {
-            "id": "multi-stage-welcome-importable",
+            "id": "treatment-dynamic",
             "template": "multistage",
             "screens": [
               {
@@ -701,7 +701,7 @@
             "moments-page"
           ],
           "value": {
-            "id": "XMAN_MOMENTS_TEST",
+            "id": "treatment",
             "groups": [
               "moments-pages"
             ],
@@ -713,7 +713,7 @@
                 },
                 "id": "moments-wnp"
               },
-              "bucket_id": "XMAN_MOMENTS_TEST"
+              "bucket_id": "xman-moments-page-80-nightly"
             },
             "targeting": "true",
             "template": "update_action",
@@ -752,7 +752,7 @@
             "cfr"
           ],
           "value": {
-            "id": "EXPERIMENT_SHOPPING_TO_SOCIAL",
+            "id": "treatmeant-a",
             "template": "cfr_doorhanger",
             "groups": [
               "cfr"
@@ -760,7 +760,7 @@
             "content": {
               "layout": "addon_recommendation",
               "category": "cfrAddons",
-              "bucket_id": "EXPERIMENT_SHOPPING_TO_SOCIAL",
+              "bucket_id": "bug-1651993-high-velocity-message-testing-multi-account-containers-retention-study",
               "notification_text": {
                 "string_id": "cfr-doorhanger-extension-notification2"
               },
@@ -872,7 +872,7 @@
             "cfr"
           ],
           "value": {
-            "id": "EXPERIMENT_SOCIAL_TO_SHOPPING",
+            "id": "treatmeant-b",
             "template": "cfr_doorhanger",
             "groups": [
               "cfr"
@@ -880,10 +880,7 @@
             "content": {
               "layout": "addon_recommendation",
               "category": "cfrAddons",
-              "bucket_id": "EXPERIMENT_SOCIAL_TO_SHOPPING",
-              "notification_text": {
-                "string_id": "cfr-doorhanger-extension-notification2"
-              },
+              "bucket_id": "bug-1651993-high-velocity-message-testing-multi-account-containers-retention-study",
               "heading_text": {
                 "string_id": "cfr-doorhanger-extension-heading"
               },
@@ -1004,7 +1001,7 @@
             "cfr"
           ],
           "value": {
-            "id": "EXPERIMENT_SHOPPING_TO_SOCIAL_ORGANIZE",
+            "id": "treatmeant-c",
             "template": "cfr_doorhanger",
             "groups": [
               "cfr"
@@ -1012,10 +1009,7 @@
             "content": {
               "layout": "addon_recommendation",
               "category": "cfrAddons",
-              "bucket_id": "EXPERIMENT_SHOPPING_TO_SOCIAL_ORGANIZE",
-              "notification_text": {
-                "string_id": "cfr-doorhanger-extension-notification2"
-              },
+              "bucket_id": "bug-1651993-high-velocity-message-testing-multi-account-containers-retention-study",
               "heading_text": {
                 "string_id": "cfr-doorhanger-extension-heading"
               },
@@ -1147,7 +1141,7 @@
             "aboutwelcome"
           ],
           "value": {
-            "id": "multi-stage-welcome-import",
+            "id": "treatment-a",
             "template": "multistage",
             "screens": [
               {
@@ -1213,7 +1207,7 @@
             "aboutwelcome"
           ],
           "value": {
-            "id": "multi-stage-welcome-theme",
+            "id": "treatment-b",
             "template": "multistage",
             "screens": [
               {
@@ -1292,7 +1286,7 @@
             "aboutwelcome"
           ],
           "value": {
-            "id": "multi-stage-welcome-import-theme",
+            "id": "treatment-c",
             "template": "multistage",
             "screens": [
               {
