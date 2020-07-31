@@ -1396,7 +1396,7 @@
     "id": "PRIVACY-RETENTION-STUDY-V2-BUG-1656311",
     "enabled": true,
     "filter_expression": "(env.channel == 'release' || env.channel == 'default') && env.version >= '79.'",
-    "targeting": "localeLanguageCode == 'en' && 'app.shield.optoutstudies.enabled'|preferenceValue",
+    "targeting": "localeLanguageCode == 'en' && 'app.shield.optoutstudies.enabled'|preferenceValue && ((currentDate|date - profileAgeCreated) / 86400000) <= 14",
     "arguments": {
       "slug": "bug-1656311-message-high-velocity-message-testing-privacy-retenti-release-79-v2",
       "userFacingName": "Message Router Content Experiment High Velocity Message Testing Privacy Retention Study V2",
