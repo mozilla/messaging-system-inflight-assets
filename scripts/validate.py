@@ -144,20 +144,19 @@ def get_branch_message(branch):
         if "id" in value:
             return "cfr", branch["value"]
         return "cfr", None
-    elif branch["groups"] == ["aboutwelcome"]:
+    if branch["groups"] == ["aboutwelcome"]:
         value = branch["value"]
         if "cards" in value:
             return "onboarding", value["cards"]
-        elif "screens" in value:
+        if "screens" in value:
             return "onboarding-multistage", value
-        else:
-            return "onboarding", None
-    elif branch["groups"] == ["moments-page"]:
+        return "onboarding", None
+    if branch["groups"] == ["moments-page"]:
         if "id" in branch["value"]:
             return "moments-page", branch["value"]
         return "moments-page", None
-    else:
-        return None, None
+
+    return None, None
 
 
 def validate_message_identifiers(message, experiment_slug, branch_slug):
@@ -176,7 +175,7 @@ def validate_message_identifiers(message, experiment_slug, branch_slug):
         # Empty branch nothing to check
         return
     if message_id != branch_slug and not _branch_message_id_join(message_id):
-        print("Message id for {} should match or include it's branch: {}"
+        print("Message id for {} should match or include its branch: {}"
               .format(message.get("id"), branch_slug)
               )
         sys.exit(1)
