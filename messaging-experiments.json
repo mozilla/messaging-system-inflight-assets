@@ -1391,5 +1391,261 @@
         }
       ]
     }
+  },
+  {
+    "id": "PRIVACY-RETENTION-STUDY-V2-BUG-1656311",
+    "enabled": true,
+    "filter_expression": "(env.channel == 'release' || env.channel == 'default') && env.version >= '79.'",
+    "targeting": "localeLanguageCode == 'en' && 'app.shield.optoutstudies.enabled'|preferenceValue",
+    "arguments": {
+      "slug": "bug-1656311-message-high-velocity-message-testing-privacy-retenti-release-79-v2",
+      "userFacingName": "Message Router Content Experiment High Velocity Message Testing Privacy Retention Study V2",
+      "experimentDocumentUrl": "https://experimenter.services.mozilla.com/experiments/high-velocity-message-testing-privacy-retention-study-v2/",
+      "userFacingDescription": "This measures retention changes across some privacy pages including the Protections Dashboard, Mozilla's Privacy Promise, and Firefox Monitor.",
+      "isEnrollmentPaused": false,
+      "branches": [
+        {
+          "slug": "control",
+          "ratio": 1,
+          "groups": [
+            "cfr"
+          ],
+          "value": {}
+        },
+        {
+          "slug": "treatment-variation-a",
+          "ratio": 1,
+          "groups": [
+            "cfr"
+          ],
+          "value": {
+            "id": "PRIVACY_RETENTION_PRIVACY",
+            "template": "cfr_doorhanger",
+            "content": {
+              "layout": "icon_and_message",
+              "category": "cfrFeatures",
+              "anchor_id": "tracking-protection-icon-box",
+              "skip_address_bar_notifier": true,
+              "persistent_doorhanger": true,
+              "bucket_id": "PRIVACY_RETENTION_PRIVACY",
+              "heading_text": "Putting your privacy before profits",
+              "notification_text": "",
+              "info_icon": {
+                "label": {
+                  "string_id": "cfr-doorhanger-extension-sumo-link"
+                },
+                "sumo_path": "extensionrecommendations"
+              },
+              "text": "You\u2019re using the only major browser backed by a non-profit. See how Firefox puts your privacy first.",
+              "icon": "chrome://browser/content/logos/tracking-protection.svg",
+              "icon_dark_theme": "chrome://browser/content/logos/tracking-protection-dark-theme.svg",
+              "buttons": {
+                "primary": {
+                  "label": {
+                    "value": "Show Me",
+                    "attributes": {
+                      "accesskey": "S"
+                    }
+                  },
+                  "action": {
+                    "type": "OPEN_URL",
+                    "data": {
+                      "args": "https://www.mozilla.org/firefox/privacy/?utm_source=firefox-desktop&utm_campaign=hvt-privacy-retention&utm_medium=referral",
+                      "where": "tab"
+                    }
+                  }
+                },
+                "secondary": [
+                  {
+                    "label": {
+                      "string_id": "cfr-doorhanger-extension-cancel-button"
+                    },
+                    "action": {
+                      "type": "CANCEL"
+                    }
+                  },
+                  {
+                    "label": {
+                      "string_id": "cfr-doorhanger-extension-never-show-recommendation"
+                    }
+                  }
+                ]
+              }
+            },
+            "targeting": "recentVisits|length > 1 && userPrefs.cfrFeatures",
+            "frequency": {
+              "lifetime": 3,
+              "custom": [
+                {
+                  "period": 86400000,
+                  "cap": 1
+                }
+              ]
+            },
+            "trigger": {
+              "id": "frequentVisits",
+              "patterns": [
+                "http://*/*",
+                "https://*/*"
+              ]
+            }
+          }
+        },
+        {
+          "slug": "treatment-variation-b",
+          "ratio": 1,
+          "groups": [
+            "cfr"
+          ],
+          "value": {
+            "id": "PRIVACY_RETENTION_PROTECTION_REPORT",
+            "template": "cfr_doorhanger",
+            "content": {
+              "layout": "icon_and_message",
+              "category": "cfrFeatures",
+              "anchor_id": "tracking-protection-icon-box",
+              "skip_address_bar_notifier": true,
+              "persistent_doorhanger": true,
+              "bucket_id": "PRIVACY_RETENTION_PROTECTION_REPORT",
+              "heading_text": "Putting your privacy before profits",
+              "notification_text": "",
+              "info_icon": {
+                "label": {
+                  "string_id": "cfr-doorhanger-extension-sumo-link"
+                },
+                "sumo_path": "extensionrecommendations"
+              },
+              "text": "You\u2019re using the only major browser backed by a non-profit. See how Firefox puts your privacy first.",
+              "icon": "chrome://browser/content/logos/tracking-protection.svg",
+              "icon_dark_theme": "chrome://browser/content/logos/tracking-protection-dark-theme.svg",
+              "buttons": {
+                "primary": {
+                  "label": {
+                    "value": "Show Me",
+                    "attributes": {
+                      "accesskey": "S"
+                    }
+                  },
+                  "action": {
+                    "type": "OPEN_PROTECTION_REPORT"
+                  }
+                },
+                "secondary": [
+                  {
+                    "label": {
+                      "string_id": "cfr-doorhanger-extension-cancel-button"
+                    },
+                    "action": {
+                      "type": "CANCEL"
+                    }
+                  },
+                  {
+                    "label": {
+                      "string_id": "cfr-doorhanger-extension-never-show-recommendation"
+                    }
+                  }
+                ]
+              }
+            },
+            "frequency": {
+              "lifetime": 3,
+              "custom": [
+                {
+                  "period": 86400000,
+                  "cap": 1
+                }
+              ]
+            },
+            "targeting": "recentVisits|length > 1 && userPrefs.cfrFeatures",
+            "trigger": {
+              "id": "frequentVisits",
+              "patterns": [
+                "http://*/*",
+                "https://*/*"
+              ]
+            }
+          }
+        },
+        {
+          "slug": "treatment-variation-c",
+          "ratio": 1,
+          "groups": [
+            "cfr"
+          ],
+          "value": {
+            "id": "PRIVACY_RETENTION_MONITOR",
+            "template": "cfr_doorhanger",
+            "content": {
+              "layout": "icon_and_message",
+              "category": "cfrFeatures",
+              "anchor_id": "tracking-protection-icon-box",
+              "skip_address_bar_notifier": true,
+              "persistent_doorhanger": true,
+              "bucket_id": "PRIVACY_RETENTION_MONITOR",
+              "heading_text": "Putting your privacy before profits",
+              "notification_text": "",
+              "info_icon": {
+                "label": {
+                  "string_id": "cfr-doorhanger-extension-sumo-link"
+                },
+                "sumo_path": "extensionrecommendations"
+              },
+              "text": "You\u2019re using the only major browser backed by a non-profit. See how Firefox puts your privacy first.",
+              "icon": "chrome://browser/content/logos/tracking-protection.svg",
+              "icon_dark_theme": "chrome://browser/content/logos/tracking-protection-dark-theme.svg",
+              "buttons": {
+                "primary": {
+                  "label": {
+                    "value": "Show Me",
+                    "attributes": {
+                      "accesskey": "S"
+                    }
+                  },
+                  "action": {
+                    "type": "OPEN_URL",
+                    "data": {
+                      "args": "https://monitor.firefox.com/about?utm_source=firefox-desktop&utm_campaign=hvt-privacy-retention&utm_medium=referral",
+                      "where": "tab"
+                    }
+                  }
+                },
+                "secondary": [
+                  {
+                    "label": {
+                      "string_id": "cfr-doorhanger-extension-cancel-button"
+                    },
+                    "action": {
+                      "type": "CANCEL"
+                    }
+                  },
+                  {
+                    "label": {
+                      "string_id": "cfr-doorhanger-extension-never-show-recommendation"
+                    }
+                  }
+                ]
+              }
+            },
+            "frequency": {
+              "lifetime": 3,
+              "custom": [
+                {
+                  "period": 86400000,
+                  "cap": 1
+                }
+              ]
+            },
+            "targeting": "recentVisits|length > 1 && userPrefs.cfrFeatures",
+            "trigger": {
+              "id": "frequentVisits",
+              "patterns": [
+                "http://*/*",
+                "https://*/*"
+              ]
+            }
+          }
+        }
+      ]
+    }
   }
 ]
