@@ -760,13 +760,13 @@
               - flickr.com
 - id: MULTI-STAGE-ABOUTWELCOME-V2-79-RELEASE
   enabled: true
-  filter_expression: env.version >= '79.' && (env.channel == 'default' || env.channel == 'beta')
+  filter_expression: env.version >= '79.' && env.version < '80.' && env.channel == 'release'
   # The filter `!('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue)` is used to exclude
   # users who have switched channels or re-installed the browser without having a new profile
-  targeting: localeLanguageCode == "en" && [userId, "message-multi-stage-aboutwelcome-v2-79"]|bucketSample(0, 2000, 10000) &&
-    ((isFirstStartup && !('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue)) || 'message-multi-stage-aboutwelcome-v2-79' in activeExperiments)
+  targeting: localeLanguageCode == "en" && [userId, "bug-1653032-message-multi-stage-aboutwelcome-v2-79-release-release-79-80"]|bucketSample(0, 2000, 10000) &&
+    ((isFirstStartup && !('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue)) || 'bug-1653032-message-multi-stage-aboutwelcome-v2-79-release-release-79-80' in activeExperiments)
   arguments:
-    slug: message-multi-stage-aboutwelcome-v2-79
+    slug: bug-1653032-message-multi-stage-aboutwelcome-v2-79-release-release-79-80
     userFacingName: "Multi-Stage About:Welcome V2 79 Release"
     experimentDocumentUrl: https://experimenter.services.mozilla.com/experiments/multi-stage-aboutwelcome-v2-79-release/
     userFacingDescription: Study to validate Multi-stage onboarding experience.
