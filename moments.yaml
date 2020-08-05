@@ -1,22 +1,3 @@
-- id: WNP_MOMENTS_8
-  groups: [moments-pages]
-  content:
-    action:
-      data:
-        # Valid until August 3rd EOD
-        expire: 1596499200000
-        url: https://www.mozilla.org/firefox/welcome/8
-      id: moments-wnp
-    bucket_id: WNP_MOMENTS_8
-  # Fx 70+, profile age > 30 days all en-* and selected locales
-  targeting: firefoxVersion >= 70 &&
-    (
-      localeLanguageCode == "en" ||
-      locale in ["cy", "de", "dsb", "es-AR", "fr", "fy-NL", "hsb", "hu", "ia", "it", "ka", "kab", "nb-NO", "nl", "nn-NO", "pl", "pt-BR", "ru", "sl", "sv-SE", "tr", "uk", "vi", "zh-TW"]
-    ) && ((currentDate|date - profileAgeCreated) / 86400000) > 30
-  template: update_action
-  trigger:
-    id: momentsUpdate
 - id: WNP_MOMENTS_2
   groups: [moments-pages]
   content:
@@ -44,6 +25,26 @@
   targeting: firefoxVersion >= 69 && localeLanguageCode in ["en","fr","de"] && ((currentDate|date
     - profileAgeCreated) / 86400000) >= 4 && ((currentDate|date - profileAgeCreated)
     / 86400000) < 15
+  template: update_action
+  trigger:
+    id: momentsUpdate
+- id: WNP_MOMENTS_7
+  groups: [moments-pages]
+  content:
+    action:
+      data:
+        expireDelta: 604800000
+        url: https://www.mozilla.org/firefox/welcome/7/
+      id: moments-wnp
+    bucket_id: WNP_MOMENTS_7
+  # Fx 69+, profile age > 30 days all en-* and selected locales
+  targeting: firefoxVersion >= 69 &&
+    (
+      localeLanguageCode == "en" ||
+      locale in ["be", "cy", "da", "de", "dsb", "es-AR", "es-CL", "es-ES", "es-MX", "fr", "fy-NL", "gn", "hr", "hsb", "hu", "hy-AM", "ia", "id", "it", "ka", "kab", "nl", "nn-NO", "pl", "pt-BR", "pt-PT", "ro", "ru", "sk", "sl", "sq", "sr", "sv-SE", "tr", "uk", "vi", "zh-TW"]
+    ) && ((currentDate|date - profileAgeCreated) / 86400000) > 30
+    &&  xpinstallEnabled &&
+    (['@contain-facebook','{bb1b80be-e6b3-40a1-9b6e-9d4073343f0b}', '{a50d61ca-d27b-437a-8b52-5fd801a0a88b}'] intersect addonsInfo.addons|keys)|length == 0
   template: update_action
   trigger:
     id: momentsUpdate
