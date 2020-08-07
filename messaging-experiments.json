@@ -1354,7 +1354,7 @@
               "notification_text": {
                 "string_id": "cfr-doorhanger-extension-notification"
               },
-              "text": "Wish you could watch your favorite videos shared by your friends and family as you browse the web? You can with Picture-in-Picture - hover over a video and select the blue icon."
+              "text": "Wish you could watch videos shared by your friends and family as you browse the web? You can with Picture-in-Picture - hover over a video and select the blue icon."
             },
             "frequency": {
               "lifetime": 30,
@@ -1453,7 +1453,7 @@
               "notification_text": {
                 "string_id": "cfr-doorhanger-extension-notification"
               },
-              "text": "Catch up on your favorite shows! Guilt free binge watching with Picture-in-Picture - hover over a video and select the blue icon."
+              "text": "Binge watch your favorite shows guilt-free with Picture-in-Picture - hover over a video and select the blue icon."
             },
             "frequency": {
               "lifetime": 30,
@@ -1557,7 +1557,7 @@
               "notification_text": {
                 "string_id": "cfr-doorhanger-extension-notification"
               },
-              "text": "Firefox's Picture-in-Picture lets you browse and watch videos at the same time - hover over a video and select the blue icon."
+              "text": "Picture-in-Picture lets you browse and watch videos at the same time - hover over a video and select the blue icon."
             },
             "frequency": {
               "lifetime": 30,
