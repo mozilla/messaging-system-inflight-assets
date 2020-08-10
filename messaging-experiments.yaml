@@ -788,7 +788,8 @@
     locale == 'en-US' && userPrefs.cfrFeatures &&
     'media.videocontrols.picture-in-picture.enabled'|preferenceValue &&
     [userId, 'messaging-experiments-cfr']|bucketSample(5312, 650, 10000) &&
-    ((currentDate|date - profileAgeCreated) / 86400000) > 7
+    ((currentDate|date - profileAgeCreated) / 86400000) > 7 &&
+    'app.shield.optoutstudies.enabled'|preferenceValue
   arguments:
     slug: bug-1656382-message-recommend-picture-in-picture-cfr-release-77-80
     branches:
@@ -804,7 +805,7 @@
         value:
           id: PIP_CFR_NEWS
           groups:
-            - cfr
+            - cfr-experiments
           content:
             bucket_id: PIP_CFR_NEWS
             buttons:
@@ -846,7 +847,7 @@
             text: Keep yourself in the loop. With Picture-in-Picture you can watch the latest news while you visit other websites or apps - hover over a video and select the blue icon.
           frequency:
             # Per request, this experiment wants a larger lifetime frequency cap
-            lifetime: 30
+            lifetime: 3
             custom: [{period: 86400000, cap: 1}]
           targeting: "userPrefs.cfrFeatures"
           template: cfr_doorhanger
@@ -887,7 +888,7 @@
         value:
           id: PIP_CFR_SOCIAL_MEDIA
           groups:
-            - cfr
+            - cfr-experiments
           content:
             bucket_id: PIP_CFR_SOCIAL_MEDIA
             buttons:
@@ -928,7 +929,7 @@
               string_id: cfr-doorhanger-extension-notification
             text: Wish you could watch videos shared by your friends and family as you browse the web? You can with Picture-in-Picture - hover over a video and select the blue icon.
           frequency:
-            lifetime: 30
+            lifetime: 3
             custom: [{period: 86400000, cap: 1}]
           targeting: "userPrefs.cfrFeatures"
           template: cfr_doorhanger
@@ -949,7 +950,7 @@
         value:
           id: PIP_CFR_ENTERTAINMENT
           groups:
-            - cfr
+            - cfr-experiments
           content:
             bucket_id: PIP_CFR_ENTERTAINMENT
             buttons:
@@ -990,7 +991,7 @@
               string_id: cfr-doorhanger-extension-notification
             text: Binge watch your favorite shows guilt-free with Picture-in-Picture - hover over a video and select the blue icon.
           frequency:
-            lifetime: 30
+            lifetime: 3
             custom: [{period: 86400000, cap: 1}]
           targeting: "userPrefs.cfrFeatures"
           template: cfr_doorhanger
@@ -1016,7 +1017,7 @@
         value:
           id: PIP_CFR_INFORMATIONAL
           groups:
-            - cfr
+            - cfr-experiments
           content:
             bucket_id: PIP_CFR_INFORMATIONAL
             buttons:
@@ -1057,7 +1058,7 @@
               string_id: cfr-doorhanger-extension-notification
             text: Picture-in-Picture lets you browse and watch videos at the same time - hover over a video and select the blue icon.
           frequency:
-            lifetime: 30
+            lifetime: 3
             custom: [{period: 86400000, cap: 1}]
           targeting: "userPrefs.cfrFeatures"
           template: cfr_doorhanger
