@@ -1150,10 +1150,10 @@
   {
     "id": "MESSAGE_ROUTER_PICTURE_IN_PICTURE_CFR",
     "enabled": true,
-    "filter_expression": "env.channel == 'release' && env.version >= '78.' && env.version < '79.'",
-    "targeting": "locale == 'en-US' && userPrefs.cfrFeatures &&\n'media.videocontrols.picture-in-picture.enabled'|preferenceValue &&\n[userId, 'messaging-experiments-cfr']|bucketSample(5312, 650, 10000) &&\n((currentDate|date - profileAgeCreated) / 86400000) > 7 &&\n'app.shield.optoutstudies.enabled'|preferenceValue\n",
+    "filter_expression": "env.channel == 'release' && env.version >= '78.' && env.version < '80.'",
+    "targeting": "locale == 'en-US' && userPrefs.cfrFeatures &&\nplatformName in [\"win\", \"macosx\"] &&\n'media.videocontrols.picture-in-picture.enabled'|preferenceValue &&\n[userId, 'messaging-experiments-cfr']|bucketSample(5312, 500, 10000) &&\n((currentDate|date - profileAgeCreated) / 86400000) > 7 &&\n'app.shield.optoutstudies.enabled'|preferenceValue\n",
     "arguments": {
-      "slug": "bug-1656382-message-recommend-picture-in-picture-cfr-release-77-80",
+      "slug": "bug-1658301-message-message-router-content-experiment-high-veloci-release-78-80",
       "branches": [
         {
           "slug": "control",
@@ -1164,7 +1164,7 @@
           ]
         },
         {
-          "slug": "treatment-a",
+          "slug": "treatment-a-news",
           "ratio": 1,
           "groups": [
             "cfr"
@@ -1283,7 +1283,7 @@
           }
         },
         {
-          "slug": "treatment-b",
+          "slug": "treatment-b-social-media",
           "ratio": 1,
           "groups": [
             "cfr"
@@ -1382,7 +1382,7 @@
           }
         },
         {
-          "slug": "treatment-c",
+          "slug": "treatment-c-entertainment",
           "ratio": 1,
           "groups": [
             "cfr"
@@ -1486,7 +1486,7 @@
           }
         },
         {
-          "slug": "treatment-d",
+          "slug": "treatment-d-informational",
           "ratio": 1,
           "groups": [
             "cfr"

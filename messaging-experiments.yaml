@@ -782,23 +782,24 @@
               - https://*/*
 - id: MESSAGE_ROUTER_PICTURE_IN_PICTURE_CFR
   enabled: true
-  filter_expression: env.channel == 'release' && env.version >= '78.' && env.version < '79.'
-  # 6.5% of release
+  filter_expression: env.channel == 'release' && env.version >= '78.' && env.version < '80.'
+  # 5% of release
   targeting: |
     locale == 'en-US' && userPrefs.cfrFeatures &&
+    platformName in ["win", "macosx"] &&
     'media.videocontrols.picture-in-picture.enabled'|preferenceValue &&
-    [userId, 'messaging-experiments-cfr']|bucketSample(5312, 650, 10000) &&
+    [userId, 'messaging-experiments-cfr']|bucketSample(5312, 500, 10000) &&
     ((currentDate|date - profileAgeCreated) / 86400000) > 7 &&
     'app.shield.optoutstudies.enabled'|preferenceValue
   arguments:
-    slug: bug-1656382-message-recommend-picture-in-picture-cfr-release-77-80
+    slug: bug-1658301-message-message-router-content-experiment-high-veloci-release-78-80
     branches:
       - slug: control
         ratio: 1
         value: {}
         groups:
           - cfr
-      - slug: treatment-a
+      - slug: treatment-a-news
         ratio: 1
         groups:
           - cfr
@@ -881,7 +882,7 @@
               - tmz.com
               - today.com
               - buzzfeed.com
-      - slug: treatment-b
+      - slug: treatment-b-social-media
         ratio: 1
         groups:
           - cfr
@@ -943,7 +944,7 @@
               - tumblr.com
               - reddit.com
               - pinterest.com
-      - slug: treatment-c
+      - slug: treatment-c-entertainment
         ratio: 1
         groups:
           - cfr
@@ -1010,7 +1011,7 @@
               - disneyplus.com
               - play.hbogo.com
               - primevideo.com
-      - slug: treatment-d
+      - slug: treatment-d-informational
         ratio: 1
         groups:
           - cfr
