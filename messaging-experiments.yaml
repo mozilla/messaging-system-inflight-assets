@@ -498,7 +498,7 @@
     userFacingName: "Multi-Stage About:Welcome V2 79 Release"
     experimentDocumentUrl: https://experimenter.services.mozilla.com/experiments/multi-stage-aboutwelcome-v2-79-release/
     userFacingDescription: Study to validate Multi-stage onboarding experience.
-    isEnrollmentPaused: false
+    isEnrollmentPaused: true
     branches:
       - slug: control
         ratio: 1
@@ -681,7 +681,7 @@
     userFacingName: Message Router Content Experiment High Velocity Message Testing Privacy Retention Study V2
     experimentDocumentUrl: https://experimenter.services.mozilla.com/experiments/high-velocity-message-testing-privacy-retention-study-v2/
     userFacingDescription: This measures retention changes across some privacy pages including the Protections Dashboard, and Mozilla's Privacy Promise.
-    isEnrollmentPaused: false
+    isEnrollmentPaused: true
     branches:
       - slug: cfr-to-privacy-promise
         ratio: 1
