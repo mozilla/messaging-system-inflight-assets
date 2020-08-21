@@ -955,13 +955,13 @@
     userFacingDescription: "Message Router Content Experiment: High Velocity Message Testing: CFR to PiP"
 - id: MULTI-STAGE-ABOUTWELCOME-V3-80-RELEASE
   enabled: true
-  filter_expression: env.version >= '80.' && env.version < '82.' && (env.channel == 'beta' || env.channel == 'default')
+  filter_expression: env.version >= '80.' && env.version < '81.' && env.channel == 'release'
   # The filter `!('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue)` is used to exclude
   # users who have switched channels or re-installed the browser without having a new profile
-  targeting: localeLanguageCode == "en" && [userId, "multi-stage-aboutwelcome-v3-80"]|bucketSample(0, 2000, 10000) &&
-    ((isFirstStartup && !('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue)) || 'multi-stage-aboutwelcome-v3-80' in activeExperiments)
+  targeting: localeLanguageCode == "en" && [userId, "bug-1655173-message-multi-stage-aboutwelcome-v3-80-release-release-80-81"]|bucketSample(0, 2000, 10000) &&
+    ((isFirstStartup && !('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue)) || 'bug-1655173-message-multi-stage-aboutwelcome-v3-80-release-release-80-81' in activeExperiments)
   arguments:
-    slug: multi-stage-aboutwelcome-v3-80
+    slug: bug-1655173-message-multi-stage-aboutwelcome-v3-80-release-release-80-81
     userFacingName: "Multi-Stage About:Welcome V3 80 Release"
     experimentDocumentUrl: https://experimenter.services.mozilla.com/experiments/multi-stage-aboutwelcome-v3-80-release/
     userFacingDescription: Study to validate Multi-stage onboarding experience.
