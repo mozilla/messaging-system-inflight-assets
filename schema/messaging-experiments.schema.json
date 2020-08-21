@@ -52,8 +52,15 @@
               },
               "value": {
                 "description": "Message content",
-                "type": "object",
-                "properties": {}
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "properties": {}
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
               },
               "ratio": {
                 "description":
