@@ -115,7 +115,7 @@
       "body": {
         "string_id": "cfr-whatsnew-clear-cookies-body"
       },
-      "cta_url": "",
+      "cta_url": "https://blog.mozilla.org/blog/2020/08/04/latest-firefox-rolls-out-enhanced-tracking-protection-2-0-blocking-redirect-trackers-by-default/",
       "cta_type": "OPEN_URL",
       "link_text": {
         "string_id": "cfr-whatsnew-protections-cta-link"
