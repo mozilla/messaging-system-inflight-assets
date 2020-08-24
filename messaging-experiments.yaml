@@ -971,7 +971,7 @@
         ratio: 1
         groups:
           - aboutwelcome
-        value: {}
+        value: null
       - slug: treatment-import
         ratio: 1
         groups:

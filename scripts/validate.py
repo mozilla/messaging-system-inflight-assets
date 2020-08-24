@@ -145,7 +145,9 @@ def get_branch_message(branch):
         return "cfr", None
     elif branch["groups"] == ["aboutwelcome"]:
         value = branch["value"]
-        if "cards" in value:
+        if value is None:
+            return "onboarding-multistage", None
+        elif "cards" in value:
             return "onboarding", value["cards"]
         elif "screens" in value:
             return "onboarding-multistage", value
