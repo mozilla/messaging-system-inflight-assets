@@ -1,109 +1,5 @@
 [
   {
-    "id": "WHATS_NEW_PIP_76",
-    "template": "whatsnew_panel_message",
-    "order": 3,
-    "content": {
-      "bucket_id": "WHATS_NEW_PIP_76",
-      "published_date": 1588636800000,
-      "title": {
-        "string_id": "cfr-whatsnew-pip-fullscreen-header"
-      },
-      "icon_url": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiIGlkPSJhIj48c3RvcCBzdG9wLWNvbG9yPSIjMEE4NEZGIiBvZmZzZXQ9IjAlIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzAwNjBERiIgb2Zmc2V0PSI0Ny40OTglIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzAwM0VBQSIgb2Zmc2V0PSIxMDAlIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cmVjdCBmaWxsPSJ1cmwoI2EpIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHg9Ii4wMTEiIHk9Ii4wMDciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgcng9IjQiLz48cGF0aCBkPSJNMjEgOWMxLjY1NCAwIDMgMS4zNDYgMyAzdjQuMDIxYTEgMSAwIDAgMS0yIDBWMTJjMC0uNTUyLS40NDktMS0xLTFIMTFjLS41NTEgMC0xIC40NDgtMSAxdjhjMCAuNTUyLjQ0OSAxIDEgMWg2YTEgMSAwIDEgMSAwIDJoLTZjLTEuNjU0IDAtMy0xLjM0Ni0zLTN2LThjMC0xLjY1NCAxLjM0Ni0zIDMtM3ptMS41IDEwYS41LjUgMCAwIDEgMCAxaC0uNzkzbDIuMTQ2IDIuMTQ2YS41LjUgMCAxIDEtLjcwNy43MDhMMjEgMjAuNzA3di43OTNhLjUuNSAwIDAgMS0xIDB2LTJhLjQ5OC40OTggMCAwIDEgLjUtLjV6TTE3IDEyYTEgMSAwIDAgMSAxIDF2M2ExIDEgMCAwIDEtMSAxaC01YTEgMSAwIDAgMS0xLTF2LTNhMSAxIDAgMCAxIDEtMXoiIGZpbGw9IiNGRkYiLz48L2c+PC9zdmc+",
-      "icon_alt": {
-        "string_id": "cfr-whatsnew-pip-fullscreen-icon-alt"
-      },
-      "body": {
-        "string_id": "cfr-whatsnew-pip-fullscreen-body"
-      },
-      "cta_url": "https://support.mozilla.org/1/firefox/%VERSION%/%OS%/%LOCALE%/about-p2p",
-      "cta_type": "OPEN_URL",
-      "link_text": {
-        "string_id": "cfr-whatsnew-pip-cta"
-      }
-    },
-    "targeting": "firefoxVersion >= 76 && locale != \"en-GB\" && firefoxVersion < 78",
-    "trigger": {
-      "id": "whatsNewPanelOpened"
-    }
-  },
-  {
-    "id": "WHATS_NEW_VULNERABLE_PASSWORDS_76",
-    "template": "whatsnew_panel_message",
-    "order": 2,
-    "content": {
-      "bucket_id": "WHATS_NEW_VULNERABLE_PASSWORDS_76",
-      "published_date": 1588636800000,
-      "title": {
-        "string_id": "cfr-whatsnew-passwords-header"
-      },
-      "icon_url": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJub256ZXJvIj48cmVjdCBmaWxsPSIjNEE0QTRGIiB4PSIuMDExIiB5PSIuMDA3IiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHJ4PSI0Ii8+PHBhdGggZD0iTTE2LjggMTIuNTRhMSAxIDAgMCAwIC45Mi42MiAxIDEgMCAwIDAgLjkzLTEuMzlsLTEuNzMtNC4xNWExIDEgMCAwIDAtMS44NC43NmwxLjcyIDQuMTZ6bS00IDMuNzJhMSAxIDAgMCAwIC42MS4yIDEgMSAwIDAgMCAuNzktLjM5IDEgMSAwIDAgMC0uMi0xLjRsLTMuNTUtMi43NGExLjAwMiAxLjAwMiAwIDAgMC0xLjIyIDEuNTlsMy41NyAyLjc0ek0yMyAxMi40NGguMTNhMSAxIDAgMCAwIDEtLjg3bC41OS00LjQ2YTEuMDEgMS4wMSAwIDAgMC0yLS4yN2wtLjU5IDQuNDdhMSAxIDAgMCAwIC44NyAxLjEzek0yMiAxN2E1IDUgMCAwIDAtNC45IDRINmExIDEgMCAwIDAgMCAyaDF2MmExIDEgMCAxIDAgMiAwdi0yaDJ2MmExIDEgMCAxIDAgMiAwdi0yaDQuMWE1IDUgMCAxIDAgNC45LTZ6bTAgOGEzIDMgMCAxIDEgMC02IDMgMyAwIDAgMSAwIDZ6IiBmaWxsPSIjRkZGIi8+PC9nPjwvc3ZnPg==",
-      "icon_alt": {
-        "string_id": "cfr-whatsnew-passwords-icon-alt"
-      },
-      "body": {
-        "string_id": "cfr-whatsnew-passwords-body"
-      },
-      "cta_url": "https://support.mozilla.org/1/firefox/%VERSION%/%OS%/%LOCALE%/lockwise-alerts",
-      "cta_type": "OPEN_URL",
-      "link_text": {
-        "string_id": "cfr-whatsnew-pip-cta"
-      }
-    },
-    "targeting": "firefoxVersion >= 76 && firefoxVersion < 78",
-    "trigger": {
-      "id": "whatsNewPanelOpened"
-    }
-  },
-  {
-    "id": "WHATS_NEW_LOCKWISE_PASSWORDS_76",
-    "template": "whatsnew_panel_message",
-    "order": 1,
-    "content": {
-      "bucket_id": "WHATS_NEW_LOCKWISE_PASSWORDS_76",
-      "published_date": 1588636800000,
-      "title": {
-        "string_id": "cfr-whatsnew-lockwise-header"
-      },
-      "icon_url": "chrome://browser/content/logos/lockwise.svg",
-      "icon_alt": {
-        "string_id": "cfr-whatsnew-lockwise-icon-alt"
-      },
-      "body": {
-        "string_id": "cfr-whatsnew-lockwise-body"
-      },
-      "cta_url": "https://support.mozilla.org/1/firefox/%VERSION%/%OS%/%LOCALE%/generate-password",
-      "cta_type": "OPEN_URL",
-      "link_text": {
-        "string_id": "cfr-whatsnew-pip-cta"
-      }
-    },
-    "targeting": "firefoxVersion >= 76 && firefoxVersion < 78",
-    "trigger": {
-      "id": "whatsNewPanelOpened"
-    }
-  },
-  {
-    "id": "WHATS_NEW_POCKET_GB",
-    "template": "whatsnew_panel_message",
-    "order": 1,
-    "content": {
-      "bucket_id": "WHATS_NEW_POCKET_GB",
-      "published_date": 1593475200000,
-      "title": "Fascinating articles from Pocket for Firefox",
-      "icon_url": "data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjU3NiIgaGVpZ2h0PSI1NzYiIHZpZXdCb3g9IjAgMCA0MzIgNDMyIj48cGF0aCBmaWxsPSIjZWY0MTU2IiBkPSJNMzEuNSAyMi40QzE5LjEgMjUuNCA5IDMzLjYgMy42IDQ0LjlMLjUgNTEuNS4yIDEzMWMtLjIgNjkuMS0uMSA4MS4xIDEuNCA5MiAxMC43IDgyLjMgNjguOCAxNTIuOSAxNDcuMyAxNzkuMSAyNC4yIDggMzEuMSA5LjEgNjIuNSA5LjYgMjguOS41IDM2LjMgMCA1Mi42LTMuOCAyMC40LTQuNyA0NS44LTE1IDYzLTI1LjYgMjcuMy0xNi45IDUyLjctNDEuNyA2OS45LTY4LjMgMTcuNi0yNy4yIDI5LjQtNTkuMSAzMy41LTkxIDEuNS0xMC45IDEuNy0yMi45IDEuNC05Mi41bC0uMy04MC0yLjgtNS43Yy01LjctMTEuNi0xNi40LTIwLjItMjguNS0yMi43LTcuOS0xLjctMzYxLjgtMS40LTM2OC43LjN6bTkyLjQgMTE2LjFjMyAxLjUgMTkuNCAxNi41IDQ2LjQgNDIuNWw0MS44IDQwLjEgMTEuNy0xMWM2LjQtNiAyNS45LTI0LjMgNDMuMi00MC42IDIxLjEtMTkuOSAzMy0zMC40IDM2LTMxLjggMTAuMy00LjggMjQuOC0xLjQgMzIuNCA3LjUgOS42IDExLjIgOS4zIDMwLjItLjcgNDAuNy0xLjggMS44LTI2LjMgMjUtNTQuNSA1MS41LTMwLjkgMjguOS01My4xIDQ5LjEtNTYgNTAuNi0zLjggMi02LjEgMi41LTEyLjIgMi41LTEyLjggMC0xMi40LjMtNzItNTYuNC01Ny40LTU0LjUtNTcuMi01NC40LTU4LjYtNjYuMi0yLjYtMjIuNSAyMi4zLTM5LjggNDIuNS0yOS40eiIvPjwvc3ZnPg==",
-      "icon_alt": "Pocket for Firefox icon",
-      "body": "Get the most thought-provoking stories from Pocket right on your new tab.",
-      "cta_url": "home-topstories",
-      "cta_type": "OPEN_PREFERENCES_PAGE",
-      "link_text": "Turn on Pocket articles"
-    },
-    "targeting": "firefoxVersion >= 78 && locale == \"en-GB\"",
-    "trigger": {
-      "id": "whatsNewPanelOpened"
-    }
-  },
-  {
     "id": "WHATS_NEW_PROTECTIONS_DASHBOARD_78",
     "template": "whatsnew_panel_message",
     "order": 2,
@@ -156,7 +52,7 @@
     }
   },
   {
-    "id": "WHATS_NEW_BADGE_78",
+    "id": "WHATS_NEW_BADGE_80",
     "content": {
       "action": {
         "id": "show-whatsnew-button"
@@ -164,7 +60,7 @@
       "badgeDescription": {
         "string_id": "cfr-badge-reader-label-newfeature"
       },
-      "bucket_id": "WHATS_NEW_BADGE_78",
+      "bucket_id": "WHATS_NEW_BADGE_80",
       "delay": 300000,
       "target": "whats-new-menu-button"
     },
@@ -172,10 +68,62 @@
       "lifetime": 100
     },
     "priority": 5,
-    "targeting": "firefoxVersion == 78 && (usesFirefoxSync || hasAccessedFxAPanel || currentDate|date - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_78'] || (messageImpressions['WHATS_NEW_BADGE_78']|length >= 1 && currentDate|date - messageImpressions['WHATS_NEW_BADGE_78'][0] <= 345600000)) && 'browser.messaging-system.whatsNewPanel.enabled'|preferenceValue",
+    "targeting": "firefoxVersion == 80 && (usesFirefoxSync || hasAccessedFxAPanel || currentDate|date - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_80'] || (messageImpressions['WHATS_NEW_BADGE_80']|length >= 1 && currentDate|date - messageImpressions['WHATS_NEW_BADGE_80'][0] <= 345600000)) && \"browser.messaging-system.whatsNewPanel.enabled\"|preferenceValue && localeLanguageCode == \"en\"",
     "template": "toolbar_badge",
     "trigger": {
       "id": "toolbarBadgeUpdate"
+    }
+  },
+  {
+    "id": "WHATS_NEW_BETTER_PDF_78",
+    "template": "whatsnew_panel_message",
+    "order": 3,
+    "content": {
+      "bucket_id": "WHATS_NEW_BETTER_PDF_78",
+      "published_date": 1593475200000,
+      "title": {
+        "string_id": "cfr-whatsnew-better-pdf-header"
+      },
+      "body": {
+        "string_id": "cfr-whatsnew-better-pdf-body"
+      },
+      "cta_url": "https://support.mozilla.org/1/firefox/%VERSION%/%OS%/%LOCALE%/pdf-viewer",
+      "cta_type": "OPEN_URL",
+      "link_text": {
+        "string_id": "cfr-whatsnew-pip-cta"
+      }
+    },
+    "targeting": "firefoxVersion >= 78",
+    "trigger": {
+      "id": "whatsNewPanelOpened"
+    }
+  },
+  {
+    "id": "WHATS_NEW_COOKIES_PROTECTION_80",
+    "template": "whatsnew_panel_message",
+    "order": 1,
+    "content": {
+      "bucket_id": "WHATS_NEW_COOKIES_PROTECTION_80",
+      "published_date": 1598313600000,
+      "title": {
+        "string_id": "cfr-whatsnew-clear-cookies-header"
+      },
+      "icon_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiI+PHBhdGggZD0iTTE4LjgyIDYuOGEyLjYzIDIuNjMgMCAwIDAtLjE0LjggMi43NSAyLjc1IDAgMCAwIDIuMiAyLjY5bC44OC0uODhhMi40MSAyLjQxIDAgMCAxIC4xMy0uNzEgMy40MiAzLjQyIDAgMCAxLS40NiAwIDIuNzMgMi43MyAwIDAgMS0yLjYxLTEuOXptMTAuNyA2LjQ1QTIuMzQgMi4zNCAwIDAgMSAyNiAxMS44M2EyLjc0IDIuNzQgMCAwIDEtMS40LjQybC0xLjMgMS4yN2EyLjY2IDIuNjYgMCAwIDAgMS4wNS4yMSAyLjc0IDIuNzQgMCAwIDAgMS41OS0uNTEgMi43NCAyLjc0IDAgMCAwIDIuNzEgMi4zNiAyLjY5IDIuNjkgMCAwIDAgLjctLjEgMi4zNiAyLjM2IDAgMCAxIC4yNi4zNiAyLjI2IDIuMjYgMCAwIDAgLjM5LTEuMjEgMi4yOCAyLjI4IDAgMCAwLS40OC0xLjM4eiIgZmlsbD0iI2ZmYTQzNiIvPjxwYXRoIGQ9Ik0xOC42OCA3LjZhMi42MyAyLjYzIDAgMCAxIC4xNC0uOCAyLjc1IDIuNzUgMCAwIDEtLjE0LS44IDIuNzQgMi43NCAwIDAgMSAuMDktLjY0IDIuNjkgMi42OSAwIDAgMS0xLTIuMTEgMi4zNyAyLjM3IDAgMCAxIC4wOS0uNjUgMi41NiAyLjU2IDAgMCAwLTMuMzIuMDUgMi41OCAyLjU4IDAgMCAwLTMuNTQuNzJBMi41NSAyLjU1IDAgMCAwIDcuNzMgNSAyLjU3IDIuNTcgMCAwIDAgNSA3LjM5YTIuNTcgMi41NyAwIDAgMC0yIDMgMi41OCAyLjU4IDAgMCAwLTEuMTUgMy40NCAyLjU3IDIuNTcgMCAwIDAtLjIyIDMuNjJBMi41OCAyLjU4IDAgMCAwIDIuMzcgMjEgMi41NSAyLjU1IDAgMCAwIDQgMjQuMjdhMi41NyAyLjU3IDAgMCAwIC44NSAyLjA2bDE2LTE2YTIuNzUgMi43NSAwIDAgMS0yLjE3LTIuNzN6bTEwLjQ2IDExLjU1YTIuNTcgMi41NyAwIDAgMCAuMjItMy42MiAyLjY5IDIuNjkgMCAwIDEtLjcuMSAyLjc0IDIuNzQgMCAwIDEtMi43Mi0yLjQgMi43NCAyLjc0IDAgMCAxLTEuNTkuNTEgMi42NiAyLjY2IDAgMCAxLTEuMDUtLjIxTDggMjguODZhMi41OSAyLjU5IDAgMCAwIDEuNDEuMTQgMi41OCAyLjU4IDAgMCAwIDMuNDQgMS4xNSAyLjU3IDIuNTcgMCAwIDAgMy42Mi4yMiAyLjU4IDIuNTggMCAwIDAgMy41My0uNzRBMi41NSAyLjU1IDAgMCAwIDIzLjI3IDI4IDIuNTcgMi41NyAwIDAgMCAyNiAyNS42MWEyLjU3IDIuNTcgMCAwIDAgMi0zIDIuNTggMi41OCAwIDAgMCAxLjE1LTMuNDR6IiBmaWxsPSIjZmZkNTY3Ii8+PGNpcmNsZSBjeD0iNyIgY3k9IjE1IiByPSIxLjg4IiBmaWxsPSIjOTA1OWZmIi8+PGVsbGlwc2UgY3g9IjExIiBjeT0iOCIgcng9IjEuODgiIHJ5PSIxLjc1IiBmaWxsPSIjOTA1OWZmIi8+PGNpcmNsZSBjeD0iMTkuMDQiIGN5PSIyMi4xMSIgcj0iMS43NSIgZmlsbD0iIzkwNTlmZiIvPjxjaXJjbGUgY3g9IjI1IiBjeT0iMiIgcj0iLjc1IiBmaWxsPSIjZmZhNDM2Ii8+PGNpcmNsZSBjeD0iMjMiIGN5PSI2IiByPSIxIiBmaWxsPSIjZmZhNDM2Ii8+PGNpcmNsZSBjeD0iMjgiIGN5PSIxMCIgcj0iLjc1IiBmaWxsPSIjZTI3ZjJlIi8+PHBhdGggZD0iTTQuNzggMjMuMTJBMi40OCAyLjQ4IDAgMCAxIDMuMjEgMjBhMi40OSAyLjQ5IDAgMCAxLS43LTMuNDRBMi40OCAyLjQ4IDAgMCAxIDIuNzIgMTMgMi40OCAyLjQ4IDAgMCAxIDMgMTAuNDRhMi41NyAyLjU3IDAgMCAwLTEuMTEgMy40MSAyLjU3IDIuNTcgMCAwIDAtLjIyIDMuNjIgMi41OCAyLjU4IDAgMCAwIC43IDMuNTNBMi41NSAyLjU1IDAgMCAwIDQgMjQuMjdhMi41NyAyLjU3IDAgMCAwIC44NSAyLjA2bDEtMWEyLjQ2IDIuNDYgMCAwIDEtMS4wNy0yLjIxem0yNC41Ni0zLjM5QTIuNDggMi40OCAwIDAgMSAyOCAyMS40OWEyLjUgMi41IDAgMCAxLTEuOTQgMi45MyAyLjQ5IDIuNDkgMCAwIDEtMi42MyAyLjMzIDIuNDggMi40OCAwIDAgMS0zLjE0IDEuNTYgMi40OCAyLjQ4IDAgMCAxLTMuNDQuNyAyLjQ4IDIuNDggMCAwIDEtMy41MS0uMjFBMi40OSAyLjQ5IDAgMCAxIDEwIDI3LjY5YTIuNDggMi40OCAwIDAgMS0uOSAwTDggMjguODZhMi41OSAyLjU5IDAgMCAwIDEuNDEuMTQgMi41OCAyLjU4IDAgMCAwIDMuNDQgMS4xNSAyLjU3IDIuNTcgMCAwIDAgMy42Mi4yMiAyLjU4IDIuNTggMCAwIDAgMy41My0uNzRBMi41NSAyLjU1IDAgMCAwIDIzLjI3IDI4IDIuNTcgMi41NyAwIDAgMCAyNiAyNS42MWEyLjU3IDIuNTcgMCAwIDAgMi0zIDIuNTggMi41OCAwIDAgMCAxLjM0LTIuODh6IiBmaWxsPSIjZTI3ZjJlIi8+PHBhdGggZD0iTTE0LjMzIDE2Ljg0bDIuNDUtMi40NGExLjg3IDEuODcgMCAxIDAtMi40NSAyLjQ0em0tMy40IDMuNEExLjg3IDEuODcgMCAwIDAgOS4xOCAyMnptMTIuNC02Ljc0TDIyIDE0LjgyYTIgMiAwIDAgMCAxLjg3IDJBMiAyIDAgMCAwIDI2IDE1di0uMjNhMS45MiAxLjkyIDAgMCAwLS41My0xLjMyIDIuNyAyLjcgMCAwIDEtMi4xNC4wNXoiIGZpbGw9IiM5MDU5ZmYiLz48cGF0aCBkPSJNNCAzMGEyIDIgMCAwIDEtMS40MS0zLjQxbDI0LTI0YTIgMiAwIDAgMSAyLjgyIDIuODJsLTI0IDI0QTIgMiAwIDAgMSA0IDMweiIgZmlsbD0iI2UyMjg1MCIvPjwvc3ZnPg==",
+      "icon_alt": {
+        "string_id": "cfr-whatsnew-clear-cookies-image-alt"
+      },
+      "body": {
+        "string_id": "cfr-whatsnew-clear-cookies-body"
+      },
+      "cta_url": "https://blog.mozilla.org/blog/2020/08/04/latest-firefox-rolls-out-enhanced-tracking-protection-2-0-blocking-redirect-trackers-by-default/",
+      "cta_type": "OPEN_URL",
+      "link_text": {
+        "string_id": "cfr-whatsnew-pip-cta"
+      }
+    },
+    "targeting": "firefoxVersion >= 80 && localeLanguageCode == \"en\"",
+    "trigger": {
+      "id": "whatsNewPanelOpened"
     }
   }
 ]
