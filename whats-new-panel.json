@@ -186,7 +186,7 @@
       "badgeDescription": {
         "string_id": "cfr-badge-reader-label-newfeature"
       },
-      "bucket_id": "WHATS_NEW_BADGE_80_DE",
+      "bucket_id": "WHATS_NEW_BADGE_80_FR",
       "delay": 300000,
       "target": "whats-new-menu-button"
     },
