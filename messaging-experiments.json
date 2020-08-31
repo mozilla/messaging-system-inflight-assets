@@ -1372,7 +1372,7 @@
     "id": "MULTI-STAGE-ABOUTWELCOME-V3-80-RELEASE",
     "enabled": true,
     "filter_expression": "env.version >= '80.' && env.version < '81.' && env.channel == 'release'",
-    "targeting": "localeLanguageCode == \"en\" && [userId, \"bug-1655173-message-multi-stage-aboutwelcome-v3-80-release-release-80-81\"]|bucketSample(0, 2000, 10000) && ((isFirstStartup && !('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue)) || 'bug-1655173-message-multi-stage-aboutwelcome-v3-80-release-release-80-81' in activeExperiments)",
+    "targeting": "localeLanguageCode == \"en\" && [userId, \"bug-1655173-message-multi-stage-aboutwelcome-v3-80-release-release-80-81\"]|bucketSample(0, 4000, 10000) && ((isFirstStartup && !('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue)) || 'bug-1655173-message-multi-stage-aboutwelcome-v3-80-release-release-80-81' in activeExperiments)",
     "arguments": {
       "slug": "bug-1655173-message-multi-stage-aboutwelcome-v3-80-release-release-80-81",
       "userFacingName": "Multi-Stage About:Welcome V3 80 Release",
