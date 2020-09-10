@@ -184,9 +184,7 @@
               ]
             },
             "rating": {
-              "type": "number",
-              "minimum": 0,
-              "maximum": 5,
+              "type": "string",
               "description": "Star rating"
             },
             "users": {
