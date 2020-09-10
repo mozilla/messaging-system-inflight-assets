@@ -146,7 +146,9 @@
     icon_url: ""
     icon_alt: ""
     body: Contribute your data to Mozilla’s Pioneer program to help researchers understand pressing technology issues like misinformation, data privacy, and ethical AI.
-    cta_url: "pioneer"
+    cta_url: pioneer
+    # Open in a new tab and set focus to it
+    cta_where: tab
     cta_type: OPEN_ABOUT_PAGE
     link_text: Join Pioneer
   targeting: firefoxVersion >= 81 && localeLanguageCode == "en"
