@@ -194,6 +194,7 @@
       "icon_alt": "",
       "body": "Contribute your data to Mozilla\u2019s Pioneer program to help researchers understand pressing technology issues like misinformation, data privacy, and ethical AI.",
       "cta_url": "pioneer",
+      "cta_where": "tab",
       "cta_type": "OPEN_ABOUT_PAGE",
       "link_text": "Join Pioneer"
     },
