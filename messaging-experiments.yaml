@@ -489,7 +489,7 @@
     userFacingName: "Multi-Stage About:Welcome V3 80 Release"
     experimentDocumentUrl: https://experimenter.services.mozilla.com/experiments/multi-stage-aboutwelcome-v3-80-release/
     userFacingDescription: Study to validate Multi-stage onboarding experience.
-    isEnrollmentPaused: false
+    isEnrollmentPaused: true
     branches:
       - slug: control
         ratio: 1
