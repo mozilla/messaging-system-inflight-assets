@@ -30,6 +30,7 @@ SCHEMA_MAP = {
     "cfr-fxa": "schema/cfr-fxa.schema.json",
     "cfr-heartbeat": "schema/cfr-heartbeat.schema.json",
     "messaging-experiments": "schema/messaging-experiments.schema.json",
+    "messaging-experiments-82": "schema/messaging-experiments-82.schema.json",
     "whats-new-panel": "schema/whats-new-panel.schema.json",
     "action": "schema/messaging-system-special-message-actions.schema.json",
     "message-groups": "schema/message-groups.schema.json",
@@ -194,6 +195,7 @@ def validate_experiment(item):
 
 def validate(schema_name, src_path):
     schema = load_schema(schema_name)
+    new_experiments_schema = load_schema("messaging-experiments-82")
     check_action = schema_name in ['cfr']
 
     with open(src_path, "r") as f:
@@ -201,10 +203,19 @@ def validate(schema_name, src_path):
         for item in items:
             try:
                 print("Validate schema for {}".format(item["id"]))
-                jsonschema.validate(instance=item, schema=schema)
-                # If it's an experiment we want to evaluate the branches
                 if "arguments" in item:
+                    try:
+                        print("Validate {} with Experiments schema 82+".format(item["id"]))
+                        jsonschema.validate(instance=item, schema=new_experiments_schema)
+                    except ValidationError as err:
+                        match = best_match([err])
+                        print("Validation error against the new experiments schema: {}"
+                              .format(match.message))
+                        jsonschema.validate(instance=item, schema=schema)
+                    # If it's an experiment we want to evaluate the branches
                     validate_experiment(item)
+                else:
+                    jsonschema.validate(instance=item, schema=schema)
             except ValidationError as err:
                 match = best_match([err])
                 print("Validation error: {}".format(match.message))
