@@ -136,12 +136,12 @@
   targeting: firefoxVersion >= 80 && localeLanguageCode == "fr"
   trigger:
     id: whatsNewPanelOpened
-- id: WHATS_NEW_PIONEER_81
+- id: WHATS_NEW_PIONEER_82
   template: whatsnew_panel_message
   order: 1
   content:
-    bucket_id: WHATS_NEW_PIONEER_81
-    published_date: 1600732800000
+    bucket_id: WHATS_NEW_PIONEER_82
+    published_date: 1603152000000
     title: Put your data to work for a better internet
     icon_url: ""
     icon_alt: ""
@@ -151,16 +151,16 @@
     cta_where: tab
     cta_type: OPEN_ABOUT_PAGE
     link_text: Join Pioneer
-  targeting: firefoxVersion >= 81 && localeLanguageCode == "en"
+  targeting: firefoxVersion >= 82 && localeLanguageCode == "en"
   trigger:
     id: whatsNewPanelOpened
-- id: WHATS_NEW_BADGE_81
+- id: WHATS_NEW_BADGE_82
   content:
     action:
       id: show-whatsnew-button
     badgeDescription:
       string_id: cfr-badge-reader-label-newfeature
-    bucket_id: WHATS_NEW_BADGE_81
+    bucket_id: WHATS_NEW_BADGE_82
     delay: 300000
     target: whats-new-menu-button
   frequency:
@@ -169,10 +169,10 @@
   # Don't show the WNPanel notification if the user still has the FxA notification active
   # Ok to show after 28 days, if the user interacted with the notification or sync is turned off
   targeting:
-    firefoxVersion == 81 && (usesFirefoxSync || hasAccessedFxAPanel || currentDate|date
-    - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_81']
-    || (messageImpressions['WHATS_NEW_BADGE_81']|length >= 1 && currentDate|date -
-    messageImpressions['WHATS_NEW_BADGE_81'][0] <= 345600000)) &&
+    firefoxVersion == 82 && (usesFirefoxSync || hasAccessedFxAPanel || currentDate|date
+    - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_82']
+    || (messageImpressions['WHATS_NEW_BADGE_82']|length >= 1 && currentDate|date -
+    messageImpressions['WHATS_NEW_BADGE_82'][0] <= 345600000)) &&
     "browser.messaging-system.whatsNewPanel.enabled"|preferenceValue &&
     localeLanguageCode == "en"
   template: toolbar_badge
