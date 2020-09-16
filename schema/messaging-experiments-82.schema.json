@@ -1,7 +1,35 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$ref": "#/definitions/Experiment",
+  "$ref": "#/definitions/ExperimentRecipe",
   "definitions": {
+    "ExperimentRecipe": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "A unique identifier for the Recipe"
+        },
+        "targeting": {
+          "type": "string",
+          "description": "JEXL expression using messaging system environment"
+        },
+        "enabled": {
+          "type": "boolean",
+          "description": "Is the experiment enabled?"
+        },
+        "arguments": {
+          "$ref": "#/definitions/Experiment",
+          "description": "Experiment definition"
+        }
+      },
+      "required": [
+        "id",
+        "enabled",
+        "arguments"
+      ],
+      "additionalProperties": false,
+      "description": "The experiment definition accessible to Firefox via Remote Settings.\nIt is compatible with ExperimentManager."
+    },
     "Experiment": {
       "type": "object",
       "properties": {
