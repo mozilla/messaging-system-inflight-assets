@@ -215,6 +215,7 @@ def validate(schema_name, src_path):
                     # If it's an experiment we want to evaluate the branches
                     validate_experiment(item)
                 else:
+                    print("Validate {} with the old Experiments schema".format(item["id"]))
                     jsonschema.validate(instance=item, schema=schema)
             except ValidationError as err:
                 match = best_match([err])
