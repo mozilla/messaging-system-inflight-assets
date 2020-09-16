@@ -293,5 +293,109 @@
         }
       ]
     }
+  },
+  {
+    "id": "MULTI-STAGE-ABOUTWELCOME-ZERO-STAGE-TEST",
+    "enabled": true,
+    "targeting": "env.version >= '81.' && env.channel == 'default' && localeLanguageCode == \"en\" && ((isFirstStartup && !('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue)) || 'zero-stage-test' in activeExperiments)",
+    "arguments": {
+      "slug": "zero-stage-test",
+      "active": true,
+      "features": [],
+      "startDate": "",
+      "endDate": "",
+      "proposedDuration": 0,
+      "proposedEnrollment": 0,
+      "referenceBranch": "",
+      "bucketConfig": {
+        "count": 9000,
+        "start": 0,
+        "total": 10000,
+        "namespace": "zero-stage-test",
+        "randomizationUnit": "normandy_id"
+      },
+      "userFacingName": "Multi-Stage About:Welcome Zero Stage",
+      "userFacingDescription": "Test of the Zero Stage JSON flag",
+      "isEnrollmentPaused": false,
+      "branches": [
+        {
+          "slug": "aboutwelcome-disabled",
+          "ratio": 1,
+          "feature": {
+            "featureId": "aboutwelcome",
+            "enabled": false,
+            "value": null
+          }
+        },
+        {
+          "slug": "aboutwelcome-enabled",
+          "ratio": 1,
+          "feature": {
+            "featureId": "aboutwelcome",
+            "enabled": true,
+            "value": {
+              "id": "msw-import",
+              "template": "multistage",
+              "screens": [
+                {
+                  "id": "AW_GET_STARTED",
+                  "order": 0,
+                  "content": {
+                    "zap": true,
+                    "title": "Welcome to Firefox",
+                    "subtitle": "The fast, safe, and private browser that's backed by a non-profit.",
+                    "primary_button": {
+                      "label": "Start Setup",
+                      "action": {
+                        "navigate": true
+                      }
+                    },
+                    "secondary_button": {
+                      "text": "Have an account?",
+                      "label": "Sign in",
+                      "position": "top",
+                      "action": {
+                        "type": "OPEN_URL",
+                        "addFlowParams": true,
+                        "data": {
+                          "args": "https://accounts.firefox.com/?service=sync&action=email&context=fx_desktop_v3&entrypoint=activity-stream-firstrun&style=trailhead",
+                          "where": "current"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "AW_IMPORT_SETTINGS",
+                  "order": 1,
+                  "content": {
+                    "zap": true,
+                    "title": "Import your passwords, bookmarks,\u00a0and more",
+                    "subtitle": "Coming from another browser? It's easy to bring everything to Firefox.",
+                    "tiles": {
+                      "type": "topsites",
+                      "info": true
+                    },
+                    "primary_button": {
+                      "label": "Start Import",
+                      "action": {
+                        "navigate": true,
+                        "type": "SHOW_MIGRATION_WIZARD"
+                      }
+                    },
+                    "secondary_button": {
+                      "label": "Not now",
+                      "action": {
+                        "navigate": true
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
   }
 ]
