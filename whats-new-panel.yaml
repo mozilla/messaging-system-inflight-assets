@@ -151,7 +151,7 @@
     cta_where: tab
     cta_type: OPEN_ABOUT_PAGE
     link_text: Join Pioneer
-  targeting: firefoxVersion >= 82 && localeLanguageCode == "en"
+  targeting: firefoxVersion >= 82 && region == "US"
   trigger:
     id: whatsNewPanelOpened
 - id: WHATS_NEW_BADGE_82
@@ -174,7 +174,7 @@
     || (messageImpressions['WHATS_NEW_BADGE_82']|length >= 1 && currentDate|date -
     messageImpressions['WHATS_NEW_BADGE_82'][0] <= 345600000)) &&
     "browser.messaging-system.whatsNewPanel.enabled"|preferenceValue &&
-    localeLanguageCode == "en"
+    region == "US"
   template: toolbar_badge
   trigger:
     id: toolbarBadgeUpdate
