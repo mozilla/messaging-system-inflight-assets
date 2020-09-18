@@ -138,7 +138,11 @@ def validate_all_actions(message, message_type, for_exp=False):
         validate_action(action, for_exp)
 
 
-def get_branch_message(branch):
+def get_branch_message_legacy(branch):
+    """
+    This gets the branch for legacy recipes (<=81), it's deprecated in 82 by
+    get_branch_message()
+    """
     if branch["groups"] == ["cfr"]:
         value = branch["value"]
         if "id" in value:
@@ -162,9 +166,35 @@ def get_branch_message(branch):
         return None, None
 
 
+def get_branch_message(branch):
+    feature = branch["feature"]["featureId"]
+    if feature == "cfr":
+        value = branch["value"]
+        if "id" in value:
+            return "cfr", branch["value"]
+        return "cfr", None
+    elif feature == "aboutwelcome":
+        value = branch["value"]
+        if value is None:
+            return "onboarding-multistage", None
+        elif "cards" in value:
+            return "onboarding", value["cards"]
+        elif "screens" in value:
+            return "onboarding-multistage", value
+        else:
+            return "onboarding", None
+    elif feature == "moments-page":
+        if "id" in branch["value"]:
+            return "moments-page", branch["value"]
+        return "moments-page", None
+    else:
+        return None, None
+
+
 def validate_experiment(item):
     for branch in item.get("arguments").get("branches"):
-        message_type, branch_message = get_branch_message(branch)
+        message_type, branch_message = get_branch_message(branch) \
+            if "feature" in branch else get_branch_message_legacy(branch)
         if branch_message is None:
             print(
                 "\tSkip branch {} because it's empty"
