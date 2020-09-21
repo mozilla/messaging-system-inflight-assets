@@ -167,14 +167,15 @@ def get_branch_message_legacy(branch):
 
 
 def get_branch_message(branch):
-    feature = branch["feature"]["featureId"]
-    if feature == "cfr":
-        value = branch["value"]
+    feature = branch["feature"]
+    feature_id = feature["featureId"]
+    if feature_id == "cfr":
+        value = feature["value"]
         if "id" in value:
-            return "cfr", branch["value"]
+            return "cfr", feature["value"]
         return "cfr", None
-    elif feature == "aboutwelcome":
-        value = branch["value"]
+    elif feature_id == "aboutwelcome":
+        value = feature["value"]
         if value is None:
             return "onboarding-multistage", None
         elif "cards" in value:
@@ -183,9 +184,9 @@ def get_branch_message(branch):
             return "onboarding-multistage", value
         else:
             return "onboarding", None
-    elif feature == "moments-page":
-        if "id" in branch["value"]:
-            return "moments-page", branch["value"]
+    elif feature_id == "moments-page":
+        if "id" in feature["value"]:
+            return "moments-page", feature["value"]
         return "moments-page", None
     else:
         return None, None
