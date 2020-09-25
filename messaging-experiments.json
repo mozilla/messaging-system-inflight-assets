@@ -337,13 +337,13 @@
           }
         },
         {
-          "slug": "msw-titles",
+          "slug": "msw-no-titles",
           "ratio": 1,
           "feature": {
             "featureId": "aboutwelcome",
             "enabled": true,
             "value": {
-              "id": "msw-titles",
+              "id": "msw-no-titles",
               "template": "multistage",
               "screens": [
                 {
