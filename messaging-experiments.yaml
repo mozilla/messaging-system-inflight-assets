@@ -221,22 +221,28 @@
       namespace: zero-stage-test
       randomizationUnit: normandy_id
     userFacingName: "Multi-Stage About:Welcome Zero Stage"
-    userFacingDescription: Test of the Zero Stage JSON flag
+    userFacingDescription: Test of the Zero Stage JSON flag, with and without override content
     isEnrollmentPaused: false
     branches:
-      - slug: aboutwelcome-disabled
+      - slug: msw-disabled
         ratio: 1
         feature:
           featureId: "aboutwelcome"
           enabled: false
           value: null
-      - slug: aboutwelcome-enabled
+      - slug: msw-default
+        ratio: 1
+        feature:
+          featureId: "aboutwelcome"
+          enabled: true
+          value: {}
+      - slug: msw-titles
         ratio: 1
         feature:
           featureId: "aboutwelcome"
           enabled: true
           value:
-            id: msw-import
+            id: msw-titles
             template: multistage
             screens:
               - id: "AW_GET_STARTED"
@@ -267,7 +273,7 @@
                   subtitle: Coming from another browser? It's easy to bring everything to Firefox.
                   tiles:
                     type: topsites
-                    info: true
+                    showTitles: false
                   primary_button:
                     label: Start Import
                     action:
@@ -277,3 +283,35 @@
                     label: Not now
                     action:
                       navigate: true
+              - id: "AW_CHOOSE_THEME"
+                order: 2
+                content:
+                  zap: true
+                  title: Choose a look
+                  subtitle: Personalize Firefox with a theme.
+                  tiles:
+                    type: theme
+                    action:
+                      theme: <event>
+                    data:
+                      - theme: automatic
+                        label: Automatic
+                        tooltip:
+                          string_id: onboarding-multistage-theme-tooltip-automatic
+                      - theme: light
+                        label: Light
+                        tooltip:
+                          string_id: onboarding-multistage-theme-tooltip-light
+                      - theme: dark
+                        label: Dark
+                        tooltip:
+                          string_id: onboarding-multistage-theme-tooltip-dark
+                  primary_button:
+                    label: Save Theme
+                    action:
+                      navigate: true
+                  secondary_button:
+                    label: Not now
+                    action:
+                      navigate: true
+                      theme: automatic
