@@ -308,14 +308,14 @@
       "proposedEnrollment": 0,
       "referenceBranch": "",
       "bucketConfig": {
-        "count": 9000,
+        "count": 2000,
         "start": 0,
         "total": 10000,
         "namespace": "zero-stage-test",
         "randomizationUnit": "normandy_id"
       },
       "userFacingName": "Multi-Stage About:Welcome Zero Stage",
-      "userFacingDescription": "Test of the Zero Stage JSON flag, with and without override content",
+      "userFacingDescription": "Study to validate with a minimal onboarding experience",
       "isEnrollmentPaused": false,
       "branches": [
         {
@@ -367,8 +367,7 @@
                         "type": "OPEN_URL",
                         "addFlowParams": true,
                         "data": {
-                          "args": "https://accounts.firefox.com/?service=sync&action=email&context=fx_desktop_v3&entrypoint=activity-stream-firstrun&style=trailhead",
-                          "where": "current"
+                          "entrypoint": "activity-stream-firstrun"
                         }
                       }
                     }
@@ -432,6 +431,13 @@
                           "label": "Dark",
                           "tooltip": {
                             "string_id": "onboarding-multistage-theme-tooltip-dark"
+                          }
+                        },
+                        {
+                          "theme": "alpenglow",
+                          "label": "Alpenglow",
+                          "tooltip": {
+                            "string_id": "onboarding-multistage-theme-tooltip-alpenglow-2"
                           }
                         }
                       ]
