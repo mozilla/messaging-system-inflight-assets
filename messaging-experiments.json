@@ -297,7 +297,7 @@
   {
     "id": "MULTI-STAGE-ABOUTWELCOME-ZERO-STAGE-TEST",
     "enabled": true,
-    "targeting": "env.version >= '81.' && env.channel == 'default' && localeLanguageCode == \"en\" && ((isFirstStartup && !('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue)) || 'zero-stage-test' in activeExperiments)",
+    "targeting": "firefoxVersion >= '81.' && browserSettings.update.channel == 'default' && localeLanguageCode == \"en\" && ((isFirstStartup && !('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue)) || 'zero-stage-test' in activeExperiments)",
     "arguments": {
       "slug": "zero-stage-test",
       "active": true,

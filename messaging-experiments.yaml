@@ -204,7 +204,7 @@
   enabled: true
   # The filter `!('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue)` is used to exclude
   # users who have switched channels or re-installed the browser without having a new profile
-  targeting: env.version >= '81.' && env.channel == 'default' && localeLanguageCode == "en" && ((isFirstStartup && !('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue)) || 'zero-stage-test' in activeExperiments)
+  targeting: firefoxVersion >= '81.' && browserSettings.update.channel == 'default' && localeLanguageCode == "en" && ((isFirstStartup && !('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue)) || 'zero-stage-test' in activeExperiments)
   arguments:
     slug: zero-stage-test
     active: true
