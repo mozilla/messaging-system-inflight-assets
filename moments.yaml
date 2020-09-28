@@ -28,7 +28,6 @@
   template: update_action
   trigger:
     id: momentsUpdate
-# Release: TBD mid-Sept (goal is to launch this at least one week before 9/22)
 - id: WNP_MOMENTS_4
   groups: [moments-pages]
   content:
@@ -38,7 +37,7 @@
         url: https://www.mozilla.org/firefox/welcome/4/
       id: moments-wnp
     bucket_id: WNP_MOMENTS_4
-  targeting: firefoxVersion >= 69 && localeLanguageCode in ["en", "fr", "de", "es"] &&
+  targeting: firefoxVersion >= 69 && localeLanguageCode in ["en", "fr", "de"] &&
     ((currentDate|date - profileAgeCreated) / 86400000) > 30
   template: update_action
   trigger:
