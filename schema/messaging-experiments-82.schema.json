@@ -1,69 +1,40 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$ref": "#/definitions/ExperimentRecipe",
+  "$ref": "#/definitions/NimbusExperiment",
   "definitions": {
-    "ExperimentRecipe": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "string",
-          "description": "A unique identifier for the Recipe"
-        },
-        "targeting": {
-          "type": "string",
-          "description": "JEXL expression using messaging system environment"
-        },
-        "enabled": {
-          "type": "boolean",
-          "description": "Is the experiment enabled?"
-        },
-        "arguments": {
-          "$ref": "#/definitions/Experiment",
-          "description": "Experiment definition"
-        }
-      },
-      "required": [
-        "id",
-        "enabled",
-        "arguments"
-      ],
-      "additionalProperties": false,
-      "description": "The experiment definition accessible to Firefox via Remote Settings.\nIt is compatible with ExperimentManager."
-    },
-    "Experiment": {
+    "NimbusExperiment": {
       "type": "object",
       "properties": {
         "slug": {
           "type": "string",
           "description": "Unique identifier for the experiment"
         },
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the experiment. This is a duplicate of slug, but is a required field\nfor all Remote Settings records."
+        },
+        "application": {
+          "type": "string",
+          "description": "A specific product such as Firefox Desktop or Fenix that supports Nimbus experiments"
+        },
         "userFacingName": {
           "type": "string",
-          "description": "Publically-accesible name of the experiment"
+          "description": "Public name of the experiment displayed on \"about:studies\""
         },
         "userFacingDescription": {
           "type": "string",
-          "description": "Short public description of the experiment"
-        },
-        "active": {
-          "type": "boolean",
-          "description": "Is the experiment currently live in production? i.e., published to remote settings?"
+          "description": "Short public description of the experiment displayed on on \"about:studies\""
         },
         "isEnrollmentPaused": {
           "type": "boolean",
-          "description": "Are we continuing to enroll new users into the experiment?"
+          "description": "Should we enroll new users into the experiment?"
         },
         "bucketConfig": {
           "type": "object",
           "properties": {
             "randomizationUnit": {
               "type": "string",
-              "enum": [
-                "client_id",
-                "normandy_id"
-              ],
-              "description": "The randomization unit. Note that client_id is not yet implemented.",
-              "default": "normandy_id"
+              "description": "A unique, stable identifier for the user used as an input to bucket hashing"
             },
             "namespace": {
               "type": "string",
@@ -93,12 +64,12 @@
           "additionalProperties": false,
           "description": "Bucketing configuration"
         },
-        "features": {
+        "probeSets": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "description": "A list of feature slugs relevant to the experiment analysis"
+          "description": "A list of probe set slugs relevant to the experiment analysis"
         },
         "branches": {
           "type": "array",
@@ -119,23 +90,23 @@
                 "properties": {
                   "featureId": {
                     "type": "string",
-                    "enum": [
-                      "cfr",
-                      "aboutwelcome"
-                    ]
+                    "description": "The identifier for the feature flag"
                   },
                   "enabled": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "description": "This can be used to turn the whole feature on/off"
                   },
                   "value": {
                     "anyOf": [
                       {
-                        "type": "object"
+                        "type": "object",
+                        "additionalProperties": {}
                       },
                       {
                         "type": "null"
                       }
-                    ]
+                    ],
+                    "description": "Optional extra params for the feature (this should be validated against a schema)"
                   }
                 },
                 "required": [
@@ -148,16 +119,22 @@
             },
             "required": [
               "slug",
-              "ratio",
-              "feature"
+              "ratio"
             ],
             "additionalProperties": false
           },
           "description": "Branch configuration for the experiment"
         },
-        "startDate": {
+        "targeting": {
           "type": "string",
-          "description": "Actual publish date of the experiment",
+          "description": "JEXL expression used to filter experiments based on locale, geo, etc."
+        },
+        "startDate": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Actual publish date of the experiment\nNote that this value is expected to be null in Remote Settings.",
           "format": "date-time"
         },
         "endDate": {
@@ -165,12 +142,12 @@
             "string",
             "null"
           ],
-          "description": "Actual end date of the experiment",
+          "description": "Actual end date of the experiment.\nNote that this value is expected to be null in Remote Settings.",
           "format": "date-time"
         },
         "proposedDuration": {
           "type": "number",
-          "description": "Duration of the experiment from the start date in days"
+          "description": "Duration of the experiment from the start date in days.\nNote that this value is expected to be null in Remote Settings.\nin Remote Settings."
         },
         "proposedEnrollment": {
           "type": "number",
@@ -183,31 +160,28 @@
           ],
           "description": "The slug of the reference branch"
         },
-        "platform": {
+        "filter_expression": {
           "type": "string",
-          "enum": [
-            "fenix",
-            "firefox-desktop"
-          ],
-          "description": "The platform for the experiment"
+          "description": "This is NOT used by Nimbus, but has special functionality in Remote Settings.\nSee https://remote-settings.readthedocs.io/en/latest/target-filters.html#how"
         }
       },
       "required": [
         "slug",
+        "id",
+        "application",
         "userFacingName",
         "userFacingDescription",
-        "active",
         "isEnrollmentPaused",
         "bucketConfig",
-        "features",
+        "probeSets",
         "branches",
         "startDate",
         "endDate",
-        "proposedDuration",
         "proposedEnrollment",
         "referenceBranch"
       ],
-      "additionalProperties": false
+      "additionalProperties": true,
+      "description": "The experiment definition accessible to:\n1. The Nimbus SDK via Remote Settings\n2. Jetstream via the Experimenter API"
     }
   }
 }
