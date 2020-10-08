@@ -2625,3 +2625,37 @@
                   label: Start Browsing
                   action:
                     navigate: true
+- id: XMAN-MOMENTS-PAGE-80-NIGHTLY
+  # Do *not* publish to production. This message is used for dev and QA only
+  enabled: true
+  filter_expression: env.version >= '80.' && env.version < '81.' && (env.channel == 'nightly' || env.channel == 'default')
+  targeting: localeLanguageCode == "en"
+  arguments:
+    slug: xman-moments-page-80-nightly
+    userFacingName: "Moments Page Test: Nightly 80"
+    userFacingDescription: "Moments page test"
+    isEnrollmentPaused: false
+    branches:
+      - slug: control
+        ratio: 1
+        groups:
+          - moments-page
+        value: {}
+      - slug: treatment
+        ratio: 1
+        groups:
+          - moments-page
+        value:
+          id: XMAN_MOMENTS_TEST
+          groups: [moments-pages]
+          content:
+            action:
+              data:
+                expireDelta: 604800000
+                url: https://www.mozilla.org/firefox/welcome/1/
+              id: moments-wnp
+            bucket_id: XMAN_MOMENTS_TEST
+          targeting: "true"
+          template: update_action
+          trigger:
+            id: momentsUpdate
