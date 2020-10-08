@@ -137,34 +137,6 @@ def validate_all_actions(message, message_type, for_exp=False):
         validate_action(action, for_exp)
 
 
-def get_branch_message_legacy(branch):
-    """
-    This gets the branch for legacy recipes (<=81), it's deprecated in 82 by
-    get_branch_message()
-    """
-    if branch["groups"] == ["cfr"]:
-        value = branch["value"]
-        if "id" in value:
-            return "cfr", branch["value"]
-        return "cfr", None
-    elif branch["groups"] == ["aboutwelcome"]:
-        value = branch["value"]
-        if value is None:
-            return "onboarding-multistage", None
-        elif "cards" in value:
-            return "onboarding", value["cards"]
-        elif "screens" in value:
-            return "onboarding-multistage", value
-        else:
-            return "onboarding", None
-    elif branch["groups"] == ["moments-page"]:
-        if "id" in branch["value"]:
-            return "moments-page", branch["value"]
-        return "moments-page", None
-    else:
-        return None, None
-
-
 def get_branch_message(branch):
     feature = branch["feature"]
     feature_id = feature["featureId"]
@@ -191,10 +163,29 @@ def get_branch_message(branch):
         return None, None
 
 
+def validate_experiment_message_id(exp_slug, branch):
+    """ This validation enforces certain naming convention for some message
+    types such as CFR in order to support the automated analysis feature of
+    Jetstream.
+    """
+    message_type, branch_message = get_branch_message(branch)
+    if branch_message is None:
+        return
+
+    if message_type == "cfr":
+        print(f"\tValidate experiment message ID for branch {branch['slug']}")
+
+        assert branch_message["id"] == f"{exp_slug}:{branch['slug']}", \
+            (f"Invalid CFR message ID {branch_message['id']}, "
+             f"it should be named as {{experiment-slug}}:{{branch-slug}}")
+        assert branch_message["content"]["bucket_id"] == f"{exp_slug}:{branch['slug']}", \
+            (f"Invalid CFR bucket_id {branch_message['content']['bucket_id']}, "
+             f"it should be named as {{experiment-slug}}:{{branch-slug}}")
+
+
 def validate_experiment(item):
     for branch in item.get("branches"):
-        message_type, branch_message = get_branch_message(branch) \
-            if "feature" in branch else get_branch_message_legacy(branch)
+        message_type, branch_message = get_branch_message(branch)
         if branch_message is None:
             print(
                 "\tSkip branch {} because it's empty"
@@ -222,6 +213,9 @@ def validate_experiment(item):
         # Validate all the message actions
         validate_all_actions(branch_message, message_type, True)
 
+        # Validate the message_id naming
+        validate_experiment_message_id(item.slug, branch)
+
 
 def validate(schema_name, src_path):
     schema = load_schema(schema_name)
@@ -229,6 +223,8 @@ def validate(schema_name, src_path):
 
     with open(src_path, "r") as f:
         items = json.loads(f.read())
+        if items is None:
+            return
         for item in items:
             try:
                 print("Validate schema for {}".format(item["id"]))
