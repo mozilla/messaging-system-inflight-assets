@@ -1393,6 +1393,12 @@
         "string_id": "cfr-doorhanger-fission-body"
       },
       "icon": "chrome://browser/skin/connection-secure.svg",
+      "info_icon": {
+        "label": {
+          "string_id": "cfr-doorhanger-extension-sumo-link"
+        },
+        "sumo_path": "extensionrecommendations"
+      },
       "buttons": {
         "secondary": [
           {
