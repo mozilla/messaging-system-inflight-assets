@@ -142,7 +142,7 @@ def get_branch_message(branch):
     feature_id = feature["featureId"]
     if feature_id == "cfr":
         value = feature["value"]
-        if "id" in value:
+        if value is not None and "id" in value:
             return "cfr", feature["value"]
         return "cfr", None
     elif feature_id == "aboutwelcome":
@@ -200,7 +200,7 @@ def validate_experiment(item):
                     branch_message]
             for message in branch_message_list:
                 jsonschema.validate(instance=message, schema=schema)
-            print("\tValidated {} with schema {}".format(
+            print("\tValidate {} with schema {}".format(
                 branch.get("slug"), message_type))
         except ValidationError as err:
             match = best_match([err])
@@ -214,7 +214,7 @@ def validate_experiment(item):
         validate_all_actions(branch_message, message_type, True)
 
         # Validate the message_id naming
-        validate_experiment_message_id(item.slug, branch)
+        validate_experiment_message_id(item["slug"], branch)
 
 
 def validate(schema_name, src_path):
