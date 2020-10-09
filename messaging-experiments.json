@@ -14,7 +14,7 @@
         "slug": "control",
         "ratio": 1,
         "feature": {
-          "featureId": "aboutwelcome",
+          "featureId": "cfr",
           "enabled": true,
           "value": null
         }
@@ -23,10 +23,58 @@
         "slug": "treatment",
         "ratio": 1,
         "feature": {
-          "featureId": "aboutwelcome",
+          "featureId": "cfr",
           "enabled": true,
           "value": {
-            "title": "hello"
+            "id": "TEST-EXPERIMENT-82:treatment",
+            "content": {
+              "bucket_id": "TEST-EXPERIMENT-82:treatment",
+              "category": "cfrFeatures",
+              "buttons": {
+                "primary": {
+                  "action": {
+                    "data": {
+                      "args": "pageAction-sendToDevice"
+                    },
+                    "type": "HIGHLIGHT_FEATURE"
+                  },
+                  "label": {
+                    "string_id": "cfr-doorhanger-send-tab-ok-button"
+                  }
+                },
+                "secondary": [
+                  {
+                    "action": {
+                      "type": "CANCEL"
+                    },
+                    "label": {
+                      "string_id": "cfr-doorhanger-extension-cancel-button"
+                    }
+                  },
+                  {
+                    "label": {
+                      "string_id": "cfr-doorhanger-extension-never-show-recommendation"
+                    }
+                  },
+                  {
+                    "action": {
+                      "data": {
+                        "category": "general-cfrfeatures"
+                      },
+                      "type": "OPEN_PREFERENCES_PAGE"
+                    },
+                    "label": {
+                      "string_id": "cfr-doorhanger-extension-manage-settings-button"
+                    }
+                  }
+                ]
+              }
+            },
+            "targeting": "locale == en-US",
+            "template": "cfr_doorhanger",
+            "trigger": {
+              "id": "openArticleURL"
+            }
           }
         }
       }
