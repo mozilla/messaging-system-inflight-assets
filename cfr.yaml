@@ -1052,17 +1052,17 @@
     buttons:
       secondary:
         - action:
-            type: OPEN_URL
-            data:
-              args: https://wiki.mozilla.org/Project_Fission
-              where: tabshifted
+            type: CANCEL
           label:
-            string_id: cfr-doorhanger-fission-secondary-button
+            string_id: cfr-doorhanger-fission-primary-button
       primary:
-        label:
-          string_id: cfr-doorhanger-fission-primary-button
         action:
-          type: CANCEL
+          type: OPEN_URL
+          data:
+            args: https://wiki.mozilla.org/Project_Fission
+            where: tabshifted
+        label:
+          string_id: cfr-doorhanger-fission-secondary-button
     heading_text:
       string_id: cfr-doorhanger-fission-header
     notification_text:
