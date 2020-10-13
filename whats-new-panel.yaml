@@ -95,28 +95,10 @@
     - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_82']
     || (messageImpressions['WHATS_NEW_BADGE_82']|length >= 1 && currentDate|date -
     messageImpressions['WHATS_NEW_BADGE_82'][0] <= 345600000)) &&
-    "browser.messaging-system.whatsNewPanel.enabled"|preferenceValue &&
-    region == "US"
+    "browser.messaging-system.whatsNewPanel.enabled"|preferenceValue
   template: toolbar_badge
   trigger:
     id: toolbarBadgeUpdate
-- id: WHATS_NEW_ION_PROGRAM_82
-  template: whatsnew_panel_message
-  order: 1
-  content:
-    bucket_id: WHATS_NEW_ION_PROGRAM_82
-    published_date: 1603152000000
-    title: Put your data to work for a better internet
-    icon_url: ""
-    icon_alt: ""
-    body: Contribute your data to Mozilla’s Ion program to help researchers understand pressing technology issues like misinformation, data privacy, and ethical AI.
-    cta_url: ion
-    cta_where: tab
-    cta_type: OPEN_ABOUT_PAGE
-    link_text: Join Ion
-  targeting: firefoxVersion >= 82 && localeLanguageCode == 'en' && region == 'US'
-  trigger:
-    id: whatsNewPanelOpened
 - id: WHATS_NEW_DNS_OVER_HTTPS
   template: whatsnew_panel_message
   order: 2
