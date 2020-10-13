@@ -260,7 +260,7 @@
       feature:
         featureId: cfr
         enabled: false
-        value:
+        value: {}
   targeting: browserSettings.update.channel == 'release' &&
     localeLanguageCode == 'en' && region == 'US' &&
     'app.shield.optoutstudies.enabled'|preferenceValue

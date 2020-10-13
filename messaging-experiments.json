@@ -385,7 +385,7 @@
         "feature": {
           "featureId": "cfr",
           "enabled": false,
-          "value": null
+          "value": {}
         }
       }
     ],
