@@ -111,6 +111,7 @@
     icon_alt: ""
     body: Contribute your data to Mozilla’s Ion program to help researchers understand pressing technology issues like misinformation, data privacy, and ethical AI.
     cta_url: ion
+    cta_where: tab
     cta_type: OPEN_ABOUT_PAGE
     link_text: Join Ion
   targeting: firefoxVersion >= 82 && localeLanguageCode == 'en' && region == 'US'
