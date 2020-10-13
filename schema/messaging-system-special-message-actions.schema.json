@@ -247,5 +247,62 @@
       }
     },
     "type": "object"
+  },
+  "CONFIGURE_HOMEPAGE": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "object",
+        "properties": {
+          "homePage": {
+            "type": "string",
+            "description": "Should reset homepage pref",
+            "enum": ["default"]
+          },
+          "newtab": {
+            "type": "string",
+            "enum": ["default"],
+            "description": "Should reset newtab pref"
+          },
+          "layout": {
+            "type": "object",
+            "description": "Section name and boolean value that specifies if the section should be on or off.",
+            "properties": {
+              "search": {
+                "type": "boolean"
+              },
+              "topsites": {
+                "type": "boolean"
+              },
+              "highlights": {
+                "type": "boolean"
+              },
+              "snippets": {
+                "type": "boolean"
+              },
+              "topstories": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "search",
+              "topsites",
+              "highlights",
+              "snippets",
+              "topstories"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      "type": {
+        "type": "string",
+        "enum": ["CONFIGURE_HOMEPAGE"]
+      }
+    },
+    "required": ["data", "type"],
+    "additionalProperties": false,
+    "description": "Resets homepage pref and sections layout" 
   }
 }
