@@ -259,7 +259,7 @@
       ratio: 1
       feature:
         featureId: cfr
-        enabled: false
+        enabled: true
         value: {}
   targeting: browserSettings.update.channel == 'release' &&
     localeLanguageCode == 'en' && region == 'US' &&
