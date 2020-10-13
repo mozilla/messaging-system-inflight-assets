@@ -1043,7 +1043,7 @@
     anchor_id: PanelUI-menu-button
     layout: icon_and_message
     text:
-      string_id: cfr-doorhanger-fission-body
+      string_id: cfr-doorhanger-fission-body-approved
     icon: chrome://browser/skin/connection-secure.svg
     info_icon:
       label:
