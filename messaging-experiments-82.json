@@ -2,13 +2,6 @@
   {
     "id": "bug-1661707-homepage-remediation-search-value",
     "application": "firefox-desktop",
-    "bucketConfig": {
-      "namespace": "messaging-experiments-cfr",
-      "randomizationUnit": "normandy_id",
-      "start": 5312,
-      "count": 6312,
-      "total": 10000
-    },
     "probeSets": [],
     "startDate": null,
     "endDate": null,
@@ -19,6 +12,13 @@
       "isEnrollmentPaused": false,
       "userFacingName": "Homepage Remediation: Search Value Props Experiment",
       "userFacingDescription": "This experiment promotes the default Firefox homepage configuration for users that switched away from it. We want to communicate the recent improvements that should lead to a better user experience.",
+      "bucketConfig": {
+        "namespace": "messaging-experiments-cfr",
+        "randomizationUnit": "normandy_id",
+        "start": 5312,
+        "count": 6312,
+        "total": 10000
+      },
       "branches": [
         {
           "slug": "treatment-a",

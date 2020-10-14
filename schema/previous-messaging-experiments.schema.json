@@ -19,6 +19,41 @@
       "description": "Experiment configuration",
       "type": "object",
       "properties": {
+        "bucketConfig": {
+          "type": "object",
+          "properties": {
+            "randomizationUnit": {
+              "type": "string",
+              "description": "A unique, stable identifier for the user used as an input to bucket hashing"
+            },
+            "namespace": {
+              "type": "string",
+              "description": "Additional inputs to the hashing function"
+            },
+            "start": {
+              "type": "number",
+              "description": "Index of start of the range of buckets"
+            },
+            "count": {
+              "type": "number",
+              "description": "Number of buckets to check"
+            },
+            "total": {
+              "type": "number",
+              "description": "Total number of buckets",
+              "default": 10000
+            }
+          },
+          "required": [
+            "randomizationUnit",
+            "namespace",
+            "start",
+            "count",
+            "total"
+          ],
+          "additionalProperties": false,
+          "description": "Bucketing configuration"
+        },
         "userFacingName": {
           "type": "string",
           "description": "Experiment name to be shown to users on about:studies"
@@ -85,7 +120,8 @@
         "slug",
         "branches",
         "userFacingName",
-        "userFacingDescription"
+        "userFacingDescription",
+        "bucketConfig"
       ]
     }
   },
