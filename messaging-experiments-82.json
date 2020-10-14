@@ -16,7 +16,7 @@
         "namespace": "messaging-experiments-cfr",
         "randomizationUnit": "normandy_id",
         "start": 5312,
-        "count": 6312,
+        "count": 1000,
         "total": 10000
       },
       "branches": [
