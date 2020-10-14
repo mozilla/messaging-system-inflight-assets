@@ -33,9 +33,6 @@
             },
             "targeting": "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 3 && userPrefs.cfrFeatures && currentDate|date - profileAgeCreated > 15770000000",
             "template": "cfr_doorhanger",
-            "groups": [
-              "cfr"
-            ],
             "content": {
               "layout": "icon_and_message",
               "text": "Keep using your favorite search and your normal web browsing will help us keep Firefox free. Would you like to update your homepage?",
@@ -125,9 +122,6 @@
             },
             "targeting": "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 3 && userPrefs.cfrFeatures && currentDate|date - profileAgeCreated > 15770000000",
             "template": "cfr_doorhanger",
-            "groups": [
-              "cfr"
-            ],
             "content": {
               "layout": "icon_and_message",
               "text": "Keep using your favorite search and ####. Would you like to update your homepage?",
@@ -217,9 +211,6 @@
             },
             "targeting": "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 3 && userPrefs.cfrFeatures && currentDate|date - profileAgeCreated > 15770000000",
             "template": "cfr_doorhanger",
-            "groups": [
-              "cfr"
-            ],
             "content": {
               "layout": "icon_and_message",
               "text": "Update your homepage to search Google while also being able to search your Firefox history and bookmarks.",
