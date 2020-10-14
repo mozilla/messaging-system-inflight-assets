@@ -23,10 +23,16 @@
         ratio: 1
         value:
           id: 'bug-1661707-homepage-remediation-search-value:treatment-a'
+          # Workaround for bug 1671149
+          group:
+            - cfr
           frequency:
             lifetime: 3
+          # Has google set as the homepage, has CFR features enabled, has profile
+          # older than 6 months
           targeting: "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 3 && userPrefs.cfrFeatures && currentDate|date - profileAgeCreated > 15770000000"
           template: cfr_doorhanger
+          # Message should count towards the daily CFR limit
           groups:
             - cfr
           content:
@@ -81,10 +87,16 @@
         ratio: 1
         value:
           id: 'bug-1661707-homepage-remediation-search-value:treatment-b'
+          # Workaround for bug 1671149
+          group:
+            - cfr
           frequency:
             lifetime: 3
+          # Has google set as the homepage, has CFR features enabled, has profile
+          # older than 6 months
           targeting: "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 3 && userPrefs.cfrFeatures && currentDate|date - profileAgeCreated > 15770000000"
           template: cfr_doorhanger
+          # Message should count towards the daily CFR limit
           groups:
             - cfr
           content:
@@ -139,10 +151,16 @@
         ratio: 1
         value:
           id: 'bug-1661707-homepage-remediation-search-value:treatment-c'
+          # Workaround for bug 1671149
+          group:
+            - cfr
           frequency:
             lifetime: 3
+          # Has google set as the homepage, has CFR features enabled, has profile
+          # older than 6 months
           targeting: "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 3 && userPrefs.cfrFeatures && currentDate|date - profileAgeCreated > 15770000000"
           template: cfr_doorhanger
+          # Message should count towards the daily CFR limit
           groups:
             - cfr
           content:
