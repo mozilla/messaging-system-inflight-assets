@@ -23,274 +23,290 @@
         {
           "slug": "treatment-a",
           "ratio": 1,
-          "value": {
-            "id": "bug-1661707-homepage-remediation-search-value:treatment-a",
-            "group": [
-              "cfr"
-            ],
-            "frequency": {
-              "lifetime": 3
-            },
-            "targeting": "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 3 && userPrefs.cfrFeatures && currentDate|date - profileAgeCreated > 15770000000",
-            "template": "cfr_doorhanger",
-            "content": {
-              "layout": "icon_and_message",
-              "text": "Keep using your favorite search and your normal web browsing will help us keep Firefox free. Would you like to update your homepage?",
-              "icon": "chrome://browser/skin/preferences/search.svg",
-              "buttons": {
-                "secondary": [
-                  {
+          "feature": {
+            "featureId": "cfr",
+            "enabled": true,
+            "value": {
+              "id": "bug-1661707-homepage-remediation-search-value:treatment-a",
+              "group": [
+                "cfr"
+              ],
+              "frequency": {
+                "lifetime": 3
+              },
+              "targeting": "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 3 && userPrefs.cfrFeatures && currentDate|date - profileAgeCreated > 15770000000",
+              "template": "cfr_doorhanger",
+              "content": {
+                "layout": "icon_and_message",
+                "text": "Keep using your favorite search and your normal web browsing will help us keep Firefox free. Would you like to update your homepage?",
+                "icon": "chrome://browser/skin/preferences/search.svg",
+                "buttons": {
+                  "secondary": [
+                    {
+                      "label": {
+                        "string_id": "cfr-doorhanger-extension-cancel-button"
+                      },
+                      "action": {
+                        "type": "CANCEL"
+                      }
+                    },
+                    {
+                      "label": {
+                        "string_id": "cfr-doorhanger-extension-never-show-recommendation"
+                      }
+                    },
+                    {
+                      "label": {
+                        "string_id": "cfr-doorhanger-extension-manage-settings-button"
+                      },
+                      "action": {
+                        "type": "OPEN_PREFERENCES_PAGE",
+                        "data": {
+                          "category": "general-cfrfeatures"
+                        }
+                      }
+                    }
+                  ],
+                  "primary": {
                     "label": {
-                      "string_id": "cfr-doorhanger-extension-cancel-button"
+                      "value": "Update Homepage",
+                      "attributes": {
+                        "accesskey": "U"
+                      }
                     },
                     "action": {
-                      "type": "CANCEL"
-                    }
-                  },
-                  {
-                    "label": {
-                      "string_id": "cfr-doorhanger-extension-never-show-recommendation"
-                    }
-                  },
-                  {
-                    "label": {
-                      "string_id": "cfr-doorhanger-extension-manage-settings-button"
-                    },
-                    "action": {
-                      "type": "OPEN_PREFERENCES_PAGE",
+                      "type": "CONFIGURE_HOMEPAGE",
                       "data": {
-                        "category": "general-cfrfeatures"
+                        "homePage": "default",
+                        "newtab": "default",
+                        "layout": {
+                          "search": true,
+                          "topsites": false,
+                          "highlights": false,
+                          "topstories": false,
+                          "snippets": false
+                        }
                       }
                     }
                   }
-                ],
-                "primary": {
-                  "label": {
-                    "value": "Update Homepage",
-                    "attributes": {
-                      "accesskey": "U"
-                    }
-                  },
-                  "action": {
-                    "type": "CONFIGURE_HOMEPAGE",
-                    "data": {
-                      "homePage": "default",
-                      "newtab": "default",
-                      "layout": {
-                        "search": true,
-                        "topsites": false,
-                        "highlights": false,
-                        "topstories": false,
-                        "snippets": false
-                      }
-                    }
-                  }
-                }
-              },
-              "bucket_id": "bug-1661707-homepage-remediation-search-value:treatment-a",
-              "heading_text": "Same great search, keep Firefox free",
-              "info_icon": {
-                "label": {
-                  "string_id": "cfr-doorhanger-extension-sumo-link"
                 },
-                "sumo_path": "extensionrecommendations"
+                "bucket_id": "bug-1661707-homepage-remediation-search-value:treatment-a",
+                "heading_text": "Same great search, keep Firefox free",
+                "info_icon": {
+                  "label": {
+                    "string_id": "cfr-doorhanger-extension-sumo-link"
+                  },
+                  "sumo_path": "extensionrecommendations"
+                },
+                "notification_text": {
+                  "string_id": "cfr-doorhanger-feature-notification"
+                },
+                "category": "cfrFeatures"
               },
-              "notification_text": {
-                "string_id": "cfr-doorhanger-feature-notification"
-              },
-              "category": "cfrFeatures"
-            },
-            "trigger": {
-              "id": "openURL",
-              "params": [
-                "google.com",
-                "www.google.com"
-              ]
+              "trigger": {
+                "id": "openURL",
+                "params": [
+                  "google.com",
+                  "www.google.com"
+                ]
+              }
             }
           }
         },
         {
           "slug": "treatment-b",
           "ratio": 1,
-          "value": {
-            "id": "bug-1661707-homepage-remediation-search-value:treatment-b",
-            "group": [
-              "cfr"
-            ],
-            "frequency": {
-              "lifetime": 3
-            },
-            "targeting": "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 3 && userPrefs.cfrFeatures && currentDate|date - profileAgeCreated > 15770000000",
-            "template": "cfr_doorhanger",
-            "content": {
-              "layout": "icon_and_message",
-              "text": "Keep using your favorite search and ####. Would you like to update your homepage?",
-              "icon": "chrome://browser/skin/preferences/search.svg",
-              "buttons": {
-                "secondary": [
-                  {
+          "feature": {
+            "featureId": "cfr",
+            "enabled": true,
+            "value": {
+              "id": "bug-1661707-homepage-remediation-search-value:treatment-b",
+              "group": [
+                "cfr"
+              ],
+              "frequency": {
+                "lifetime": 3
+              },
+              "targeting": "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 3 && userPrefs.cfrFeatures && currentDate|date - profileAgeCreated > 15770000000",
+              "template": "cfr_doorhanger",
+              "content": {
+                "layout": "icon_and_message",
+                "text": "Keep using your favorite search and ####. Would you like to update your homepage?",
+                "icon": "chrome://browser/skin/preferences/search.svg",
+                "buttons": {
+                  "secondary": [
+                    {
+                      "label": {
+                        "string_id": "cfr-doorhanger-extension-cancel-button"
+                      },
+                      "action": {
+                        "type": "CANCEL"
+                      }
+                    },
+                    {
+                      "label": {
+                        "string_id": "cfr-doorhanger-extension-never-show-recommendation"
+                      }
+                    },
+                    {
+                      "label": {
+                        "string_id": "cfr-doorhanger-extension-manage-settings-button"
+                      },
+                      "action": {
+                        "type": "OPEN_PREFERENCES_PAGE",
+                        "data": {
+                          "category": "general-cfrfeatures"
+                        }
+                      }
+                    }
+                  ],
+                  "primary": {
                     "label": {
-                      "string_id": "cfr-doorhanger-extension-cancel-button"
+                      "value": "Update Homepage",
+                      "attributes": {
+                        "accesskey": "U"
+                      }
                     },
                     "action": {
-                      "type": "CANCEL"
-                    }
-                  },
-                  {
-                    "label": {
-                      "string_id": "cfr-doorhanger-extension-never-show-recommendation"
-                    }
-                  },
-                  {
-                    "label": {
-                      "string_id": "cfr-doorhanger-extension-manage-settings-button"
-                    },
-                    "action": {
-                      "type": "OPEN_PREFERENCES_PAGE",
+                      "type": "CONFIGURE_HOMEPAGE",
                       "data": {
-                        "category": "general-cfrfeatures"
+                        "homePage": "default",
+                        "newtab": "default",
+                        "layout": {
+                          "search": true,
+                          "topsites": true,
+                          "highlights": false,
+                          "topstories": false,
+                          "snippets": false
+                        }
                       }
                     }
                   }
-                ],
-                "primary": {
-                  "label": {
-                    "value": "Update Homepage",
-                    "attributes": {
-                      "accesskey": "U"
-                    }
-                  },
-                  "action": {
-                    "type": "CONFIGURE_HOMEPAGE",
-                    "data": {
-                      "homePage": "default",
-                      "newtab": "default",
-                      "layout": {
-                        "search": true,
-                        "topsites": true,
-                        "highlights": false,
-                        "topstories": false,
-                        "snippets": false
-                      }
-                    }
-                  }
-                }
-              },
-              "bucket_id": "bug-1661707-homepage-remediation-search-value:treatment-b",
-              "heading_text": "Same great search, ####",
-              "info_icon": {
-                "label": {
-                  "string_id": "cfr-doorhanger-extension-sumo-link"
                 },
-                "sumo_path": "extensionrecommendations"
+                "bucket_id": "bug-1661707-homepage-remediation-search-value:treatment-b",
+                "heading_text": "Same great search, ####",
+                "info_icon": {
+                  "label": {
+                    "string_id": "cfr-doorhanger-extension-sumo-link"
+                  },
+                  "sumo_path": "extensionrecommendations"
+                },
+                "notification_text": {
+                  "string_id": "cfr-doorhanger-feature-notification"
+                },
+                "category": "cfrFeatures"
               },
-              "notification_text": {
-                "string_id": "cfr-doorhanger-feature-notification"
-              },
-              "category": "cfrFeatures"
-            },
-            "trigger": {
-              "id": "openURL",
-              "params": [
-                "google.com",
-                "www.google.com"
-              ]
+              "trigger": {
+                "id": "openURL",
+                "params": [
+                  "google.com",
+                  "www.google.com"
+                ]
+              }
             }
           }
         },
         {
           "slug": "treatment-c",
           "ratio": 1,
-          "value": {
-            "id": "bug-1661707-homepage-remediation-search-value:treatment-c",
-            "group": [
-              "cfr"
-            ],
-            "frequency": {
-              "lifetime": 3
-            },
-            "targeting": "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 3 && userPrefs.cfrFeatures && currentDate|date - profileAgeCreated > 15770000000",
-            "template": "cfr_doorhanger",
-            "content": {
-              "layout": "icon_and_message",
-              "text": "Update your homepage to search Google while also being able to search your Firefox history and bookmarks.",
-              "icon": "chrome://browser/skin/preferences/search.svg",
-              "buttons": {
-                "secondary": [
-                  {
+          "feature": {
+            "featureId": "cfr",
+            "enabled": true,
+            "value": {
+              "id": "bug-1661707-homepage-remediation-search-value:treatment-c",
+              "group": [
+                "cfr"
+              ],
+              "frequency": {
+                "lifetime": 3
+              },
+              "targeting": "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 3 && userPrefs.cfrFeatures && currentDate|date - profileAgeCreated > 15770000000",
+              "template": "cfr_doorhanger",
+              "content": {
+                "layout": "icon_and_message",
+                "text": "Update your homepage to search Google while also being able to search your Firefox history and bookmarks.",
+                "icon": "chrome://browser/skin/preferences/search.svg",
+                "buttons": {
+                  "secondary": [
+                    {
+                      "label": {
+                        "string_id": "cfr-doorhanger-extension-cancel-button"
+                      },
+                      "action": {
+                        "type": "CANCEL"
+                      }
+                    },
+                    {
+                      "label": {
+                        "string_id": "cfr-doorhanger-extension-never-show-recommendation"
+                      }
+                    },
+                    {
+                      "label": {
+                        "string_id": "cfr-doorhanger-extension-manage-settings-button"
+                      },
+                      "action": {
+                        "type": "OPEN_PREFERENCES_PAGE",
+                        "data": {
+                          "category": "general-cfrfeatures"
+                        }
+                      }
+                    }
+                  ],
+                  "primary": {
                     "label": {
-                      "string_id": "cfr-doorhanger-extension-cancel-button"
+                      "value": "Activate now",
+                      "attributes": {
+                        "accesskey": "A"
+                      }
                     },
                     "action": {
-                      "type": "CANCEL"
-                    }
-                  },
-                  {
-                    "label": {
-                      "string_id": "cfr-doorhanger-extension-never-show-recommendation"
-                    }
-                  },
-                  {
-                    "label": {
-                      "string_id": "cfr-doorhanger-extension-manage-settings-button"
-                    },
-                    "action": {
-                      "type": "OPEN_PREFERENCES_PAGE",
+                      "type": "CONFIGURE_HOMEPAGE",
                       "data": {
-                        "category": "general-cfrfeatures"
+                        "homePage": "default",
+                        "newtab": "default",
+                        "layout": {
+                          "search": true,
+                          "topsites": true,
+                          "highlights": true,
+                          "topstories": true,
+                          "snippets": true
+                        }
                       }
                     }
                   }
-                ],
-                "primary": {
-                  "label": {
-                    "value": "Activate now",
-                    "attributes": {
-                      "accesskey": "A"
-                    }
-                  },
-                  "action": {
-                    "type": "CONFIGURE_HOMEPAGE",
-                    "data": {
-                      "homePage": "default",
-                      "newtab": "default",
-                      "layout": {
-                        "search": true,
-                        "topsites": true,
-                        "highlights": true,
-                        "topstories": true,
-                        "snippets": true
-                      }
-                    }
-                  }
-                }
-              },
-              "bucket_id": "bug-1661707-homepage-remediation-search-value:treatment-c",
-              "heading_text": "A better search experience",
-              "info_icon": {
-                "label": {
-                  "string_id": "cfr-doorhanger-extension-sumo-link"
                 },
-                "sumo_path": "extensionrecommendations"
+                "bucket_id": "bug-1661707-homepage-remediation-search-value:treatment-c",
+                "heading_text": "A better search experience",
+                "info_icon": {
+                  "label": {
+                    "string_id": "cfr-doorhanger-extension-sumo-link"
+                  },
+                  "sumo_path": "extensionrecommendations"
+                },
+                "notification_text": {
+                  "string_id": "cfr-doorhanger-feature-notification"
+                },
+                "category": "cfrFeatures"
               },
-              "notification_text": {
-                "string_id": "cfr-doorhanger-feature-notification"
-              },
-              "category": "cfrFeatures"
-            },
-            "trigger": {
-              "id": "openURL",
-              "params": [
-                "google.com",
-                "www.google.com"
-              ]
+              "trigger": {
+                "id": "openURL",
+                "params": [
+                  "google.com",
+                  "www.google.com"
+                ]
+              }
             }
           }
         },
         {
           "slug": "control",
           "ratio": 1,
-          "value": {}
+          "feature": {
+            "featureId": "cfr",
+            "enabled": true,
+            "value": {}
+          }
         }
       ]
     },
