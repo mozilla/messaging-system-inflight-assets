@@ -25,7 +25,7 @@
           id: 'bug-1661707-homepage-remediation-search-value:treatment-a'
           frequency:
             lifetime: 3
-          targeting: "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 3 && userPrefs.cfrFeatures"
+          targeting: "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 3 && userPrefs.cfrFeatures && currentDate|date - profileAgeCreated > 15770000000"
           template: cfr_doorhanger
           content:
             layout: icon_and_message
@@ -81,7 +81,7 @@
           id: 'bug-1661707-homepage-remediation-search-value:treatment-b'
           frequency:
             lifetime: 3
-          targeting: "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 3 && userPrefs.cfrFeatures"
+          targeting: "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 3 && userPrefs.cfrFeatures && currentDate|date - profileAgeCreated > 15770000000"
           template: cfr_doorhanger
           content:
             layout: icon_and_message
@@ -137,7 +137,7 @@
           id: 'bug-1661707-homepage-remediation-search-value:treatment-c'
           frequency:
             lifetime: 3
-          targeting: "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 3 && userPrefs.cfrFeatures"
+          targeting: "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 3 && userPrefs.cfrFeatures && currentDate|date - profileAgeCreated > 15770000000"
           template: cfr_doorhanger
           content:
             layout: icon_and_message
