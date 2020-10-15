@@ -221,3 +221,126 @@
   targeting: browserSettings.update.channel == 'release' &&
     localeLanguageCode == 'en' && region == 'US' &&
     'app.shield.optoutstudies.enabled'|preferenceValue
+- id: MULTI-STAGE-ABOUTWELCOME-ZERO-STAGE
+  enabled: true
+  # The filter `!('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue)` is used to exclude
+  # users who have switched channels or re-installed the browser without having a new profile
+  targeting: firefoxVersion >= '82.' && browserSettings.update.channel == 'beta' && localeLanguageCode == "en" && ((isFirstStartup && !('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue)) || 'bug-1668928-message-multi-stage-aboutwelcome-zero-stage-release-82-83' in activeExperiments)
+  arguments:
+    slug: bug-1668928-message-multi-stage-aboutwelcome-zero-stage-release-82-83
+    startDate:
+    endDate:
+    proposedEnrollment: 7
+    referenceBranch: "control"
+    bucketConfig:
+      count: 2000
+      start: 0
+      total: 10000
+      namespace: bug-1668928-message-multi-stage-aboutwelcome-zero-stage-release-82-83
+      randomizationUnit: normandy_id
+    userFacingName: "Multi-Stage About:Welcome Zero Stage"
+    userFacingDescription: Study to validate a minimal onboarding experience
+    isEnrollmentPaused: false
+    branches:
+      - slug: control
+        ratio: 1
+        feature:
+          featureId: "aboutwelcome"
+          enabled: false
+          value: null
+      - slug: treatment-default
+        ratio: 1
+        feature:
+          featureId: "aboutwelcome"
+          enabled: true
+          value: {}
+      - slug: treatment-no-titles
+        ratio: 1
+        feature:
+          featureId: "aboutwelcome"
+          enabled: true
+          value:
+            id: msw-no-titles
+            template: multistage
+            screens:
+              - id: "AW_GET_STARTED"
+                order: 0
+                content:
+                  zap: true
+                  title: Welcome to Firefox
+                  subtitle: The fast, safe, and private browser that's backed by a non-profit.
+                  primary_button:
+                    label: Start Setup
+                    action:
+                      navigate: true
+                  secondary_button:
+                    text: Have an account?
+                    label: Sign in
+                    position: top
+                    action:
+                      type: SHOW_FIREFOX_ACCOUNTS
+                      addFlowParams: true
+                      data:
+                        entrypoint: activity-stream-firstrun
+              - id: "AW_IMPORT_SETTINGS"
+                order: 1
+                content:
+                  zap: true
+                  title: Import your passwords, bookmarks, and more
+                  subtitle: Coming from another browser? It's easy to bring everything to Firefox.
+                  tiles:
+                    type: topsites
+                    showTitles: false
+                  primary_button:
+                    label: Start Import
+                    action:
+                      navigate: true
+                      type: SHOW_MIGRATION_WIZARD
+                  secondary_button:
+                    label: Not now
+                    action:
+                      navigate: true
+              - id: "AW_CHOOSE_THEME"
+                order: 2
+                content:
+                  zap: true
+                  title: Choose a look
+                  subtitle: Personalize Firefox with a theme.
+                  tiles:
+                    type: theme
+                    action:
+                      theme: <event>
+                    data:
+                      - theme: automatic
+                        label: Automatic
+                        tooltip:
+                          string_id: onboarding-multistage-theme-tooltip-automatic-2
+                        description:
+                          string_id: onboarding-multistage-theme-tooltip-automatic-2
+                      - theme: light
+                        label: Light
+                        tooltip:
+                          string_id: onboarding-multistage-theme-tooltip-light-2
+                        description:
+                          string_id: onboarding-multistage-theme-tooltip-light-2
+                      - theme: dark
+                        label: Dark
+                        tooltip:
+                          string_id: onboarding-multistage-theme-tooltip-dark-2
+                        description:
+                          string_id: onboarding-multistage-theme-tooltip-dark-2
+                      - theme: alpenglow
+                        label: Alpenglow
+                        tooltip:
+                          string_id: onboarding-multistage-theme-tooltip-alpenglow-2
+                        description:
+                          string_id: onboarding-multistage-theme-tooltip-alpenglow-2
+                  primary_button:
+                    label: Save Theme
+                    action:
+                      navigate: true
+                  secondary_button:
+                    label: Not now
+                    action:
+                      navigate: true
+                      theme: automatic
