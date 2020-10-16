@@ -456,5 +456,5 @@
     }
   },
   "additionalProperties": false,
-  "required": ["id", "content", "targeting", "template", "trigger"]
+  "required": ["id", "groups", "content", "targeting", "template", "trigger"]
 }
