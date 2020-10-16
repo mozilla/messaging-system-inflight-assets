@@ -29,6 +29,10 @@
             # Workaround for bug 1671149
             group:
               - cfr
+            # This links the message with the daily group frequency cap defined
+            # here: https://github.com/mozilla/messaging-system-inflight-assets/blob/3b9db1ec2c437c4c954213ac11a457264c3492e3/message-groups.json#L16
+            groups:
+              - cfr-experiments
             frequency:
               lifetime: 3
             # Has google set as the homepage, has CFR features enabled, has profile
@@ -93,6 +97,10 @@
             # Workaround for bug 1671149
             group:
               - cfr
+            # This links the message with the daily group frequency cap defined
+            # here: https://github.com/mozilla/messaging-system-inflight-assets/blob/3b9db1ec2c437c4c954213ac11a457264c3492e3/message-groups.json#L16
+            groups:
+              - cfr-experiments
             frequency:
               lifetime: 3
             # Has google set as the homepage, has CFR features enabled, has profile
@@ -157,6 +165,10 @@
             # Workaround for bug 1671149
             group:
               - cfr
+            # This links the message with the daily group frequency cap defined
+            # here: https://github.com/mozilla/messaging-system-inflight-assets/blob/3b9db1ec2c437c4c954213ac11a457264c3492e3/message-groups.json#L16
+            groups:
+              - cfr-experiments
             frequency:
               lifetime: 3
             # Has google set as the homepage, has CFR features enabled, has profile

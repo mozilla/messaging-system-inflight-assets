@@ -27,6 +27,9 @@
           "enabled": true,
           "value": {
             "id": "TEST-EXPERIMENT-82:treatment",
+            "groups": [
+              "cfr-experiments"
+            ],
             "content": {
               "bucket_id": "TEST-EXPERIMENT-82:treatment",
               "category": "cfrFeatures",

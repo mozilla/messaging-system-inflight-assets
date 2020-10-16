@@ -1,4 +1,6 @@
 - id: MILESTONE_MESSAGE
+  groups:
+    - cfr
   content:
     anchor_id: tracking-protection-icon-box
     bucket_id: CFR_MILESTONE_MESSAGE
@@ -25,6 +27,8 @@
     params:
       - ContentBlockingMilestone
 - id: SEND_TAB_CFR
+  groups:
+    - cfr
   content:
     bucket_id: SEND_TAB_CFR
     buttons:
@@ -161,6 +165,8 @@
       - bleacherreport.com
       - www.bleacherreport.com
 - id: SEND_RECIPE_TAB_CFR
+  groups:
+    - cfr
   content:
     bucket_id: SEND_RECIPE_TAB_CFR
     buttons:
@@ -440,6 +446,8 @@
       - kraftrecipes.com
       - www.kraftrecipes.com
 - id: BOOKMARK_SYNC_CFR
+  groups:
+    - cfr
   content:
     bucket_id: BOOKMARK_SYNC_CFR
     buttons:
@@ -484,6 +492,8 @@
   trigger:
     id: openBookmarkedURL
 - id: PIN_TAB_72
+  groups:
+    - cfr
   content:
     bucket_id: CFR_PIN_TAB
     buttons:
@@ -567,6 +577,8 @@
       - amazon.de
       - www.amazon.de
 - id: SAVE_LOGIN_72
+  groups:
+    - cfr
   content:
     bucket_id: CFR_SAVE_LOGIN
     buttons:
@@ -612,6 +624,8 @@
   trigger:
     id: newSavedLogin
 - id: UPDATE_LOGIN
+  groups:
+    - cfr
   content:
     bucket_id: CFR_UPDATE_LOGIN
     buttons:
@@ -657,6 +671,8 @@
   trigger:
     id: newSavedLogin
 - id: SOCIAL_TRACKING_PROTECTION
+  groups:
+    - cfr
   content:
     anchor_id: tracking-protection-icon-box
     bucket_id: CFR_SOCIAL_TRACKING_PROTECTION
@@ -706,6 +722,8 @@
       - 65536
       - 537001984
 - id: FINGERPRINTERS_PROTECTION
+  groups:
+    - cfr
   content:
     anchor_id: tracking-protection-icon-box
     bucket_id: CFR_FINGERPRINTERS_PROTECTION
@@ -754,6 +772,8 @@
     params:
       - 64
 - id: CRYPTOMINERS_PROTECTION
+  groups:
+    - cfr
   content:
     anchor_id: tracking-protection-icon-box
     bucket_id: CFR_CRYPTOMINERS_PROTECTION
@@ -802,6 +822,8 @@
     params:
       - 2048
 - id: DOH_ROLLOUT_CONFIRMATION
+  groups:
+    - cfr
   targeting: "'doh-rollout.enabled'|preferenceValue && !'doh-rollout.disable-heuristics'|preferenceValue && !'doh-rollout.skipHeuristicsCheck'|preferenceValue && !'doh-rollout.doorhanger-decision'|preferenceValue && firefoxVersion >= 79"
   template: cfr_doorhanger
   content:
@@ -839,6 +861,8 @@
     patterns:
       - "*://*/*"
 - id: YOUTUBE_ENHANCE_3_72
+  groups:
+    - cfr
   content:
     addon:
       amo_url: https://addons.mozilla.org/firefox/addon/enhancer-for-youtube/
@@ -899,6 +923,8 @@
       - www.youtube.com
       - youtube.com
 - id: GOOGLE_TRANSLATE_3_72
+  groups:
+    - cfr
   content:
     addon:
       amo_url: https://addons.mozilla.org/firefox/addon/to-google-translate/
@@ -963,6 +989,8 @@
     params:
       - translate.google.com
 - id: FACEBOOK_CONTAINER_3_72
+  groups:
+    - cfr
   content:
     addon:
       amo_url: https://addons.mozilla.org/firefox/addon/facebook-container/
@@ -1028,6 +1056,8 @@
       - www.messenger.com
       - messenger.com
 - id: FISSION_EXPERIMENT_CONFIRMATION
+  groups:
+    - cfr
   targeting: "isFissionExperimentEnabled"
   frequency:
     lifetime: 1

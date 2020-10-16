@@ -1,6 +1,9 @@
 [
   {
     "id": "MILESTONE_MESSAGE",
+    "groups": [
+      "cfr"
+    ],
     "content": {
       "anchor_id": "tracking-protection-icon-box",
       "bucket_id": "CFR_MILESTONE_MESSAGE",
@@ -38,6 +41,9 @@
   },
   {
     "id": "SEND_TAB_CFR",
+    "groups": [
+      "cfr"
+    ],
     "content": {
       "bucket_id": "SEND_TAB_CFR",
       "buttons": {
@@ -203,6 +209,9 @@
   },
   {
     "id": "SEND_RECIPE_TAB_CFR",
+    "groups": [
+      "cfr"
+    ],
     "content": {
       "bucket_id": "SEND_RECIPE_TAB_CFR",
       "buttons": {
@@ -511,6 +520,9 @@
   },
   {
     "id": "BOOKMARK_SYNC_CFR",
+    "groups": [
+      "cfr"
+    ],
     "content": {
       "bucket_id": "BOOKMARK_SYNC_CFR",
       "buttons": {
@@ -583,6 +595,9 @@
   },
   {
     "id": "PIN_TAB_72",
+    "groups": [
+      "cfr"
+    ],
     "content": {
       "bucket_id": "CFR_PIN_TAB",
       "buttons": {
@@ -700,6 +715,9 @@
   },
   {
     "id": "SAVE_LOGIN_72",
+    "groups": [
+      "cfr"
+    ],
     "content": {
       "bucket_id": "CFR_SAVE_LOGIN",
       "buttons": {
@@ -773,6 +791,9 @@
   },
   {
     "id": "UPDATE_LOGIN",
+    "groups": [
+      "cfr"
+    ],
     "content": {
       "bucket_id": "CFR_UPDATE_LOGIN",
       "buttons": {
@@ -846,6 +867,9 @@
   },
   {
     "id": "SOCIAL_TRACKING_PROTECTION",
+    "groups": [
+      "cfr"
+    ],
     "content": {
       "anchor_id": "tracking-protection-icon-box",
       "bucket_id": "CFR_SOCIAL_TRACKING_PROTECTION",
@@ -920,6 +944,9 @@
   },
   {
     "id": "FINGERPRINTERS_PROTECTION",
+    "groups": [
+      "cfr"
+    ],
     "content": {
       "anchor_id": "tracking-protection-icon-box",
       "bucket_id": "CFR_FINGERPRINTERS_PROTECTION",
@@ -993,6 +1020,9 @@
   },
   {
     "id": "CRYPTOMINERS_PROTECTION",
+    "groups": [
+      "cfr"
+    ],
     "content": {
       "anchor_id": "tracking-protection-icon-box",
       "bucket_id": "CFR_CRYPTOMINERS_PROTECTION",
@@ -1066,6 +1096,9 @@
   },
   {
     "id": "DOH_ROLLOUT_CONFIRMATION",
+    "groups": [
+      "cfr"
+    ],
     "targeting": "'doh-rollout.enabled'|preferenceValue && !'doh-rollout.disable-heuristics'|preferenceValue && !'doh-rollout.skipHeuristicsCheck'|preferenceValue && !'doh-rollout.doorhanger-decision'|preferenceValue && firefoxVersion >= 79",
     "template": "cfr_doorhanger",
     "content": {
@@ -1122,6 +1155,9 @@
   },
   {
     "id": "YOUTUBE_ENHANCE_3_72",
+    "groups": [
+      "cfr"
+    ],
     "content": {
       "addon": {
         "amo_url": "https://addons.mozilla.org/firefox/addon/enhancer-for-youtube/",
@@ -1204,6 +1240,9 @@
   },
   {
     "id": "GOOGLE_TRANSLATE_3_72",
+    "groups": [
+      "cfr"
+    ],
     "content": {
       "addon": {
         "amo_url": "https://addons.mozilla.org/firefox/addon/to-google-translate/",
@@ -1284,6 +1323,9 @@
   },
   {
     "id": "FACEBOOK_CONTAINER_3_72",
+    "groups": [
+      "cfr"
+    ],
     "content": {
       "addon": {
         "amo_url": "https://addons.mozilla.org/firefox/addon/facebook-container/",
@@ -1372,6 +1414,9 @@
   },
   {
     "id": "FISSION_EXPERIMENT_CONFIRMATION",
+    "groups": [
+      "cfr"
+    ],
     "targeting": "isFissionExperimentEnabled",
     "frequency": {
       "lifetime": 1
