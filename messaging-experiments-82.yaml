@@ -233,6 +233,77 @@
   targeting: browserSettings.update.channel == 'release' &&
     localeLanguageCode == 'en' && region == 'US' &&
     'app.shield.optoutstudies.enabled'|preferenceValue
+
+- id: WIZARD-LESS-PASSWORD-IMPORT-AUTOCOMPLETE-EXPERIMENT
+  enabled: true
+  targeting: firefoxVersion >= '82.' &&
+    browserSettings.update.channel != 'release' &&
+    localeLanguageCode == 'en' &&
+    'app.shield.optoutstudies.enabled'|preferenceValue &&
+    (isFirstStartup ||
+     'password-autocomplete-wizardless' in activeExperiments)
+  arguments:
+    slug: password-autocomplete-wizardless
+    startDate:
+    endDate:
+    proposedEnrollment: 7
+    referenceBranch: control
+    bucketConfig:
+      count: 1000
+      start: 0
+      total: 10000
+      namespace: password-autocomplete-wizardless
+      randomizationUnit: normandy_id
+    userFacingName: Wizard-less Password import autocomplete Experiment
+    userFacingDescription: We would like to run a study to see if showing the import wizard from a password autocomplete entry when Firefox knows there's a Chrome saved login for the site leads to growth.
+    isEnrollmentPaused: false
+    branches:
+      - slug: control
+        ratio: 1
+        feature:
+          featureId: password-autocomplete
+          enabled: true
+          value:
+            directMigrateSingleProfile: false
+      - slug: treatment
+        ratio: 1
+        feature:
+          featureId: password-autocomplete
+          enabled: true
+          value:
+            directMigrateSingleProfile: true
+  slug: password-autocomplete-wizardless
+  probeSets: []
+  startDate:
+  endDate:
+  proposedEnrollment: 7
+  referenceBranch: control
+  application: firefox-desktop
+  bucketConfig:
+    count: 1000
+    start: 0
+    total: 10000
+    namespace: password-autocomplete-wizardless
+    randomizationUnit: normandy_id
+  userFacingName: Wizard-less Password import autocomplete Experiment
+  userFacingDescription: We would like to run a study to see if showing the import wizard from a password autocomplete entry when Firefox knows there's a Chrome saved login for the site leads to growth.
+  isEnrollmentPaused: false
+  branches:
+    - slug: control
+      ratio: 1
+      feature:
+        featureId: password-autocomplete
+        enabled: true
+        value:
+          directMigrateSingleProfile: false
+    - slug: treatment
+      ratio: 1
+      feature:
+        featureId: password-autocomplete
+        enabled: true
+        value:
+          directMigrateSingleProfile: true
+
 - id: MULTI-STAGE-ABOUTWELCOME-ZERO-STAGE
   enabled: true
   # The filter `!('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue)` is used to exclude
