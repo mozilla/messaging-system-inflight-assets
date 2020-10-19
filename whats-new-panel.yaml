@@ -113,7 +113,7 @@
     cta_url: https://support.mozilla.org/1/firefox/%VERSION%/%OS%/%LOCALE%/dns-over-https
     cta_type: OPEN_URL
     link_text: Learn more
-  targeting: firefoxVersion >= 82 && region == 'US'
+  targeting: firefoxVersion >= 82 && region == 'US' && 'doh-rollout.self-enabled'|preferenceValue
   trigger:
     id: whatsNewPanelOpened
 - id: WHATS_NEW_MEDIA_SESSION_82
