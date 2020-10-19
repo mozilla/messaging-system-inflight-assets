@@ -237,7 +237,7 @@
   enabled: true
   # The filter `!('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue)` is used to exclude
   # users who have switched channels or re-installed the browser without having a new profile
-  targeting: firefoxVersion >= '82.' && browserSettings.update.channel != 'release' && localeLanguageCode == "en" && ((isFirstStartup && !('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue)) || 'bug-1668928-message-multi-stage-aboutwelcome-zero-stage-release-82-83' in activeExperiments)
+  targeting: firefoxVersion >= '82.' && (browserSettings.update.channel != 'release' || browserSettings.update.channel != 'beta') && localeLanguageCode == "en" && ((isFirstStartup && !('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue)) || 'bug-1668928-message-multi-stage-aboutwelcome-zero-stage-release-82-83' in activeExperiments) && 'app.shield.optoutstudies.enabled'|preferenceValue
   arguments:
     slug: bug-1668928-message-multi-stage-aboutwelcome-zero-stage-release-82-83
     startDate:
