@@ -128,11 +128,11 @@
     }
   },
   {
-    "id": "WHATS_NEW_DNS_OVER_HTTPS",
+    "id": "WHATS_NEW_DNS_OVER_HTTPS_82",
     "template": "whatsnew_panel_message",
     "order": 2,
     "content": {
-      "bucket_id": "WHATS_NEW_DNS_OVER_HTTPS",
+      "bucket_id": "WHATS_NEW_DNS_OVER_HTTPS_82",
       "published_date": 1603152000000,
       "title": "Safer browsing with DNS over HTTPS",
       "icon_url": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxwYXRoIGQ9Ik0xMi41IDYuOTg0SDEyVjVhNCA0IDAgMSAwLTggMHYxLjk4NGgtLjVhMS41IDEuNSAwIDAgMC0xLjUgMS41VjEzLjVBMS41IDEuNSAwIDAgMCAzLjUgMTVoOWExLjUgMS41IDAgMCAwIDEuNS0xLjVWOC40ODRhMS41IDEuNSAwIDAgMC0xLjUtMS41ek02IDVhMiAyIDAgMSAxIDQgMHYxLjk4NEg2VjV6IiBpZD0iYSIvPjwvZGVmcz48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGZpbGw9IiNEN0Q3REIiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgcng9IjQiLz48dXNlIGZpbGwtb3BhY2l0eT0iLjgiIGZpbGw9IiMwQzBDMEQiIHhsaW5rOmhyZWY9IiNhIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4IDgpIi8+PC9nPjwvc3ZnPg==",
