@@ -867,7 +867,7 @@
     addon:
       amo_url: https://addons.mozilla.org/firefox/addon/enhancer-for-youtube/
       author: Maxime RF
-      icon: resource://activity-stream/data/content/assets/cfr_enhancer_youtube.png
+      icon: chrome://activity-stream/content/data/content/assets/cfr_enhancer_youtube.png
       id: '700308'
       rating: "4.7"
       title: "Enhancer for YouTube\u2122"
@@ -929,7 +929,7 @@
     addon:
       amo_url: https://addons.mozilla.org/firefox/addon/to-google-translate/
       author: Juan Escobar
-      icon: resource://activity-stream/data/content/assets/cfr_google_translate.png
+      icon: chrome://activity-stream/content/data/content/assets/cfr_google_translate.png
       id: '445852'
       rating: "4.1"
       title: To Google Translate
@@ -995,7 +995,7 @@
     addon:
       amo_url: https://addons.mozilla.org/firefox/addon/facebook-container/
       author: Mozilla
-      icon: resource://activity-stream/data/content/assets/cfr_fb_container.png
+      icon: chrome://activity-stream/content/data/content/assets/cfr_fb_container.png
       id: '954390'
       rating: "4.4"
       title: Facebook Container
