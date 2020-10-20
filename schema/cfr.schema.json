@@ -455,6 +455,6 @@
       "type": "integer"
     }
   },
-  "additionalProperties": false,
+  "additionalProperties": true,
   "required": ["id", "groups", "content", "targeting", "template", "trigger"]
 }
