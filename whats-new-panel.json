@@ -1,104 +1,5 @@
 [
   {
-    "id": "WHATS_NEW_PROTECTIONS_DASHBOARD_78",
-    "template": "whatsnew_panel_message",
-    "order": 2,
-    "content": {
-      "bucket_id": "WHATS_NEW_PROTECTIONS_DASHBOARD_78",
-      "published_date": 1593475200000,
-      "title": {
-        "string_id": "cfr-whatsnew-protections-header"
-      },
-      "icon_url": "chrome://browser/content/logos/tracking-protection.svg",
-      "icon_alt": {
-        "string_id": "cfr-whatsnew-protections-icon-alt"
-      },
-      "body": {
-        "string_id": "cfr-whatsnew-protections-body"
-      },
-      "cta_url": "",
-      "cta_type": "OPEN_PROTECTION_REPORT",
-      "link_text": {
-        "string_id": "cfr-whatsnew-protections-cta-link"
-      }
-    },
-    "targeting": "firefoxVersion >= 78",
-    "trigger": {
-      "id": "whatsNewPanelOpened"
-    }
-  },
-  {
-    "id": "WHATS_NEW_BETTER_PDF_78",
-    "template": "whatsnew_panel_message",
-    "order": 3,
-    "content": {
-      "bucket_id": "WHATS_NEW_BETTER_PDF_78",
-      "published_date": 1593475200000,
-      "title": {
-        "string_id": "cfr-whatsnew-better-pdf-header"
-      },
-      "body": {
-        "string_id": "cfr-whatsnew-better-pdf-body"
-      },
-      "cta_url": "https://support.mozilla.org/1/firefox/%VERSION%/%OS%/%LOCALE%/pdf-viewer",
-      "cta_type": "OPEN_URL",
-      "link_text": {
-        "string_id": "cfr-whatsnew-pip-cta"
-      }
-    },
-    "targeting": "firefoxVersion >= 78",
-    "trigger": {
-      "id": "whatsNewPanelOpened"
-    }
-  },
-  {
-    "id": "WHATS_NEW_BADGE_80",
-    "content": {
-      "action": {
-        "id": "show-whatsnew-button"
-      },
-      "badgeDescription": {
-        "string_id": "cfr-badge-reader-label-newfeature"
-      },
-      "bucket_id": "WHATS_NEW_BADGE_80",
-      "delay": 300000,
-      "target": "whats-new-menu-button"
-    },
-    "frequency": {
-      "lifetime": 100
-    },
-    "priority": 5,
-    "targeting": "firefoxVersion == 80 && (usesFirefoxSync || hasAccessedFxAPanel || currentDate|date - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_80'] || (messageImpressions['WHATS_NEW_BADGE_80']|length >= 1 && currentDate|date - messageImpressions['WHATS_NEW_BADGE_80'][0] <= 345600000)) && \"browser.messaging-system.whatsNewPanel.enabled\"|preferenceValue && localeLanguageCode in [\"en\", \"de\", \"fr\"]",
-    "template": "toolbar_badge",
-    "trigger": {
-      "id": "toolbarBadgeUpdate"
-    }
-  },
-  {
-    "id": "WHATS_NEW_BETTER_PDF_78",
-    "template": "whatsnew_panel_message",
-    "order": 3,
-    "content": {
-      "bucket_id": "WHATS_NEW_BETTER_PDF_78",
-      "published_date": 1593475200000,
-      "title": {
-        "string_id": "cfr-whatsnew-better-pdf-header"
-      },
-      "body": {
-        "string_id": "cfr-whatsnew-better-pdf-body"
-      },
-      "cta_url": "https://support.mozilla.org/1/firefox/%VERSION%/%OS%/%LOCALE%/pdf-viewer",
-      "cta_type": "OPEN_URL",
-      "link_text": {
-        "string_id": "cfr-whatsnew-pip-cta"
-      }
-    },
-    "targeting": "firefoxVersion >= 78",
-    "trigger": {
-      "id": "whatsNewPanelOpened"
-    }
-  },
-  {
     "id": "WHATS_NEW_COOKIES_PROTECTION_80",
     "template": "whatsnew_panel_message",
     "order": 1,
@@ -220,10 +121,36 @@
       "lifetime": 100
     },
     "priority": 5,
-    "targeting": "firefoxVersion == 82 && (usesFirefoxSync || hasAccessedFxAPanel || currentDate|date - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_82'] || (messageImpressions['WHATS_NEW_BADGE_82']|length >= 1 && currentDate|date - messageImpressions['WHATS_NEW_BADGE_82'][0] <= 345600000)) && \"browser.messaging-system.whatsNewPanel.enabled\"|preferenceValue && region == \"US\"",
+    "targeting": "firefoxVersion == 82 && (usesFirefoxSync || hasAccessedFxAPanel || currentDate|date - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_82'] || (messageImpressions['WHATS_NEW_BADGE_82']|length >= 1 && currentDate|date - messageImpressions['WHATS_NEW_BADGE_82'][0] <= 345600000)) && \"browser.messaging-system.whatsNewPanel.enabled\"|preferenceValue && localeLanguageCode != 'fr'",
     "template": "toolbar_badge",
     "trigger": {
       "id": "toolbarBadgeUpdate"
+    }
+  },
+  {
+    "id": "WHATS_NEW_MEDIA_SESSION_82",
+    "template": "whatsnew_panel_message",
+    "order": 3,
+    "content": {
+      "bucket_id": "WHATS_NEW_MEDIA_SESSION_82",
+      "published_date": 1603152000000,
+      "title": {
+        "string_id": "cfr-whatsnew-media-keys-header"
+      },
+      "icon_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiI+PGcgZGF0YS1uYW1lPSJMYXllciAzIj48cmVjdCB4PSIuMDciIHk9Ii4wOCIgd2lkdGg9IjMxLjg2IiBoZWlnaHQ9IjMxLjg2IiByeD0iNiIgZmlsbD0iIzE1MTQxYSIvPjxyZWN0IHg9Ii4wNyIgd2lkdGg9IjMxLjg2IiBoZWlnaHQ9IjI5LjczIiByeD0iNiIgZmlsbD0iIzRhNGE1NSIvPjxwYXRoIGQ9Ik0yNS45MyAwSDYuMDdhNiA2IDAgMCAwLTYgNnYyYTYgNiAwIDAgMSA2LTZoMTkuODZhNiA2IDAgMCAxIDYgNlY2YTYgNiAwIDAgMC02LTZ6IiBmaWxsPSIjNWI1YjY2Ii8+PHBhdGggZD0iTTYuNjIgOC41NHYxM2EuNS41IDAgMCAwIC44LjRsOS41Mi02LjkyLTkuNTItNi44OGEuNTEuNTEgMCAwIDAtLjguNHptMTIuMTMtMWgtLjgxYTEgMSAwIDAgMC0xIDF2MTNhMSAxIDAgMCAwIDEgMWguODFhMSAxIDAgMCAwIDEtMXYtMTNhMSAxIDAgMCAwLTEtLjk4em01LjYzIDBoLS44MmExIDEgMCAwIDAtMSAxdjEzYTEgMSAwIDAgMCAxIDFoLjgyYTEgMSAwIDAgMCAxLTF2LTEzYTEgMSAwIDAgMC0xLS45OHoiIGZpbGw9IiM1NGZmYmQiLz48L2c+PC9zdmc+",
+      "icon_alt": "Media buttons",
+      "body": {
+        "string_id": "cfr-whatsnew-media-keys-body"
+      },
+      "cta_url": "https://support.mozilla.org/1/firefox/%VERSION%/%OS%/%LOCALE%/media-keyboard-control",
+      "cta_type": "OPEN_URL",
+      "link_text": {
+        "string_id": "cfr-whatsnew-media-keys-button"
+      }
+    },
+    "targeting": "firefoxVersion >= 82 && localeLanguageCode != 'fr'",
+    "trigger": {
+      "id": "whatsNewPanelOpened"
     }
   }
 ]

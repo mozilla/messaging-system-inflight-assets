@@ -468,3 +468,81 @@
   template: toolbar_badge
   trigger:
     id: toolbarBadgeUpdate
+- id: WHATS_NEW_PROTECTIONS_DASHBOARD_78
+  template: whatsnew_panel_message
+  order: 2
+  content:
+    bucket_id: WHATS_NEW_PROTECTIONS_DASHBOARD_78
+    published_date: 1593475200000
+    title:
+      string_id: cfr-whatsnew-protections-header
+    icon_url: chrome://browser/content/logos/tracking-protection.svg
+    icon_alt:
+      string_id: cfr-whatsnew-protections-icon-alt
+    body:
+      string_id: cfr-whatsnew-protections-body
+    cta_url: ""
+    cta_type: OPEN_PROTECTION_REPORT
+    link_text:
+      string_id: cfr-whatsnew-protections-cta-link
+  targeting: firefoxVersion >= 78
+  trigger:
+    id: whatsNewPanelOpened
+- id: WHATS_NEW_BETTER_PDF_78
+  template: whatsnew_panel_message
+  order: 3
+  content:
+    bucket_id: WHATS_NEW_BETTER_PDF_78
+    published_date: 1593475200000
+    title:
+      string_id: cfr-whatsnew-better-pdf-header
+    body:
+      string_id: cfr-whatsnew-better-pdf-body
+    cta_url: https://support.mozilla.org/1/firefox/%VERSION%/%OS%/%LOCALE%/pdf-viewer
+    cta_type: OPEN_URL
+    link_text:
+      string_id: cfr-whatsnew-pip-cta
+  targeting: firefoxVersion >= 78
+  trigger:
+    id: whatsNewPanelOpened
+- id: WHATS_NEW_BADGE_80
+  content:
+    action:
+      id: show-whatsnew-button
+    badgeDescription:
+      string_id: cfr-badge-reader-label-newfeature
+    bucket_id: WHATS_NEW_BADGE_80
+    delay: 300000
+    target: whats-new-menu-button
+  frequency:
+    lifetime: 100
+  priority: 5
+  # Don't show the WNPanel notification if the user still has the FxA notification active
+  # Ok to show after 28 days, if the user interacted with the notification or sync is turned off
+  targeting:
+    firefoxVersion == 80 && (usesFirefoxSync || hasAccessedFxAPanel || currentDate|date
+    - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_80']
+    || (messageImpressions['WHATS_NEW_BADGE_80']|length >= 1 && currentDate|date -
+    messageImpressions['WHATS_NEW_BADGE_80'][0] <= 345600000)) &&
+    "browser.messaging-system.whatsNewPanel.enabled"|preferenceValue &&
+    localeLanguageCode in ["en", "de", "fr"]
+  template: toolbar_badge
+  trigger:
+    id: toolbarBadgeUpdate
+- id: WHATS_NEW_BETTER_PDF_78
+  template: whatsnew_panel_message
+  order: 3
+  content:
+    bucket_id: WHATS_NEW_BETTER_PDF_78
+    published_date: 1593475200000
+    title:
+      string_id: cfr-whatsnew-better-pdf-header
+    body:
+      string_id: cfr-whatsnew-better-pdf-body
+    cta_url: https://support.mozilla.org/1/firefox/%VERSION%/%OS%/%LOCALE%/pdf-viewer
+    cta_type: OPEN_URL
+    link_text:
+      string_id: cfr-whatsnew-pip-cta
+  targeting: firefoxVersion >= 78
+  trigger:
+    id: whatsNewPanelOpened
