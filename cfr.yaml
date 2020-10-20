@@ -915,7 +915,7 @@
     ,\"iridium@particlecore.github.io\",\"jid1-ss6kLNCbNz6u0g@jetpack\",\"{1cf918d2-f4ea-4b4f-b34e-455283fef19f}\"\
     ] intersect addonsInfo.addons|keys)|length == 0 &&\n      ([\"www.youtube.com\"\
     ,\"youtube.com\"] intersect topFrecentSites[.frecency >= 10000]|mapToProperty('host'))|length\
-    \ > 0 && firefoxVersion >= 72 && userPrefs.cfrAddons"
+    \ > 0 && firefoxVersion >= 82 && userPrefs.cfrAddons"
   template: cfr_doorhanger
   trigger:
     id: openURL
@@ -982,7 +982,7 @@
     ,\"{e20e0de5-1667-4df4-bd69-705720e37391}\",\"{09e26ae9-e9c1-477c-80a6-99934212f2fe}\"\
     ,\"mgxtranslator@magemagix.com\",\"gtranslatewins@mozilla.org\"] intersect addonsInfo.addons|keys)|length\
     \ == 0 &&\n      ([\"translate.google.com\"] intersect topFrecentSites[.frecency\
-    \ >= 10000]|mapToProperty('host'))|length > 0 && firefoxVersion >= 72 && userPrefs.cfrAddons"
+    \ >= 10000]|mapToProperty('host'))|length > 0 && firefoxVersion >= 82 && userPrefs.cfrAddons"
   template: cfr_doorhanger
   trigger:
     id: openURL
@@ -1041,7 +1041,7 @@
     ,\"{a50d61ca-d27b-437a-8b52-5fd801a0a88b}\"] intersect addonsInfo.addons|keys)|length\
     \ == 0 &&\n      ([\"www.facebook.com\",\"facebook.com\",\"messenger.com\",\"www.messenger.com\",\
     \"instagram.com\",\"www.instagram.com\",\"whatsapp.com\",\"www.whatsapp.com\",\"web.whatsapp.com\"]\
-    intersect topFrecentSites[.frecency >= 5000]|mapToProperty('host'))|length > 0 && firefoxVersion >= 72 && userPrefs.cfrAddons"
+    intersect topFrecentSites[.frecency >= 5000]|mapToProperty('host'))|length > 0 && firefoxVersion >= 82 && userPrefs.cfrAddons"
   template: cfr_doorhanger
   trigger:
     id: openURL
