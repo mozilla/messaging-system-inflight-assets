@@ -1,4 +1,4 @@
-- id: bug-1661707-homepage-remediation-search-value
+- id: bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83
   application: firefox-desktop
   probeSets: []
   startDate:
@@ -6,8 +6,8 @@
   proposedEnrollment: 7
   referenceBranch: control
   arguments:
-    slug: bug-1661707-homepage-remediation-search-value
     isEnrollmentPaused: true
+    slug: bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83
     userFacingName: 'Homepage Remediation: Search Value Props Experiment'
     userFacingDescription: This experiment promotes the default Firefox homepage configuration
       for users that switched away from it. We want to communicate the recent improvements
@@ -25,7 +25,7 @@
           featureId: cfr
           enabled: true
           value:
-            id: 'bug-1661707-homepage-remediation-search-value:treatment-a'
+            id: 'bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-a'
             # Workaround for bug 1671149
             group:
               - cfr
@@ -73,7 +73,7 @@
                         highlights: false
                         topstories: false
                         snippets: false
-              bucket_id: 'bug-1661707-homepage-remediation-search-value:treatment-a'
+              bucket_id: 'bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-a'
               heading_text: Support a better web with the Firefox homepage
               info_icon:
                 label:
@@ -93,7 +93,7 @@
           featureId: cfr
           enabled: true
           value:
-            id: 'bug-1661707-homepage-remediation-search-value:treatment-b'
+            id: 'bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-b'
             # Workaround for bug 1671149
             group:
               - cfr
@@ -141,7 +141,7 @@
                         highlights: false
                         topstories: false
                         snippets: false
-              bucket_id: 'bug-1661707-homepage-remediation-search-value:treatment-b'
+              bucket_id: 'bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-b'
               heading_text: 'Same great search, ####'
               info_icon:
                 label:
@@ -161,7 +161,7 @@
           featureId: cfr
           enabled: true
           value:
-            id: 'bug-1661707-homepage-remediation-search-value:treatment-c'
+            id: 'bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-c'
             # Workaround for bug 1671149
             group:
               - cfr
@@ -209,7 +209,7 @@
                         highlights: true
                         topstories: true
                         snippets: true
-              bucket_id: 'bug-1661707-homepage-remediation-search-value:treatment-c'
+              bucket_id: 'bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-c'
               heading_text: Get the web’s best content right on your homepage
               info_icon:
                 label:
@@ -232,7 +232,7 @@
   targeting: browserSettings.update.channel == 'release' &&
     localeLanguageCode == 'en' && region == 'US' &&
     'app.shield.optoutstudies.enabled'|preferenceValue
-  slug: bug-1661707-homepage-remediation-search-value
+  slug: bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83
   isEnrollmentPaused: false
   userFacingName: 'Homepage Remediation: Search Value Props Experiment'
   userFacingDescription: This experiment promotes the default Firefox homepage configuration
@@ -251,7 +251,7 @@
         featureId: cfr
         enabled: true
         value:
-          id: 'bug-1661707-homepage-remediation-search-value:treatment-a'
+          id: 'bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-a'
           # Workaround for bug 1671149
           group:
             - cfr
@@ -299,7 +299,7 @@
                       highlights: false
                       topstories: false
                       snippets: false
-            bucket_id: 'bug-1661707-homepage-remediation-search-value:treatment-a'
+            bucket_id: 'bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-a'
             heading_text: Support a better web with the Firefox homepage
             info_icon:
               label:
@@ -319,7 +319,7 @@
         featureId: cfr
         enabled: true
         value:
-          id: 'bug-1661707-homepage-remediation-search-value:treatment-b'
+          id: 'bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-b'
           # Workaround for bug 1671149
           group:
             - cfr
@@ -367,7 +367,7 @@
                       highlights: false
                       topstories: false
                       snippets: false
-            bucket_id: 'bug-1661707-homepage-remediation-search-value:treatment-b'
+            bucket_id: 'bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-b'
             heading_text: 'Same great search, ####'
             info_icon:
               label:
@@ -387,7 +387,7 @@
         featureId: cfr
         enabled: true
         value:
-          id: 'bug-1661707-homepage-remediation-search-value:treatment-c'
+          id: 'bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-c'
           # Workaround for bug 1671149
           group:
             - cfr
@@ -435,7 +435,7 @@
                       highlights: true
                       topstories: true
                       snippets: true
-            bucket_id: 'bug-1661707-homepage-remediation-search-value:treatment-c'
+            bucket_id: 'bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-c'
             heading_text: Get the web’s best content right on your homepage
             info_icon:
               label:

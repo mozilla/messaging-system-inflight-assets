@@ -1,6 +1,6 @@
 [
   {
-    "id": "bug-1661707-homepage-remediation-search-value",
+    "id": "bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83",
     "application": "firefox-desktop",
     "probeSets": [],
     "startDate": null,
@@ -8,8 +8,8 @@
     "proposedEnrollment": 7,
     "referenceBranch": "control",
     "arguments": {
-      "slug": "bug-1661707-homepage-remediation-search-value",
       "isEnrollmentPaused": true,
+      "slug": "bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83",
       "userFacingName": "Homepage Remediation: Search Value Props Experiment",
       "userFacingDescription": "This experiment promotes the default Firefox homepage configuration for users that switched away from it. We want to communicate the recent improvements that should lead to a better user experience.",
       "bucketConfig": {
@@ -27,7 +27,7 @@
             "featureId": "cfr",
             "enabled": true,
             "value": {
-              "id": "bug-1661707-homepage-remediation-search-value:treatment-a",
+              "id": "bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-a",
               "group": [
                 "cfr"
               ],
@@ -93,7 +93,7 @@
                     }
                   }
                 },
-                "bucket_id": "bug-1661707-homepage-remediation-search-value:treatment-a",
+                "bucket_id": "bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-a",
                 "heading_text": "Support a better web with the Firefox homepage",
                 "info_icon": {
                   "label": {
@@ -123,7 +123,7 @@
             "featureId": "cfr",
             "enabled": true,
             "value": {
-              "id": "bug-1661707-homepage-remediation-search-value:treatment-b",
+              "id": "bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-b",
               "group": [
                 "cfr"
               ],
@@ -189,7 +189,7 @@
                     }
                   }
                 },
-                "bucket_id": "bug-1661707-homepage-remediation-search-value:treatment-b",
+                "bucket_id": "bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-b",
                 "heading_text": "Same great search, ####",
                 "info_icon": {
                   "label": {
@@ -219,7 +219,7 @@
             "featureId": "cfr",
             "enabled": true,
             "value": {
-              "id": "bug-1661707-homepage-remediation-search-value:treatment-c",
+              "id": "bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-c",
               "group": [
                 "cfr"
               ],
@@ -285,7 +285,7 @@
                     }
                   }
                 },
-                "bucket_id": "bug-1661707-homepage-remediation-search-value:treatment-c",
+                "bucket_id": "bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-c",
                 "heading_text": "Get the web\u2019s best content right on your homepage",
                 "info_icon": {
                   "label": {
@@ -320,7 +320,7 @@
       ]
     },
     "targeting": "browserSettings.update.channel == 'release' && localeLanguageCode == 'en' && region == 'US' && 'app.shield.optoutstudies.enabled'|preferenceValue",
-    "slug": "bug-1661707-homepage-remediation-search-value",
+    "slug": "bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83",
     "isEnrollmentPaused": false,
     "userFacingName": "Homepage Remediation: Search Value Props Experiment",
     "userFacingDescription": "This experiment promotes the default Firefox homepage configuration for users that switched away from it. We want to communicate the recent improvements that should lead to a better user experience.",
@@ -339,7 +339,7 @@
           "featureId": "cfr",
           "enabled": true,
           "value": {
-            "id": "bug-1661707-homepage-remediation-search-value:treatment-a",
+            "id": "bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-a",
             "group": [
               "cfr"
             ],
@@ -405,7 +405,7 @@
                   }
                 }
               },
-              "bucket_id": "bug-1661707-homepage-remediation-search-value:treatment-a",
+              "bucket_id": "bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-a",
               "heading_text": "Support a better web with the Firefox homepage",
               "info_icon": {
                 "label": {
@@ -435,7 +435,7 @@
           "featureId": "cfr",
           "enabled": true,
           "value": {
-            "id": "bug-1661707-homepage-remediation-search-value:treatment-b",
+            "id": "bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-b",
             "group": [
               "cfr"
             ],
@@ -501,7 +501,7 @@
                   }
                 }
               },
-              "bucket_id": "bug-1661707-homepage-remediation-search-value:treatment-b",
+              "bucket_id": "bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-b",
               "heading_text": "Same great search, ####",
               "info_icon": {
                 "label": {
@@ -531,7 +531,7 @@
           "featureId": "cfr",
           "enabled": true,
           "value": {
-            "id": "bug-1661707-homepage-remediation-search-value:treatment-c",
+            "id": "bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-c",
             "group": [
               "cfr"
             ],
@@ -597,7 +597,7 @@
                   }
                 }
               },
-              "bucket_id": "bug-1661707-homepage-remediation-search-value:treatment-c",
+              "bucket_id": "bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-c",
               "heading_text": "Get the web\u2019s best content right on your homepage",
               "info_icon": {
                 "label": {
