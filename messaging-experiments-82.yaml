@@ -142,7 +142,7 @@
                         topstories: false
                         snippets: false
               bucket_id: 'bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-b'
-              heading_text: 'Same great search, ####'
+              heading_text: Type less, find more with a personalized homepage
               info_icon:
                 label:
                   string_id: cfr-doorhanger-extension-sumo-link
@@ -368,7 +368,7 @@
                       topstories: false
                       snippets: false
             bucket_id: 'bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-b'
-            heading_text: 'Same great search, ####'
+            heading_text: Type less, find more with a personalized homepage
             info_icon:
               label:
                 string_id: cfr-doorhanger-extension-sumo-link
