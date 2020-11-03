@@ -9,7 +9,7 @@
     "referenceBranch": "control",
     "arguments": {
       "slug": "bug-1661707-homepage-remediation-search-value",
-      "isEnrollmentPaused": false,
+      "isEnrollmentPaused": true,
       "userFacingName": "Homepage Remediation: Search Value Props Experiment",
       "userFacingDescription": "This experiment promotes the default Firefox homepage configuration for users that switched away from it. We want to communicate the recent improvements that should lead to a better user experience.",
       "bucketConfig": {
@@ -340,7 +340,7 @@
       },
       "userFacingName": "Wizard-less Password import autocomplete Experiment",
       "userFacingDescription": "We would like to run a study to see if showing the import wizard from a password autocomplete entry when Firefox knows there's a Chrome saved login for the site leads to growth.",
-      "isEnrollmentPaused": false,
+      "isEnrollmentPaused": true,
       "branches": [
         {
           "slug": "control",
@@ -382,7 +382,7 @@
     },
     "userFacingName": "Wizard-less Password import autocomplete Experiment",
     "userFacingDescription": "We would like to run a study to see if showing the import wizard from a password autocomplete entry when Firefox knows there's a Chrome saved login for the site leads to growth.",
-    "isEnrollmentPaused": false,
+    "isEnrollmentPaused": true,
     "branches": [
       {
         "slug": "control",
@@ -427,7 +427,7 @@
       },
       "userFacingName": "Multi-Stage About:Welcome Zero Stage",
       "userFacingDescription": "Study to validate a minimal onboarding experience",
-      "isEnrollmentPaused": false,
+      "isEnrollmentPaused": true,
       "branches": [
         {
           "slug": "control",
@@ -587,7 +587,7 @@
       ]
     },
     "slug": "bug-1668928-message-multi-stage-aboutwelcome-zero-stage-release-82-83",
-    "isEnrollmentPaused": false,
+    "isEnrollmentPaused": true,
     "probeSets": [],
     "startDate": null,
     "endDate": null,
