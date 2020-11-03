@@ -27,8 +27,7 @@
           value:
             id: 'bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-a'
             # Workaround for bug 1671149
-            group:
-              - cfr
+            group: cfr
             # This links the message with the daily group frequency cap defined
             # here: https://github.com/mozilla/messaging-system-inflight-assets/blob/3b9db1ec2c437c4c954213ac11a457264c3492e3/message-groups.json#L16
             groups:
@@ -95,8 +94,7 @@
           value:
             id: 'bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-b'
             # Workaround for bug 1671149
-            group:
-              - cfr
+            group: cfr
             # This links the message with the daily group frequency cap defined
             # here: https://github.com/mozilla/messaging-system-inflight-assets/blob/3b9db1ec2c437c4c954213ac11a457264c3492e3/message-groups.json#L16
             groups:
@@ -163,8 +161,7 @@
           value:
             id: 'bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-c'
             # Workaround for bug 1671149
-            group:
-              - cfr
+            group: cfr
             # This links the message with the daily group frequency cap defined
             # here: https://github.com/mozilla/messaging-system-inflight-assets/blob/3b9db1ec2c437c4c954213ac11a457264c3492e3/message-groups.json#L16
             groups:
@@ -253,8 +250,7 @@
         value:
           id: 'bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-a'
           # Workaround for bug 1671149
-          group:
-            - cfr
+          group: cfr
           # This links the message with the daily group frequency cap defined
           # here: https://github.com/mozilla/messaging-system-inflight-assets/blob/3b9db1ec2c437c4c954213ac11a457264c3492e3/message-groups.json#L16
           groups:
@@ -321,8 +317,7 @@
         value:
           id: 'bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-b'
           # Workaround for bug 1671149
-          group:
-            - cfr
+          group: cfr
           # This links the message with the daily group frequency cap defined
           # here: https://github.com/mozilla/messaging-system-inflight-assets/blob/3b9db1ec2c437c4c954213ac11a457264c3492e3/message-groups.json#L16
           groups:
@@ -389,8 +384,7 @@
         value:
           id: 'bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-c'
           # Workaround for bug 1671149
-          group:
-            - cfr
+          group: cfr
           # This links the message with the daily group frequency cap defined
           # here: https://github.com/mozilla/messaging-system-inflight-assets/blob/3b9db1ec2c437c4c954213ac11a457264c3492e3/message-groups.json#L16
           groups:

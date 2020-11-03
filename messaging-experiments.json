@@ -121,9 +121,7 @@
             "enabled": true,
             "value": {
               "id": "bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-a",
-              "group": [
-                "cfr"
-              ],
+              "group": "cfr",
               "groups": [
                 "cfr-experiments"
               ],
@@ -217,9 +215,7 @@
             "enabled": true,
             "value": {
               "id": "bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-b",
-              "group": [
-                "cfr"
-              ],
+              "group": "cfr",
               "groups": [
                 "cfr-experiments"
               ],
@@ -313,9 +309,7 @@
             "enabled": true,
             "value": {
               "id": "bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-c",
-              "group": [
-                "cfr"
-              ],
+              "group": "cfr",
               "groups": [
                 "cfr-experiments"
               ],
@@ -433,9 +427,7 @@
           "enabled": true,
           "value": {
             "id": "bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-a",
-            "group": [
-              "cfr"
-            ],
+            "group": "cfr",
             "groups": [
               "cfr-experiments"
             ],
@@ -529,9 +521,7 @@
           "enabled": true,
           "value": {
             "id": "bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-b",
-            "group": [
-              "cfr"
-            ],
+            "group": "cfr",
             "groups": [
               "cfr-experiments"
             ],
@@ -625,9 +615,7 @@
           "enabled": true,
           "value": {
             "id": "bug-1671620-message-homepage-remediation-search-value-props-exper-release-82-83:treatment-c",
-            "group": [
-              "cfr"
-            ],
+            "group": "cfr",
             "groups": [
               "cfr-experiments"
             ],
