@@ -36,7 +36,7 @@
               lifetime: 3
             # Has google set as the homepage, has CFR features enabled, has profile
             # older than 6 months
-            targeting: "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 3 && userPrefs.cfrFeatures && currentDate|date - profileAgeCreated > 15770000000"
+            targeting: "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 1 && userPrefs.cfrFeatures && currentDate|date - profileAgeCreated > 15770000000"
             template: cfr_doorhanger
             content:
               layout: icon_and_message
@@ -103,7 +103,7 @@
               lifetime: 3
             # Has google set as the homepage, has CFR features enabled, has profile
             # older than 6 months
-            targeting: "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 3 && userPrefs.cfrFeatures && currentDate|date - profileAgeCreated > 15770000000"
+            targeting: "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 3 && userPrefs.cfrFeatures && currentDate|date - profileAgeCreated > 604800000"
             template: cfr_doorhanger
             content:
               layout: icon_and_message
@@ -170,7 +170,7 @@
               lifetime: 3
             # Has google set as the homepage, has CFR features enabled, has profile
             # older than 6 months
-            targeting: "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 3 && userPrefs.cfrFeatures && currentDate|date - profileAgeCreated > 15770000000"
+            targeting: "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 1 && userPrefs.cfrFeatures && currentDate|date - profileAgeCreated > 604800000"
             template: cfr_doorhanger
             content:
               layout: icon_and_message
@@ -259,7 +259,7 @@
             lifetime: 3
           # Has google set as the homepage, has CFR features enabled, has profile
           # older than 6 months
-          targeting: "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 3 && userPrefs.cfrFeatures && currentDate|date - profileAgeCreated > 15770000000"
+          targeting: "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 1 && userPrefs.cfrFeatures && currentDate|date - profileAgeCreated > 15770000000"
           template: cfr_doorhanger
           content:
             layout: icon_and_message
@@ -326,7 +326,7 @@
             lifetime: 3
           # Has google set as the homepage, has CFR features enabled, has profile
           # older than 6 months
-          targeting: "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 3 && userPrefs.cfrFeatures && currentDate|date - profileAgeCreated > 15770000000"
+          targeting: "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 3 && userPrefs.cfrFeatures && currentDate|date - profileAgeCreated > 604800000"
           template: cfr_doorhanger
           content:
             layout: icon_and_message
@@ -393,7 +393,7 @@
             lifetime: 3
           # Has google set as the homepage, has CFR features enabled, has profile
           # older than 6 months
-          targeting: "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 3 && userPrefs.cfrFeatures && currentDate|date - profileAgeCreated > 15770000000"
+          targeting: "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 1 && userPrefs.cfrFeatures && currentDate|date - profileAgeCreated > 604800000"
           template: cfr_doorhanger
           content:
             layout: icon_and_message
