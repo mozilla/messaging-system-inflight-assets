@@ -148,7 +148,7 @@
         "string_id": "cfr-whatsnew-media-keys-button"
       }
     },
-    "targeting": "firefoxVersion >= 82 && localeLanguageCode != 'fr'",
+    "targeting": "firefoxVersion >= 82",
     "trigger": {
       "id": "whatsNewPanelOpened"
     }
