@@ -1062,9 +1062,9 @@
   {
     "id": "MULTI-STAGE-ABOUTWELCOME-SET-DEFAULT-V1",
     "enabled": true,
-    "targeting": "firefoxVersion >= '82.' && browserSettings.update.channel == 'release' && locale == 'en-US' && ((isFirstStartup && !('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue)) || 'bug-1675623-message-multi-stage-onboarding-set-default-experiment-release-82-85' in activeExperiments) && 'app.shield.optoutstudies.enabled'|preferenceValue",
+    "targeting": "firefoxVersion >= '82.' && browserSettings.update.channel == 'release' && locale == 'en-US' && ((isFirstStartup && !('trailhead.firstrun.didSeeAboutWelcome'|preferenceValue)) || 'bug-1675623-message-multi-stage-onboarding-set-default-experiment-release-82-83' in activeExperiments) && 'app.shield.optoutstudies.enabled'|preferenceValue",
     "arguments": {
-      "slug": "bug-1675623-message-multi-stage-onboarding-set-default-experiment-release-82-85",
+      "slug": "bug-1675623-message-multi-stage-onboarding-set-default-experiment-release-82-83",
       "startDate": null,
       "endDate": null,
       "proposedEnrollment": 7,
@@ -1073,7 +1073,7 @@
         "count": 2000,
         "start": 0,
         "total": 10000,
-        "namespace": "bug-1675623-message-multi-stage-onboarding-set-default-experiment-release-82-85",
+        "namespace": "bug-1675623-message-multi-stage-onboarding-set-default-experiment-release-82-83",
         "randomizationUnit": "normandy_id"
       },
       "userFacingName": "Multi-Stage Onboarding: Set Default Experiment",
@@ -1500,7 +1500,7 @@
         }
       ]
     },
-    "slug": "bug-1675623-message-multi-stage-onboarding-set-default-experiment-release-82-85",
+    "slug": "bug-1675623-message-multi-stage-onboarding-set-default-experiment-release-82-83",
     "isEnrollmentPaused": false,
     "probeSets": [],
     "startDate": null,
@@ -1509,7 +1509,7 @@
     "referenceBranch": "control",
     "application": "firefox-desktop",
     "bucketConfig": {
-      "namespace": "bug-1675623-message-multi-stage-onboarding-set-default-experiment-release-82-85",
+      "namespace": "bug-1675623-message-multi-stage-onboarding-set-default-experiment-release-82-83",
       "randomizationUnit": "normandy_id",
       "start": 0,
       "count": 2000,
