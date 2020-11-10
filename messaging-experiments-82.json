@@ -1666,7 +1666,7 @@
                       {
                         "theme": "automatic",
                         "label": {
-                          "string_id": "onboarding-multistage-theme-tooltip-automatic"
+                          "string_id": "onboarding-multistage-theme-label-automatic"
                         },
                         "tooltip": {
                           "string_id": "onboarding-multistage-theme-tooltip-automatic-2"
@@ -1840,7 +1840,7 @@
                       {
                         "theme": "automatic",
                         "label": {
-                          "string_id": "onboarding-multistage-theme-tooltip-automatic"
+                          "string_id": "onboarding-multistage-theme-label-automatic"
                         },
                         "tooltip": {
                           "string_id": "onboarding-multistage-theme-tooltip-automatic-2"
