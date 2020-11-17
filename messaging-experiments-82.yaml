@@ -779,7 +779,7 @@
       randomizationUnit: normandy_id
     userFacingName: "Multi-Stage Onboarding: Set Default Experiment"
     userFacingDescription: Study to validate whether introducing a set-default screen will increase the likelihood of new user activation.
-    isEnrollmentPaused: false
+    isEnrollmentPaused: true
     branches:
       - slug: control
         ratio: 1
@@ -1048,7 +1048,7 @@
                     action:
                       navigate: true
   slug: bug-1675623-message-multi-stage-onboarding-set-default-experiment-release-82-83
-  isEnrollmentPaused: false
+  isEnrollmentPaused: true
   probeSets: []
   startDate: null
   endDate: null
