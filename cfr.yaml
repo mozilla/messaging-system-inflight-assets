@@ -200,7 +200,7 @@
       string_id: cfr-doorhanger-sync-logins-body
   frequency:
     lifetime: 3
-  targeting: (!type || type == 'save') && isFxAEnabled == true && usesFirefoxSync == false && firefoxVersion >= 72
+  targeting: (!type || type == 'save') && isFxAEnabled == true && usesFirefoxSync == false && firefoxVersion >= 72 && userPrefs.cfrFeatures
   template: cfr_doorhanger
   trigger:
     id: newSavedLogin
@@ -247,7 +247,7 @@
       string_id: cfr-doorhanger-sync-logins-body
   frequency:
     lifetime: 3
-  targeting: type == 'update' && isFxAEnabled == true && usesFirefoxSync == false && firefoxVersion >= 76
+  targeting: type == 'update' && isFxAEnabled == true && usesFirefoxSync == false && firefoxVersion >= 76 && userPrefs.cfrFeatures
   template: cfr_doorhanger
   trigger:
     id: newSavedLogin
