@@ -93,7 +93,7 @@
         "string_id": "cfr-whatsnew-pip-cta"
       }
     },
-    "targeting": "firefoxVersion >= 84",
+    "targeting": "firefoxVersion >= 84 && localeLanguageCode != 'ru'",
     "trigger": {
       "id": "whatsNewPanelOpened"
     }
@@ -115,7 +115,7 @@
       "lifetime": 100
     },
     "priority": 5,
-    "targeting": "firefoxVersion == 84 && (usesFirefoxSync || hasAccessedFxAPanel || currentDate|date - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_84'] || (messageImpressions['WHATS_NEW_BADGE_84']|length >= 1 && currentDate|date - messageImpressions['WHATS_NEW_BADGE_84'][0] <= 345600000)) && \"browser.messaging-system.whatsNewPanel.enabled\"|preferenceValue",
+    "targeting": "firefoxVersion == 84 && (usesFirefoxSync || hasAccessedFxAPanel || currentDate|date - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_84'] || (messageImpressions['WHATS_NEW_BADGE_84']|length >= 1 && currentDate|date - messageImpressions['WHATS_NEW_BADGE_84'][0] <= 345600000)) && \"browser.messaging-system.whatsNewPanel.enabled\"|preferenceValue && localeLanguageCode != 'ru'",
     "template": "toolbar_badge",
     "trigger": {
       "id": "toolbarBadgeUpdate"
