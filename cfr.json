@@ -44,7 +44,7 @@
     "targeting": "pageLoad >= 4",
     "template": "milestone_message",
     "trigger": {
-      "id": "trackingProtection",
+      "id": "contentBlocking",
       "params": [
         "ContentBlockingMilestone"
       ]
