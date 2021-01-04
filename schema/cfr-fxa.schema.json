@@ -19,6 +19,14 @@
       "type": "string",
       "description": "Message identifier"
     },
+    "groups": {
+      "description": "Array of preferences used to control `enabled` status of the group. If any is `false` the group is disabled.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Preference name"
+      }
+    },
     "content": {
       "type": "object",
       "properties": {

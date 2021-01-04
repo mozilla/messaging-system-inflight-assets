@@ -1,6 +1,9 @@
 [
   {
     "id": "FXA_BOOKMARK_PANEL_71_plus",
+    "groups": [
+      "cfr"
+    ],
     "content": {
       "background_color_1": "#7d31ae",
       "background_color_2": "#5033be",
