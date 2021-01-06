@@ -74,7 +74,6 @@
       string_id: cfr-whatsnew-search-shortcuts-body
     cta_url: https://support.mozilla.org/1/firefox/%VERSION%/%OS%/%LOCALE%/search-shortcuts
     # Open in a new tab and set focus to it
-    cta_where: tab
     cta_type: OPEN_URL
     link_text:
       string_id: cfr-whatsnew-pip-cta
