@@ -54,7 +54,7 @@
     }
   },
   {
-    "id": "WHATS_NEW_BADGE_84",
+    "id": "WHATS_NEW_BADGE_85",
     "content": {
       "action": {
         "id": "show-whatsnew-button"
@@ -62,7 +62,7 @@
       "badgeDescription": {
         "string_id": "cfr-badge-reader-label-newfeature"
       },
-      "bucket_id": "WHATS_NEW_BADGE_84",
+      "bucket_id": "WHATS_NEW_BADGE_85",
       "delay": 300000,
       "target": "whats-new-menu-button"
     },
@@ -70,7 +70,7 @@
       "lifetime": 100
     },
     "priority": 5,
-    "targeting": "firefoxVersion == 84 && (usesFirefoxSync || hasAccessedFxAPanel || currentDate|date - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_84'] || (messageImpressions['WHATS_NEW_BADGE_84']|length >= 1 && currentDate|date - messageImpressions['WHATS_NEW_BADGE_84'][0] <= 345600000)) && \"browser.messaging-system.whatsNewPanel.enabled\"|preferenceValue && localeLanguageCode != 'ru'",
+    "targeting": "firefoxVersion == 85 && (usesFirefoxSync || hasAccessedFxAPanel || currentDate|date - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_85'] || (messageImpressions['WHATS_NEW_BADGE_85']|length >= 1 && currentDate|date - messageImpressions['WHATS_NEW_BADGE_85'][0] <= 345600000)) && \"browser.messaging-system.whatsNewPanel.enabled\"|preferenceValue",
     "template": "toolbar_badge",
     "trigger": {
       "id": "toolbarBadgeUpdate"
@@ -82,7 +82,7 @@
     "order": 1,
     "content": {
       "bucket_id": "WHATS_NEW_SUPERCOOKIE_85",
-      "published_date": 1614038400000,
+      "published_date": 1611619200000,
       "title": {
         "string_id": "cfr-whatsnew-supercookies-header"
       },
@@ -108,7 +108,7 @@
     "order": 2,
     "content": {
       "bucket_id": "WHATS_NEW_BOOKMARKING_85",
-      "published_date": 1614038400000,
+      "published_date": 1611619200000,
       "title": {
         "string_id": "cfr-whatsnew-bookmarking-header"
       },
@@ -117,7 +117,7 @@
       "body": {
         "string_id": "cfr-whatsnew-bookmarking-body"
       },
-      "cta_url": "https://support.mozilla.org/1/firefox/%VERSION%/%OS%/%LOCALE%/media-keyboard-control",
+      "cta_url": "https://support.mozilla.org/1/firefox/%VERSION%/%OS%/%LOCALE%/bookmarks",
       "cta_type": "OPEN_URL",
       "link_text": {
         "string_id": "cfr-whatsnew-pip-cta"
