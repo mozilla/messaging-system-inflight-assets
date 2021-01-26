@@ -1,49 +1,5 @@
 [
   {
-    "id": "WHATS_NEW_PIONEER_82",
-    "template": "whatsnew_panel_message",
-    "order": 1,
-    "content": {
-      "bucket_id": "WHATS_NEW_PIONEER_82",
-      "published_date": 1603152000000,
-      "title": "Put your data to work for a better internet",
-      "icon_url": "",
-      "icon_alt": "",
-      "body": "Contribute your data to Mozilla\u2019s Pioneer program to help researchers understand pressing technology issues like misinformation, data privacy, and ethical AI.",
-      "cta_url": "pioneer",
-      "cta_where": "tab",
-      "cta_type": "OPEN_ABOUT_PAGE",
-      "link_text": "Join Pioneer"
-    },
-    "targeting": "firefoxVersion >= 82 && region == \"US\"",
-    "trigger": {
-      "id": "whatsNewPanelOpened"
-    }
-  },
-  {
-    "id": "WHATS_NEW_BADGE_82",
-    "content": {
-      "action": {
-        "id": "show-whatsnew-button"
-      },
-      "badgeDescription": {
-        "string_id": "cfr-badge-reader-label-newfeature"
-      },
-      "bucket_id": "WHATS_NEW_BADGE_82",
-      "delay": 300000,
-      "target": "whats-new-menu-button"
-    },
-    "frequency": {
-      "lifetime": 100
-    },
-    "priority": 5,
-    "targeting": "firefoxVersion == 82 && (usesFirefoxSync || hasAccessedFxAPanel || currentDate|date - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_82'] || (messageImpressions['WHATS_NEW_BADGE_82']|length >= 1 && currentDate|date - messageImpressions['WHATS_NEW_BADGE_82'][0] <= 345600000)) && \"browser.messaging-system.whatsNewPanel.enabled\"|preferenceValue && localeLanguageCode != 'fr'",
-    "template": "toolbar_badge",
-    "trigger": {
-      "id": "toolbarBadgeUpdate"
-    }
-  },
-  {
     "id": "WHATS_NEW_MEDIA_SESSION_82",
     "template": "whatsnew_panel_message",
     "order": 3,
@@ -98,7 +54,7 @@
     }
   },
   {
-    "id": "WHATS_NEW_BADGE_84",
+    "id": "WHATS_NEW_BADGE_85",
     "content": {
       "action": {
         "id": "show-whatsnew-button"
@@ -106,7 +62,7 @@
       "badgeDescription": {
         "string_id": "cfr-badge-reader-label-newfeature"
       },
-      "bucket_id": "WHATS_NEW_BADGE_84",
+      "bucket_id": "WHATS_NEW_BADGE_85",
       "delay": 300000,
       "target": "whats-new-menu-button"
     },
@@ -114,10 +70,62 @@
       "lifetime": 100
     },
     "priority": 5,
-    "targeting": "firefoxVersion == 84 && (usesFirefoxSync || hasAccessedFxAPanel || currentDate|date - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_84'] || (messageImpressions['WHATS_NEW_BADGE_84']|length >= 1 && currentDate|date - messageImpressions['WHATS_NEW_BADGE_84'][0] <= 345600000)) && \"browser.messaging-system.whatsNewPanel.enabled\"|preferenceValue && localeLanguageCode != 'ru'",
+    "targeting": "firefoxVersion == 85 && (usesFirefoxSync || hasAccessedFxAPanel || currentDate|date - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_85'] || (messageImpressions['WHATS_NEW_BADGE_85']|length >= 1 && currentDate|date - messageImpressions['WHATS_NEW_BADGE_85'][0] <= 345600000)) && \"browser.messaging-system.whatsNewPanel.enabled\"|preferenceValue",
     "template": "toolbar_badge",
     "trigger": {
       "id": "toolbarBadgeUpdate"
+    }
+  },
+  {
+    "id": "WHATS_NEW_SUPERCOOKIE_85",
+    "template": "whatsnew_panel_message",
+    "order": 1,
+    "content": {
+      "bucket_id": "WHATS_NEW_SUPERCOOKIE_85",
+      "published_date": 1611619200000,
+      "title": {
+        "string_id": "cfr-whatsnew-supercookies-header"
+      },
+      "icon_url": "chrome://browser/content/logos/tracking-protection.svg",
+      "icon_alt": "Shield icon",
+      "body": {
+        "string_id": "cfr-whatsnew-supercookies-body"
+      },
+      "cta_url": "https://blog.mozilla.org/security/2021/01/26/supercookie-protections/",
+      "cta_type": "OPEN_URL",
+      "link_text": {
+        "string_id": "cfr-whatsnew-pip-cta"
+      }
+    },
+    "targeting": "firefoxVersion >= 85",
+    "trigger": {
+      "id": "whatsNewPanelOpened"
+    }
+  },
+  {
+    "id": "WHATS_NEW_BOOKMARKING_85",
+    "template": "whatsnew_panel_message",
+    "order": 2,
+    "content": {
+      "bucket_id": "WHATS_NEW_BOOKMARKING_85",
+      "published_date": 1611619200000,
+      "title": {
+        "string_id": "cfr-whatsnew-bookmarking-header"
+      },
+      "icon_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHBhdGggZmlsbD0iIzQ1YTFmZiIgZmlsbC1vcGFjaXR5PSJjb250ZXh0LWZpbGwtb3BhY2l0eSIgZD0iTTE1Ljg0NSA2LjA2NEExLjEgMS4xIDAgMCAwIDE1IDUuMzMxTDEwLjkxMSA0LjYgOC45ODUuNzM1YTEuMSAxLjEgMCAwIDAtMS45NjkgMEw1LjA4OSA0LjZsLTQuMDgxLjcyOWExLjEgMS4xIDAgMCAwLS42MTUgMS44MzRMMy4zMiAxMC4zMWwtLjYwOSA0LjM2YTEuMSAxLjEgMCAwIDAgMS42IDEuMTI3TDggMTMuODczbDMuNjkgMS45MjdhMS4xIDEuMSAwIDAgMCAxLjYtMS4xMjdsLS42MS00LjM2MyAyLjkyNi0zLjE0NmExLjEgMS4xIDAgMCAwIC4yMzktMS4xeiIvPjwvc3ZnPg==",
+      "icon_alt": "Bookmark icon",
+      "body": {
+        "string_id": "cfr-whatsnew-bookmarking-body"
+      },
+      "cta_url": "https://support.mozilla.org/1/firefox/%VERSION%/%OS%/%LOCALE%/bookmarks",
+      "cta_type": "OPEN_URL",
+      "link_text": {
+        "string_id": "cfr-whatsnew-pip-cta"
+      }
+    },
+    "targeting": "firefoxVersion >= 85",
+    "trigger": {
+      "id": "whatsNewPanelOpened"
     }
   }
 ]
