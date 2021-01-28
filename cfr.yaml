@@ -32,6 +32,34 @@
     id: contentBlocking
     params:
       - ContentBlockingMilestone
+- id: MILESTONE_MESSAGE_2
+  groups:
+    - cfr
+  content:
+    anchor_id: tracking-protection-icon-box
+    bucket_id: CFR_MILESTONE_MESSAGE
+    buttons:
+      primary:
+        action:
+          type: OPEN_PROTECTION_REPORT
+        event: PROTECTION
+        label:
+          string_id: cfr-doorhanger-milestone-ok-button
+    category: cfrFeatures
+    heading_text:
+      string_id: cfr-doorhanger-milestone-heading2
+    layout: short_message
+    notification_text: ''
+    skip_address_bar_notifier: true
+    text: ''
+  frequency:
+    lifetime: 7
+  targeting: pageLoad >= 4 && firefoxVersion >= 87
+  template: milestone_message
+  trigger:
+    id: trackingProtection
+    params:
+      - ContentBlockingMilestone
 - id: BOOKMARK_SYNC_CFR
   groups:
     - cfr
