@@ -41,7 +41,7 @@
     "frequency": {
       "lifetime": 7
     },
-    "targeting": "pageLoad >= 4",
+    "targeting": "pageLoad >= 4 && firefoxVersion < 87 && userPrefs.cfrFeatures",
     "template": "milestone_message",
     "trigger": {
       "id": "contentBlocking",
@@ -51,7 +51,7 @@
     }
   },
   {
-    "id": "MILESTONE_MESSAGE_2",
+    "id": "MILESTONE_MESSAGE_87",
     "groups": [
       "cfr"
     ],
@@ -81,7 +81,7 @@
     "frequency": {
       "lifetime": 7
     },
-    "targeting": "pageLoad >= 4 && firefoxVersion >= 87",
+    "targeting": "pageLoad >= 4 && firefoxVersion >= 87 && userPrefs.cfrFeatures",
     "template": "milestone_message",
     "trigger": {
       "id": "trackingProtection",
