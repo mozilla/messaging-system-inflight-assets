@@ -37,7 +37,7 @@
     - cfr
   content:
     anchor_id: tracking-protection-icon-box
-    bucket_id: CFR_MILESTONE_MESSAGE
+    bucket_id: CFR_MILESTONE_MESSAGE_87
     buttons:
       primary:
         action:
