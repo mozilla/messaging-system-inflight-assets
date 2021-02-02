@@ -67,7 +67,18 @@
           "label": {
             "string_id": "cfr-doorhanger-milestone-ok-button"
           }
-        }
+        },
+        "secondary": [
+          {
+            "label": {
+              "string_id": "cfr-doorhanger-milestone-close-button"
+            },
+            "action": {
+              "type": "CANCEL"
+            },
+            "event": "DISMISS"
+          }
+        ]
       },
       "category": "cfrFeatures",
       "heading_text": {
