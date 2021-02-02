@@ -57,7 +57,7 @@
     ],
     "content": {
       "anchor_id": "tracking-protection-icon-box",
-      "bucket_id": "CFR_MILESTONE_MESSAGE_87",
+      "bucket_id": "CFR_MILESTONE_MESSAGE",
       "buttons": {
         "primary": {
           "action": {
@@ -95,7 +95,7 @@
     "targeting": "pageLoad >= 4 && firefoxVersion >= 87 && userPrefs.cfrFeatures",
     "template": "milestone_message",
     "trigger": {
-      "id": "trackingProtection",
+      "id": "contentBlocking",
       "params": [
         "ContentBlockingMilestone"
       ]
