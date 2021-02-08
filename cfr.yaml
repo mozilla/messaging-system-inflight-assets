@@ -679,7 +679,7 @@
 - id: FISSION_EXPERIMENT_CONFIRMATION
   groups:
     - cfr
-  targeting: "isFissionExperimentEnabled"
+  targeting: "isFissionExperimentEnabled && browserSettings.update.channel in ['nightly', 'default']"
   frequency:
     lifetime: 1
   template: cfr_doorhanger
