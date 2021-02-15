@@ -726,10 +726,10 @@
     lifetime: 3
   # Has google set as the homepage, has CFR features enabled, has profile
   # older than 6 months
-  targeting: "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 3 && userPrefs.cfrFeatures && currentDate|date - profileAgeCreated > 15770000000 && firefoxVersion > 82 && localeLanguageCode == 'en'"
+  targeting: "!homePageSettings.isDefault && homePageSettings.isCustomUrl && homePageSettings.urls[.host == 'google.com']|length > 0 && visitsCount >= 3 && userPrefs.cfrFeatures && currentDate|date - profileAgeCreated > 15770000000 && firefoxVersion > 82 && localeLanguageCode == 'en' && region == 'US'"
   template: cfr_doorhanger
   content:
-    bucket_id: HOMEPAGE_REMEDIATION
+    bucket_id: CFR_M1
     layout: icon_and_message
     text: When you use the Firefox homepage, you get the same great search experience while also supporting the only browser that’s backed by a non-profit.
     icon: chrome://browser/skin/preferences/search.svg
