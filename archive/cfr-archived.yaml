@@ -626,3 +626,46 @@
       - drive.google.com
       - netflix.com
       - www.netflix.com
+- id: FISSION_EXPERIMENT_CONFIRMATION
+  groups:
+    - cfr
+  targeting: "isFissionExperimentEnabled && browserSettings.update.channel in ['nightly', 'default']"
+  frequency:
+    lifetime: 1
+  template: cfr_doorhanger
+  trigger:
+    id: openURL
+    patterns:
+      - "*://*/*"
+  content:
+    bucket_id: FISSION_EXPERIMENT_CONFIRMATION
+    skip_address_bar_notifier: true
+    persistent_doorhanger: true
+    anchor_id: PanelUI-menu-button
+    layout: icon_and_message
+    text:
+      string_id: cfr-doorhanger-fission-body-approved
+    icon: chrome://browser/skin/connection-secure.svg
+    info_icon:
+      label:
+        string_id: cfr-doorhanger-extension-sumo-link
+      sumo_path: extensionrecommendations
+    buttons:
+      secondary:
+        - action:
+            type: CANCEL
+          label:
+            string_id: cfr-doorhanger-fission-primary-button
+      primary:
+        action:
+          type: OPEN_URL
+          data:
+            args: https://wiki.mozilla.org/Project_Fission
+            where: tabshifted
+        label:
+          string_id: cfr-doorhanger-fission-secondary-button
+    heading_text:
+      string_id: cfr-doorhanger-fission-header
+    notification_text:
+      string_id: cfr-doorhanger-feature-notification
+    category: cfrFeatures
