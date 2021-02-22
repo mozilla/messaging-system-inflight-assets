@@ -111,7 +111,7 @@
     icon_alt: Cookie icon
     body:
       string_id: cfr-whatsnew-cross-site-tracking-body
-    cta_url: https://example.com
+    cta_url: https://blog.mozilla.org/security/2021/02/23/total-cookie-protection/
     cta_type: OPEN_URL
     link_text:
       string_id: cfr-whatsnew-pip-cta
