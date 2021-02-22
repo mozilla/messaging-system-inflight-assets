@@ -38,13 +38,13 @@
   targeting: firefoxVersion >= 84 && localeLanguageCode != 'ru'
   trigger:
     id: whatsNewPanelOpened
-- id: WHATS_NEW_BADGE_85
+- id: WHATS_NEW_BADGE_86
   content:
     action:
       id: show-whatsnew-button
     badgeDescription:
       string_id: cfr-badge-reader-label-newfeature
-    bucket_id: WHATS_NEW_BADGE_85
+    bucket_id: WHATS_NEW_BADGE_86
     delay: 300000
     target: whats-new-menu-button
   frequency:
@@ -53,10 +53,10 @@
   # Don't show the WNPanel notification if the user still has the FxA notification active
   # Ok to show after 28 days, if the user interacted with the notification or sync is turned off
   targeting:
-    firefoxVersion == 85 && (usesFirefoxSync || hasAccessedFxAPanel || currentDate|date
-    - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_85']
-    || (messageImpressions['WHATS_NEW_BADGE_85']|length >= 1 && currentDate|date -
-    messageImpressions['WHATS_NEW_BADGE_85'][0] <= 345600000)) &&
+    firefoxVersion == 86 && (usesFirefoxSync || hasAccessedFxAPanel || currentDate|date
+    - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_86']
+    || (messageImpressions['WHATS_NEW_BADGE_86']|length >= 1 && currentDate|date -
+    messageImpressions['WHATS_NEW_BADGE_86'][0] <= 345600000)) &&
     "browser.messaging-system.whatsNewPanel.enabled"|preferenceValue
   template: toolbar_badge
   trigger:
