@@ -38,13 +38,13 @@
   targeting: firefoxVersion >= 84 && localeLanguageCode != 'ru'
   trigger:
     id: whatsNewPanelOpened
-- id: WHATS_NEW_BADGE_85
+- id: WHATS_NEW_BADGE_86
   content:
     action:
       id: show-whatsnew-button
     badgeDescription:
       string_id: cfr-badge-reader-label-newfeature
-    bucket_id: WHATS_NEW_BADGE_85
+    bucket_id: WHATS_NEW_BADGE_86
     delay: 300000
     target: whats-new-menu-button
   frequency:
@@ -53,10 +53,10 @@
   # Don't show the WNPanel notification if the user still has the FxA notification active
   # Ok to show after 28 days, if the user interacted with the notification or sync is turned off
   targeting:
-    firefoxVersion == 85 && (usesFirefoxSync || hasAccessedFxAPanel || currentDate|date
-    - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_85']
-    || (messageImpressions['WHATS_NEW_BADGE_85']|length >= 1 && currentDate|date -
-    messageImpressions['WHATS_NEW_BADGE_85'][0] <= 345600000)) &&
+    firefoxVersion == 86 && (usesFirefoxSync || hasAccessedFxAPanel || currentDate|date
+    - 2419200000 >= profileAgeCreated) && (!messageImpressions['WHATS_NEW_BADGE_86']
+    || (messageImpressions['WHATS_NEW_BADGE_86']|length >= 1 && currentDate|date -
+    messageImpressions['WHATS_NEW_BADGE_86'][0] <= 345600000)) &&
     "browser.messaging-system.whatsNewPanel.enabled"|preferenceValue
   template: toolbar_badge
   trigger:
@@ -97,5 +97,24 @@
     link_text:
       string_id: cfr-whatsnew-pip-cta
   targeting: firefoxVersion >= 85
+  trigger:
+    id: whatsNewPanelOpened
+- id: WHATS_NEW_CROSS_SITE_86
+  template: whatsnew_panel_message
+  order: 1
+  content:
+    bucket_id: WHATS_NEW_CROSS_SITE_86
+    published_date: 1614038400000
+    title:
+      string_id: cfr-whatsnew-cross-site-tracking-header
+    icon_url: data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiI+PHBhdGggZD0iTTE4LjgyIDYuOGEyLjYzIDIuNjMgMCAwIDAtLjE0LjggMi43NSAyLjc1IDAgMCAwIDIuMiAyLjY5bC44OC0uODhhMi40MSAyLjQxIDAgMCAxIC4xMy0uNzEgMy40MiAzLjQyIDAgMCAxLS40NiAwIDIuNzMgMi43MyAwIDAgMS0yLjYxLTEuOXptMTAuNyA2LjQ1QTIuMzQgMi4zNCAwIDAgMSAyNiAxMS44M2EyLjc0IDIuNzQgMCAwIDEtMS40LjQybC0xLjMgMS4yN2EyLjY2IDIuNjYgMCAwIDAgMS4wNS4yMSAyLjc0IDIuNzQgMCAwIDAgMS41OS0uNTEgMi43NCAyLjc0IDAgMCAwIDIuNzEgMi4zNiAyLjY5IDIuNjkgMCAwIDAgLjctLjEgMi4zNiAyLjM2IDAgMCAxIC4yNi4zNiAyLjI2IDIuMjYgMCAwIDAgLjM5LTEuMjEgMi4yOCAyLjI4IDAgMCAwLS40OC0xLjM4eiIgZmlsbD0iI2ZmYTQzNiIvPjxwYXRoIGQ9Ik0xOC42OCA3LjZhMi42MyAyLjYzIDAgMCAxIC4xNC0uOCAyLjc1IDIuNzUgMCAwIDEtLjE0LS44IDIuNzQgMi43NCAwIDAgMSAuMDktLjY0IDIuNjkgMi42OSAwIDAgMS0xLTIuMTEgMi4zNyAyLjM3IDAgMCAxIC4wOS0uNjUgMi41NiAyLjU2IDAgMCAwLTMuMzIuMDUgMi41OCAyLjU4IDAgMCAwLTMuNTQuNzJBMi41NSAyLjU1IDAgMCAwIDcuNzMgNSAyLjU3IDIuNTcgMCAwIDAgNSA3LjM5YTIuNTcgMi41NyAwIDAgMC0yIDMgMi41OCAyLjU4IDAgMCAwLTEuMTUgMy40NCAyLjU3IDIuNTcgMCAwIDAtLjIyIDMuNjJBMi41OCAyLjU4IDAgMCAwIDIuMzcgMjEgMi41NSAyLjU1IDAgMCAwIDQgMjQuMjdhMi41NyAyLjU3IDAgMCAwIC44NSAyLjA2bDE2LTE2YTIuNzUgMi43NSAwIDAgMS0yLjE3LTIuNzN6bTEwLjQ2IDExLjU1YTIuNTcgMi41NyAwIDAgMCAuMjItMy42MiAyLjY5IDIuNjkgMCAwIDEtLjcuMSAyLjc0IDIuNzQgMCAwIDEtMi43Mi0yLjQgMi43NCAyLjc0IDAgMCAxLTEuNTkuNTEgMi42NiAyLjY2IDAgMCAxLTEuMDUtLjIxTDggMjguODZhMi41OSAyLjU5IDAgMCAwIDEuNDEuMTQgMi41OCAyLjU4IDAgMCAwIDMuNDQgMS4xNSAyLjU3IDIuNTcgMCAwIDAgMy42Mi4yMiAyLjU4IDIuNTggMCAwIDAgMy41My0uNzRBMi41NSAyLjU1IDAgMCAwIDIzLjI3IDI4IDIuNTcgMi41NyAwIDAgMCAyNiAyNS42MWEyLjU3IDIuNTcgMCAwIDAgMi0zIDIuNTggMi41OCAwIDAgMCAxLjE1LTMuNDR6IiBmaWxsPSIjZmZkNTY3Ii8+PGNpcmNsZSBjeD0iNyIgY3k9IjE1IiByPSIxLjg4IiBmaWxsPSIjOTA1OWZmIi8+PGVsbGlwc2UgY3g9IjExIiBjeT0iOCIgcng9IjEuODgiIHJ5PSIxLjc1IiBmaWxsPSIjOTA1OWZmIi8+PGNpcmNsZSBjeD0iMTkuMDQiIGN5PSIyMi4xMSIgcj0iMS43NSIgZmlsbD0iIzkwNTlmZiIvPjxjaXJjbGUgY3g9IjI1IiBjeT0iMiIgcj0iLjc1IiBmaWxsPSIjZmZhNDM2Ii8+PGNpcmNsZSBjeD0iMjMiIGN5PSI2IiByPSIxIiBmaWxsPSIjZmZhNDM2Ii8+PGNpcmNsZSBjeD0iMjgiIGN5PSIxMCIgcj0iLjc1IiBmaWxsPSIjZTI3ZjJlIi8+PHBhdGggZD0iTTQuNzggMjMuMTJBMi40OCAyLjQ4IDAgMCAxIDMuMjEgMjBhMi40OSAyLjQ5IDAgMCAxLS43LTMuNDRBMi40OCAyLjQ4IDAgMCAxIDIuNzIgMTMgMi40OCAyLjQ4IDAgMCAxIDMgMTAuNDRhMi41NyAyLjU3IDAgMCAwLTEuMTEgMy40MSAyLjU3IDIuNTcgMCAwIDAtLjIyIDMuNjIgMi41OCAyLjU4IDAgMCAwIC43IDMuNTNBMi41NSAyLjU1IDAgMCAwIDQgMjQuMjdhMi41NyAyLjU3IDAgMCAwIC44NSAyLjA2bDEtMWEyLjQ2IDIuNDYgMCAwIDEtMS4wNy0yLjIxem0yNC41Ni0zLjM5QTIuNDggMi40OCAwIDAgMSAyOCAyMS40OWEyLjUgMi41IDAgMCAxLTEuOTQgMi45MyAyLjQ5IDIuNDkgMCAwIDEtMi42MyAyLjMzIDIuNDggMi40OCAwIDAgMS0zLjE0IDEuNTYgMi40OCAyLjQ4IDAgMCAxLTMuNDQuNyAyLjQ4IDIuNDggMCAwIDEtMy41MS0uMjFBMi40OSAyLjQ5IDAgMCAxIDEwIDI3LjY5YTIuNDggMi40OCAwIDAgMS0uOSAwTDggMjguODZhMi41OSAyLjU5IDAgMCAwIDEuNDEuMTQgMi41OCAyLjU4IDAgMCAwIDMuNDQgMS4xNSAyLjU3IDIuNTcgMCAwIDAgMy42Mi4yMiAyLjU4IDIuNTggMCAwIDAgMy41My0uNzRBMi41NSAyLjU1IDAgMCAwIDIzLjI3IDI4IDIuNTcgMi41NyAwIDAgMCAyNiAyNS42MWEyLjU3IDIuNTcgMCAwIDAgMi0zIDIuNTggMi41OCAwIDAgMCAxLjM0LTIuODh6IiBmaWxsPSIjZTI3ZjJlIi8+PHBhdGggZD0iTTE0LjMzIDE2Ljg0bDIuNDUtMi40NGExLjg3IDEuODcgMCAxIDAtMi40NSAyLjQ0em0tMy40IDMuNEExLjg3IDEuODcgMCAwIDAgOS4xOCAyMnptMTIuNC02Ljc0TDIyIDE0LjgyYTIgMiAwIDAgMCAxLjg3IDJBMiAyIDAgMCAwIDI2IDE1di0uMjNhMS45MiAxLjkyIDAgMCAwLS41My0xLjMyIDIuNyAyLjcgMCAwIDEtMi4xNC4wNXoiIGZpbGw9IiM5MDU5ZmYiLz48cGF0aCBkPSJNNCAzMGEyIDIgMCAwIDEtMS40MS0zLjQxbDI0LTI0YTIgMiAwIDAgMSAyLjgyIDIuODJsLTI0IDI0QTIgMiAwIDAgMSA0IDMweiIgZmlsbD0iI2UyMjg1MCIvPjwvc3ZnPg==
+    icon_alt: Cookie icon
+    body:
+      string_id: cfr-whatsnew-cross-site-tracking-body
+    cta_url: https://blog.mozilla.org/security/2021/02/23/total-cookie-protection/
+    cta_type: OPEN_URL
+    link_text:
+      string_id: cfr-whatsnew-pip-cta
+  targeting: firefoxVersion >= 86
   trigger:
     id: whatsNewPanelOpened
