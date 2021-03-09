@@ -92,7 +92,7 @@
     "frequency": {
       "lifetime": 7
     },
-    "targeting": "pageLoad >= 4 && firefoxVersion >= 87 && userPrefs.cfrFeatures && firefoxVersion < 89",
+    "targeting": "pageLoad >= 4 && firefoxVersion >= 87 && userPrefs.cfrFeatures",
     "template": "milestone_message",
     "trigger": {
       "id": "contentBlocking",
