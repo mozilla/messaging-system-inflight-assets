@@ -20,7 +20,7 @@
         "string_id": "cfr-whatsnew-media-keys-button"
       }
     },
-    "targeting": "firefoxVersion >= 82",
+    "targeting": "firefoxVersion >= 82 && firefoxVersion < 89",
     "trigger": {
       "id": "whatsNewPanelOpened"
     }
@@ -48,7 +48,7 @@
         "string_id": "cfr-whatsnew-pip-cta"
       }
     },
-    "targeting": "firefoxVersion >= 84 && localeLanguageCode != 'ru'",
+    "targeting": "firefoxVersion >= 84 && localeLanguageCode != 'ru' && firefoxVersion < 89",
     "trigger": {
       "id": "whatsNewPanelOpened"
     }
@@ -97,7 +97,7 @@
         "string_id": "cfr-whatsnew-pip-cta"
       }
     },
-    "targeting": "firefoxVersion >= 85",
+    "targeting": "firefoxVersion >= 85 && firefoxVersion < 89",
     "trigger": {
       "id": "whatsNewPanelOpened"
     }
@@ -123,7 +123,7 @@
         "string_id": "cfr-whatsnew-pip-cta"
       }
     },
-    "targeting": "firefoxVersion >= 85",
+    "targeting": "firefoxVersion >= 85 && firefoxVersion < 89",
     "trigger": {
       "id": "whatsNewPanelOpened"
     }
@@ -149,7 +149,7 @@
         "string_id": "cfr-whatsnew-pip-cta"
       }
     },
-    "targeting": "firefoxVersion >= 86",
+    "targeting": "firefoxVersion >= 86 && firefoxVersion < 89",
     "trigger": {
       "id": "whatsNewPanelOpened"
     }

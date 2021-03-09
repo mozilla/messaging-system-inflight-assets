@@ -14,7 +14,7 @@
       },
       "bucket_id": "WNP_MOMENTS_2"
     },
-    "targeting": "firefoxVersion >= 69 && localeLanguageCode in [\"en\",\"fr\",\"de\"] && ((currentDate|date - profileAgeCreated) / 86400000) >= 17 && ((currentDate|date - profileAgeCreated) / 86400000) < 30",
+    "targeting": "firefoxVersion >= 69 && localeLanguageCode in [\"en\",\"fr\",\"de\"] && ((currentDate|date - profileAgeCreated) / 86400000) >= 17 && ((currentDate|date - profileAgeCreated) / 86400000) < 30 && firefoxVersion < 89",
     "template": "update_action",
     "trigger": {
       "id": "momentsUpdate"
@@ -35,7 +35,7 @@
       },
       "bucket_id": "WNP_MOMENTS_1"
     },
-    "targeting": "firefoxVersion >= 69 && localeLanguageCode in [\"en\",\"fr\",\"de\"] && ((currentDate|date - profileAgeCreated) / 86400000) >= 4 && ((currentDate|date - profileAgeCreated) / 86400000) < 15",
+    "targeting": "firefoxVersion >= 69 && localeLanguageCode in [\"en\",\"fr\",\"de\"] && ((currentDate|date - profileAgeCreated) / 86400000) >= 4 && ((currentDate|date - profileAgeCreated) / 86400000) < 15 && firefoxVersion < 89",
     "template": "update_action",
     "trigger": {
       "id": "momentsUpdate"
@@ -56,7 +56,7 @@
       },
       "bucket_id": "WNP_MOMENTS_4"
     },
-    "targeting": "firefoxVersion >= 69 && localeLanguageCode in [\"en\", \"fr\", \"de\"] && ((currentDate|date - profileAgeCreated) / 86400000) > 30",
+    "targeting": "firefoxVersion >= 69 && localeLanguageCode in [\"en\", \"fr\", \"de\"] && ((currentDate|date - profileAgeCreated) / 86400000) > 30 && firefoxVersion < 89",
     "template": "update_action",
     "trigger": {
       "id": "momentsUpdate"

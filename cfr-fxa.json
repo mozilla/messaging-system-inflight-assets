@@ -32,7 +32,7 @@
     "frequency": {
       "lifetime": 3
     },
-    "targeting": "!usesFirefoxSync && isFxAEnabled == true && totalBookmarksCount >= 10\n&& firefoxVersion >= 70 && userPrefs.cfrFeatures\n",
+    "targeting": "!usesFirefoxSync && isFxAEnabled == true && totalBookmarksCount >= 10\n&& firefoxVersion >= 70 && userPrefs.cfrFeatures && firefoxVersion < 89\n",
     "template": "fxa_bookmark_panel",
     "trigger": {
       "id": "bookmark-panel"
