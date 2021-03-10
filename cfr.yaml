@@ -303,6 +303,7 @@
     layout: icon_and_message
     text:
       string_id: cfr-doorhanger-doh-body
+    icon: chrome://browser/skin/connection-secure.svg
     buttons:
       secondary:
         - label:
@@ -311,7 +312,7 @@
             type: DISABLE_DOH
       primary:
         label:
-          string_id: cfr-doorhanger-doh-primary-button-2
+          string_id: cfr-doorhanger-doh-primary-button
         action:
           type: ACCEPT_DOH
     bucket_id: DOH_ROLLOUT_CONFIRMATION
