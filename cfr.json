@@ -463,7 +463,6 @@
       "text": {
         "string_id": "cfr-doorhanger-doh-body"
       },
-      "icon": "chrome://browser/skin/connection-secure.svg",
       "buttons": {
         "secondary": [
           {
@@ -477,7 +476,7 @@
         ],
         "primary": {
           "label": {
-            "string_id": "cfr-doorhanger-doh-primary-button"
+            "string_id": "cfr-doorhanger-doh-primary-button-2"
           },
           "action": {
             "type": "ACCEPT_DOH"
