@@ -291,10 +291,10 @@
   template: cfr_doorhanger
   trigger:
     id: newSavedLogin
-- id: DOH_ROLLOUT_CONFIRMATION
+- id: DOH_ROLLOUT_CONFIRMATION_89
   groups:
     - cfr
-  targeting: "'doh-rollout.enabled'|preferenceValue && !'doh-rollout.disable-heuristics'|preferenceValue && !'doh-rollout.skipHeuristicsCheck'|preferenceValue && !'doh-rollout.doorhanger-decision'|preferenceValue && firefoxVersion >= 79"
+  targeting: "'doh-rollout.enabled'|preferenceValue && !'doh-rollout.disable-heuristics'|preferenceValue && !'doh-rollout.skipHeuristicsCheck'|preferenceValue && !'doh-rollout.doorhanger-decision'|preferenceValue && firefoxVersion >= 89"
   template: cfr_doorhanger
   content:
     skip_address_bar_notifier: true
@@ -314,7 +314,7 @@
           string_id: cfr-doorhanger-doh-primary-button-2
         action:
           type: ACCEPT_DOH
-    bucket_id: DOH_ROLLOUT_CONFIRMATION
+    bucket_id: DOH_ROLLOUT_CONFIRMATION_89
     heading_text:
       string_id: cfr-doorhanger-doh-header
     info_icon:
