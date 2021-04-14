@@ -128,4 +128,5 @@
     custom:
       - period: 3024000000  # 86400000 * 35 (35 days to ms)
         cap: 1
-  targeting: "true"
+  # Not default browser and user dismissed the default browser prompt
+  targeting: "!isDefaultBrowser && !'browser.shell.checkDefaultBrowser'|preferenceValue"

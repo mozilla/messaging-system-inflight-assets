@@ -197,6 +197,6 @@
         }
       ]
     },
-    "targeting": "true"
+    "targeting": "!isDefaultBrowser && !'browser.shell.checkDefaultBrowser'|preferenceValue"
   }
 ]
