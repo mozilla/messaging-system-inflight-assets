@@ -199,6 +199,15 @@
     },
     "type": "object"
   },
+  "PIN_AND_DEFAULT": {
+    "description": "Pin browser to taskbar and set as default",
+    "properties": {
+      "type": {
+        "enum": ["PIN_AND_DEFAULT"],
+        "type": "string"
+      }
+    }
+  },
   "SHOW_FIREFOX_ACCOUNTS": {
     "description": "Show Firefox Accounts",
     "properties": {

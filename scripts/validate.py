@@ -99,13 +99,18 @@ def validate_action(action, for_exp):
 
 def extract_actions(message, message_type):
     def _extract_cfr():
-        for name, button in message["content"].get("buttons", {}).items():
-            if name == "primary":
+        buttons_prop = message["content"].get("buttons", {})
+        if type(buttons_prop) is list:
+            for button in buttons_prop:
                 yield button["action"]
-            else:
-                for sub_button in button:
-                    if "action" in sub_button:
-                        yield sub_button["action"]
+        else:
+            for name, button in message["content"].get("buttons", {}).items():
+                if name == "primary":
+                    yield button["action"]
+                else:
+                    for sub_button in button:
+                        if "action" in sub_button:
+                            yield sub_button["action"]
 
     def _extract_onboarding():
         for card in message:

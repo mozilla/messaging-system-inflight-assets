@@ -158,5 +158,45 @@
         "*://*/*"
       ]
     }
+  },
+  {
+    "id": "INFOBAR_DEFAULT_AND_PIN_87",
+    "groups": [
+      "cfr"
+    ],
+    "content": {
+      "category": "cfrFeatures",
+      "bucket_id": "INFOBAR_DEFAULT_AND_PIN_87",
+      "text": {
+        "string_id": "default-browser-notification-message"
+      },
+      "type": "global",
+      "buttons": [
+        {
+          "label": {
+            "string_id": "default-browser-notification-button"
+          },
+          "action": {
+            "type": "PIN_AND_DEFAULT"
+          },
+          "primary": true,
+          "accessKey": "P"
+        }
+      ]
+    },
+    "trigger": {
+      "id": "defaultBrowserCheck"
+    },
+    "template": "infobar",
+    "frequency": {
+      "lifetime": 100,
+      "custom": [
+        {
+          "period": 3024000000,
+          "cap": 1
+        }
+      ]
+    },
+    "targeting": "true"
   }
 ]
