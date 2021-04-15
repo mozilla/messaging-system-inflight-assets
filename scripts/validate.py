@@ -104,7 +104,7 @@ def extract_actions(message, message_type):
             for button in buttons_prop:
                 yield button["action"]
         else:
-            for name, button in message["content"].get("buttons", {}).items():
+            for name, button in buttons_prop.items():
                 if name == "primary":
                     yield button["action"]
                 else:

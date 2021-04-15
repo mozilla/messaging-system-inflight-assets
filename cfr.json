@@ -197,6 +197,6 @@
         }
       ]
     },
-    "targeting": "!isDefaultBrowser && !'browser.shell.checkDefaultBrowser'|preferenceValue"
+    "targeting": "!isDefaultBrowser && !'browser.shell.checkDefaultBrowser'|preferenceValue && isMajorUpgrade != true"
   }
 ]

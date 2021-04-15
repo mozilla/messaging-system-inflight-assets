@@ -129,4 +129,4 @@
       - period: 3024000000  # 86400000 * 35 (35 days to ms)
         cap: 1
   # Not default browser and user dismissed the default browser prompt
-  targeting: "!isDefaultBrowser && !'browser.shell.checkDefaultBrowser'|preferenceValue"
+  targeting: "!isDefaultBrowser && !'browser.shell.checkDefaultBrowser'|preferenceValue && isMajorUpgrade != true"
