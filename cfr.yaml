@@ -130,4 +130,4 @@
         cap: 1
   # Not default browser and user dismissed the default browser prompt
   targeting:
-    "firefoxVersion >= 87 && !isDefaultBrowser && !'browser.shell.checkDefaultBrowser'|preferenceValue && isMajorUpgrade != true && platformName != 'linux' && ((currentDate|date - profileAgeCreated) / 604800000) >= 5 && !activeNotifications"
+    "(firefoxVersion >= 87 || (firefoxVersion >= 90 && source == 'startup')) && !isDefaultBrowser && !'browser.shell.checkDefaultBrowser'|preferenceValue && isMajorUpgrade != true && platformName != 'linux' && ((currentDate|date - profileAgeCreated) / 604800000) >= 5 && !activeNotifications"
