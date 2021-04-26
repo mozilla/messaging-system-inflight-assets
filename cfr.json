@@ -197,6 +197,6 @@
         }
       ]
     },
-    "targeting": "(firefoxVersion >= 87 || (firefoxVersion >= 90 && source == 'startup')) && !isDefaultBrowser && !'browser.shell.checkDefaultBrowser'|preferenceValue && isMajorUpgrade != true && platformName != 'linux' && ((currentDate|date - profileAgeCreated) / 604800000) >= 5 && !activeNotifications"
+    "targeting": "((firefoxVersion >= 87 && firefoxVersion < 90) || (firefoxVersion >= 90 && source == 'startup')) && !isDefaultBrowser && !'browser.shell.checkDefaultBrowser'|preferenceValue && isMajorUpgrade != true && platformName != 'linux' && ((currentDate|date - profileAgeCreated) / 604800000) >= 5 && !activeNotifications"
   }
 ]
