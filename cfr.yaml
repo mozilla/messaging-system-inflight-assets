@@ -129,8 +129,8 @@
       - period: 3024000000  # 86400000 * 35 (35 days to ms)
         cap: 1
   # Not default browser and user dismissed the default browser prompt
-  # For Firefox version 87-89 the message is triggered only on the newtab page.
-  # For versions 90+ we trigger the message at startup and want to ignore the
+  # For Firefox version 87-88 the message is triggered only on the newtab page.
+  # For versions 89+ we trigger the message at startup and want to ignore the
   # newtab trigger.
   targeting:
     "((firefoxVersion >= 87 && firefoxVersion < 89) || (firefoxVersion >= 89 && source == 'startup')) && !isDefaultBrowser && !'browser.shell.checkDefaultBrowser'|preferenceValue && isMajorUpgrade != true && platformName != 'linux' && ((currentDate|date - profileAgeCreated) / 604800000) >= 5 && !activeNotifications"
