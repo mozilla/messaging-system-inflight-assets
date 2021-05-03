@@ -1,6 +1,6 @@
 [
   {
-    "id": "WNP_MOMENTS_2",
+    "id": "WNP_MOMENTS_9",
     "groups": [
       "moments-pages"
     ],
@@ -8,20 +8,20 @@
       "action": {
         "data": {
           "expireDelta": 604800000,
-          "url": "https://www.mozilla.org/firefox/welcome/2/"
+          "url": "https://www.mozilla.org/%LOCALE%/firefox/welcome/9/"
         },
         "id": "moments-wnp"
       },
-      "bucket_id": "WNP_MOMENTS_2"
+      "bucket_id": "WNP_MOMENTS_9"
     },
-    "targeting": "firefoxVersion >= 69 && localeLanguageCode in [\"en\",\"fr\",\"de\"] && ((currentDate|date - profileAgeCreated) / 86400000) >= 17 && ((currentDate|date - profileAgeCreated) / 86400000) < 30 && firefoxVersion < 89",
+    "targeting": "firefoxVersion >= 86 && localeLanguageCode in [\"fr\", \"de\"] && region in [\"FR\", \"DE\"] && firefoxVersion < 89",
     "template": "update_action",
     "trigger": {
       "id": "momentsUpdate"
     }
   },
   {
-    "id": "WNP_MOMENTS_1",
+    "id": "WNP_MOMENTS_10",
     "groups": [
       "moments-pages"
     ],
@@ -29,34 +29,13 @@
       "action": {
         "data": {
           "expireDelta": 604800000,
-          "url": "https://www.mozilla.org/firefox/welcome/1/"
+          "url": "https://www.mozilla.org/en-US/firefox/welcome/10/"
         },
         "id": "moments-wnp"
       },
-      "bucket_id": "WNP_MOMENTS_1"
+      "bucket_id": "WNP_MOMENTS_10"
     },
-    "targeting": "firefoxVersion >= 69 && localeLanguageCode in [\"en\",\"fr\",\"de\"] && ((currentDate|date - profileAgeCreated) / 86400000) >= 4 && ((currentDate|date - profileAgeCreated) / 86400000) < 15 && firefoxVersion < 89",
-    "template": "update_action",
-    "trigger": {
-      "id": "momentsUpdate"
-    }
-  },
-  {
-    "id": "WNP_MOMENTS_4",
-    "groups": [
-      "moments-pages"
-    ],
-    "content": {
-      "action": {
-        "data": {
-          "expireDelta": 604800000,
-          "url": "https://www.mozilla.org/firefox/welcome/4/"
-        },
-        "id": "moments-wnp"
-      },
-      "bucket_id": "WNP_MOMENTS_4"
-    },
-    "targeting": "firefoxVersion >= 69 && localeLanguageCode in [\"en\", \"fr\", \"de\"] && ((currentDate|date - profileAgeCreated) / 86400000) > 30 && firefoxVersion < 89",
+    "targeting": "firefoxVersion >= 86 && localeLanguageCode in [\"en\"] && region in [\"US\"] && firefoxVersion < 89",
     "template": "update_action",
     "trigger": {
       "id": "momentsUpdate"
