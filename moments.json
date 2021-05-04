@@ -14,7 +14,7 @@
       },
       "bucket_id": "WNP_MOMENTS_9"
     },
-    "targeting": "firefoxVersion >= 86 && localeLanguageCode in [\"fr\", \"de\"] && region in [\"FR\", \"DE\"] && firefoxVersion < 89",
+    "targeting": "firefoxVersion >= 86 && localeLanguageCode in [\"fr\", \"de\"] && region in [\"FR\", \"DE\", \"US\"] && firefoxVersion < 89 && ((currentDate|date - profileAgeCreated) / 86400000) > 30",
     "template": "update_action",
     "trigger": {
       "id": "momentsUpdate"
@@ -35,7 +35,7 @@
       },
       "bucket_id": "WNP_MOMENTS_10"
     },
-    "targeting": "firefoxVersion >= 86 && localeLanguageCode in [\"en\"] && region in [\"US\"] && firefoxVersion < 89",
+    "targeting": "firefoxVersion >= 86 && localeLanguageCode in [\"en\"] && region in [\"US\"] && firefoxVersion < 89 && ((currentDate|date - profileAgeCreated) / 86400000) > 30",
     "template": "update_action",
     "trigger": {
       "id": "momentsUpdate"

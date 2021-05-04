@@ -7,7 +7,7 @@
         url: https://www.mozilla.org/%LOCALE%/firefox/welcome/9/
       id: moments-wnp
     bucket_id: WNP_MOMENTS_9
-  targeting: firefoxVersion >= 86 && localeLanguageCode in ["fr", "de"] && region in ["FR", "DE"] && firefoxVersion < 89
+  targeting: firefoxVersion >= 86 && localeLanguageCode in ["fr", "de"] && region in ["FR", "DE", "US"] && firefoxVersion < 89 && ((currentDate|date - profileAgeCreated) / 86400000) > 30
   template: update_action
   trigger:
     id: momentsUpdate
@@ -20,7 +20,7 @@
         url: https://www.mozilla.org/en-US/firefox/welcome/10/
       id: moments-wnp
     bucket_id: WNP_MOMENTS_10
-  targeting: firefoxVersion >= 86 && localeLanguageCode in ["en"] && region in ["US"] && firefoxVersion < 89
+  targeting: firefoxVersion >= 86 && localeLanguageCode in ["en"] && region in ["US"] && firefoxVersion < 89 && ((currentDate|date - profileAgeCreated) / 86400000) > 30
   template: update_action
   trigger:
     id: momentsUpdate
