@@ -19,26 +19,5 @@
     "trigger": {
       "id": "momentsUpdate"
     }
-  },
-  {
-    "id": "WNP_MOMENTS_10",
-    "groups": [
-      "moments-pages"
-    ],
-    "content": {
-      "action": {
-        "data": {
-          "expireDelta": 604800000,
-          "url": "https://www.mozilla.org/en-US/firefox/welcome/10/"
-        },
-        "id": "moments-wnp"
-      },
-      "bucket_id": "WNP_MOMENTS_10"
-    },
-    "targeting": "firefoxVersion >= 86 && localeLanguageCode in [\"en\"] && region in [\"US\"] && firefoxVersion < 89 && ((currentDate|date - profileAgeCreated) / 86400000) > 30",
-    "template": "update_action",
-    "trigger": {
-      "id": "momentsUpdate"
-    }
   }
 ]
