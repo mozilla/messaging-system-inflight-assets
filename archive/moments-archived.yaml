@@ -81,3 +81,16 @@
   template: update_action
   trigger:
     id: momentsUpdate
+- id: WNP_MOMENTS_9
+  groups: [moments-pages]
+  content:
+    action:
+      data:
+        expireDelta: 604800000
+        url: https://www.mozilla.org/%LOCALE%/firefox/welcome/9/
+      id: moments-wnp
+    bucket_id: WNP_MOMENTS_9
+  targeting: firefoxVersion >= 86 && localeLanguageCode in ["fr", "de"] && region in ["FR", "DE", "US"] && firefoxVersion < 89 && ((currentDate|date - profileAgeCreated) / 86400000) > 30
+  template: update_action
+  trigger:
+    id: momentsUpdate
