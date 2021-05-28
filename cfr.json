@@ -198,5 +198,87 @@
       ]
     },
     "targeting": "((firefoxVersion >= 87 && firefoxVersion < 89) || (firefoxVersion >= 89 && source == 'startup')) && !isDefaultBrowser && !'browser.shell.checkDefaultBrowser'|preferenceValue && isMajorUpgrade != true && platformName != 'linux' && ((currentDate|date - profileAgeCreated) / 604800000) >= 5 && !activeNotifications && 'browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features'|preferenceValue && ((currentDate|date - profileAgeCreated) / 604800000) < 15"
+  },
+  {
+    "id": "CFR_FULL_VIDEO_SUPPORT_EN",
+    "groups": [
+      "cfr"
+    ],
+    "targeting": "firefoxVersion < 88 && firefoxVersion != 78 && localeLanguageCode == 'en'",
+    "template": "cfr_doorhanger",
+    "content": {
+      "skip_address_bar_notifier": true,
+      "persistent_doorhanger": true,
+      "anchor_id": "PanelUI-menu-button",
+      "layout": "icon_and_message",
+      "text": "Videos on this site may not play correctly on this version of Firefox. For full video support, update Firefox now.",
+      "buttons": {
+        "secondary": [
+          {
+            "label": {
+              "string_id": "cfr-doorhanger-extension-cancel-button"
+            },
+            "action": {
+              "type": "CANCEL"
+            }
+          }
+        ],
+        "primary": {
+          "label": {
+            "value": "Update Now",
+            "attributes": {
+              "accesskey": "U"
+            }
+          },
+          "action": {
+            "type": "OPEN_URL",
+            "data": {
+              "args": "https://support.mozilla.org/kb/update-firefox-latest-release",
+              "where": "tabshifted"
+            }
+          }
+        }
+      },
+      "bucket_id": "CFR_FULL_VIDEO_SUPPORT_EN",
+      "heading_text": "Update Firefox to play video",
+      "info_icon": {
+        "label": {
+          "string_id": "cfr-doorhanger-extension-sumo-link"
+        },
+        "sumo_path": "extensionrecommendations"
+      },
+      "notification_text": "Message from Firefox",
+      "category": "cfrFeatures"
+    },
+    "frequency": {
+      "lifetime": 3
+    },
+    "trigger": {
+      "id": "openURL",
+      "patterns": [
+        "https://*/Amazon-Video/*",
+        "https://*/Prime-Video/*"
+      ],
+      "params": [
+        "www.hulu.com",
+        "hulu.com",
+        "www.netflix.com",
+        "netflix.com",
+        "wwwdisneyplus.com",
+        "disneyplus.com",
+        "www.hbomax.com",
+        "hbomax.com",
+        "www.sho.com",
+        "sho.com",
+        "www.directv.com",
+        "directv.com",
+        "www.starzplay.com",
+        "starzplay.com",
+        "www.sling.com",
+        "sling.com",
+        "www.facebook.com",
+        "facebook.com"
+      ]
+    }
   }
 ]
