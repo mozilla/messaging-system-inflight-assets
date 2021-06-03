@@ -137,15 +137,15 @@
 - id: CFR_FULL_VIDEO_SUPPORT_EN
   groups:
     - cfr
-  targeting: firefoxVersion < 88 && firefoxVersion != 78 && localeLanguageCode == 'en'
+  targeting: firefoxVersion < 88 && firefoxVersion != 78 && localeLanguageCode in ['en', 'fr', 'de']
   template: cfr_doorhanger
   content:
     skip_address_bar_notifier: true
     persistent_doorhanger: true
     anchor_id: PanelUI-menu-button
     layout: icon_and_message
-    text: Videos on this site may not play correctly on this version of Firefox. For
-      full video support, update Firefox now.
+    text:
+      string_id: cfr-doorhanger-video-support-body
     buttons:
       secondary:
         - label:
@@ -154,16 +154,15 @@
             type: CANCEL
       primary:
         label:
-          value: Update Now
-          attributes:
-            accesskey: U
+          string_id: cfr-doorhanger-video-support-primary-button
         action:
           type: OPEN_URL
           data:
             args: https://support.mozilla.org/kb/update-firefox-latest-release
             where: tabshifted
     bucket_id: CFR_FULL_VIDEO_SUPPORT_EN
-    heading_text: Update Firefox to play video
+    heading_text:
+      string_id: cfr-doorhanger-video-support-header
     info_icon:
       label:
         string_id: cfr-doorhanger-extension-sumo-link
