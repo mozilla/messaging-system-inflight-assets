@@ -1,1 +1,23 @@
-null
+[
+  {
+    "id": "WNP_MOMENTS_9_89",
+    "groups": [
+      "moments-pages"
+    ],
+    "content": {
+      "action": {
+        "data": {
+          "expire": 1624579200000,
+          "url": "https://www.mozilla.org/%LOCALE%/firefox/welcome/9/"
+        },
+        "id": "moments-wnp"
+      },
+      "bucket_id": "WNP_MOMENTS_9_89"
+    },
+    "targeting": "firefoxVersion >= 89 && firefoxVersion < 90 && localeLanguageCode in [\"fr\", \"de\"] && region in [\"FR\", \"DE\", \"US\"] && ((currentDate|date - profileAgeCreated) / 86400000) > 30 && usesFirefoxSync && !(\"e6eb0d1e856335fc\" in attachedFxAOAuthClients|mapToProperty(\"id\"))",
+    "template": "update_action",
+    "trigger": {
+      "id": "momentsUpdate"
+    }
+  }
+]
