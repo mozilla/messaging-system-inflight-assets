@@ -204,7 +204,7 @@
     "groups": [
       "cfr"
     ],
-    "targeting": "firefoxVersion < 88 && firefoxVersion != 78 && localeLanguageCode in ['en', 'fr', 'de']",
+    "targeting": "firefoxVersion < 88 && firefoxVersion != 78 && localeLanguageCode in ['en', 'fr', 'de', 'ru', 'zh', 'es', 'it', 'pl']",
     "template": "cfr_doorhanger",
     "content": {
       "skip_address_bar_notifier": true,
