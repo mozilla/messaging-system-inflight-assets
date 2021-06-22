@@ -19,5 +19,26 @@
     "trigger": {
       "id": "momentsUpdate"
     }
+  },
+  {
+    "id": "WNP_MOMENTS_10",
+    "groups": [
+      "moments-pages"
+    ],
+    "content": {
+      "action": {
+        "data": {
+          "expire": 1626134400000,
+          "url": "https://www.mozilla.org/firefox/welcome/10/"
+        },
+        "id": "moments-wnp"
+      },
+      "bucket_id": "WNP_MOMENTS_10"
+    },
+    "targeting": "localeLanguageCode == 'en' && region in [\"US\", \"CA\", \"GB\", \"NZ\", \"SG\", \"MY\"] && ((currentDate|date - profileAgeCreated) / 86400000) >= 4 && ((currentDate|date - profileAgeCreated) / 86400000) < 15 && userPrefs.cfrAddons && userPrefs.cfrFeatures && isWhatsNewPanelEnabled",
+    "template": "update_action",
+    "trigger": {
+      "id": "momentsUpdate"
+    }
   }
 ]
