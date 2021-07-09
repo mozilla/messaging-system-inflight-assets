@@ -113,6 +113,7 @@
       "persistent_doorhanger": true,
       "anchor_id": "PanelUI-menu-button",
       "layout": "icon_and_message",
+      "learn_more": "firefox-dns-over-https",
       "text": {
         "string_id": "cfr-doorhanger-doh-body"
       },
