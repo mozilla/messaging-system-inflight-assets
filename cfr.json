@@ -106,7 +106,7 @@
     "groups": [
       "cfr"
     ],
-    "targeting": "( 'doh-rollout.enabled'|preferenceValue || 'doh-rollout.self-enabled'|preferenceValue || 'doh-rollout.ru.enabled'|preferenceValue || 'doh-rollout.ua.enabled'|preferenceValue ) && !( 'doh-rollout.disable-heuristics'|preferenceValue || 'doh-rollout.skipHeuristicsCheck'|preferenceValue || 'doh-rollout.doorhanger-decision'|preferenceValue ) && firefoxVersion >= 89",
+    "targeting": "profileAgeCreated < 1572480000000 && ( 'doh-rollout.enabled'|preferenceValue || 'doh-rollout.self-enabled'|preferenceValue || 'doh-rollout.ru.enabled'|preferenceValue || 'doh-rollout.ua.enabled'|preferenceValue ) && !( 'doh-rollout.disable-heuristics'|preferenceValue || 'doh-rollout.skipHeuristicsCheck'|preferenceValue || 'doh-rollout.doorhanger-decision'|preferenceValue ) && firefoxVersion >= 89",
     "template": "infobar",
     "content": {
       "priority": 3,
