@@ -1,0 +1,32 @@
+- id: WNP_MOMENTS_9
+  groups: [moments-pages]
+  content:
+    action:
+      data:
+        # Valid until November 29th EOD
+        expire: 1638144000000
+        # URL will redirect to correct locale based on browser settings
+        url: https://www.mozilla.org/firefox/welcome/9
+      id: moments-wnp
+    bucket_id: WNP_MOMENTS_9
+  targeting: localeLanguageCode in ["fr", "de", "es", "nl", "it"] &&
+    region in ["DE", "AT", "BE", "CA", "FR", "IE", "IT", "MY", "NL", "NZ", "SG", "ES", "CH", "US", "GB"]
+  template: update_action
+  trigger:
+    id: momentsUpdate
+- id: WNP_MOMENTS_10
+  groups: [moments-pages]
+  content:
+    action:
+      data:
+        # Valid until November 29th EOD
+        expire: 1638144000000
+        # URL will redirect to correct locale based on browser settings
+        url: https://www.mozilla.org/firefox/welcome/10
+      id: moments-wnp
+    bucket_id: WNP_MOMENTS_10
+  targeting: localeLanguageCode in ["en"] &&
+    region in ["DE", "AT", "BE", "CA", "FR", "IE", "IT", "MY", "NL", "NZ", "SG", "ES", "CH", "US", "GB"]
+  template: update_action
+  trigger:
+    id: momentsUpdate
