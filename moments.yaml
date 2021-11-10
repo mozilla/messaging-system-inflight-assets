@@ -9,7 +9,7 @@
         url: https://www.mozilla.org/firefox/welcome/9
       id: moments-wnp
     bucket_id: WNP_MOMENTS_9
-  targeting: localeLanguageCode in ["fr", "de", "es", "nl", "it"] &&
+  targeting: localeLanguageCode in ["fr", "de"] &&
     region in ["DE", "AT", "BE", "CA", "FR", "IE", "IT", "MY", "NL", "NZ", "SG", "ES", "CH", "US", "GB"]
   template: update_action
   trigger:
@@ -25,7 +25,7 @@
         url: https://www.mozilla.org/firefox/welcome/10
       id: moments-wnp
     bucket_id: WNP_MOMENTS_10
-  targeting: localeLanguageCode in ["en"] &&
+  targeting: (localeLanguageCode in ["en", "nl", "it"] || locale == "es-ES") &&
     region in ["DE", "AT", "BE", "CA", "FR", "IE", "IT", "MY", "NL", "NZ", "SG", "ES", "CH", "US", "GB"]
   template: update_action
   trigger:

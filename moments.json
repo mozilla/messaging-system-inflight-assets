@@ -14,7 +14,7 @@
       },
       "bucket_id": "WNP_MOMENTS_9"
     },
-    "targeting": "localeLanguageCode in [\"fr\", \"de\", \"es\", \"nl\", \"it\"] && region in [\"DE\", \"AT\", \"BE\", \"CA\", \"FR\", \"IE\", \"IT\", \"MY\", \"NL\", \"NZ\", \"SG\", \"ES\", \"CH\", \"US\", \"GB\"]",
+    "targeting": "localeLanguageCode in [\"fr\", \"de\"] && region in [\"DE\", \"AT\", \"BE\", \"CA\", \"FR\", \"IE\", \"IT\", \"MY\", \"NL\", \"NZ\", \"SG\", \"ES\", \"CH\", \"US\", \"GB\"]",
     "template": "update_action",
     "trigger": {
       "id": "momentsUpdate"
@@ -35,7 +35,7 @@
       },
       "bucket_id": "WNP_MOMENTS_10"
     },
-    "targeting": "localeLanguageCode in [\"en\"] && region in [\"DE\", \"AT\", \"BE\", \"CA\", \"FR\", \"IE\", \"IT\", \"MY\", \"NL\", \"NZ\", \"SG\", \"ES\", \"CH\", \"US\", \"GB\"]",
+    "targeting": "(localeLanguageCode in [\"en\", \"nl\", \"it\"] || locale == \"es-ES\") && region in [\"DE\", \"AT\", \"BE\", \"CA\", \"FR\", \"IE\", \"IT\", \"MY\", \"NL\", \"NZ\", \"SG\", \"ES\", \"CH\", \"US\", \"GB\"]",
     "template": "update_action",
     "trigger": {
       "id": "momentsUpdate"
