@@ -10,7 +10,9 @@
       id: moments-wnp
     bucket_id: WNP_MOMENTS_9
   targeting: localeLanguageCode in ["fr", "de"] &&
-    region in ["DE", "AT", "BE", "CA", "FR", "IE", "IT", "MY", "NL", "NZ", "SG", "ES", "CH", "US", "GB"]
+    region in ["DE", "AT", "BE", "CA", "FR", "IE", "IT", "MY", "NL", "NZ", "SG", "ES", "CH", "US", "GB"] &&
+    'browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features'|preferenceValue &&
+    'browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons'|preferenceValue
   template: update_action
   trigger:
     id: momentsUpdate
@@ -26,7 +28,9 @@
       id: moments-wnp
     bucket_id: WNP_MOMENTS_10
   targeting: (localeLanguageCode in ["en", "nl", "it"] || locale == "es-ES") &&
-    region in ["DE", "AT", "BE", "CA", "FR", "IE", "IT", "MY", "NL", "NZ", "SG", "ES", "CH", "US", "GB"]
+    region in ["DE", "AT", "BE", "CA", "FR", "IE", "IT", "MY", "NL", "NZ", "SG", "ES", "CH", "US", "GB"]  &&
+    'browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features'|preferenceValue &&
+    'browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons'|preferenceValue
   template: update_action
   trigger:
     id: momentsUpdate
