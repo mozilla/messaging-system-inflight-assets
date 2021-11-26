@@ -1,41 +1,20 @@
 [
   {
-    "id": "WNP_MOMENTS_9",
+    "id": "WNP_MOMENTS_11",
     "groups": [
       "moments-pages"
     ],
     "content": {
       "action": {
         "data": {
-          "expire": 1638144000000,
-          "url": "https://www.mozilla.org/firefox/welcome/9"
+          "expire": 1639526400000,
+          "url": "https://www.mozilla.org/firefox/welcome/11"
         },
         "id": "moments-wnp"
       },
-      "bucket_id": "WNP_MOMENTS_9"
+      "bucket_id": "WNP_MOMENTS_11"
     },
-    "targeting": "localeLanguageCode in [\"fr\", \"de\"] && region in [\"DE\", \"AT\", \"BE\", \"CA\", \"FR\", \"IE\", \"IT\", \"MY\", \"NL\", \"NZ\", \"SG\", \"ES\", \"CH\", \"US\", \"GB\"]",
-    "template": "update_action",
-    "trigger": {
-      "id": "momentsUpdate"
-    }
-  },
-  {
-    "id": "WNP_MOMENTS_10",
-    "groups": [
-      "moments-pages"
-    ],
-    "content": {
-      "action": {
-        "data": {
-          "expire": 1638144000000,
-          "url": "https://www.mozilla.org/firefox/welcome/10"
-        },
-        "id": "moments-wnp"
-      },
-      "bucket_id": "WNP_MOMENTS_10"
-    },
-    "targeting": "(localeLanguageCode in [\"en\", \"nl\", \"it\"] || locale == \"es-ES\") && region in [\"DE\", \"AT\", \"BE\", \"CA\", \"FR\", \"IE\", \"IT\", \"MY\", \"NL\", \"NZ\", \"SG\", \"ES\", \"CH\", \"US\", \"GB\"]",
+    "targeting": "localeLanguageCode in [\"en\", \"de\", \"fr\", \"nl\", \"it\"] && region in [\"DE\", \"AT\", \"BE\", \"CA\", \"FR\", \"IE\", \"IT\", \"MY\", \"NL\", \"NZ\", \"SG\", \"CH\", \"US\", \"GB\", \"ES\"]  && 'browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features'|preferenceValue && 'browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons'|preferenceValue",
     "template": "update_action",
     "trigger": {
       "id": "momentsUpdate"
