@@ -9,8 +9,8 @@
         url: https://www.mozilla.org/firefox/welcome/11
       id: moments-wnp
     bucket_id: WNP_MOMENTS_11
-  targeting: localeLanguageCode in ["en", "de", "fr", "nl", "it"] &&
-    region in ["DE", "AT", "BE", "CA", "FR", "IE", "IT", "MY", "NL", "NZ", "SG", "CH", "US", "GB", "ES"]  &&
+  targeting: (localeLanguageCode in ["en", "de", "fr", "nl", "it"] || locale == "es-ES") &&
+    region in ["DE", "AT", "BE", "CA", "FR", "IE", "IT", "MY", "NL", "NZ", "SG", "ES", "CH", "US", "GB"]  &&
     'browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features'|preferenceValue &&
     'browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons'|preferenceValue
   template: update_action
