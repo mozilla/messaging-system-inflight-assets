@@ -1,15 +1,35 @@
-- id: WNP_MOMENTS_11
+- id: WNP_MOMENTS_12
   groups: [moments-pages]
   content:
     action:
       data:
-        # Valid until December 15th EOD
-        expire: 1639526400000
+        # Valid until December 31th EOD
+        expire: 1640908800000
         # URL will redirect to correct locale based on browser settings
-        url: https://www.mozilla.org/firefox/welcome/11
+        url: https://www.mozilla.org/firefox/welcome/12
       id: moments-wnp
-    bucket_id: WNP_MOMENTS_11
-  targeting: localeLanguageCode in ["en", "de", "fr", "nl", "it"] &&
+    bucket_id: WNP_MOMENTS_12
+  # multi-account container EN only
+  targeting: localeLanguageCode == "en" &&
+    region in ["DE", "AT", "BE", "CA", "FR", "IE", "IT", "MY", "NL", "NZ", "SG", "CH", "US", "GB", "ES"]  &&
+    (addonsInfo.addons|keys intersect ["@testpilot-containers"])|length == 1 &&
+    'browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features'|preferenceValue &&
+    'browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons'|preferenceValue
+  template: update_action
+  trigger:
+    id: momentsUpdate
+- id: WNP_MOMENTS_13
+  groups: [moments-pages]
+  content:
+    action:
+      data:
+        # Valid until December 31th EOD
+        expire: 1640908800000
+        # URL will redirect to correct locale based on browser settings
+        url: https://www.mozilla.org/firefox/welcome/13
+      id: moments-wnp
+    bucket_id: WNP_MOMENTS_13
+  targeting: (localeLanguageCode in ["en", "de", "fr", "nl", "it", "ms"] || locale == "es-ES") &&
     region in ["DE", "AT", "BE", "CA", "FR", "IE", "IT", "MY", "NL", "NZ", "SG", "CH", "US", "GB", "ES"]  &&
     'browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features'|preferenceValue &&
     'browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons'|preferenceValue
