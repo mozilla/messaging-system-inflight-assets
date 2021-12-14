@@ -31,6 +31,7 @@
     bucket_id: WNP_MOMENTS_13
   targeting: (localeLanguageCode in ["en", "de", "fr", "nl", "it", "ms"] || locale == "es-ES") &&
     region in ["DE", "AT", "BE", "CA", "FR", "IE", "IT", "MY", "NL", "NZ", "SG", "CH", "US", "GB", "ES"]  &&
+    (addonsInfo.addons|keys intersect ["@testpilot-containers"])|length == 0 &&
     'browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features'|preferenceValue &&
     'browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons'|preferenceValue
   template: update_action
