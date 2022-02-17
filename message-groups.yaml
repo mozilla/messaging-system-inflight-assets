@@ -3,15 +3,23 @@
   type: remote-settings
   frequency:
     custom:
-      - {period: 86400000, cap: 1}
+      - {period: 86400000, cap: 1}  # 1 day
 - id: cfr-experiments
   enabled: true
   type: remote-settings
   frequency:
     custom:
-      - {period: 86400000, cap: 1}
+      - {period: 86400000, cap: 1}  # 1 day
 - id: moments-pages
   enabled: true
   type: remote-settings
+  userPreferences:
+    - browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features
+- id: eco
+  enabled: true
+  type: remote-settings
+  frequency:
+    custom:
+      - {period: 2419200000, cap: 1}  # 4 weeks
   userPreferences:
     - browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features

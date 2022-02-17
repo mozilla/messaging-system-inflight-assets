@@ -19,6 +19,7 @@ EVALUATOR.add_transform('mapToProperty', lambda x, y: [])
 EVALUATOR.add_transform('keys', lambda x: [])
 EVALUATOR.add_transform('bucketSample', lambda x, y, z, q: False)
 EVALUATOR.add_transform('stableSample', lambda x, y: False)
+EVALUATOR.add_transform('versionCompare', lambda x: 0)
 
 # cache all the known schemas to validate experiments
 ALL_SCHEMAS = dict()
