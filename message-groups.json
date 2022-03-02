@@ -32,5 +32,21 @@
     "userPreferences": [
       "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features"
     ]
+  },
+  {
+    "id": "eco",
+    "enabled": true,
+    "type": "remote-settings",
+    "frequency": {
+      "custom": [
+        {
+          "period": 2419200000,
+          "cap": 1
+        }
+      ]
+    },
+    "userPreferences": [
+      "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features"
+    ]
   }
 ]

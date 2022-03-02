@@ -380,8 +380,7 @@
           ]
         }
       },
-      "additionalProperties": true,
-      "required": ["category", "bucket_id"]
+      "additionalProperties": true
     },
     "frequency": {
       "type": "object",
