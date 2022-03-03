@@ -297,11 +297,11 @@
       },
       "body": {
         "title": {
-          "label": "A better Internet starts with you",
+          "label": "A better internet starts with you",
           "size": "24px"
         },
         "text": {
-          "label": "When you use Firefox, you\u2019re voting for an open and accessible Internet that\u2019s better for everyone.",
+          "label": "When you use Firefox, you\u2019re voting for an open and accessible internet that\u2019s better for everyone.",
           "size": "16px"
         },
         "primary": {
@@ -345,7 +345,7 @@
           "size": "24px"
         },
         "text": {
-          "label": "Every month, Firefox blocks an average of over 3,000 trackers per user. Because nothing, especially privacy nuisances like trackers, should stand between you and the good Internet.",
+          "label": "Every month, Firefox blocks an average of over 3,000 trackers per user. Because nothing, especially privacy nuisances like trackers, should stand between you and the good internet.",
           "size": "16px"
         },
         "primary": {
