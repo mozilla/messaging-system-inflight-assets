@@ -375,7 +375,7 @@
     &&
     version|versionCompare('95.!') >= 0 &&
     !(version in ['96.0', '96.0.1']) &&
-    locale in ['zh-CN', 'de', 'fr', 'es-ES', 'ru', 'pt-BR', 'pl', 'it', 'es-MX', 'ja', 'ja-JP-mac']
+    locale in ['zh-CN', 'de', 'fr', 'es-ES', 'ru', 'pt-BR', 'it', 'es-MX']
 - id: peace-of-mind-a-rollout-fast
   groups:
     - eco
@@ -425,4 +425,4 @@
     &&
     version|versionCompare('95.!') >= 0 &&
     !(version in ['96.0', '96.0.1']) &&
-    locale in ['zh-CN', 'de', 'fr', 'es-ES', 'ru', 'pt-BR', 'pl', 'it', 'es-MX', 'ja', 'ja-JP-mac']
+    locale in ['zh-CN', 'de', 'fr', 'es-ES', 'ru', 'pt-BR', 'it', 'es-MX']
