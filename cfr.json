@@ -417,7 +417,7 @@
     "frequency": {
       "lifetime": 1
     },
-    "targeting": "userMonthlyActivity|length >= 1 && userMonthlyActivity|length <= 6 && (currentDate|date - profileAgeCreated|date) / 86400000 >= 28 && doesAppNeedPin  && browserSettings.update.channel == 'release' && version|versionCompare('94.!') >= 0 && source == 'startup' && !isMajorUpgrade && !activeNotifications && locale in ['zh-CN', 'de', 'fr', 'es-ES', 'ru', 'pt-BR', 'pl', 'it', 'es-MX', 'ja', 'ja-JP-mac']"
+    "targeting": "userMonthlyActivity|length >= 1 && userMonthlyActivity|length <= 6 && (currentDate|date - profileAgeCreated|date) / 86400000 >= 28 && doesAppNeedPin  && browserSettings.update.channel == 'release' && source == 'startup' && !isMajorUpgrade && !activeNotifications && version|versionCompare('95.!') >= 0 && !(version in ['96.0', '96.0.1']) && locale in ['zh-CN', 'de', 'fr', 'es-ES', 'ru', 'pt-BR', 'pl', 'it', 'es-MX', 'ja', 'ja-JP-mac']"
   },
   {
     "id": "peace-of-mind-a-rollout-fast",
@@ -469,6 +469,6 @@
     "frequency": {
       "lifetime": 1
     },
-    "targeting": "userMonthlyActivity|length >= 7 && userMonthlyActivity|length <= 13 && (currentDate|date - profileAgeCreated|date) / 86400000 >= 28 && doesAppNeedPin  && browserSettings.update.channel == 'release' && version|versionCompare('94.!') >= 0 && source == 'startup' && !isMajorUpgrade && !activeNotifications && locale in ['zh-CN', 'de', 'fr', 'es-ES', 'ru', 'pt-BR', 'pl', 'it', 'es-MX', 'ja', 'ja-JP-mac']"
+    "targeting": "userMonthlyActivity|length >= 7 && userMonthlyActivity|length <= 13 && (currentDate|date - profileAgeCreated|date) / 86400000 >= 28 && doesAppNeedPin  && browserSettings.update.channel == 'release' && source == 'startup' && !isMajorUpgrade && !activeNotifications && version|versionCompare('95.!') >= 0 && !(version in ['96.0', '96.0.1']) && locale in ['zh-CN', 'de', 'fr', 'es-ES', 'ru', 'pt-BR', 'pl', 'it', 'es-MX', 'ja', 'ja-JP-mac']"
   }
 ]
