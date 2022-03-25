@@ -326,3 +326,103 @@
     'peace-of-mind-casual-modal:treatment-b',
     'peace-of-mind-casual-modal:treatment-c'
     ])|length == 0
+- id: better-internet-c-rollout-fast
+  groups:
+    - eco
+  content:
+    template: logo-and-content
+    logoImageURL: https://www.mozilla.org/media/img/firefox/onboarding/mountain.bd39012cc5a9.svg
+    logo:
+      imageURL: https://www.mozilla.org/media/img/firefox/onboarding/mountain.bd39012cc5a9.svg
+      size: 115px
+    body:
+      title:
+        label:
+          string_id: spotlight-better-internet-header
+        size: 24px
+      text:
+        label:
+          string_id: spotlight-better-internet-body
+        size: 16px
+      primary:
+        label:
+          string_id: spotlight-pin-primary-button
+        action:
+          type: PIN_FIREFOX_TO_TASKBAR
+      secondary:
+        label:
+          string_id: spotlight-pin-secondary-button
+        action:
+          type: CANCEL
+  trigger:
+    id: defaultBrowserCheck
+  template: spotlight
+  frequency:
+    lifetime: 1
+  # 1. Nimbus rollout enrollment targeting except sticky, study opt-out
+  # 2. Nimbus rollout message targeting except user prefs (handled by groups)
+  # 3. Custom version and locale targeting for RemoteL10n
+  targeting: >-
+    userMonthlyActivity|length >= 1 &&
+    userMonthlyActivity|length <= 6 &&
+    (currentDate|date - profileAgeCreated|date) / 86400000 >= 28 &&
+    doesAppNeedPin  &&
+    browserSettings.update.channel == 'release'
+    &&
+    source == 'startup' &&
+    !isMajorUpgrade &&
+    !activeNotifications
+    &&
+    version|versionCompare('95.!') >= 0 &&
+    !(version in ['96.0', '96.0.1']) &&
+    locale in ['zh-CN', 'de', 'fr', 'es-ES', 'ru', 'pt-BR', 'it', 'es-MX', 'ja']
+- id: peace-of-mind-a-rollout-fast
+  groups:
+    - eco
+  content:
+    template: logo-and-content
+    logoImageURL: https://www.mozilla.org/media/img/firefox/onboarding/umbrella.041dbea876c4.png
+    logo:
+      imageURL: https://www.mozilla.org/media/img/firefox/onboarding/umbrella.041dbea876c4.png
+      size: 115px
+    body:
+      title:
+        label:
+          string_id: spotlight-peace-mind-header
+        size: 24px
+      text:
+        label:
+          string_id: spotlight-peace-mind-body
+        size: 16px
+      primary:
+        label:
+          string_id: spotlight-pin-primary-button
+        action:
+          type: PIN_FIREFOX_TO_TASKBAR
+      secondary:
+        label:
+          string_id: spotlight-pin-secondary-button
+        action:
+          type: CANCEL
+  trigger:
+    id: defaultBrowserCheck
+  template: spotlight
+  frequency:
+    lifetime: 1
+  # 1. Nimbus rollout enrollment targeting except sticky, study opt-out
+  # 2. Nimbus rollout message targeting except user prefs (handled by groups)
+  # 3. Custom version and locale targeting for RemoteL10n
+  targeting: >-
+    userMonthlyActivity|length >= 7 &&
+    userMonthlyActivity|length <= 13 &&
+    (currentDate|date - profileAgeCreated|date) / 86400000 >= 28 &&
+    doesAppNeedPin  &&
+    browserSettings.update.channel == 'release'
+    &&
+    source == 'startup' &&
+    !isMajorUpgrade &&
+    !activeNotifications
+    &&
+    version|versionCompare('95.!') >= 0 &&
+    !(version in ['96.0', '96.0.1']) &&
+    locale in ['zh-CN', 'de', 'fr', 'es-ES', 'ru', 'pt-BR', 'it', 'es-MX', 'ja']
