@@ -331,6 +331,7 @@
     - eco
   content:
     template: logo-and-content
+    logoImageURL: https://www.mozilla.org/media/img/firefox/onboarding/mountain.bd39012cc5a9.svg
     logo:
       imageURL: https://www.mozilla.org/media/img/firefox/onboarding/mountain.bd39012cc5a9.svg
       size: 115px
@@ -380,6 +381,7 @@
     - eco
   content:
     template: logo-and-content
+    logoImageURL: https://www.mozilla.org/media/img/firefox/onboarding/umbrella.041dbea876c4.png
     logo:
       imageURL: https://www.mozilla.org/media/img/firefox/onboarding/umbrella.041dbea876c4.png
       size: 115px
