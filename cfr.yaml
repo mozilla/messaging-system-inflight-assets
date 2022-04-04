@@ -72,6 +72,7 @@
   targeting: >-
     (
     'doh-rollout.enabled'|preferenceValue ||
+    'doh-rollout.self-enabled'|preferenceValue ||
     'doh-rollout.ru.enabled'|preferenceValue ||
     'doh-rollout.ua.enabled'|preferenceValue
     ) &&
