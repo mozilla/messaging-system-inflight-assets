@@ -280,103 +280,14 @@
     }
   },
   {
-    "id": "better-internet-c-rollout-cfr",
+    "id": "better-internet-c-rollout-global",
     "groups": [
       "eco"
     ],
     "content": {
       "template": "logo-and-content",
-      "logoImageURL": "https://www.mozilla.org/media/img/firefox/onboarding/mountain.bd39012cc5a9.svg",
       "logo": {
-        "imageURL": "https://www.mozilla.org/media/img/firefox/onboarding/mountain.bd39012cc5a9.svg",
-        "size": "115px"
-      },
-      "body": {
-        "title": {
-          "label": "A better internet starts with you",
-          "size": "24px"
-        },
-        "text": {
-          "label": "When you use Firefox, you\u2019re voting for an open and accessible internet that\u2019s better for everyone.",
-          "size": "16px"
-        },
-        "primary": {
-          "label": "Pin to taskbar",
-          "action": {
-            "type": "PIN_FIREFOX_TO_TASKBAR"
-          }
-        },
-        "secondary": {
-          "label": "Not now",
-          "action": {
-            "type": "CANCEL"
-          }
-        }
-      }
-    },
-    "trigger": {
-      "id": "defaultBrowserCheck"
-    },
-    "template": "spotlight",
-    "frequency": {
-      "lifetime": 1
-    },
-    "targeting": "userMonthlyActivity|length >= 1 && userMonthlyActivity|length <= 6 && (currentDate|date - profileAgeCreated|date) / 86400000 >= 28 && doesAppNeedPin  && browserSettings.update.channel == 'release' && version|versionCompare('94.!') >= 0 && locale in ['en-CA', 'en-GB', 'en-US'] && source == 'startup' && !isMajorUpgrade && !activeNotifications && (messageImpressions|keys intersect [ 'better-internet-c-rollout:rollout-30', 'better-internet-infrequent-eco2202:control', 'better-internet-infrequent-eco2202:treatment-a', 'better-internet-infrequent-eco2202:treatment-b', 'better-internet-infrequent-modal:treatment-a', 'better-internet-infrequent-modal:treatment-b', 'better-internet-infrequent-modal:treatment-c', 'download-mobile-regular-modal:treatment-a', 'download-mobile-regular-modal:treatment-b', 'download-mobile-regular-modal:treatment-c', 'peace-of-mind-a-rollout:rollout-30', 'peace-of-mind-casual-modal:treatment-a', 'peace-of-mind-casual-modal:treatment-b', 'peace-of-mind-casual-modal:treatment-c' ])|length == 0"
-  },
-  {
-    "id": "peace-of-mind-a-rollout-cfr",
-    "groups": [
-      "eco"
-    ],
-    "content": {
-      "template": "logo-and-content",
-      "logoImageURL": "https://www.mozilla.org/media/img/firefox/onboarding/umbrella.041dbea876c4.png",
-      "logo": {
-        "imageURL": "https://www.mozilla.org/media/img/firefox/onboarding/umbrella.041dbea876c4.png",
-        "size": "115px"
-      },
-      "body": {
-        "title": {
-          "label": "We\u2019ve got you covered",
-          "size": "24px"
-        },
-        "text": {
-          "label": "Every month, Firefox blocks an average of over 3,000 trackers per user. Because nothing, especially privacy nuisances like trackers, should stand between you and the good internet.",
-          "size": "16px"
-        },
-        "primary": {
-          "label": "Pin to taskbar",
-          "action": {
-            "type": "PIN_FIREFOX_TO_TASKBAR"
-          }
-        },
-        "secondary": {
-          "label": "Not now",
-          "action": {
-            "type": "CANCEL"
-          }
-        }
-      }
-    },
-    "trigger": {
-      "id": "defaultBrowserCheck"
-    },
-    "template": "spotlight",
-    "frequency": {
-      "lifetime": 1
-    },
-    "targeting": "userMonthlyActivity|length >= 7 && userMonthlyActivity|length <= 13 && (currentDate|date - profileAgeCreated|date) / 86400000 >= 28 && doesAppNeedPin  && browserSettings.update.channel == 'release' && version|versionCompare('94.!') >= 0 && locale in ['en-CA', 'en-GB', 'en-US'] && source == 'startup' && !isMajorUpgrade && !activeNotifications && (messageImpressions|keys intersect [ 'better-internet-c-rollout:rollout-30', 'better-internet-infrequent-eco2202:control', 'better-internet-infrequent-eco2202:treatment-a', 'better-internet-infrequent-eco2202:treatment-b', 'better-internet-infrequent-modal:treatment-a', 'better-internet-infrequent-modal:treatment-b', 'better-internet-infrequent-modal:treatment-c', 'download-mobile-regular-modal:treatment-a', 'download-mobile-regular-modal:treatment-b', 'download-mobile-regular-modal:treatment-c', 'peace-of-mind-a-rollout:rollout-30', 'peace-of-mind-casual-modal:treatment-a', 'peace-of-mind-casual-modal:treatment-b', 'peace-of-mind-casual-modal:treatment-c' ])|length == 0"
-  },
-  {
-    "id": "better-internet-c-rollout-fast",
-    "groups": [
-      "eco"
-    ],
-    "content": {
-      "template": "logo-and-content",
-      "logoImageURL": "https://www.mozilla.org/media/img/firefox/onboarding/mountain.bd39012cc5a9.svg",
-      "logo": {
-        "imageURL": "https://www.mozilla.org/media/img/firefox/onboarding/mountain.bd39012cc5a9.svg",
+        "imageURL": "chrome://activity-stream/content/data/content/assets/remote/mountain.svg",
         "size": "115px"
       },
       "body": {
@@ -384,7 +295,7 @@
           "label": {
             "string_id": "spotlight-better-internet-header"
           },
-          "size": "24px"
+          "size": "22px"
         },
         "text": {
           "label": {
@@ -417,18 +328,17 @@
     "frequency": {
       "lifetime": 1
     },
-    "targeting": "userMonthlyActivity|length >= 1 && userMonthlyActivity|length <= 6 && (currentDate|date - profileAgeCreated|date) / 86400000 >= 28 && doesAppNeedPin  && browserSettings.update.channel == 'release' && source == 'startup' && !isMajorUpgrade && !activeNotifications && version|versionCompare('95.!') >= 0 && !(version in ['96.0', '96.0.1']) && locale in ['zh-CN', 'de', 'fr', 'es-ES', 'ru', 'pt-BR', 'it', 'es-MX', 'ja']"
+    "targeting": "userMonthlyActivity|length >= 1 && userMonthlyActivity|length <= 6 && (currentDate|date - profileAgeCreated|date) / 86400000 >= 28 && doesAppNeedPin  && browserSettings.update.channel == 'release' && source == 'startup' && !isMajorUpgrade && !activeNotifications && version|versionCompare('99.!') >= 0"
   },
   {
-    "id": "peace-of-mind-a-rollout-fast",
+    "id": "peace-of-mind-a-rollout-global",
     "groups": [
       "eco"
     ],
     "content": {
       "template": "logo-and-content",
-      "logoImageURL": "https://www.mozilla.org/media/img/firefox/onboarding/umbrella.041dbea876c4.png",
       "logo": {
-        "imageURL": "https://www.mozilla.org/media/img/firefox/onboarding/umbrella.041dbea876c4.png",
+        "imageURL": "chrome://activity-stream/content/data/content/assets/remote/umbrella.png",
         "size": "115px"
       },
       "body": {
@@ -436,13 +346,13 @@
           "label": {
             "string_id": "spotlight-peace-mind-header"
           },
-          "size": "24px"
+          "size": "22px"
         },
         "text": {
           "label": {
             "string_id": "spotlight-peace-mind-body"
           },
-          "size": "16px"
+          "size": "15px"
         },
         "primary": {
           "label": {
@@ -469,6 +379,6 @@
     "frequency": {
       "lifetime": 1
     },
-    "targeting": "userMonthlyActivity|length >= 7 && userMonthlyActivity|length <= 13 && (currentDate|date - profileAgeCreated|date) / 86400000 >= 28 && doesAppNeedPin  && browserSettings.update.channel == 'release' && source == 'startup' && !isMajorUpgrade && !activeNotifications && version|versionCompare('95.!') >= 0 && !(version in ['96.0', '96.0.1']) && locale in ['zh-CN', 'de', 'fr', 'es-ES', 'ru', 'pt-BR', 'it', 'es-MX', 'ja']"
+    "targeting": "userMonthlyActivity|length >= 7 && userMonthlyActivity|length <= 13 && (currentDate|date - profileAgeCreated|date) / 86400000 >= 28 && doesAppNeedPin  && browserSettings.update.channel == 'release' && source == 'startup' && !isMajorUpgrade && !activeNotifications && version|versionCompare('99.!') >= 0"
   }
 ]
