@@ -299,3 +299,60 @@
     !activeNotifications
     &&
     version|versionCompare('99.!') >= 0
+- id: tcp-spotlight-opt-in-rollout
+  groups:
+    - tcp
+  content:
+    template: logo-and-content
+    logo:
+      imageURL: chrome://branding/content/about-logo@2x.png
+      size: 64px
+    body:
+      title:
+        label:
+          string_id: spotlight-total-cookie-protection-header
+        size: 20px
+      text:
+        label:
+          string_id: spotlight-total-cookie-protection-body
+        size: 18px
+      primary:
+        label:
+          string_id: spotlight-total-cookie-protection-primary-button
+        action:
+          type: ENABLE_TOTAL_COOKIE_PROTECTION
+      secondary:
+        label:
+          string_id: spotlight-total-cookie-protection-secondary-button
+        action:
+          type: ENABLE_TOTAL_COOKIE_PROTECTION_SECTION_AND_OPT_OUT
+    extra:
+      expanded:
+        label:
+          string_id: spotlight-total-cookie-protection-expanded
+        size: 13px
+  priority: 1
+  trigger:
+    id: defaultBrowserCheck
+  template: spotlight
+  frequency:
+    lifetime: 2
+    custom:
+      - period: 691200000  # 1000 * 60 * 60 * 24 * 8 (8 days in ms)
+        cap: 1
+  # 1. Basic message release/beta Fx100.0.1+ targeting
+  # 2. Custom TCP opt-in, e.g., default cookie behavior, not interacted, not experiment
+  # 3. Rollout sampling, e.g., 1% -> 25% -> ... -> 100%
+  targeting: >-
+    source == 'startup' &&
+    !isMajorUpgrade &&
+    browserSettings.update.channel in ['release', 'beta'] &&
+    version|versionCompare('100.0.1') >= 0
+    &&
+    'network.cookie.cookieBehavior'|preferenceValue == 4 &&
+    !'privacy.restrict3rdpartystorage.rollout.enabledByDefault'|preferenceIsUserSet &&
+    !'browser.privatebrowsing.autostart'|preferenceValue &&
+    !'browser.search.param.google_channel_us'|preferenceValue('')|regExpMatch('^[ntc]us5$') &&
+    !'browser.search.param.google_channel_row'|preferenceValue('')|regExpMatch('^[ntc]row5$')
+    &&
+    [userId, 'tcp-spotlight-opt-in-rollout']|bucketSample(0, 400, 10000)
