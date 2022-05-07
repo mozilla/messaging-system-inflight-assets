@@ -13,6 +13,14 @@ jobs:
       # Do NOT want `python/save-cache` here as it won't cache yamllint
       # - python/save-cache
       - run:
+          name: Ensure schemas are up-to-date
+          command: |
+            ./scripts/fetch-schemas.py
+            if [[ ! -z "$(git diff)" ]]; then
+              echo "Schemas do not match schemas in mozilla-central!"
+              exit 1
+            fi
+      - run:
           command: |
             touch *.json && make
           name: Build
