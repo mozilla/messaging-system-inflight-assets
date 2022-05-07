@@ -4,7 +4,6 @@ import json
 import sys
 
 import jsonschema
-
 from jsonschema.exceptions import best_match, ValidationError
 from pyjexl.jexl import JEXL
 
