@@ -19,8 +19,9 @@ clean:
 
 check:
 	scripts/validate.py cfr outgoing/cfr.json
-	scripts/validate.py moments-page outgoing/moments.json
 	scripts/validate.py cfr-fxa outgoing/cfr-fxa.json
-	scripts/validate.py whats-new-panel outgoing/whats-new-panel.json
-	scripts/validate.py messaging-experiments outgoing/messaging-experiments.json
+	scripts/validate.py cfr-heartbeat outgoing/cfr-heartbeat.json
 	scripts/validate.py message-groups outgoing/message-groups.json
+	scripts/validate.py messaging-experiments outgoing/messaging-experiments.json
+	scripts/validate.py moments-page outgoing/moments.json
+	scripts/validate.py whats-new-panel outgoing/whats-new-panel.json
