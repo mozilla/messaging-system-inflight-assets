@@ -355,4 +355,4 @@
     !'browser.search.param.google_channel_us'|preferenceValue('')|regExpMatch('^[ntc]us5$') &&
     !'browser.search.param.google_channel_row'|preferenceValue('')|regExpMatch('^[ntc]row5$')
     &&
-    [userId, 'tcp-spotlight-opt-in-rollout']|bucketSample(0, 400, 10000)
+    [userId, 'tcp-spotlight-opt-in-rollout']|bucketSample(0, 2500, 10000)

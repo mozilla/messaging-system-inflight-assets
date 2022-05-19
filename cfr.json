@@ -445,6 +445,6 @@
         }
       ]
     },
-    "targeting": "source == 'startup' && !isMajorUpgrade && browserSettings.update.channel in ['release', 'beta'] && version|versionCompare('100.0.1') >= 0 && 'network.cookie.cookieBehavior'|preferenceValue == 4 && !'privacy.restrict3rdpartystorage.rollout.enabledByDefault'|preferenceIsUserSet && !'browser.privatebrowsing.autostart'|preferenceValue && !'browser.search.param.google_channel_us'|preferenceValue('')|regExpMatch('^[ntc]us5$') && !'browser.search.param.google_channel_row'|preferenceValue('')|regExpMatch('^[ntc]row5$') && [userId, 'tcp-spotlight-opt-in-rollout']|bucketSample(0, 400, 10000)"
+    "targeting": "source == 'startup' && !isMajorUpgrade && browserSettings.update.channel in ['release', 'beta'] && version|versionCompare('100.0.1') >= 0 && 'network.cookie.cookieBehavior'|preferenceValue == 4 && !'privacy.restrict3rdpartystorage.rollout.enabledByDefault'|preferenceIsUserSet && !'browser.privatebrowsing.autostart'|preferenceValue && !'browser.search.param.google_channel_us'|preferenceValue('')|regExpMatch('^[ntc]us5$') && !'browser.search.param.google_channel_row'|preferenceValue('')|regExpMatch('^[ntc]row5$') && [userId, 'tcp-spotlight-opt-in-rollout']|bucketSample(0, 2500, 10000)"
   }
 ]
