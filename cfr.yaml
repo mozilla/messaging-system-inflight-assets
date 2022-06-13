@@ -69,7 +69,9 @@
 - id: DOH_ROLLOUT_CONFIRMATION_89
   groups:
     - cfr
+  # Don't show to profiles newer than Oct 31st 2019
   targeting: >-
+    profileAgeCreated < 1572480000000 &&
     (
     'doh-rollout.enabled'|preferenceValue ||
     'doh-rollout.self-enabled'|preferenceValue ||
