@@ -2,7 +2,7 @@ PYTHON = python3
 FLAGS = -c
 CMD = 'import sys, yaml, json; json.dump(yaml.load(sys.stdin, Loader=yaml.Loader), sys.stdout, indent=2)'
 
-all: outgoing/cfr-fxa.json outgoing/cfr-heartbeat.json outgoing/cfr.json \
+all: outgoing/cfr-heartbeat.json outgoing/cfr.json \
      outgoing/message-groups.json outgoing/messaging-experiments.json \
      outgoing/moments.json outgoing/whats-new-panel.json
 
@@ -19,7 +19,6 @@ clean:
 
 check:
 	scripts/validate.py cfr outgoing/cfr.json
-	scripts/validate.py cfr-fxa outgoing/cfr-fxa.json
 	scripts/validate.py cfr-heartbeat outgoing/cfr-heartbeat.json
 	scripts/validate.py message-groups outgoing/message-groups.json
 	scripts/validate.py messaging-experiments outgoing/messaging-experiments.json

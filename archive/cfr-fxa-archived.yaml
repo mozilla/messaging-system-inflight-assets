@@ -43,3 +43,32 @@
   trigger:
     id: bookmark-panel
   weight: 100
+- id: FXA_BOOKMARK_PANEL_71_plus
+  groups:
+    - cfr
+  content:
+    background_color_1: '#7d31ae'
+    background_color_2: '#5033be'
+    bucket_id: FXA_BOOKMARK_PANEL_71_plus
+    close_button:
+      tooltiptext:
+        string_id: cfr-doorhanger-bookmark-fxa-close-btn-tooltip
+    color: white
+    cta:
+      string_id: cfr-doorhanger-bookmark-fxa-link-text
+    info_icon:
+      tooltiptext:
+        string_id: cfr-doorhanger-bookmark-fxa-info-icon-tooltip
+    text:
+      string_id: cfr-doorhanger-bookmark-fxa-body
+    title:
+      string_id: cfr-doorhanger-bookmark-fxa-header
+  frequency:
+    lifetime: 3
+  targeting: |
+    !usesFirefoxSync && isFxAEnabled == true && totalBookmarksCount >= 10
+    && firefoxVersion >= 70 && userPrefs.cfrFeatures && firefoxVersion < 89
+  template: fxa_bookmark_panel
+  trigger:
+    id: bookmark-panel
+  weight: 100

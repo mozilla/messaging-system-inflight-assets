@@ -31,7 +31,6 @@ SCHEMA_MAP = {
     "cfr": "schema/cfr.schema.json",
     "onboarding": "schema/onboarding.schema.json",
     "onboarding-multistage": "schema/onboarding-multistage.schema.json",
-    "cfr-fxa": "schema/cfr-fxa.schema.json",
     "cfr-heartbeat": "schema/cfr-heartbeat.schema.json",
     "messaging-experiments": "schema/messaging-experiments.schema.json",
     "previous-messaging-experiments": "schema/previous-messaging-experiments.schema.json",
