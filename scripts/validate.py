@@ -29,8 +29,6 @@ ALL_SCHEMAS = dict()
 
 SCHEMA_MAP = {
     "cfr": "schema/cfr.schema.json",
-    "onboarding": "schema/onboarding.schema.json",
-    "onboarding-multistage": "schema/onboarding-multistage.schema.json",
     "cfr-heartbeat": "schema/cfr-heartbeat.schema.json",
     "messaging-experiments": "schema/messaging-experiments.schema.json",
     "previous-messaging-experiments": "schema/previous-messaging-experiments.schema.json",
@@ -45,8 +43,20 @@ USAGE = """
 
         validate.py ${TYPE} ${JSON_PATH}
 
+<<<<<<< HEAD
     Where ${type} should be one of "cfr" "cfr-fxa", "messaging-experiments",
     "whats-new-panel".
+=======
+    Where TYPE should be one of:
+        cfr
+        cfr-heartbeat
+        messaging-experiments
+        prvious-messaging-experiments
+        whats-new-panel
+        action
+        message-groups
+        moments-page
+>>>>>>> bd23e36 (remove onboarding)
 
     Exmaple:
         validate.py cfr ./cfr.json
