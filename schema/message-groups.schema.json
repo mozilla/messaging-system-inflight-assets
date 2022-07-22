@@ -59,5 +59,6 @@
       "enum": ["remote-settings", "local", "default"]
     }
   },
-  "required": ["id", "enabled", "type"]
+  "required": ["id", "enabled", "type"],
+  "additionalProperties": true
 }

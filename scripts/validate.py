@@ -2,10 +2,29 @@
 
 import json
 import sys
+from pathlib import Path
 
 import jsonschema
 from jsonschema.exceptions import best_match, ValidationError
 from pyjexl.jexl import JEXL
+
+
+class NestedRefResolver(jsonschema.RefResolver):
+    """A custom ref resolver that handles bundled schema.
+
+    This is the resolver used by Experimenter.
+    """
+
+    def __init__(self, schema):
+        super().__init__(base_uri=None, referrer=None)
+
+        if "$id" in schema:
+            self.store[schema["$id"]] = schema
+
+        if "$defs" in schema:
+            for dfn in schema["$defs"].values():
+                if "$id" in dfn:
+                    self.store[dfn["$id"]] = dfn
 
 # Create a jexl evaluator
 EVALUATOR = JEXL()
@@ -27,35 +46,39 @@ EVALUATOR.add_transform('versionCompare', lambda x: 0)
 ALL_SCHEMAS = dict()
 
 SCHEMA_MAP = {
-    "cfr": "schema/cfr.schema.json",
-    "cfr-heartbeat": "schema/cfr-heartbeat.schema.json",
-    "messaging-experiments": "schema/messaging-experiments.schema.json",
-    "whats-new-panel": "schema/whats-new-panel.schema.json",
-    "action": "schema/messaging-system-special-message-actions.schema.json",
-    "message-groups": "schema/message-groups.schema.json",
-    "moments-page": "schema/moments-action.schema.json",
+    "message": Path("schema", "MessagingExperiment.schema.json"),
+    "experiment": Path("schema", "NimbusExperiment.schema.json"),
+    "action": Path("schema", "SpecialMessageActionSchemas.json"),
+    "message-groups": Path("schema", "message-groups.schema.json"),
 }
 
 USAGE = """
     Usage:
+        validate.py TYPE PATH
 
-        validate.py ${TYPE} ${JSON_PATH}
-
-    Where ${type} should be one of "cfr" "cfr-fxa", "messaging-experiments",
-    "whats-new-panel".
+    Where TYPE should be one of "message", "experiment", or "message-groups".
 
     Exmaple:
-        validate.py cfr ./cfr.json
+        validate.py message ./outgoing/cfr.json
 """
 
 
 def load_schema(name):
+    """Load a schema and cache it."""
     if name in ALL_SCHEMAS:
         return ALL_SCHEMAS[name]
 
-    path = SCHEMA_MAP[name]
-    with open(path, "r") as f:
-        ALL_SCHEMAS[name] = json.loads(f.read())
+    with SCHEMA_MAP[name].open("r") as f:
+        schema = json.load(f)
+        if name == "experiment":
+            # The NimbusExperiment schema contains a self-ref.
+            schema = {
+                "$schema": schema["$schema"],
+                **schema["definitions"]["NimbusExperiment"],
+            }
+
+        ALL_SCHEMAS[name] = schema
+
     return ALL_SCHEMAS[name]
 
 
@@ -78,16 +101,12 @@ def validate_item_targeting(item, for_exp=False):
 
 
 def validate_action(action, for_exp):
+    """Validate a special message action"""
     indentation = "\t" if for_exp else ""
-    all_action_schemas = load_schema("action")
-    action_type = action["type"]
+    schema = load_schema("action")
 
-    print("{}Validate message action {}".format(indentation, action_type))
-    if action_type not in all_action_schemas:
-        print("{}Unknown action {}".format(indentation, action_type))
-        sys.exit(1)
+    print("{}Validate message action {}".format(indentation, action["type"]))
 
-    schema = all_action_schemas[action_type]
     try:
         jsonschema.validate(instance=action, schema=schema)
     except ValidationError as err:
@@ -96,8 +115,11 @@ def validate_action(action, for_exp):
         sys.exit(1)
 
 
-def extract_actions(message, message_type):
-    def _extract_cfr():
+def extract_actions(message):
+    """Extract all of the special message actions from the given message."""
+    message_type = message["template"]
+
+    def _extract_cfr_doorhanger():
         buttons_prop = message["content"].get("buttons", {})
         if type(buttons_prop) is list:
             for button in buttons_prop:
@@ -111,38 +133,58 @@ def extract_actions(message, message_type):
                         if "action" in sub_button:
                             yield sub_button["action"]
 
-    def _extract_onboarding():
-        for card in message:
-            button = card["content"]["primary_button"]
-            if "action" in button:
-                yield button["action"]
+    def _extract_cfr_urlbar_chiclet():
+        yield message["content"]["action"]
 
-    def _extract_onboarding_multistage():
-        for screen in message["screens"]:
-            for button_name in ["primary_button", "secondary_button"]:
-                button = screen["content"].get(button_name)
-                if button and button["action"].get("type"):
-                    yield button["action"]
+    def _extract_infobar():
+        for button in message["buttons"]:
+            yield button["action"]
 
-    if message_type == "cfr":
-        yield from _extract_cfr()
-    elif message_type == "onboarding":
-        yield from _extract_onboarding()
-    elif message_type == "onboarding-multistage":
-        yield from _extract_onboarding_multistage()
-    elif message_type == "moments-page":
-        # No actions to validate for moments-page
-        return
-    else:
-        raise KeyError("invalid message type {}".format(message_type))
+    def _extract_spotlight():
+        template = message["content"].get("template", "logo-and-content")
+
+        if template == "logo-and-content":
+            yield message["content"]["body"]["primary"]["action"]
+            yield message["content"]["body"]["secondary"]["action"]
+        elif template == "multistage":
+            for screen in message["content"]["screens"]:
+                for button_name in ["primary_button", "secondary_button"]:
+                    button = screen["content"].get(button_name)
+                    if button and button["action"].get("type"):
+                        yield button["action"]
+
+    def _extract_toolbar_badge():
+        if "action" in message["content"]:
+            yield message["content"]["action"]
+
+    def _extract_pb_newtab():
+        if "promoButton" in message["content"]:
+            yield message["content"]["promoButton"]["action"]
+
+    extractors = {
+        "cfr_doorhanger": _extract_cfr_doorhanger,
+        "cfr_urlbar_chiclet": _extract_cfr_urlbar_chiclet,
+        "infobar": _extract_infobar,
+        "spotlight": _extract_spotlight,
+        "toolbar_badge": _extract_toolbar_badge,
+        "pb_newtab": _extract_pb_newtab,
+    }
+
+    try:
+        yield from extractors[message_type]()
+    except KeyError:
+        return []
 
 
-def validate_all_actions(message, message_type, for_exp=False):
-    for action in extract_actions(message, message_type):
+def validate_all_actions(message, for_exp=False):
+    """Validate all actions in the given message."""
+    for action in extract_actions(message):
         validate_action(action, for_exp)
 
 
 def get_branch_message(branch):
+    """Return the message from an experiment branch."""
+    # TODO: This does not support multi-feature experiments.
     feature = branch["feature"]
     feature_id = feature["featureId"]
     if feature_id == "cfr":
@@ -216,37 +258,51 @@ def validate_experiment(item):
         validate_item_targeting(branch_message, True)
 
         # Validate all the message actions
-        validate_all_actions(branch_message, message_type, True)
+        validate_all_actions(branch_message, True)
 
         # Validate the message_id naming
         validate_experiment_message_id(item["slug"], branch)
 
 
+def validate_message(message):
+    """Validate the components of a message"""
+    validate_item_targeting(message)
+    validate_all_actions(message)
+
+
 def validate(schema_name, src_path):
     schema = load_schema(schema_name)
-    check_action = schema_name in ['cfr']
+    resolver = NestedRefResolver(schema)
 
+    print(f"Validating {src_path} with {schema_name} schema...")
     with open(src_path, "r") as f:
-        items = json.loads(f.read())
-        if items is None:
-            return
-        for item in items:
-            try:
-                print("Validate schema for {}".format(item["id"]))
-                jsonschema.validate(instance=item, schema=schema)
-                # If it's an experiment we want to evaluate the branches
-                if "slug" in item:
+        items = json.load(f)
+
+        if items is not None:
+            for item in items:
+                print(f"Valiating schema for {item['id']}")
+
+                try:
+                    jsonschema.validate(
+                        instance=item,
+                        schema=schema,
+                        resolver=resolver,
+                    )
+                except ValidationError as err:
+                    match = best_match([err])
+                    print(f"Validation error: {match.message}")
+                    sys.exit(1)
+
+                if schema_name == "message":
+                    validate_message(item)
+                elif schema_name == "experiment":
                     validate_experiment(item)
-            except ValidationError as err:
-                match = best_match([err])
-                print("Validation error: {}".format(match.message))
-                sys.exit(1)
-            validate_item_targeting(item)
-            if check_action:
-                validate_all_actions(item, schema_name)
+                elif schema_name == "message-group":
+                    pass
+                elif schema_name == "action":
+                    pass
 
-    print("Passed!")
-
+    print("PASS")
 
 if __name__ == '__main__':
     if len(sys.argv) < 3:
