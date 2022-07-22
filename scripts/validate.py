@@ -26,21 +26,21 @@ class NestedRefResolver(jsonschema.RefResolver):
                 if "$id" in dfn:
                     self.store[dfn["$id"]] = dfn
 
+
 # Create a jexl evaluator
 EVALUATOR = JEXL()
-EVALUATOR.add_binary_operator(
-    'intersect', 40, lambda x, y: set(x).intersection(y))
-EVALUATOR.add_transform('bucketSample', lambda x, y, z, q: False)
-EVALUATOR.add_transform('date', lambda x: 0)
-EVALUATOR.add_transform('keys', lambda x: [])
-EVALUATOR.add_transform('length', lambda x: 0)
-EVALUATOR.add_transform('mapToProperty', lambda x, y: [])
-EVALUATOR.add_transform('preferenceExists', lambda x: False)
-EVALUATOR.add_transform('preferenceIsUserSet', lambda x: False)
-EVALUATOR.add_transform('preferenceValue', lambda x: False)
-EVALUATOR.add_transform('regExpMatch', lambda x: False)
-EVALUATOR.add_transform('stableSample', lambda x, y: False)
-EVALUATOR.add_transform('versionCompare', lambda x: 0)
+EVALUATOR.add_binary_operator("intersect", 40, lambda x, y: set(x).intersection(y))
+EVALUATOR.add_transform("bucketSample", lambda x, y, z, q: False)
+EVALUATOR.add_transform("date", lambda x: 0)
+EVALUATOR.add_transform("keys", lambda x: [])
+EVALUATOR.add_transform("length", lambda x: 0)
+EVALUATOR.add_transform("mapToProperty", lambda x, y: [])
+EVALUATOR.add_transform("preferenceExists", lambda x: False)
+EVALUATOR.add_transform("preferenceIsUserSet", lambda x: False)
+EVALUATOR.add_transform("preferenceValue", lambda x: False)
+EVALUATOR.add_transform("regExpMatch", lambda x: False)
+EVALUATOR.add_transform("stableSample", lambda x, y: False)
+EVALUATOR.add_transform("versionCompare", lambda x: 0)
 
 # cache all the known schemas to validate experiments
 ALL_SCHEMAS = dict()
@@ -86,7 +86,7 @@ def validate_item_targeting(item, for_exp=False):
     if "targeting" not in item and "filter_expression" not in item:
         return
     indentation = "\t" if for_exp else ""
-    print("{}Validate targeting {}".format(indentation, item['id']))
+    print("{}Validate targeting {}".format(indentation, item["id"]))
     for key in ["targeting", "filter_expression"]:
         jexl_expression = item.get(key)
         if jexl_expression is None:
@@ -211,7 +211,7 @@ def get_branch_message(branch):
 
 
 def validate_experiment_message_id(exp_slug, branch):
-    """ This validation enforces certain naming convention for some message
+    """This validation enforces certain naming convention for some message
     types such as CFR in order to support the automated analysis feature of
     Jetstream.
     """
@@ -222,33 +222,35 @@ def validate_experiment_message_id(exp_slug, branch):
     if message_type == "cfr":
         print(f"\tValidate experiment message ID for branch {branch['slug']}")
 
-        assert branch_message["id"] == f"{exp_slug}:{branch['slug']}", \
-            (f"Invalid CFR message ID {branch_message['id']}, "
-             f"it should be named as {{experiment-slug}}:{{branch-slug}}")
-        assert branch_message["content"]["bucket_id"] == f"{exp_slug}:{branch['slug']}", \
-            (f"Invalid CFR bucket_id {branch_message['content']['bucket_id']}, "
-             f"it should be named as {{experiment-slug}}:{{branch-slug}}")
+        assert branch_message["id"] == f"{exp_slug}:{branch['slug']}", (
+            f"Invalid CFR message ID {branch_message['id']}, "
+            f"it should be named as {{experiment-slug}}:{{branch-slug}}"
+        )
+        assert (
+            branch_message["content"]["bucket_id"] == f"{exp_slug}:{branch['slug']}"
+        ), (
+            f"Invalid CFR bucket_id {branch_message['content']['bucket_id']}, "
+            f"it should be named as {{experiment-slug}}:{{branch-slug}}"
+        )
 
 
 def validate_experiment(item):
     for branch in item.get("branches"):
         message_type, branch_message = get_branch_message(branch)
         if branch_message is None:
-            print(
-                "\tSkip branch {} because it's empty"
-                .format(branch.get("slug"))
-            )
+            print("\tSkip branch {} because it's empty".format(branch.get("slug")))
             continue
 
         schema = load_schema(message_type)
         try:
-            branch_message_list = \
-                branch_message if isinstance(branch_message, list) else [
-                    branch_message]
+            branch_message_list = (
+                branch_message if isinstance(branch_message, list) else [branch_message]
+            )
             for message in branch_message_list:
                 jsonschema.validate(instance=message, schema=schema)
-            print("\tValidate {} with schema {}".format(
-                branch.get("slug"), message_type))
+            print(
+                "\tValidate {} with schema {}".format(branch.get("slug"), message_type)
+            )
         except ValidationError as err:
             match = best_match([err])
             print("\tValidation error: {}".format(match.message))
@@ -304,7 +306,8 @@ def validate(schema_name, src_path):
 
     print("PASS")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     if len(sys.argv) < 3:
         print(USAGE)
         sys.exit(1)
