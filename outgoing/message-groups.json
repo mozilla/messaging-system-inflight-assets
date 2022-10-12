@@ -10,7 +10,10 @@
           "cap": 1
         }
       ]
-    }
+    },
+    "userPreferences": [
+      "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features"
+    ]
   },
   {
     "id": "cfr-experiments",
