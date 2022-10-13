@@ -4,6 +4,8 @@
   frequency:
     custom:
       - {period: 86400000, cap: 1}  # 1 day
+  userPreferences:
+    - browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features
 - id: cfr-experiments
   enabled: true
   type: remote-settings
