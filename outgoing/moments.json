@@ -40,5 +40,26 @@
     "trigger": {
       "id": "momentsUpdate"
     }
+  },
+  {
+    "id": "WNP_MOMENTS_14",
+    "groups": [
+      "moments-pages"
+    ],
+    "content": {
+      "action": {
+        "data": {
+          "expire": 1667260800000,
+          "url": "https://www.mozilla.org/firefox/welcome/14"
+        },
+        "id": "moments-wnp"
+      },
+      "bucket_id": "WNP_MOMENTS_14"
+    },
+    "targeting": "localeLanguageCode in [\"en\", \"de\", \"fr\"] && region in [\"AT\", \"BE\", \"CA\", \"CH\", \"DE\", \"ES\", \"FI\", \"FR\", \"GB\", \"IE\", \"IT\", \"MY\", \"NL\", \"NZ\", \"SE\", \"SG\", \"US\"]  && 'browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features'|preferenceValue && 'browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons'|preferenceValue",
+    "template": "update_action",
+    "trigger": {
+      "id": "momentsUpdate"
+    }
   }
 ]
