@@ -42,8 +42,8 @@
   content:
     action:
       data:
-        # Valid until 2022 October 31 EOD (coupon expiry)
-        expire: 1667260800000
+        # Valid until 2022 November 14 EOD (coupon expiry)
+        expire: 1668470400000
         # URL will redirect to correct locale based on browser settings
         url: https://www.mozilla.org/firefox/welcome/14
       id: moments-wnp
