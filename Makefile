@@ -24,3 +24,6 @@ check:
 	scripts/validate.py message outgoing/whats-new-panel.json
 	scripts/validate.py experiment outgoing/messaging-experiments.json
 	scripts/validate.py message-groups outgoing/message-groups.json
+
+export: all
+	scripts/export-all.py
