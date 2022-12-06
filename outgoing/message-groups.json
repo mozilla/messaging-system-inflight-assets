@@ -51,5 +51,22 @@
     "userPreferences": [
       "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features"
     ]
+  },
+  {
+    "id": "import-spotlights",
+    "enabled": true,
+    "type": "remote-settings",
+    "frequency": {
+      "custom": [
+        {
+          "period": 60000,
+          "cap": 1
+        }
+      ],
+      "lifetime": 4
+    },
+    "userPreferences": [
+      "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features"
+    ]
   }
 ]

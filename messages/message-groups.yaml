@@ -25,3 +25,13 @@
       - {period: 2419200000, cap: 1}  # 4 weeks
   userPreferences:
     - browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features
+- id: import-spotlights
+  enabled: true
+  type: remote-settings
+  frequency:
+    custom:
+      # - {period: 4838400000, cap: 1}  # 56 days
+      - {period: 60000, cap: 1}
+    lifetime: 4
+  userPreferences:
+    - browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features
