@@ -59,7 +59,7 @@
     "frequency": {
       "custom": [
         {
-          "period": 60000,
+          "period": 4838400000,
           "cap": 1
         }
       ],
