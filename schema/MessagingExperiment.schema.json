@@ -3,212 +3,23 @@
   "$id": "resource://activity-stream/schemas/MessagingExperiment.schema.json",
   "title": "Messaging Experiment",
   "description": "A Firefox Messaging System message.",
-  "oneOf": [
-    {
-      "description": "An empty FxMS message.",
-      "type": "object",
-      "additionalProperties": false
+  "if": {
+    "type": "object",
+    "properties": {
+      "template": {
+        "const": "multi"
+      }
     },
-    {
-      "allOf": [
-        {
-          "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/Message"
-        },
-        {
-          "if": {
-            "type": "object",
-            "properties": {
-              "template": {
-                "type": "string",
-                "enum": [
-                  "cfr_urlbar_chiclet"
-                ]
-              }
-            },
-            "required": [
-              "template"
-            ]
-          },
-          "then": {
-            "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/CFRUrlbarChiclet"
-          }
-        },
-        {
-          "if": {
-            "type": "object",
-            "properties": {
-              "template": {
-                "type": "string",
-                "enum": [
-                  "cfr_doorhanger",
-                  "milestone_message"
-                ]
-              }
-            },
-            "required": [
-              "template"
-            ]
-          },
-          "then": {
-            "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/ExtensionDoorhanger"
-          }
-        },
-        {
-          "if": {
-            "type": "object",
-            "properties": {
-              "template": {
-                "type": "string",
-                "enum": [
-                  "infobar"
-                ]
-              }
-            },
-            "required": [
-              "template"
-            ]
-          },
-          "then": {
-            "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/InfoBar"
-          }
-        },
-        {
-          "if": {
-            "type": "object",
-            "properties": {
-              "template": {
-                "type": "string",
-                "enum": [
-                  "pb_newtab"
-                ]
-              }
-            },
-            "required": [
-              "template"
-            ]
-          },
-          "then": {
-            "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/NewtabPromoMessage"
-          }
-        },
-        {
-          "if": {
-            "type": "object",
-            "properties": {
-              "template": {
-                "type": "string",
-                "enum": [
-                  "protections_panel"
-                ]
-              }
-            },
-            "required": [
-              "template"
-            ]
-          },
-          "then": {
-            "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/ProtectionsPanelMessage"
-          }
-        },
-        {
-          "if": {
-            "type": "object",
-            "properties": {
-              "template": {
-                "type": "string",
-                "enum": [
-                  "spotlight",
-                  "feature_callout"
-                ]
-              }
-            },
-            "required": [
-              "template"
-            ]
-          },
-          "then": {
-            "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/Spotlight"
-          }
-        },
-        {
-          "if": {
-            "type": "object",
-            "properties": {
-              "template": {
-                "type": "string",
-                "enum": [
-                  "toast_notification"
-                ]
-              }
-            },
-            "required": [
-              "template"
-            ]
-          },
-          "then": {
-            "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/ToastNotification"
-          }
-        },
-        {
-          "if": {
-            "type": "object",
-            "properties": {
-              "template": {
-                "type": "string",
-                "enum": [
-                  "toolbar_badge"
-                ]
-              }
-            },
-            "required": [
-              "template"
-            ]
-          },
-          "then": {
-            "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/ToolbarBadgeMessage"
-          }
-        },
-        {
-          "if": {
-            "type": "object",
-            "properties": {
-              "template": {
-                "type": "string",
-                "enum": [
-                  "update_action"
-                ]
-              }
-            },
-            "required": [
-              "template"
-            ]
-          },
-          "then": {
-            "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/UpdateAction"
-          }
-        },
-        {
-          "if": {
-            "type": "object",
-            "properties": {
-              "template": {
-                "type": "string",
-                "enum": [
-                  "whatsnew_panel_message"
-                ]
-              }
-            },
-            "required": [
-              "template"
-            ]
-          },
-          "then": {
-            "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/WhatsNewMessage"
-          }
-        }
-      ]
-    }
-  ],
+    "required": [
+      "template"
+    ]
+  },
+  "then": {
+    "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/MultiMessage"
+  },
+  "else": {
+    "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/TemplatedMessage"
+  },
   "$defs": {
     "CFRUrlbarChiclet": {
       "$schema": "https://json-schema.org/draft/2019-09/schema",
@@ -339,6 +150,10 @@
               "type": "boolean",
               "description": "Prevent the doorhanger from being dismissed if user interacts with the page or switches between applications."
             },
+            "show_in_private_browsing": {
+              "type": "boolean",
+              "description": "Whether to allow the message to be shown in private browsing mode. Defaults to false."
+            },
             "notification_text": {
               "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/localizableText",
               "description": "The text in the small blue chicklet that appears in the URL bar. This can be a reference to a localized string in Firefox or just a plain string."
@@ -429,14 +244,11 @@
                   "description": "The icon displayed in the pop-over. Should be 64x64px and png/svg."
                 },
                 "rating": {
-                  "type": "number",
-                  "minimum": 0,
-                  "maximum": 5,
+                  "type": "string",
                   "description": "Star rating"
                 },
                 "users": {
-                  "type": "integer",
-                  "minimum": 0,
+                  "type": "string",
                   "description": "Installed users"
                 },
                 "amo_url": {
@@ -839,9 +651,9 @@
               "description": "Promo type used to determine if promo should show to a given user",
               "enum": [
                 "FOCUS",
-                "RALLY",
                 "VPN",
                 "PIN",
+                "COOKIE_BANNERS",
                 "OTHER"
               ]
             },
@@ -1086,19 +898,11 @@
             "template": {
               "type": "string",
               "description": "Specify the layout template for the Spotlight",
-              "enum": [
-                "logo-and-content",
-                "multistage"
-              ]
+              "const": "multistage"
             },
             "backdrop": {
               "type": "string",
               "description": "Background css behind modal content"
-            },
-            "logoImageURL": {
-              "type": "string",
-              "format": "uri",
-              "description": "(Deprecated by logo.imageURL)"
             },
             "logo": {
               "type": "object",
@@ -1114,102 +918,6 @@
                 "size": {
                   "type": "string",
                   "description": "The logo size."
-                }
-              },
-              "additionalProperties": true
-            },
-            "body": {
-              "type": "object",
-              "properties": {
-                "title": {
-                  "type": "object",
-                  "properties": {
-                    "label": {
-                      "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/localizableText",
-                      "description": "The title shown in the Spotlight message"
-                    }
-                  },
-                  "required": [
-                    "label"
-                  ]
-                },
-                "text": {
-                  "type": "object",
-                  "properties": {
-                    "label": {
-                      "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/localizableText",
-                      "description": "The content shown in the Spotlight message"
-                    }
-                  },
-                  "required": [
-                    "label"
-                  ]
-                },
-                "primary": {
-                  "type": "object",
-                  "properties": {
-                    "label": {
-                      "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/localizableText",
-                      "description": "The label for the primary button"
-                    },
-                    "action": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "description": "Action dispatched by the button."
-                        },
-                        "data": {
-                          "type": "object"
-                        }
-                      },
-                      "required": [
-                        "type"
-                      ],
-                      "additionalProperties": true
-                    }
-                  },
-                  "required": [
-                    "label",
-                    "action"
-                  ]
-                },
-                "secondary": {
-                  "type": "object",
-                  "properties": {
-                    "label": {
-                      "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/localizableText",
-                      "description": "The label for the secondary button"
-                    }
-                  },
-                  "required": [
-                    "label",
-                    "action"
-                  ]
-                }
-              },
-              "additionalProperties": true,
-              "required": [
-                "title",
-                "text",
-                "primary",
-                "secondary"
-              ]
-            },
-            "extra": {
-              "type": "object",
-              "properties": {
-                "expanded": {
-                  "type": "object",
-                  "properties": {
-                    "label": {
-                      "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/localizableText",
-                      "description": "The label for the secondary button"
-                    }
-                  },
-                  "required": [
-                    "label"
-                  ]
                 }
               },
               "additionalProperties": true
@@ -1231,35 +939,7 @@
               "description": "Index of first screen to show from message, defaulting to 0"
             }
           },
-          "additionalProperties": true,
-          "if": {
-            "properties": {
-              "logoImageURL": {
-                "type": "null"
-              }
-            }
-          },
-          "then": {
-            "properties": {
-              "logo": {
-                "oneOf": [
-                  {
-                    "required": [
-                      "imageURL"
-                    ]
-                  },
-                  {
-                    "required": [
-                      "imageId"
-                    ]
-                  }
-                ]
-              }
-            }
-          },
-          "required": [
-            "template"
-          ]
+          "additionalProperties": true
         },
         "template": {
           "type": "string",
@@ -1313,6 +993,22 @@
               "type": "string",
               "format": "moz-url-format"
             },
+            "launch_action": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "description": "The launch action to be performed when Firefox is launched."
+                },
+                "data": {
+                  "type": "object"
+                }
+              },
+              "required": [
+                "type"
+              ],
+              "additionalProperties": true
+            },
             "requireInteraction": {
               "type": "boolean",
               "description": "Whether the toast notification should remain active until the user clicks or dismisses it, rather than closing automatically."
@@ -1346,6 +1042,22 @@
                   "windowsSystemActivationType": {
                     "type": "boolean",
                     "description": "Whether to have Windows process the given `action`."
+                  },
+                  "launch_action": {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "type": "string",
+                        "description": "The launch action to be performed when Firefox is launched."
+                      },
+                      "data": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "type"
+                    ],
+                    "additionalProperties": true
                   }
                 },
                 "required": [
@@ -1509,10 +1221,6 @@
                 "tracking-protections"
               ]
             },
-            "layout_title_content_variable": {
-              "description": "Select what profile specific value to show for the current layout.",
-              "type": "string"
-            },
             "bucket_id": {
               "type": "string",
               "description": "A bucket identifier for the addon. This is used in order to anonymize telemetry for history-sensitive targeting."
@@ -1577,12 +1285,7 @@
             "body",
             "cta_url",
             "bucket_id"
-          ],
-          "dependentSchemas": {
-            "layout": [
-              "layout_title_content_variable"
-            ]
-          }
+          ]
         },
         "template": {
           "type": "string",
@@ -1701,14 +1404,23 @@
           "required": [
             "id"
           ]
+        },
+        "provider": {
+          "description": "An identifier for the provider of this message, such as \"cfr\" or \"preview\".",
+          "type": "string"
         }
       },
       "additionalProperties": true,
-      "required": [
-        "id",
-        "content",
-        "template"
-      ]
+      "dependentRequired": {
+        "content": [
+          "id",
+          "template"
+        ],
+        "template": [
+          "id",
+          "content"
+        ]
+      }
     },
     "localizedText": {
       "type": "object",
@@ -1732,6 +1444,228 @@
         {
           "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/localizedText"
         }
+      ]
+    },
+    "TemplatedMessage": {
+      "description": "An FxMS message of one of a variety of types.",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/Message"
+        },
+        {
+          "if": {
+            "type": "object",
+            "properties": {
+              "template": {
+                "type": "string",
+                "enum": [
+                  "cfr_urlbar_chiclet"
+                ]
+              }
+            },
+            "required": [
+              "template"
+            ]
+          },
+          "then": {
+            "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/CFRUrlbarChiclet"
+          }
+        },
+        {
+          "if": {
+            "type": "object",
+            "properties": {
+              "template": {
+                "type": "string",
+                "enum": [
+                  "cfr_doorhanger",
+                  "milestone_message"
+                ]
+              }
+            },
+            "required": [
+              "template"
+            ]
+          },
+          "then": {
+            "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/ExtensionDoorhanger"
+          }
+        },
+        {
+          "if": {
+            "type": "object",
+            "properties": {
+              "template": {
+                "type": "string",
+                "enum": [
+                  "infobar"
+                ]
+              }
+            },
+            "required": [
+              "template"
+            ]
+          },
+          "then": {
+            "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/InfoBar"
+          }
+        },
+        {
+          "if": {
+            "type": "object",
+            "properties": {
+              "template": {
+                "type": "string",
+                "enum": [
+                  "pb_newtab"
+                ]
+              }
+            },
+            "required": [
+              "template"
+            ]
+          },
+          "then": {
+            "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/NewtabPromoMessage"
+          }
+        },
+        {
+          "if": {
+            "type": "object",
+            "properties": {
+              "template": {
+                "type": "string",
+                "enum": [
+                  "protections_panel"
+                ]
+              }
+            },
+            "required": [
+              "template"
+            ]
+          },
+          "then": {
+            "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/ProtectionsPanelMessage"
+          }
+        },
+        {
+          "if": {
+            "type": "object",
+            "properties": {
+              "template": {
+                "type": "string",
+                "enum": [
+                  "spotlight",
+                  "feature_callout"
+                ]
+              }
+            },
+            "required": [
+              "template"
+            ]
+          },
+          "then": {
+            "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/Spotlight"
+          }
+        },
+        {
+          "if": {
+            "type": "object",
+            "properties": {
+              "template": {
+                "type": "string",
+                "enum": [
+                  "toast_notification"
+                ]
+              }
+            },
+            "required": [
+              "template"
+            ]
+          },
+          "then": {
+            "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/ToastNotification"
+          }
+        },
+        {
+          "if": {
+            "type": "object",
+            "properties": {
+              "template": {
+                "type": "string",
+                "enum": [
+                  "toolbar_badge"
+                ]
+              }
+            },
+            "required": [
+              "template"
+            ]
+          },
+          "then": {
+            "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/ToolbarBadgeMessage"
+          }
+        },
+        {
+          "if": {
+            "type": "object",
+            "properties": {
+              "template": {
+                "type": "string",
+                "enum": [
+                  "update_action"
+                ]
+              }
+            },
+            "required": [
+              "template"
+            ]
+          },
+          "then": {
+            "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/UpdateAction"
+          }
+        },
+        {
+          "if": {
+            "type": "object",
+            "properties": {
+              "template": {
+                "type": "string",
+                "enum": [
+                  "whatsnew_panel_message"
+                ]
+              }
+            },
+            "required": [
+              "template"
+            ]
+          },
+          "then": {
+            "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/WhatsNewMessage"
+          }
+        }
+      ]
+    },
+    "MultiMessage": {
+      "description": "An object containing an array of messages.",
+      "type": "object",
+      "properties": {
+        "template": {
+          "type": "string",
+          "const": "multi"
+        },
+        "messages": {
+          "type": "array",
+          "description": "An array of messages.",
+          "items": {
+            "$ref": "resource://activity-stream/schemas/MessagingExperiment.schema.json#/$defs/TemplatedMessage"
+          }
+        }
+      },
+      "required": [
+        "template",
+        "messages"
       ]
     }
   }

@@ -68,5 +68,21 @@
     "userPreferences": [
       "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features"
     ]
+  },
+  {
+    "id": "micro-surveys",
+    "enabled": true,
+    "type": "remote-settings",
+    "frequency": {
+      "custom": [
+        {
+          "period": 15778476000,
+          "cap": 1
+        }
+      ]
+    },
+    "userPreferences": [
+      "messaging-system.askForFeedback"
+    ]
   }
 ]
