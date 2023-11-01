@@ -237,69 +237,6 @@ export const InflightAssetsMessageProvider = {
             "facebook.com"
           ]
         }
-      },
-      {
-        "id": "WNP_MOMENTS_12",
-        "groups": [
-          "moments-pages"
-        ],
-        "content": {
-          "action": {
-            "data": {
-              "expire": 1640908800000,
-              "url": "https://www.mozilla.org/firefox/welcome/12"
-            },
-            "id": "moments-wnp"
-          },
-          "bucket_id": "WNP_MOMENTS_12"
-        },
-        "targeting": "localeLanguageCode == \"en\" && region in [\"DE\", \"AT\", \"BE\", \"CA\", \"FR\", \"IE\", \"IT\", \"MY\", \"NL\", \"NZ\", \"SG\", \"CH\", \"US\", \"GB\", \"ES\"]  && (addonsInfo.addons|keys intersect [\"@testpilot-containers\"])|length == 1 && 'browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features'|preferenceValue && 'browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons'|preferenceValue",
-        "template": "update_action",
-        "trigger": {
-          "id": "momentsUpdate"
-        }
-      },
-      {
-        "id": "WNP_MOMENTS_13",
-        "groups": [
-          "moments-pages"
-        ],
-        "content": {
-          "action": {
-            "data": {
-              "expire": 1640908800000,
-              "url": "https://www.mozilla.org/firefox/welcome/13"
-            },
-            "id": "moments-wnp"
-          },
-          "bucket_id": "WNP_MOMENTS_13"
-        },
-        "targeting": "(localeLanguageCode in [\"en\", \"de\", \"fr\", \"nl\", \"it\", \"ms\"] || locale == \"es-ES\") && region in [\"DE\", \"AT\", \"BE\", \"CA\", \"FR\", \"IE\", \"IT\", \"MY\", \"NL\", \"NZ\", \"SG\", \"CH\", \"US\", \"GB\", \"ES\"]  && (addonsInfo.addons|keys intersect [\"@testpilot-containers\"])|length == 0 && 'browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features'|preferenceValue && 'browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons'|preferenceValue",
-        "template": "update_action",
-        "trigger": {
-          "id": "momentsUpdate"
-        }
-      },
-      {
-        "id": "WNP_MOMENTS_14",
-        "groups": [
-          "moments-pages"
-        ],
-        "content": {
-          "action": {
-            "data": {
-              "expire": 1668470400000,
-              "url": "https://www.mozilla.org/firefox/welcome/14"
-            },
-            "id": "moments-wnp"
-          },
-          "bucket_id": "WNP_MOMENTS_14"
-        },
-        "targeting": "localeLanguageCode in [\"en\", \"de\", \"fr\"] && region in [\"AT\", \"BE\", \"CA\", \"CH\", \"DE\", \"ES\", \"FI\", \"FR\", \"GB\", \"IE\", \"IT\", \"MY\", \"NL\", \"NZ\", \"SE\", \"SG\", \"US\"]  && 'browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features'|preferenceValue && 'browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons'|preferenceValue",
-        "template": "update_action",
-        "trigger": {
-          "id": "momentsUpdate"
-        }
       }
     ];
   }
