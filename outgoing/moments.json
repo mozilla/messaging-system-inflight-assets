@@ -1,1 +1,21 @@
-null
+[
+  {
+    "id": "WNP_MOMENTS_19",
+    "groups": [],
+    "content": {
+      "action": {
+        "data": {
+          "expire": 1733702400000,
+          "url": "https://www.mozilla.org/firefox/welcome/19"
+        },
+        "id": "moments-wnp"
+      },
+      "bucket_id": "WNP_MOMENTS_14"
+    },
+    "targeting": "firefoxVersion|versionCompare(72) >= 0 && firefoxVersion|versionCompare(101) <= 0 && (currentDate|date - 1728432000000) > 0 && (currentDate|date - 1733702400000) < 0 && localeLanguageCode in ['en', 'fr', 'ru', 'es', 'zh', 'de', 'pt', 'pl', 'it', 'ja', 'id', 'hu', 'cs', 'ar', 'el']",
+    "template": "update_action",
+    "trigger": {
+      "id": "momentsUpdate"
+    }
+  }
+]
