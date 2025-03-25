@@ -73,12 +73,11 @@ def load_schema(name):
 
     with SCHEMA_MAP[name].open("r") as f:
         schema = json.load(f)
+
         if name == "experiment":
-            # The NimbusExperiment schema contains a self-ref.
-            schema = {
-                "$schema": schema["$schema"],
-                **schema["definitions"]["NimbusExperiment"],
-            }
+            # The new schema has a title "DesktopNimbusExperiment" instead of a self-ref.
+            if "DesktopNimbusExperiment" in schema:
+                schema = schema["DesktopNimbusExperiment"]
 
         ALL_SCHEMAS[name] = schema
 
