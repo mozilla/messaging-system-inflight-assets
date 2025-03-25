@@ -1,6 +1,6 @@
 PYTHON = python3
 FLAGS = -c
-CMD = 'import sys, yaml, json; json.dump(yaml.safe_load(sys.stdin), sys.stdout, indent=2)'
+CMD = 'import sys, yaml, json; json.dump(yaml.load(sys.stdin, Loader=yaml.Loader), sys.stdout, indent=2)'
 
 all: outgoing/cfr-heartbeat.json outgoing/cfr.json \
      outgoing/message-groups.json outgoing/messaging-experiments.json \

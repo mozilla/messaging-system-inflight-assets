@@ -12,7 +12,7 @@ URL_BASE = "https://hg.mozilla.org/mozilla-central/raw-file/tip/"
 SCHEMAS = {
     # The combined FxMS Mega schema
     "MessagingExperiment.schema.json": (
-        "browser/components/newtab/content-src/asrouter/schemas/"
+        "browser/components/asrouter/content-src/schemas/"
         "MessagingExperiment.schema.json"
     ),
     # The Nimbus recipe schema
@@ -25,7 +25,7 @@ SCHEMAS = {
         "SpecialMessageActionSchemas/SpecialMessageActionSchemas.json"
     ),
     "message-groups.schema.json": (
-        "browser/components/newtab/content-src/asrouter/schemas/"
+        "browser/components/asrouter/content-src/schemas/"
         "message-group.schema.json"
     ),
 }
