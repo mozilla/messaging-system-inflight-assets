@@ -153,7 +153,7 @@ export const InflightAssetsMessageProvider = {
             }
           ]
         },
-        "targeting": "((firefoxVersion >= 87 && firefoxVersion < 89) || (firefoxVersion >= 89 && source == 'startup')) && !isDefaultBrowser && !'browser.shell.checkDefaultBrowser'|preferenceValue && isMajorUpgrade != true && platformName != 'linux' && ((currentDate|date - profileAgeCreated) / 604800000) >= 5 && !activeNotifications && 'browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features'|preferenceValue && ((currentDate|date - profileAgeCreated) / 604800000) < 15"
+        "targeting": "((firefoxVersion >= 87 && firefoxVersion < 89) || (firefoxVersion >= 89 && firefoxVersion < 138 && source == 'startup')) && !isDefaultBrowser && !'browser.shell.checkDefaultBrowser'|preferenceValue && isMajorUpgrade != true && platformName != 'linux' && ((currentDate|date - profileAgeCreated) / 604800000) >= 5 && !activeNotifications && 'browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features'|preferenceValue && ((currentDate|date - profileAgeCreated) / 604800000) < 15"
       },
       {
         "id": "CFR_FULL_VIDEO_SUPPORT_EN",
