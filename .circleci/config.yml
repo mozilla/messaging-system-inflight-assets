@@ -28,6 +28,14 @@ jobs:
           command: make check
           name: Validate
 
+  test-mozilla-ssl:
+    docker:
+      - image: cimg/python:3.8
+    steps:
+      - run:
+          name: Debug TLS connection to Mozilla
+          command: curl -v https://hg.mozilla.org/
+
 workflows:
   main:
     jobs:
